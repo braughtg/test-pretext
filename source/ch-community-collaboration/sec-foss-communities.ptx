@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="topic-foss-communities"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>FOSS Communities</title>
+
+  <introduction>
+    <p>
+      Some introductory text here.
+    </p>
+  </introduction>
+
+  <subsection
+    xml:id="topic-foss-community-principles"
+  > 
+    <title>FOSS Community Principles</title>
+
+    <p>
+      Some of the key principles that guide FOSS communities are <term>shared values</term>, <term>collaboration</term>, <term>transparency</term>, <term>inclusivity</term>, <term>meritocracy</term> and <term>release early and often</term>. 
+    </p>
+
+    <p>
+      Consider each of the following statements about the operation of a FOSS community and choose the principle (or principles if multiple apply equally) with which it most closely aligns.
+    </p>
+ 
+    <exercise 
+      xml:id="ex-foss-community-principles-q1"
+      label="ex-foss-community-principles-q1"
+      >
+      <statement>
+        <p>
+          By building on each other's work the community can solve problems that no one could solve alone.
+        </p>
+        <p /> 
+      </statement>
+
+      <areas>
+        <tabular top="minor" bottom="minor" left="minor" right="minor">
+          <row>
+            <cell><area correct="no">shared values</area></cell>
+            <cell><area correct="yes">collaboration</area></cell>
+            <cell><area correct="no">transparency</area></cell>
+          </row>
+          <row>
+            <cell><area correct="no">inclusivity</area></cell>
+            <cell><area correct="no">meritocracy</area></cell>
+            <cell><area correct="no">release early and often</area></cell>
+          </row>
+        </tabular> 
+        <p /> 
+      </areas>
+      <feedback>
+        <p>
+          Review
+          <url href="https://opensource.com/open-source-way" visual="opensource.com/open-source-way">The Open Source Way</url>
+        </p>
+      </feedback>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-foss-community-principles-q2"
+      label="ex-foss-community-principles-q2"
+      >
+      <statement>
+        <p>
+          Decisions and the rationale for them are available to the community.
+        </p>
+        <p /> 
+        </statement>
+      <areas>
+        <tabular top="minor" bottom="minor" left="minor" right="minor">
+          <row>
+            <cell><area correct="no">shared values</area></cell>
+            <cell><area correct="no">collaboration</area></cell>
+            <cell><area correct="yes">transparency</area></cell>
+          </row>
+          <row>
+            <cell><area correct="no">inclusivity</area></cell>
+            <cell><area correct="no">meritocracy</area></cell>
+            <cell><area correct="no">release early and often</area></cell>
+          </row>
+        </tabular> 
+        <p /> 
+      </areas>
+      <feedback>
+        <p>
+          Review
+          <url href="https://opensource.com/open-source-way" visual="opensource.com/open-source-way">The Open Source Way</url>
+        </p>
+      </feedback>
+    </exercise>
+    
+    <p>
+      More here eventually...
+    </p>
+
+    <p>
+      A reference to the subsection block works: <xref ref="topic-foss-community-principles" />
+    </p>
+
+    <p>
+      A reference to a specific exercise: <xref ref="ex-foss-community-principles-q1" />
+    </p>  
+
+    <p>
+      A reference to a specific exercise in another section: <xref ref="ch-cc_sec-ga_ex-github-account-url" />
+    </p>  
+  
+  </subsection>
+
+  <subsection
+    xml:id="ch-cc_sec-fc_ssec-foss-community-roles"
+    label="ch-cc_sec-fc_ssec-foss-community-roles"
+    >
+    <title>FOSS Community Roles</title>
+    <introduction>
+      <p>
+        In class we also discussed some of the roles that tend to exist in FOSS communities.  These included <term>Users</term>, <term>Requestors</term>, <term>Contributors</term>, <term>Maintainers</term> and <term>Leaders</term>.  
+      </p>
+    </introduction>
+
+    <exercises>
+      <title />
+      <introduction>
+        <p>
+          Consider each of the actions described below. For each action, select the role of the individual (or individuals if multiple apply equally) that is most likely to be responsible for the action.
+        </p>
+      </introduction>
+
+      <exercise 
+        xml:id="ex-foss-community-roles-q1" 
+        label="ex-foss-community-roles-q1">
+        <statement>
+          <p>
+            Choosing the license under which the project will be released.
+          </p>
+          <p /> 
+          </statement>
+        <areas>
+          <tabular top="minor" bottom="minor" left="minor" right="minor">
+            <row>
+              <cell><area correct="no">Users</area></cell>
+              <cell><area correct="no">Requestors</area></cell>
+              <cell><area correct="no">Contributors</area></cell>
+              <cell><area correct="no">Maintainers</area></cell>
+              <cell><area correct="yes">Leaders</area></cell>
+            </row>
+          </tabular> 
+          <p /> 
+        </areas>
+      </exercise>
+    </exercises>
+
+    <p>
+      More here eventually...
+    </p>
+
+    <p>
+      A reference to a specific exercise: <xref ref="ex-foss-community-roles-q1" />
+    </p>  
+  </subsection>
+  
+</section>

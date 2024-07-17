@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="ch-cc_sec-basic-foss-workflow"
+  label="ch-cc_sec-basic-foss-workflow"  
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Basic FOSS Workflow</title>
+
+  <p>
+    Now that you have found an issue to work on, you will need to colloaborate with the project community to fix that issue. Collaboration in FOSS communities follows patterns of behavior known as <term>workflows</term>. <xref ref="ch-cc_sec-bfw_fig-basic-foss-workflow" /> shows a basic version of a FOSS workflow that is used by contributors working on FOSS projects.
+  </p>
+  <p>
+    <figure 
+      xml:id="ch-cc_sec-bfw_fig-basic-foss-workflow"
+      label="ch-cc_sec-bfw_fig-basic-foss-workflow"
+      >
+      <caption>
+        The basic FOSS workflow.  
+      </caption>
+      <image source="images/ch-community-collaboration/basic-foss-workflow.png" width="75%">
+        <description>The main project repo is forked into your GitHub space to create your remote copy.  Your remote copy is then cloned into your local development environment to create your local copy. Changes to your local copy are pushed to your remote copy and a pull request is made to the main project.
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercises
+    xml:id="ch-cc_sec-bfw_exs-github-repository-terminology"
+    label="ch-cc_sec-bfw_exs-github-repository-terminology"
+    >
+    <title />
+    
+    <exercise 
+      xml:id="ch-cc_sec-bfw_ex-github-repository-terminology"
+      label="ch-cc_sec-bfw_ex-github-repository-terminology"
+      >
+      <statement>
+        <p>
+          GitHub (and other repository hosting services) use specific terminology to refer to the copies of the repository.  Match the terminology on the left with the repository in <xref ref="ch-cc_sec-bfw_fig-basic-foss-workflow" /> to which it refers on the right.
+        </p>
+      </statement>
+
+      <matches>
+        <match>
+          <premise>Upstream</premise>
+          <response>Main project repository</response>
+        </match>
+        <match>
+          <premise>Origin</premise>
+          <response>Your Remote Copy</response>
+        </match>
+        <match>
+          <premise>Local Clone</premise>
+          <response>Local Copy of Your Remote Copy</response>
+        </match>
+      </matches>
+      <hint>
+        <p>
+          Review the diagrams in the class materials.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise 
+      xml:id="ch-cc_sec-bfw_ex-workflow-step-definitions"
+      label="ch-cc_sec-bfw_ex-workflow-step-definitions"
+      >
+      <statement>
+        <p>
+          <xref ref="ch-cc_sec-bfw_fig-basic-foss-workflow" /> illustrates a basic workflow that is used in many FOSS projects.  This workflow has the following 5 steps: <term>Fork</term>, <term>Clone</term>, <term>Edit</term>, <term>Push</term>, and <term>Pull Request</term>. Match each term on the left with the appropraite description on the right.
+        </p>
+      </statement>
+
+      <matches>
+        <match>
+          <premise>Fork</premise>
+          <response>
+            Create a copy of the main project repository in your GitHub space.
+          </response>
+        </match>
+        <match>
+          <premise>Clone</premise>
+          <response>
+            Create a copy of your remote copy of the repository into your local development environment.
+          </response>
+        </match>
+        <match>
+          <premise>Edit</premise>
+          <response>
+            Make changes to your local copy of the repository (e.g. to fix a bug).
+          </response>
+        </match>
+        <match>
+          <premise>Push</premise>
+          <response>
+            Copy your changes into your remote copy of the repository.
+          </response>
+        </match>
+        <match>
+          <premise>Pull Request</premise>
+          <response>
+            Ask that the project maintainers incorporate your chagnes into the main project reposoitory.
+          </response>
+        </match>
+      </matches>
+      <hint>
+        <p>
+          Review the diagrams in the class materials.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise 
+      xml:id="ch-cc_sec-bfw_ex-workflow-step-order"
+      label="ch-cc_sec-bfw_ex-workflow-step-order"
+      >
+      <statement>
+        <p>
+          Drag the steps of the basic FOSS workflow into the order that they are likely to occur.
+        </p>
+      </statement>
+      <blocks>
+        <block order="3">
+          <p>
+            Fork
+          </p>
+        </block>
+        <block order="1">
+          <p>
+            Clone
+          </p>
+        </block>
+        <block order="5">
+          <p>
+            Edit
+          </p>
+        </block>
+        <block order="2">
+          <p>
+            Push
+          </p>
+        </block>
+        <block order="4">
+          <p>
+            Pull Request
+          </p>
+        </block>
+      </blocks>
+      <hint>
+        <p>
+          Imagine the process you would need to use to fix a bug.
+        </p>
+      </hint>
+    </exercise>
+
+    <p>
+      More stuff here eventually...
+    </p>
+
+  </exercises>
+
+</section>

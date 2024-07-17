@@ -4,17 +4,17 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+  <book xml:id="the-gitkit-book">
+    <title>GitKit</title>
+    <subtitle>Learn git and GitHub in Context</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
-    <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
-
-
+    <!-- Include chapters -->    
+    <xi:include href="./ch-introduction/ch-introduction.ptx" />
+    <xi:include href="./ch-community-collaboration/ch-community-collaboration.ptx" />
+    
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
 

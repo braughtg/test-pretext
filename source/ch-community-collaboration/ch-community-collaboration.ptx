@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter 
+  xml:id="ch-community-collaboration"
+  label="ch-community-collaboration"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Community and Collaboration</title>
+
+  <introduction>
+    <p>
+      This topic focuses on FOSS communities.  It looks at what they are, how they are organized, the principles on which they operate and the roles that the members take on.  We also begin to look at some of the tools and processes that these communities use to support those principles and coordinate their work. We will see how git and GitHub work together to allow FOSS communities to share their work and to collaborate.  We will also see how forks and clones make it possible for a diverse and distributed group of contributors to work asynchronously and to contribute useful changes back to the upstream.  
+    </p>
+
+    <p>
+      In this and the next several chapters you will use a copy of the FarmData2 project repository to gain hands-on experience using use git and GitHub.  These activities will strengthen your understanding of git, GitHub and the ways in which FOSS communities collaborate.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-foss-communities.ptx" />
+  <xi:include href="sec-github-account.ptx" />
+  <xi:include href="sec-issue-tracker.ptx" />
+  <xi:include href="sec-basic-foss-workflow.ptx" />
+  <xi:include href="sec-forking-the-upstream.ptx" />
+  <xi:include href="sec-development-environment.ptx" />
+  <xi:include href="sec-cloning-your-origin.ptx" />
+  <xi:include href="sec-review-and-reflection.ptx" />
+  <xi:include href="sec-extra-practice.ptx" />
+</chapter>

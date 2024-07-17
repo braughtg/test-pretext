@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter 
+  xml:id="ch-introduction"
+  label="ch-introduction"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Introduction</title>
+
+  <introduction>
+    <p>
+      Preliminary information for the instructor and the student.
+    </p>
+
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-instructor-intro.ptx" />
+  <xi:include href="sec-student-intro.ptx" />
+</chapter>

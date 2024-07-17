@@ -21,7 +21,7 @@
     <!-- Style of fill-in-the-blanks: -->
     <fillin textstyle="underline" mathstyle="shade" />
     <!-- You can set a watermark: -->
-    <!-- <watermark scale="0.5">DRAFT</watermark> -->
+    <watermark scale="1.0">DRAFT</watermark>
   </common>
 
 
@@ -33,7 +33,7 @@
     <!-- Set which marked elements are included in this version: -->
     <!-- See
     https://pretextbook.org/doc/guide/html/publication-file-source.html#publication-file-source-version -->
-    <!-- <version include="videos labs"/> -->
+    <version include="instructor linux-kit-client"/>
   </source>
 
   <numbering>
@@ -60,7 +60,7 @@
   <!-- for printing; set @sides="two" if the printing woudl be two- -->
   <!-- sided.  @pageref="yes/no" controls whether page number are   -->
   <!-- included in cross-references                                 -->
-  <latex print="no" sides="two" font-size="10" draft="no">
+  <latex print="yes" sides="two" font-size="10" draft="no">
     <!-- Control text justification and bottom page behavior: -->
     <page right-alignment="flush" bottom-alignment="ragged" />
     <!-- Add content to \geometry{}: -->

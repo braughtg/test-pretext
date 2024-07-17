@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="ch-cc_sec-forking-the-upstream"
+  label="ch-cc_sec-forking-the-upstream"  
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Forking the Upstream Repository</title>
+
+  <p>
+    In <xref ref="ch-cc_sec-basic-foss-workflow" /> you saw how FOSS communities can use a basic workflow to collaborate. Now its time to get some hands-on experience with that workflow. <xref ref="ch-cc_sec-ftu_fig-basic-workflow-fork"/> illustrates first step in the workflow - forking the main project repository.
+  </p>
+
+  <p>
+    In this section you will complete this step by forking the main project repository into your own GitHub space.
+  </p>
+  
+  <p>
+    Note that when working on the GitKit you will not be interacting with the main FarmData2 repository. Instead, you will be interacting with a copy of FarmData2 that was created just for these activities. You will treat this copy as if it is the “Main Project Repo” or the upstream.  This will allow you to practice interacting with an upstream for learning purposes without affecting the main FarmData2 repository. 
+  </p>
+
+  <p>
+    <figure 
+      xml:id="ch-cc_sec-ftu_fig-basic-workflow-fork"
+      label="ch-cc_sec-ftu_fig-basic-workflow-fork"
+      >
+      <caption>
+        Forking the main project repository.
+      </caption>
+      <image source="images/ch-community-collaboration/basic-workflow-fork.png" width="75%">
+        <description>The main project repo is forked into your GitHub space to create your remote copy.
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercises 
+    xml:id="ch-cc_sec-ftu_exs-creating-your-fork"
+    label="ch-cc_sec-ftu_exs-creating-your-fork"
+    >
+    <title>Creating your Fork</title>
+    <introduction>
+      Using your web browser visit the URL that your instructor gave you to use as the upstream repository for these activities. Once on that page, complete the following exercises.
+    </introduction>
+
+    <exercise xml:id="ch-cc_sec-ftu_ex-upstream-url">
+      <statement>
+        <p>
+          Copy the upstream URL from your browswer and paste it here.
+        </p>
+        <p>
+          <var width="45" />
+        </p>
+      </statement>
+
+      <setup>
+        <var>
+          <condition string="^https://github.com/((?!(FarmData2/FarmData2|DickinsonCollege/FarmData2)).)*$">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/DickinsonCollege/FarmData2">
+            <feedback>
+              <p>
+                Double check the upstream URL that you were given by your instructor.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/FarmData2/FarmData2">
+            <feedback>
+              <p>
+                Double check the upstream URL that you were given by your instructor.
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+
+    <exercise 
+      xml:id="ch-cc_sec-ftu_ex-create-your-fork"
+      label="ch-cc_sec-ftu_ex-create-your-fork"
+      >
+      <introduction>
+        <p>
+          Complete the following steps using the upstream repository from <xref ref="ch-cc_sec-ftu_ex-upstream-url" /> 
+        </p>
+      </introduction>
+    
+      <task
+        xml:id="ch-cc_sec-ftu_task-find-fork"
+        label="ch-cc_sec-ftu_task-find-fork"
+        >
+        <statement>
+          <p>
+            Find the "Fork" button on the upstream repository page.
+              <image source="images/ch-community-collaboration/fork-button.png" width="25%">
+                <description>
+                    The fork button.
+                </description>
+              </image>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The fork button is toward the upper right hand corner of the window.
+          </p>
+        </hint>
+      </task>
+    
+      <task
+        xml:id="ch-cc_sec-ftu_task-click-fork"
+        label="ch-cc_sec-ftu_task-click-fork"
+        >
+        <statement>
+          <p>
+            Click the “Fork” button to create your own fork of the upstream repository. Make sure that you create the fork in the GitHub account that you listed in <xref ref="ch-cc_sec-ga_ex-github-account-url" />.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise 
+      xml:id="ch-cc_sec-ftu_ex-fork-url"
+      label="ch-cc_sec-ftu_ex-fork-url"
+      >
+      <statement>
+        <p>
+          Copy the full URL of your fork of the upstream from your browswer's address bar and paste it here.
+        </p>
+        <p>
+          <var width="45" />
+        </p>
+      </statement>
+
+      <setup>
+        <var>
+          <condition string="^https://github.com/.*$">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Be sure to give the full URL similar to <c>https://github.com/MyUserName/myfork</c>).
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+
+  </exercises>
+
+</section>

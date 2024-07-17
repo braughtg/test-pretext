@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="ch-cc_sec-github-account" 
+  label="ch-cc_sec-github-account" 
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>GitHub Account</title>
+
+  <p>
+    You will be using git and GitHub in many of the GitKit activities. In order to use GitHub it is necessary that you have an account.
+  </p>
+
+  <exercises 
+    xml:id="ch-cc_sec-ga_exs-github-account"
+    label="ch-cc_sec-ga_exs-github-account"
+    >
+    <title />
+
+    <p>
+      If you do not have a GitHub account, or would like to have a separate account just for this course, you can create a GitHub account here:  <url href="https://github.com/signup" visual="github.com/signup">https://github.com/signup</url>
+    </p>
+
+    <exercise 
+      xml:id="ch-cc_sec-ga_ex-github-account-url"
+      label="ch-cc_sec-ga_ex-github-account-url"
+      >
+      <statement>
+        <p>
+          Give the full URL to your GitHub profile, for example <c>https://github.com/yourUsername</c>
+        </p>
+        <p>
+          <var width="45" />
+        </p>
+      </statement>
+      
+      <setup>
+        <var>
+          <condition string="^https://github.com/.*">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Please give the full URL using the format indicated in the question.
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+
+  </exercises>
+
+</section>

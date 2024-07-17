@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section
+xml:id="ch-i_sec-instructor-intro"
+label="ch-i_sec-instructor-intro"
+xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+	<title>To The Instructor</title>
+
+	<introduction>
+		<p>
+			Introduction for the instructor goes here.
+			This will include an overview, advice on picking a KitClient and the deploy instructions.
+		</p>
+	
+	<p>
+		Click the following link to <url
+		href="https://gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod"
+		visual="gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod">
+		Deploy the GitKit
+		</url>
+	</p>
+
+	<p>
+		Instructor guide information will appear in the instructor version of the document as follows:
+		<tabular top="major" bottom="major" left="major" right="major">
+		<col width="100%" />
+			<row>
+			<cell>
+			<p>
+				<alert>Instructor Note:</alert>: Information for the instructor appears here.
+			</p>
+			</cell>
+			</row>
+		</tabular>
+	</p>
+
+	<p>
+		For example an instructor note will appear below in the <em>instructor-web</em>, <em>instructor-print</em>, <em>web</em> and <em>print</em> versions of the document but it will not appear in the  <em>student-web</em> or <em>student-print</em> versions.
+		<commentary component="instructor">
+			<tabular top="major" bottom="major" left="major" right="major">
+			<col width="100%" />
+				<row>
+				<cell>
+				<p>
+					<alert>Instructor Note:</alert>: Information for the instructor appears here.
+				</p>
+				</cell>
+				</row>
+			</tabular>
+		</commentary>
+	</p>
+	</introduction>
+
+
+	<subsection>
+		<title>Linux Kit Client Test</title>
+		<introduction>
+			<p>
+				Other than this line, this section will be empty unless the `linux-kit-client` version is built.
+			</p>
+		</introduction>
+		<p component="linux-kit-client">
+			This text appears only in the Linux Kit Client version.
+		</p>
+	</subsection>
+
+	<subsection>
+		<title>VSCode Kit Client Test</title>
+
+		<introduction>
+			<p>
+				Other than this line, this section will be empty unless the `vscode-kit-client` version is built.
+			</p>
+		</introduction>
+		
+		<p component="vscode-kit-client">
+			This text appears only in the VSCode Kit Client version.
+		</p>
+	</subsection>
+
+</section>

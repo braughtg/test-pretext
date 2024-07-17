@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="ch-cc_sec-the-issue-tracker"
+  label="ch-cc_sec-the-issue-tracker"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>The Issue Tracker</title>
+
+  <introduction>
+    <p>
+      <xref ref="ch-cc_sec-it_fig-issue-tracker"/> shows the FarmData2 issue tracker.  As described in class, FOSS projects often use an <term>issue tracker</term> to maintain a list of bugs to be fixed, features to be added and other tasks to be completed. Thus, the issue tracker is a good place to go in order to find something to work on in a FOSS project.
+    </p>
+
+    <p>
+      <figure 
+        xml:id="ch-cc_sec-it_fig-issue-tracker"
+        label="ch-cc_sec-it_fig-issue-tracker"
+        >
+        <caption>
+          The GitHub issue tracker displaying issues from the FarmData2 project.
+        </caption>
+        <image source="images/ch-community-collaboration/issue-tracker.png">
+          <description>The GitHub issue tracker displaying issues from the FarmData2 project.</description>
+        </image>
+      </figure>
+    </p>
+  </introduction>
+
+  <subsection 
+    xml:id="ch-cc_sec-it_ssec-exploring-the-issue-tracker"
+    label="ch-cc_sec-it_ssec-exploring-the-issue-tracker"
+    >
+    <title>Exploring the Issue Tracker</title>
+
+    <exercises 
+      xml:id="ch-cc_sec-it_exs-exploring-the-issue-tracker"
+      label="ch-cc_sec-it_exs-exploring-the-issue-tracker"
+      >
+      <title />
+      <introduction>
+        <p>
+          Visit the URL that your instructor provided for the FarmData2 upstream repsoitory that you will be using for your course. Click the "Issues" tab near the top of the page to go to the issue tracker.  This will take you to a page similar to the one shown in <xref ref="ch-cc_sec-it_fig-issue-tracker"/>.
+        </p>
+
+        <p>
+          Use the information in the issue tracker to answer the following questions.
+        </p>
+      </introduction>
+    
+      <exercise 
+        xml:id="ch-cc_sec-it_exs-etit_ex_issue-title"
+        label="ch-cc_sec-it_exs-etit_ex_issue-title"
+        >
+        <statement>
+          <p>
+            Every issue has a number and a title.  What is the title of issue #10?
+          </p>
+        </statement>
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Add Missing "that"
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Seeding Report: Allows Invalid Inputs
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect. Be sure you are looking at the correct issue.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Seeding Input: Duplicates appearing in Area Dropdown
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect. Be sure you are looking at the correct issue.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Dickinson College Farm Link
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect. Be sure you are looking at the correct issue.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Use the Issue Tracker and find issue #10.
+          </p>
+        </hint>
+      </exercise>
+    
+      <exercise 
+        xml:id="ch-cc_sec-it_ex_issue-tags"
+        label="ch-cc_sec-it_ex_issue-tags"
+        >
+        <statement>
+          <p>
+            Each issue can have <term>tags</term> that can be used to sort and categorize issues. Select all of the tags that are associated with issue #8?
+          </p>
+        </statement>
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>  
+              <image source="images/ch-community-collaboration/documentation-tag.png">
+                <description>Documentation</description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>  
+              <image source="images/ch-community-collaboration/round1-tag.png">
+                <description>Round1</description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>  
+              <image source="images/ch-community-collaboration/enhancement-tag.png">
+                <description>Enhancement</description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>  
+              <image source="images/ch-community-collaboration/typos-tag.png">
+                <description>Typos</description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect. Be sure you are looking at the correct issue.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>  
+              <image source="images/ch-community-collaboration/bug-tag.png">
+                <description>Bug</description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect. Be sure you are looking at the correct issue.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>  
+              <image source="images/ch-community-collaboration/uiux-tag.png">
+                <description>UI/UX</description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Incorrect. Be sure you are looking at the correct issue.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Use the Issue Tracker and find issue #8.
+          </p>
+        </hint>
+      </exercise>
+
+      <p>
+        More here eventually...
+      </p>
+      
+    </exercises>
+  </subsection>
+
+  <subsection
+    xml:id="ch-cc_sec-it_ssec-claiming-an-issue"
+    label="ch-cc_sec-it_ssec-claiming-an-issue"
+    >
+    <title>Claiming an Issue</title>
+
+    <exercises 
+      xml:id="ch-cc_sec-it_exs-claiming-an-issue"
+      label="ch-cc_sec-it_exs-claiming-an-issue"
+      >
+      <title />
+
+      <introduction>
+        <p>
+          Most projects will have a process by which contributors can <term>claim</term> an issue to work on or have an issue that they want to work on <term>assigned</term> to them. 
+        </p>
+      </introduction>
+      
+      <exercise 
+        xml:id="ch-cc_sec-it_ex-assigned-issues"
+        label="ch-cc_sec-it_ex-assigned-issues"
+        >
+        <statement>
+          <p>
+            Examine the issue tracker for the FarmData2 upstream that you are using for this activity.Some of the issues have already been assigned.  How can you tell that a specific issue has been assigned to someone?
+          </p>
+        </statement>
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                An avitar appears in the asignee column of the issue tracker.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The issue title contains the word "assigned".
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The issue no longer appears in the issue tracker.
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The title of the issue appears in a different color.
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                A comment bubble appears to the right of the issue title.
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Look at the column headers in the issue tracker.
+          </p>
+        </hint>
+      </exercise>
+    
+      <p>
+        More here eventually...
+      </p>
+    </exercises>
+  </subsection>
+
+</section>

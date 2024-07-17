@@ -1,0 +1,26 @@
+{
+    "languageSettings": [
+    ],
+    "dictionaries": ["gitkit-cspell"],
+    "dictionaryDefinitions": [
+      {
+        "name": "gitkit-cspell",
+        "path": "./.gitkit-cspell.txt",
+        "addWords": true
+      }
+    ],
+    "import": ["@cspell/dict-vue/cspell-ext.json"],
+    "ignorePaths": [
+      
+      ".gitkit-cspell.txt",
+      "licenses",
+      ".vscode",
+      ".gitignore",
+      "LICENSE",
+      "LICENSE.txt",
+    ],
+    "enableFiletypes": [
+      "markdown",
+      "pretext",
+    ]
+  }
