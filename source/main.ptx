@@ -14,6 +14,7 @@
     <!-- Include chapters -->    
     <xi:include href="./ch-introduction/ch-introduction.ptx" />
     <xi:include href="./ch-community-collaboration/ch-community-collaboration.ptx" />
+    <xi:include href="./ch-staying-synchronized/ch-staying-synchronized.ptx" />
     
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
