@@ -148,12 +148,6 @@ pretext build instructor-web-linux
 pretext view instructor-web-linux
 ```
 
-**Note:** In order to build the print versions it is necessary to open the `.devcontainer.json` file and uncomment the line:
-```
-  // "image": "oscarlevin/pretext:small",
-```
-Leaving this uncommented will consume space in the CodeSpace and may exhaust the free allocation.
-
 ### Adding Comments to the Instructor Versions
 
 Information for the instructor can be added directly in the source text at the appropriate location and then an instructor version of the full document can be built.
