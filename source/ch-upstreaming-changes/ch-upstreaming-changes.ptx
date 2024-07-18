@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter 
-  xml:id="topic-upstreaming-changes"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<chapter xml:id="topic-upstreaming-changes" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Working Locally and Upstreaming Changes</title>
 
   <introduction>
     <p>
-      This topic focused on working in your local repository using branches and commits and then upstreaming your changes using a pull request. In class we saw a typical workflow for how branches are used to make changes to code and documentation, how those changes are committed to the branch and then how those contributions can be contributed back to the upstream repository on GitHub.  
-
-      While different projects will use different workflows, the one we saw in class and the one you will use through these activities is based on a basic Forking Workflow that is quite commonly used (or adapted) by FOSS projects.
-      •	See https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow if you are interested in Atlassian’s description of the forking workflow.
-
-      These activities builds on those from the previous topic by having you apply the forking workflow to fix the issue that you claimed and then upstream your changes by making a pull request.
-
+      This topic focused on working in your local repository using branches and commits and then upstreaming your changes using a pull request.
+      In class we saw a typical workflow for how branches are used to make changes to code and documentation, how those changes are committed to the branch and then how those contributions can be contributed back to the upstream repository on GitHub.
     </p>
 
-  </introduction>
+    <p>
+      While different projects will use different workflows, the one we saw in class and the one you will use through these activities is based on a basic Forking Workflow that is quite commonly used (or adapted) by FOSS projects.
+      See <url href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow" visual="www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow">Atlassian’s description of the forking workflow.</url>
+    </p>
 
+    <p>
+      These activities build on those from the previous topic by having you apply the forking workflow to fix the issue that you claimed and then upstream your changes by making a pull request.
+    </p>
+  </introduction>
   <!-- include sections -->
   <xi:include href="sec-exploring-your-local-repository.ptx" />
   <xi:include href="sec-creating-a-feature-branch.ptx" />
@@ -30,5 +29,4 @@
   <xi:include href="sec-creating-a-pull-request.ptx" />
   <xi:include href="sec-git-command-summary.ptx" />
   <xi:include href="sec-gitkit-feedback.ptx" />
-
 </chapter>
