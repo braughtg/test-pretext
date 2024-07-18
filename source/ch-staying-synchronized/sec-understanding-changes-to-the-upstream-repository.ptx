@@ -26,210 +26,180 @@
     </figure>
   </p>
 
-  <p>
-    Answer the following questions using <xref ref="fig-changes-merged-into-upstream" />.
-  </p>
-
   <exercise xml:id="ex-merged-commits" xml:label="ex-merged-commits">
-    <statement>
+    <introduction>
       <p>
-        Which commits (give the colors) were merged into the upstream <c>main</c> since the contributor created the feature branch that is shown?
+        Answer the following questions using <xref ref="fig-changes-merged-into-upstream" />.
       </p>
-    </statement>
+    </introduction>
 
 
-    <choices>
-      <choice>
-        <statement>
-          <p>
-            Red
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Red was in <c>main</c> prior to the contributor creating the feature branch.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Yellow
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Yellow was in <c>main</c> prior to the contributor creating the feature branch.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Green
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Green was in <c>main</c> prior to the contributor creating the feature branch.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Blue
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Blue is a commit in the contributor's feature branch.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            Pink
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Yes, pink is one of the colors.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            Lime Green
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Yes, lime green is one of the colors.
-          </p>
-        </feedback>
-      </choice>
-    </choices>
-
-    <hint>
-      <p>
-        Look at which commits are new in upstream that are not part of the local repository's <c>main</c> or feature branch.
-      </p>
-    </hint>
-  </exercise>
-
-  <exercise xml:id="ex-developers-commits" xml:label="ex-developers-commits">
-    <statement>
-      <p>
-        Which of the commits did the managers merge from the contributor's pull request?
-      </p>
-    </statement>
+    <task label="placeholder">
+      <statement>
+        <p>
+          Which commits (give the colors) were merged into the upstream <c>main</c> since the contributor created the feature branch that is shown?
+        </p>
+      </statement>
 
 
-    <choices>
-      <choice>
-        <statement>
-          <p>
-            Red
-          </p>
-        </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Red
+            </p>
+          </statement>
+        </choice>
 
-        <feedback>
-          <p>
-            Red was in <c>main</c> prior to the contributor creating the feature branch.
-          </p>
-        </feedback>
-      </choice>
+        <choice>
+          <statement>
+            <p>
+              Yellow
+            </p>
+          </statement>
+        </choice>
 
-      <choice>
-        <statement>
-          <p>
-            Yellow
-          </p>
-        </statement>
+        <choice>
+          <statement>
+            <p>
+              Green
+            </p>
+          </statement>
+        </choice>
 
-        <feedback>
-          <p>
-            Yellow was in <c>main</c> prior to the contributor creating the feature branch.
-          </p>
-        </feedback>
-      </choice>
+        <choice>
+          <statement>
+            <p>
+              Blue
+            </p>
+          </statement>
+        </choice>
 
-      <choice>
-        <statement>
-          <p>
-            Green
-          </p>
-        </statement>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Pink
+            </p>
+          </statement>
+        </choice>
 
-        <feedback>
-          <p>
-            Green was in <c>main</c> prior to the contributor creating the feature branch.
-          </p>
-        </feedback>
-      </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Lime Green
+            </p>
+          </statement>
+        </choice>
+      </choices>
 
-      <choice correct="yes">
-        <statement>
-          <p>
-            Blue
-          </p>
-        </statement>
+      <hint>
+        <p>
+          Look at which commits are new in upstream that are not part of the local repository's <c>main</c> or feature branch.
+        </p>
+      </hint>
+    </task>
 
-        <feedback>
-          <p>
-            Blue was part of the contributor's feature branch.
-          </p>
-        </feedback>
-      </choice>
 
-      <choice>
-        <statement>
-          <p>
-            Pink
-          </p>
-        </statement>
+    <task label="ex-developers-commits">
+      <statement>
+        <p>
+          Which of the commits did the managers merge from the contributor's pull request?
+        </p>
+      </statement>
 
-        <feedback>
-          <p>
-            Pink was part of another contributor's pull request.
-          </p>
-        </feedback>
-      </choice>
 
-      <choice>
-        <statement>
-          <p>
-            Lime Green
-          </p>
-        </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Red
+            </p>
+          </statement>
 
-        <feedback>
-          <p>
-            Lime green was part of another contributor's pull request.
-          </p>
-        </feedback>
-      </choice>
-    </choices>
+          <feedback>
+            <p>
+              Red was in <c>main</c> prior to the contributor creating the feature branch.
+            </p>
+          </feedback>
+        </choice>
 
-    <hint>
-      <p>
-        Look at which commits are in the local repository's feature branch.
-      </p>
-    </hint>
+        <choice>
+          <statement>
+            <p>
+              Yellow
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Yellow was in <c>main</c> prior to the contributor creating the feature branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Green
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Green was in <c>main</c> prior to the contributor creating the feature branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              Blue
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Blue was part of the contributor's feature branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Pink
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Pink was part of another contributor's pull request.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Lime Green
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Lime green was part of another contributor's pull request.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look at which commits are in the local repository's feature branch.
+        </p>
+      </hint>
+    </task>
   </exercise>
 
   <exercise xml:id="ex-pink-commit-explanation" label="ex-pink-commit-explanation" >
@@ -255,7 +225,8 @@
   </p>
 
   <p>
-    If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to Appendix A (<xref ref="sec-appendix-a-synch" />) of this chapter and follow the instructions there.  Once you complete Appendix A, return to this question.
+    If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to <xref ref="sec-appendix-a-staying-synchronized" /> of this chapter and follow the instructions there.
+    Once you complete <xref ref="sec-appendix-a-staying-synchronized" />, return to this question.
   </p>
 
   <exercise xml:id="ex-origin-main-behind-main" label="ex-origin-main-behind-main" >
@@ -263,15 +234,12 @@
       <p>
         Briefly explain what has happened that caused your origin’s <c>main</c> branch to get behind the upstream <c>main</c>.
       </p>
-  
+
       <p>
         <var width="45" />
       </p>
     </statement>
-    <!-- the response tag should allow for a multi-line textbox
-    <response />
-    -->
+    <!-- the response tag should allow for a multi-line textbox <response /> -->
   </exercise>
-
   </exercises>
 </section>
