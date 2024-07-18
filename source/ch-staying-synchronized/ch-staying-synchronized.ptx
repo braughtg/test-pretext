@@ -8,7 +8,10 @@
 
   <introduction>
     <p>
-      Preliminary information for the instructor and the student.
+      This topic focused on how to keep your local and origin repositories synchronized with the project’s upstream repo. In class you saw how changes contributed to the upstream via pull requests can be merged into the <c>main</c> branch by a project maintainer.  When your changes, and those of your classmates, were merged it left your local and origin repos out of synch with the upstream.  That is, the upstream <c>main</c> branch contains commits that your copies of the <c>main</c> branch do not.
+      </p>
+      <p> 
+      The activities in this chapter will have you <em>synchronize</em> with the upstream.  Synchronizing with the upstream ensures that your local and origin copies of the <c>main</c> branch contain all of the same commits as the upstream <c>main</c> branch. This is something that you will want to do regularly as it ensures that when you create a new feature branch your changes are built on the most up to date version of the project.  Once you have synchronized your repositories you will repeat the process of fixing an issue and upstreaming your changes via a pull request.  You will find an issue in the issue tracker, create a feature branch, fix the issue and make a pull request (PR) to the upstream for your changes.
     </p>
 
   </introduction>
