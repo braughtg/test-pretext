@@ -22,3 +22,16 @@ ln --symbolic --force \
 ln --symbolic --force \
    "../../source/ch-communities-and-collaboration/images" \
    "assets/images/ch-communities-and-collaboration"
+
+ln --symbolic --force \
+   "../../source/ch-upstreaming-changes/images" \
+   "assets/images/ch-upstreaming-changes"
+
+ln --symbolic --force \
+   "../../source/ch-staying-synchronized/images" \
+   "assets/images/ch-staying-synchronized"
+
+ln --symbolic --force \
+   "../../source/ch-merge-conflicts/images" \
+   "assets/images/ch-merge-conflicts"
+   
