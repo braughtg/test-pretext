@@ -33,14 +33,12 @@
       </p>
     </introduction>
 
-
-    <task label="placeholder">
+    <task label="ex-new-commits-merged">
       <statement>
         <p>
           Which commits (give the colors) were merged into the upstream <c>main</c> since the contributor created the feature branch that is shown?
         </p>
       </statement>
-
 
       <choices>
         <choice>
@@ -99,14 +97,12 @@
       </hint>
     </task>
 
-
     <task label="ex-developers-commits">
       <statement>
         <p>
           Which of the commits did the managers merge from the contributor's pull request?
         </p>
       </statement>
-
 
       <choices>
         <choice>
@@ -239,7 +235,9 @@
         <var width="45" />
       </p>
     </statement>
-    <!-- the response tag should allow for a multi-line textbox <response /> -->
+    <!-- the response tag should allow for a multi-line textbox 
+     <response /> 
+     -->
   </exercise>
   </exercises>
 </section>
