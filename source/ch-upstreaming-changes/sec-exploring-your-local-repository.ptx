@@ -1,13 +1,386 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-exploring-your-local-repository"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-exploring-your-local-repository" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Exploring Your Local Repository</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      Like the last activity, you will be working within the KitClient for this activity.
+    </p>
   </introduction>
 
+  <exercises xml:id="ex-exploring-your-local-repository" >
+  <title/>
+  <exercise xml:id="ex-restarting-kitclient" >
+    <p>
+      Restart your KitClient based on the instructions in <xref provisional="a reference back to ch2-restarting your development environment" />.
+    </p>
+  </exercise>
+
+  <p>
+    <xref ref="fig-fork-and-clone-local" /> shows where you should be at the end of the previous set of activities. You will have forked the upstream FarmData2 repository into your own GitHub account. You will then have cloned your fork into a local repository on your computer. Your local files at this point are a copy that reflects the current state of the upstream main branch.
+  </p>
+
+  <p>
+    Let’s explore this state just a little before making the changes that address the issue that you have claimed.
+  </p>
+
+  <p>
+    <figure xml:id="fig-fork-and-clone-local">
+      <caption> Fork, Clone and Local Files. </caption>
+      <image source="images/ch-upstreaming-changes/fork_clone_local_files.png" width="75%">
+        <description>
+          Cloud image of fork, clone, and local files.
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <p>
+    The <c>git log</c> command provides a way to see information about the history of the project.
+    It will display information about the most recent commits that have been made to the repository.
+    By default, <c>git log</c> displays information about the 10 most recent commits.
+    You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
+  </p>
+
+  <p>
+    Ensure that you are in your cloned repo (i.e.
+    the <em>GitKit-FarmData2</em> directory is your working directory).
+    Then use the <c>git log</c> command to display the information about the 3 most recent commits.
+    (If you don't see more than two recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
+  </p>
+
+  <p>
+    A line that begins with "commit" appears at the start of the information about each commit.
+    That line also contains a long string of numbers and letters.
+    That string is called the <term>SHA (secure hashing algorithm)</term> hash.
+    It is a string of digits (0-9) and letters (a-f) known as a hexadecimal number and it provides a unique identifier for the commit.
+    Following the SHA hash is information about the author, the date the commit was made and the commit message that was used to describe the changes.
+  </p>
+
+  <exercise xml:id="ex-sha-of-recent-commit">
+    <title> Use the output from the <c>git log</c> command to answer the following questions about the project history</title>
+
+    <task>
+      <statement>
+        <p>
+          What is the SHA of the most recent commit?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              Choice 1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 1
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              Choice 2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 2
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 3
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 4
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 4
+            </p>
+          </feedback>
+        </choice>
+
+      </choices>
+
+      <hint>
+        <p>
+          Some hint
+        </p>
+      </hint>
+
+      <hint>
+        <p>
+          Another hint
+        </p>
+      </hint>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What is the date of the most recent commit?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              Choice 1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 1
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              Choice 2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 2
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 3
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 4
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 4
+            </p>
+          </feedback>
+        </choice>
+
+      </choices>
+
+      <hint>
+        <p>
+          Some hint
+        </p>
+      </hint>
+
+      <hint>
+        <p>
+          Another hint
+        </p>
+      </hint>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Who is the author of the third most recent commit?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              Choice 1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 1
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              Choice 2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 2
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 3
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 4
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 4
+            </p>
+          </feedback>
+        </choice>
+
+      </choices>
+
+      <hint>
+        <p>
+          Some hint
+        </p>
+      </hint>
+
+      <hint>
+        <p>
+          Another hint
+        </p>
+      </hint>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What is the purpose of the fourth most recent commit?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              Choice 1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 1
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              Choice 2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 2
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 3
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Choice 4
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback for choice 4
+            </p>
+          </feedback>
+        </choice>
+
+      </choices>
+
+      <hint>
+        <p>
+          Some hint
+        </p>
+      </hint>
+
+      <hint>
+        <p>
+          Another hint
+        </p>
+      </hint>
+    </task>
+
+  </exercise>
+  </exercises>
 </section>
