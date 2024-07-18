@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter 
+  xml:id="topic-staying-synchronized"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Staying Synchronized with the Upstream</title>
+
+  <introduction>
+    <p>
+      Preliminary information for the instructor and the student.
+    </p>
+
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-understanding-changes-to-the-upstream-repository.ptx" />
+  <xi:include href="sec-overview-of-synchronizing-with-the-upstream-repository.ptx" />
+  <xi:include href="sec-verifying-the-upstream-remote.ptx" />
+  <xi:include href="sec-creating-the-upstream-remote.ptx" />
+  <xi:include href="sec-pulling-the-upstream-main-branch.ptx" />
+  <xi:include href="sec-pushing-main-to-your-origin.ptx" />
+  <xi:include href="sec-deleting-a-feature-branch.ptx" />
+  <xi:include href="sec-git-command-summary.ptx" />
+  <xi:include href="sec-lets-do-it-again.ptx" />
+  <xi:include href="sec-gitkit-feedback.ptx" />
+  <xi:include href="sec-appendix-a.ptx" />
+</chapter>

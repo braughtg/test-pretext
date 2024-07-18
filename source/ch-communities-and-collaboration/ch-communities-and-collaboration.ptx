@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter 
+  xml:id="topic-communities-and-collaboration"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Communities and Collaboration</title>
+
+  <introduction>
+    <p>
+      Preliminary information for the instructor and the student.
+    </p>
+
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-foss-communities.ptx" />
+  <xi:include href="sec-github-account.ptx" />
+  <xi:include href="sec-the-issue-tracker.ptx" />
+  <xi:include href="sec-basic-foss-workflow.ptx" />
+  <xi:include href="sec-forking-the-upstream.ptx" />
+  <xi:include href="sec-cloning-your-origin.ptx" />
+  <xi:include href="sec-extra-practice.ptx" />
+  <xi:include href="sec-git-command-summary.ptx" />
+  
+</chapter>
