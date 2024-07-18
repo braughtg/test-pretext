@@ -5,9 +5,23 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Understanding Changes to the Upstream Repository</title>
+  <p>If the upstream maintainers decide that the changes in your PR are good for the project, they will merge them into the upstream <c>main</c> branch. That way they become a part of the main project, and everyone can benefit from your work. In class your instructor played the role of an upstream maintainer and demonstrated how the changes contained in pull requests are merged.</p>  
 
-  <introduction>
- 			    <p>Text of section.</p>
-  </introduction>
+  <p>
+    <figure 
+      xml:id="ch-cc_sec-bfw_fig-basic-foss-workflow"
+      label="ch-cc_sec-bfw_fig-basic-foss-workflow"
+      >
+      <caption>
+        The basic FOSS workflow.  
+      </caption>
+      <image source="images/ch-community-collaboration/basic-foss-workflow.png" width="75%">
+        <description>The main project repo is forked into your GitHub space to create your remote copy.  Your remote copy is then cloned into your local development environment to create your local copy. Changes to your local copy are pushed to your remote copy and a pull request is made to the main project.
+        </description>
+      </image>
+    </figure>
+  </p>
+  Figure 1 illustrates the state after several commits have been merged into upstream main.
+  
 
 </section>
