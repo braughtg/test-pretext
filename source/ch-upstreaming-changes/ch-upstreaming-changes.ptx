@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter 
+  xml:id="topic-upstreaming-changes"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Working Locally and Upstreaming Changes</title>
+
+  <introduction>
+    <p>
+      Preliminary information for the instructor and the student.
+    </p>
+
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-exploring-your-local-repository.ptx" />
+  <xi:include href="sec-creating-a-feature-branch.ptx" />
+  <xi:include href="sec-switching-branches.ptx" />
+  <xi:include href="sec-editing-local-files.ptx" />
+  <xi:include href="sec-staging-changes.ptx" />
+  <xi:include href="sec-commiting-to-your-local-repository.ptx" />
+  <xi:include href="sec-pushing-a-branch-to-your-origin.ptx" />
+  <xi:include href="sec-creating-a-pull-request.ptx" />
+  <xi:include href="sec-git-command-summary.ptx" />
+  <xi:include href="sec-gitkit-feedback.ptx" />
+
+</chapter>
