@@ -33,12 +33,14 @@
       </p>
     </introduction>
 
+
     <task label="ex-new-commits-merged">
       <statement>
         <p>
           Which commits (give the colors) were merged into the upstream <c>main</c> since the contributor created the feature branch that is shown?
         </p>
       </statement>
+
 
       <choices>
         <choice>
@@ -97,12 +99,14 @@
       </hint>
     </task>
 
+
     <task label="ex-developers-commits">
       <statement>
         <p>
           Which of the commits did the managers merge from the contributor's pull request?
         </p>
       </statement>
+
 
       <choices>
         <choice>
@@ -198,7 +202,7 @@
     </task>
   </exercise>
 
-  <exercise xml:id="ex-pink-commit-explanation" label="ex-pink-commit-explanation" >
+  <exercise xml:id="ex-pink-commit-explanation">
     <statement>
       <p>
         Briefly explain how the pink commit could have gotten into the upstream <c>main</c>.
@@ -221,8 +225,8 @@
   </p>
 
   <p>
-    If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to <xref ref="sec-appendix-a-staying-synchronized" /> of this chapter and follow the instructions there.
-    Once you complete <xref ref="sec-appendix-a-staying-synchronized" />, return to this question.
+    If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to <xref ref="topic-appendix-a-staying-synchronized" /> of this chapter and follow the instructions there.
+    Once you complete <xref ref="topic-appendix-a-staying-synchronized" />, return to this question.
   </p>
 
   <exercise xml:id="ex-origin-main-behind-main" label="ex-origin-main-behind-main" >
@@ -235,9 +239,7 @@
         <var width="45" />
       </p>
     </statement>
-    <!-- the response tag should allow for a multi-line textbox 
-     <response /> 
-     -->
+    <!-- the response tag should allow for a multi-line textbox <response /> -->
   </exercise>
   </exercises>
 </section>

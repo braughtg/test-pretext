@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="sec-appendix-a-staying-synchronized"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-appendix-a-staying-synchronized" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Appendix A</title>
 
+  <!--
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      Text of section.
+    </p>
   </introduction>
+  -->
+  <p>
+    The information in this appendix is only important if you were directed here from <xref ref="ex-origin-main-behind-main" />, otherwise it may be ignored.
+  </p>
 
+  <p>
+    You found in <xref ref="ex-origin-main-behind-main" /> that the <c>main</c> branch in your origin repository was not behind the <c>main</c> branch in the upstream repository.
+    This would have happened if you created your fork and clone after the instructor merged the class pull requests for the Round 1 issues.
+    You can recover from this situation using the commands below.
+  </p>
+
+  <p>
+    Ensure that you are in the GitKit-FarmData2 directory then use the following commands:
+    <ol>
+      <li>
+        <c>git switch main</c>
+      </li>
+
+      <li>
+        <c>git reset --hard 96d9ecee396a8a6b4bda3b2c787deeec6c353217</c>
+      </li>
+
+      <li>
+        <c>git push --force origin main</c>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    You should now return to <xref ref="ex-origin-main-behind-main" /> and the <c>main</c> branch in your origin should now be behind the <c>main</c> branch in the upstream.
+  </p>
 </section>
