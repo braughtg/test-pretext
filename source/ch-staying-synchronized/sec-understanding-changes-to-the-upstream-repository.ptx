@@ -1,27 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-understanding-changes-to-the-upstream-repository"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-understanding-changes-to-the-upstream-repository" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Understanding Changes to the Upstream Repository</title>
-  <p>If the upstream maintainers decide that the changes in your PR are good for the project, they will merge them into the upstream <c>main</c> branch. That way they become a part of the main project, and everyone can benefit from your work. In class your instructor played the role of an upstream maintainer and demonstrated how the changes contained in pull requests are merged.</p>  
 
   <p>
-    <figure 
-      xml:id="ch-cc_sec-bfw_fig-basic-foss-workflow"
-      label="ch-cc_sec-bfw_fig-basic-foss-workflow"
-      >
-      <caption>
-        The basic FOSS workflow.  
-      </caption>
-      <image source="images/ch-community-collaboration/basic-foss-workflow.png" width="75%">
-        <description>The main project repo is forked into your GitHub space to create your remote copy.  Your remote copy is then cloned into your local development environment to create your local copy. Changes to your local copy are pushed to your remote copy and a pull request is made to the main project.
+    If the upstream maintainers decide that the changes in your PR are good for the project, they will merge them into the upstream <c>main</c> branch.
+    That way they become a part of the main project, and everyone can benefit from your work.
+    In class your instructor played the role of an upstream maintainer and demonstrated how the changes contained in pull requests are merged.
+  </p>
+
+  <exercises xml:id="ex-understanding-changes-to-the-upstream-repository">
+  <title />
+  <p>
+    <xref ref="fig-changes-merged-into-upstream" /> illustrates the state after several commits have been merged into upstream <c>main</c>.
+  </p>
+
+  <p>
+    <figure xml:id="fig-changes-merged-into-upstream" >
+      <caption> Changes Merged into Upstream. </caption>
+      <image source="images/ch-staying-synchronized/changes-merged-into-upstream.png" width="75%">
+        <description>
+          Cloud image of the changes merged into upstream.
         </description>
       </image>
     </figure>
   </p>
-  Figure 1 illustrates the state after several commits have been merged into upstream main.
-  
 
+  <p>
+    Answer the following questions using <xref ref="fig-changes-merged-into-upstream" />.
+  </p>
+
+  <exercise xml:id="ex-merged-commits" xml:label="ex-merged-commits">
+    <statement>
+      <p>
+        Which commits (give the colors) were merged into the upstream <c>main</c> since the contributor created the feature branch that is shown?
+      </p>
+    </statement>
+
+
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            Red
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Red was in <c>main</c> prior to the contributor creating the feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Yellow
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Yellow was in <c>main</c> prior to the contributor creating the feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Green
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Green was in <c>main</c> prior to the contributor creating the feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Blue
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Blue is a commit in the contributor's feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            Pink
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Yes, pink is one of the colors.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            Lime Green
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Yes, lime green is one of the colors.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    <hint>
+      <p>
+        Look at which commits are new in upstream that are not part of the local repository's <c>main</c> or feature branch.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-developers-commits" xml:label="ex-developers-commits">
+    <statement>
+      <p>
+        Which of the commits did the managers merge from the contributor's pull request?
+      </p>
+    </statement>
+
+
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            Red
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Red was in <c>main</c> prior to the contributor creating the feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Yellow
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Yellow was in <c>main</c> prior to the contributor creating the feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Green
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Green was in <c>main</c> prior to the contributor creating the feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            Blue
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Blue was part of the contributor's feature branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Pink
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Pink was part of another contributor's pull request.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Lime Green
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Lime green was part of another contributor's pull request.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    <hint>
+      <p>
+        Look at which commits are in the local repository's feature branch.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-pink-commit-explanation" label="ex-pink-commit-explanation" >
+    <statement>
+      <p>
+        Briefly explain how the pink commit could have gotten into the upstream <c>main</c>.
+      </p>
+
+      <p>
+        <var width="45" />
+      </p>
+    </statement>
+  </exercise>
+
+  <p>
+    GitHub will inform you when the active branch in your origin repo is out of synch with the upstream.
+  </p>
+
+  <p>
+    Use your browser to visit your origin repo on GitHub and ensure that the <c>main</c> branch is selected.
+    Find the part of the page that indicates that your <c>main</c> branch is <em>behind</em> (i.e.
+    not the same as, or out of synch with) the upstream <c>main</c>.
+  </p>
+
+  <p>
+    If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to Appendix A (<xref ref="sec-appendix-a-synch" />) of this chapter and follow the instructions there.  Once you complete Appendix A, return to this question.
+  </p>
+
+  <exercise xml:id="ex-origin-main-behind-main" label="ex-origin-main-behind-main" >
+    <statement>
+      <p>
+        Briefly explain what has happened that caused your origin’s <c>main</c> branch to get behind the upstream <c>main</c>.
+      </p>
+  
+      <p>
+        <var width="45" />
+      </p>
+    </statement>
+    <!-- the response tag should allow for a multi-line textbox
+    <response />
+    -->
+  </exercise>
+
+  </exercises>
 </section>
