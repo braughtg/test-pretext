@@ -5,7 +5,7 @@
 
   <exercises xml:id="ex-pulling-the-upstream-main-branch">
   <title />
-  <exercise xml:id="ex-merged-commits" xml:label="ex-merged-commits">
+  <exercise xml:id="ex-active-branch" xml:label="ex-active-branch">
     <title> The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo. This chapter walks you through that process </title>
 
     <task label="ex-git-pull-change-command">
