@@ -3,29 +3,37 @@
 <section xml:id="topic-verifying-the-upstream-remote" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title component="linux-kit-client">Creating the Upstream Remote</title>
   <title component="vscode-kit-client">Verifying the Upstream Remote</title>
-  <p>
+  <p component="linux-kit-client">
     In order to pull changes from the upstream you will need to tell your local repository where the upstream is.
     In earlier figures, dotted orange lines were used to indicate that your local repository knew about the origin and that the origin knew about the upstream.
     But there was no orange dotted line from your local repository to the upstream.
     That is because, by default, your local repository isn’t aware of the upstream.
   </p>
 
-  <exercises xml:id="ex-verifying-the-upstream-remote" component="linux-kit-client">
+  <p component="vscode-kit-client">
+    When you open a fork in GitPod, GitPod clones its repository.
+    This creates a remote named origin that points to the repository it cloned.
+    When you clone a repository, this is typically the only remote created automatically.
+    But GitPod goes a step further.
+    It also creates upstream remote that points to the repository that your origin forked from.
+  </p>
+
+  <exercises xml:id="ex-verifying-the-upstream-remote">
   <title />
   <exercise xml:id="ex-setting-upstream">
-    <title> In order to pull from the upstream you will first need to make your local repository aware of the upstream. This is done by setting a remote for it.  This question will walk you through that process </title>
-
+    <title component="vscode-kit-client">To synchronize your fork, you will need to use this upstream remote. First, let's confirm that GitPod correctly created the upstream remote. This question will walk you through that process.</title>
+    <title component="linux-kit-client"> In order to pull from the upstream you will first need to make your local repository aware of the upstream. This is done by setting a remote for it.  This question will walk you through that process </title>
     <task label="ex-git-remote-command">
       <statement>
         <p>
-          The <c>git remote -v</c> command lists the names and URLs of all of the remote repositories (or just remotes for short) that your local repo knows about.
+          The <c>git remote -v</c> command lists the names and URLs of all of the remote repositories (or just <term>remotes</term> for short) that your local repo knows about.
           Run this command in the directory that contains your local repository.
         </p>
       </statement>
     </task>
 
 
-    <task label="ex-git-remote-indicated">
+    <task label="ex-git-remote-indicated" component="linux-kit-client">
       <statement>
         <p>
           How is the origin remote indicated in part a represented in <xref ref="fig-changes-merged-into-upstream" />?
@@ -37,8 +45,19 @@
       </statement>
     </task>
 
+    <task label="ex-git-remote-confirmation" component="vscode-kit-client">
+      <statement>
+        <p>
+          Confirm that <c>upstream</c> points to the upstream project on GitHub. How did you confirm it?
+        </p>
 
-    <task label="ex-remote-url">
+        <p>
+          TEXTBOX HERE
+        </p>
+      </statement>
+    </task>
+
+    <task label="ex-remote-url" component="linux-kit-client">
       <statement>
         <p>
           To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo.
@@ -54,7 +73,7 @@
     </task>
 
 
-    <task label="ex-git-remote-command">
+    <task label="ex-git-remote-command" component="linux-kit-client">
       <statement>
         <p>
           The git remote command can also be used to add a new remote to your local repo.
@@ -66,13 +85,13 @@
         </p>
 
         <p>
-Use the above command to create a remote named <c>upstream</c> that points to the <em>FarmData2 upstream repository</em> that you are using for this activity.
+          Use the above command to create a remote named <c>upstream</c> that points to the <em>FarmData2 upstream repository</em> that you are using for this activity.
         </p>
       </statement>
     </task>
 
 
-    <task xml:id="ex-confirm-remote" label="ex-confirm-remote">
+    <task xml:id="ex-confirm-remote" label="ex-confirm-remote" component="linux-kit-client">
       <statement>
         <p>
           Use the <c>git remote -v</c> command to confirm that the new upstream remote has been added.
@@ -84,7 +103,9 @@ Use the above command to create a remote named <c>upstream</c> that points to th
     <task label="ex-upstream-representation">
       <statement>
         <p>
-          The upstream remote that you added in <xref ref="ex-confirm-remote" /> provides your local repo with the information it needs to find the upstream repo.  In git this information is represented using a URL. How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
+          The upstream remote provides your local repo with the information it needs to find the upstream repo.
+          In git this information is represented using a URL.
+          How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
         </p>
 
         <p>
@@ -94,8 +115,9 @@ Use the above command to create a remote named <c>upstream</c> that points to th
     </task>
   </exercise>
 
-  <p>
-        Note that you will only need to set the upstream remote once for a repository.  Once the upstream remote is set you will be able to pull from the upstream repo as often as is necessary.
+  <p component="linux-kit-client">
+    Note that you will only need to set the upstream remote once for a repository.
+    Once the upstream remote is set you will be able to pull from the upstream repo as often as is necessary.
   </p>
   </exercises>
 </section>
