@@ -15,8 +15,6 @@ Licensing information for the GitKit activities can be found in the [LICENSE.md]
 
 ## PreTeXt References
 
-THIS NEEDS TO BE ORGANIZED
-
 These are some helpful PreTeXt references:
 - The PreTeXt guide:
   - https://pretextbook.org/doc/guide/html/guide-toc.html
@@ -98,23 +96,44 @@ Notes:
 - Format code by right clicking in document and choosing "Format document with..." and then the “preTeXt-tools” formatter.
 - `<exercises>` has an empty `<title \>` to prevent an "Exercises" heading from appearing.
 - The `...` can be most any content.
-- If a section is short and does not require sub-sections then the `<subsection>` division should be omitted.
+- If a section is short and does not require subsections then the `<subsection>` division should be omitted.
 
 ### `xml:id` Naming Conventions
 
 Every division/element can have an `xml:id` attribute and some elements are required to have one. 
 
-The `xml:id`s are required to be unique across the entire text.
+The `xml:id`s are required to be unique across the entire text.  To help ensure that `xml:id`s are unique and discoverable they will be prefixed with the type of thing being linked to using the following previxes:
+<dl>
+  <dt>fig-</dt>
+  <dd>for a Figure</dd>
+  <dt>table-</dt>
+  <dd>for a Table</dd>
+  <dt>topic-</dt>
+  <dd>A topic is a block of text at any level of abstraction. Thus it can be used for a section, a subsection, a paragraph, a chapter, or even a part.</dd>
+  <dt>ex-</dt>
+  <dd>An `<exercises>` division, an `<exercise>` element, or a `<task>` element.</dd>
+</dl>
+
+Other cases:
+- If multiple chapters have the same section name (e.g. Appendix-A, Git Command Summary, etc) then append the `xml:id` of the chapter. For example `<section xml:id=”topic-appendix-a-chapter-name”>`
+- If a division/element will appear only in the `linux` or `vscode` version of the text its `xml:id` should have a suffix indicating its version.  
+- If two divisions/elements provide alternate content for the `linux` and `vscode` versions their `xml:ids` will be the same except for the suffix. 
+
+Additional general suggestions:
+1. Use meaningful names that name or describe the thing they name.
+2. Use only lowercase letters and numbers.
+3. Use only hyphens to separate words in multiword names: `this-is-an-example`
+4. Avoid including information that may change (like its structural information: e.g., fig-sec1-subsec2-flow). This avoids having to rename it if you move it to another section.
 
 The following elements will always have an `xml:id`:
 - `<section xml:id="topic-section-title">`
-  - If multiple chapters have the same section name (e.g. Appendix-A, Git Command Summary, etc) then append the `xml:id` of the section. For example `<section xml:id=”topic-appendix-a-chapter-name”>`
 - `<figure xml:id="fig-figure-descriptions">`
 - `<exercises xml:id="ex-section-title">`
 - `<exercise xml:id="ex-exercise-description" label="ex-exercise-description>`
+- `<task xml:id="ex-task-description" label="ex-task-description>`
 - Any division or element that needs to be cross referenced using an `xref`. 
 
-In addition, `<exercise>` elements are recognized by Runestone and must have a `label` attribute. For simplicity and consistency if an element has both an `xml:id` attribute and a `label` attribute they will have the same value.
+In addition, `<exercise>` and `<task>` elements are recognized by Runestone and must have a `label` attribute. For simplicity and consistency if an element has both an `xml:id` attribute and a `label` attribute they will have the same value.
 
 For example, an `<exercise>` element following the naming convention defined below might have the `xml:id` and `label` as follows:
 
@@ -131,31 +150,7 @@ Any division/element with an `xml:id` can then be linked to by using an `xref` a
 <xref ref="ex-foss-community-principles-q1"/>
 ```
 
-#### Basics
-
-1. Use only lowercase letters and numbers.
-2. Use only hyphens to separate words in multiword names: `this-is-an-example`
-3. Prefix each `xml:id` with the type of thing being linked to. Here is a list of prefixes that can be used:
-    <dl>
-      <dt>fig-</dt>
-      <dd>for a Figure</dd>
-      <dt>table-</dt>
-      <dd>for a Table</dd>
-      <dt>topic-</dt>
-      <dd>A topic is a block of text at any level of abstraction. Thus it can be used for a section, a subsection, a paragraph, a chapter, or even a part.</dd>
-      <dt>ex-</dt>
-      <dd>An exercises division or a exercise element.</dd>
-    </dl>
-
-#### Advice
-
-1. Use meaningful names that name or describe the thing they name.
-2. Avoid including information that may change (like its structural information: e.g., fig-sec1-subsec2-flow). This avoids having to rename it if you move it to another section.
-3. Only add `xml:id` and `label` attributes to elements that need them.
-    * `If PreTeXt or Runestone require it, then do so.
-    * If you need to link to something from another section, then do so.
-
-#### Tip for finding IDs for `xref`s
+#### Tip for Discovering Existing `xml:id`s for `xref`s
 
 Use `grep` to find existing labels to link to. For example:
 
@@ -280,11 +275,15 @@ Note:
 Content specific to a given kit client is indicated by adding a `component` attribute to to divisions/elements as follows:
 
 ```
-  <p component="linuc-kit-client">
+  <p 
+    component="linuc-kit-client"
+    xml:id="topic-some-stuff-linux">
     This text appears only in the Linux Kit Client versions.
   </p>
 
-  <p component="vscode-kit-client">
+  <p 
+    component="vscode-kit-client"
+    xml:id="topic-some-stuff-vscode">
     This text appears only in the VSCode Kit Client versions.
   </p>
 ```
