@@ -30,40 +30,49 @@
         <p>
           How is the origin remote indicated in part a represented in <xref ref="fig-changes-merged-into-upstream" />?
         </p>
+
         <p>
           TEXTBOX HERE or MULTIPLE CHOICE
         </p>
       </statement>
     </task>
 
-   <task label="ex-remote-url">
+
+    <task label="ex-remote-url">
       <statement>
         <p>
-          To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo. Use your browser to navigate to the <em>upstream FarmData2 repo</em> that you are using for this course and give its URL here. Hint: You can find the upstream using the link from your origin repo in GitHub. Once you find the upstream, you can get the URL by using the “Code” button in the upstream repo, it ends in <c>.git</c>.
+          To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo.
+          Use your browser to navigate to the <em>upstream FarmData2 repo</em> that you are using for this course and give its URL here.
+          Hint: You can find the <c>upstream</c> using the link from your origin repo in GitHub.
+          Once you find the upstream, you can get the URL by using the “Code” button in the upstream repo, it ends in <c>.git</c>.
         </p>
+
         <p>
           TEXTBOX HERE with REGULAR EXPRESSION
         </p>
       </statement>
     </task>
 
-       <task label="ex-git-remote-command">
+
+    <task label="ex-git-remote-command">
       <statement>
         <p>
-          The git remote command can also be used to add a new remote to your local repo.  The format for this command is: 
-          </p>
-          <p>
-<c>
-	git remote add &lt;remote repo name&gt; &lt;remote repo URL&gt;</c>
-  </p>
-<p>
-Use the above command to create a remote named upstream that points to the <em>FarmData2 upstream repository</em> that you are using for this activity.
+          The git remote command can also be used to add a new remote to your local repo.
+          The format for this command is:
         </p>
 
+        <p>
+          <c>	git remote add &lt;remote repo name&gt; &lt;remote repo URL&gt;</c>
+        </p>
+
+        <p>
+Use the above command to create a remote named <c>upstream</c> that points to the <em>FarmData2 upstream repository</em> that you are using for this activity.
+        </p>
       </statement>
     </task>
 
-       <task label="ex-confirm-remote">
+
+    <task xml:id="ex-confirm-remote" label="ex-confirm-remote">
       <statement>
         <p>
           Use the <c>git remote -v</c> command to confirm that the new upstream remote has been added.
@@ -72,20 +81,21 @@ Use the above command to create a remote named upstream that points to the <em>F
     </task>
 
 
-       <task label="ex-git-remote-indicated">
+    <task label="ex-upstream-representation">
       <statement>
         <p>
-          The upstream remote that you added in part e provides your local repo with the information it needs to find the upstream repo.  In git this information is represented using a URL. How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
+          The upstream remote that you added in <xref ref="ex-confirm-remote" /> provides your local repo with the information it needs to find the upstream repo.  In git this information is represented using a URL. How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
         </p>
+
         <p>
           TEXTBOX HERE or MULTIPLE CHOICE
         </p>
       </statement>
     </task>
+  </exercise>
 
-      </exercise>
-      <p>
+  <p>
         Note that you will only need to set the upstream remote once for a repository.  Once the upstream remote is set you will be able to pull from the upstream repo as often as is necessary.
-      </p>
-      </exercises>
-    </section>
+  </p>
+  </exercises>
+</section>
