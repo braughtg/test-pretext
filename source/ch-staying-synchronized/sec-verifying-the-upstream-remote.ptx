@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-verifying-the-upstream-remote"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
-  <title>Verifying the Upstream Remote</title>
+<section xml:id="topic-verifying-the-upstream-remote" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title component="linux-kit-client">Creating the Upstream Remote</title>
+  <title component="vscode-kit-client">Verifying the Upstream Remote</title>
+  <p>
+    In order to pull changes from the upstream you will need to tell your local repository where the upstream is.
+    In earlier figures, dotted orange lines were used to indicate that your local repository knew about the origin and that the origin knew about the upstream.
+    But there was no orange dotted line from your local repository to the upstream.
+    That is because, by default, your local repository isn’t aware of the upstream.
+  </p>
 
-  <introduction>
- 			    <p>Text of section.</p>
-  </introduction>
+  <exercises xml:id="ex-verifying-the-upstream-remote" component="linux-kit-client">
+  <title />
+  <exercise xml:id="ex-setting-upstream">
+    <title> In order to pull from the upstream you will first need to make your local repository aware of the upstream. This is done by setting a remote for it.  This question will walk you through that process </title>
 
+    <task label="ex-git-remote-command">
+      <statement>
+        <p>
+          The <c>git remote -v</c> command lists the names and URLs of all of the remote repositories (or just remotes for short) that your local repo knows about.
+          Run this command in the directory that contains your local repository.
+        </p>
+      </statement>
+    </task>
+
+
+    <task label="ex-git-remote-indicated">
+      <statement>
+        <p>
+          How is the origin remote indicated in part a represented in <xref ref="fig-changes-merged-into-upstream" />?
+        </p>
+      </statement>
+    </task>
+
+
+    <task label="ex-git-remote-url">
+      <statement>
+        <p>
+          To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo.
+          Use your browser to navigate to the upstream <em>FarmData2</em> repo that you are using for this course and give its URL here.
+          Hint: You can find the upstream using the link from your origin repo in GitHub.
+          Once you find the upstream, you can get the URL by using the “Code” button in the upstream repo, it ends in <c>.git</c>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+  The <c>git remote</c> command can also be used to add a new remote to your local repo.
+  The format for this command is: <c>git remote add <remote repo name> <remote repo URL> </c> Use the above command to create a remote named <em>upstream</em> that points to the <em>FarmData2 upstream</em> repository that you are using for this activity.
+  </exercises>
 </section>
