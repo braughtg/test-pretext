@@ -25,15 +25,13 @@
   <exercises xml:id="ex-exploring-your-local-repository" >
   <title/>
   <exercise xml:id="ex-restarting-kitclient-for-synching" >
-    <title> Restart your KitClient based on the instructions in <xref provisional="a reference back to ch2-restarting your development environment" />
-
-    .
-    </title>
+    <p> Restart your KitClient based on the instructions in <xref provisional="a reference back to ch2-restarting your development environment" />
+    </p>
   </exercise>
 
   <exercise xml:id="ex-setting-upstream">
-    <title component="vscode-kit-client">To synchronize your fork, you will need to use this upstream remote. First, let's confirm that GitPod correctly created the upstream remote. This question will walk you through that process.</title>
-    <title component="linux-kit-client"> In order to pull from the upstream you will first need to make your local repository aware of the upstream. This is done by setting a remote for it.  This question will walk you through that process </title>
+    <introduction component="vscode-kit-client">To synchronize your fork, you will need to use this upstream remote. First, let's confirm that GitPod correctly created the upstream remote. This exercise will walk you through that process.</introduction>
+    <introduction component="linux-kit-client"> In order to pull from the upstream you will first need to make your local repository aware of the upstream. This is done by setting a remote for it.  This exercise will walk you through that process </introduction>
     <task label="ex-git-remote-command">
       <statement>
         <p>
@@ -63,11 +61,8 @@
           Confirm that <c>upstream</c> points to the upstream project on GitHub.
           How did you confirm it?
         </p>
-
-        <p>
-          TEXTBOX HERE
-        </p>
       </statement>
+      <response />
     </task>
 
 
