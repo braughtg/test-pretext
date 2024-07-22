@@ -59,32 +59,57 @@ The code below shows the skeleton of a prototypcial section:
   xml:id="topic-section-title"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
-  <title>...</title>
+  <title>Section Title</title>
+  <introduction>
+    ...
+  </introduction>
+  <exercises>
+    <title />
+    ...
+    <exercise
+      xml:id="ex-some-exercise"
+      label="ex-some-exercise">
+    </exercise>
+    ...
+  </exercises>
+  <conclusion>
+    ...
+  </conclusion>
+</section>
+```
+
+### Including a Subsection
+
+If a section contains subsections then each `<subsection>` gets its own `<exercises>` division as follows:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section
+  xml:id="topic-section-title"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Section Title</title>
   <introduction>
     ...
   </introduction>
   <subsection>
-    <exercises
-      xml:id="ex-section-title">
+    <title>Subsection Title</title>
+    <introduction>
+      ...
+    </introduction>
+    <exercises>
       <title />
       ...
       <exercise
-        xml:id="ex-description-of-exercise">
+        xml:id="ex-some-exercise"
+        label="ex-some-exercise">
       </exercise>
       ...
     </exercises>
-    <subsubsection>
-      <exercises
-        xml:id="ex-subsection-title">
-        <title />
-        ...
-        <exercise
-          xml:id="ex-description-of-exercise">
-        </exercise>
-        ...
-      </exercises>
-    </subsubsection>
+    <conclusion>
     ...
+    </conclusion>
   </subsection>
   <conclusion>
     ...
@@ -96,53 +121,68 @@ Notes:
 - Format code by right clicking in document and choosing "Format document with..." and then the “preTeXt-tools” formatter.
 - `<exercises>` has an empty `<title \>` to prevent an "Exercises" heading from appearing.
 - The `...` can be most any content.
-- If a section is short and does not require subsections then the `<subsection>` division should be omitted.
 
-### `xml:id` Naming Conventions
+### `xml:id`s and `label`s
 
-Every division/element can have an `xml:id` attribute and some elements are required to have one. 
+`xml:id`s and `label`s are attributes assigned divisions/elements that help to identify them.  Both `xml:id`s and `labels` are required to be unique across the entire text.
 
-The `xml:id`s are required to be unique across the entire text.  To help ensure that `xml:id`s are unique and discoverable they will be prefixed with the type of thing being linked to using the following previxes:
-<dl>
-  <dt>fig-</dt>
-  <dd>for a Figure</dd>
-  <dt>table-</dt>
-  <dd>for a Table</dd>
-  <dt>topic-</dt>
-  <dd>A topic is a block of text at any level of abstraction. Thus it can be used for a section, a subsection, a paragraph, a chapter, or even a part.</dd>
-  <dt>ex-</dt>
-  <dd>An `<exercises>` division, an `<exercise>` element, or a `<task>` element.</dd>
-</dl>
+A division/element in the preTeXt document will have an `xml:id` attribute if:
+  - We want to create a link (`xref`) to it from somewhere else in the document.
+  - The division/element is an `<exercise>` and `<task>`.
+   
+Every `<exercise>` and `<task>` will have both an `xml:id` and a `label` attribute with the same value.
+  - The `label` attribute is required by Runestone to generate database identifiers for the questions and student responses.  
+  - Including an `xml:id` with the same value ensures that the `labels` will be unique becasue the preTeXt build checks for duplicate labels.
 
-Other cases:
-- If multiple chapters have the same section name (e.g. Appendix-A, Git Command Summary, etc) then append the `xml:id` of the chapter. For example `<section xml:id=”topic-appendix-a-chapter-name”>`
-- If a division/element will appear only in the `linux` or `vscode` version of the text its `xml:id` should have a suffix indicating its version.  
-- If two divisions/elements provide alternate content for the `linux` and `vscode` versions their `xml:ids` will be the same except for the suffix. 
+#### Naming Conventions
 
-Additional general suggestions:
-1. Use meaningful names that name or describe the thing they name.
-2. Use only lowercase letters and numbers.
-3. Use only hyphens to separate words in multiword names: `this-is-an-example`
-4. Avoid including information that may change (like its structural information: e.g., fig-sec1-subsec2-flow). This avoids having to rename it if you move it to another section.
+To help ensure that `xml:id` and `label` values are unique across the entire text and are also discoverable they will follow a set of rules:
+- Use only lowercase letters and numbers.
+- Use only hyphens to separate words in multiword names: `this-is-an-example`
+- Prefix the name with the type of thing being linked to using the following previxes:
+- `fig-` for a Figure
+- `table-` for a Table
+- `topic-` for a block of text at any level of abstraction. Thus it can be used for a section, a subsection, a paragraph, a chapter, or even a part.
+- `ex-` for an `<exercises>` division, an `<exercise>` element, or a `<task>` element.
+- Avoid including information that may change (like its structural information: e.g., fig-sec1-subsec2-flow). This avoids having to rename it if you move it to another section.
 
-The following elements will always have an `xml:id`:
-- `<section xml:id="topic-section-title">`
-- `<figure xml:id="fig-figure-descriptions">`
-- `<exercises xml:id="ex-section-title">`
-- `<exercise xml:id="ex-exercise-description" label="ex-exercise-description>`
-- `<task xml:id="ex-task-description" label="ex-task-description>`
-- Any division or element that needs to be cross referenced using an `xref`. 
-
-In addition, `<exercise>` and `<task>` elements are recognized by Runestone and must have a `label` attribute. For simplicity and consistency if an element has both an `xml:id` attribute and a `label` attribute they will have the same value.
-
-For example, an `<exercise>` element following the naming convention defined below might have the `xml:id` and `label` as follows:
-
-```xml
-  <exercise
-    xml:id="ex-foss-community-principles-q1"
-    label="ex-foss-community-principles-q1"
-    >
+Some examples follow:
 ```
+<section 
+  xml:id="topic-section-title">
+  ...
+</section>
+
+<figure 
+  xml:id="fig-figure-description">
+  ...
+</figure>
+
+<exercises>
+  <exercise 
+    xml:id="ex-exercise-description" 
+    label="ex-exercise-description>
+    <task 
+      xml:id="ex-task-description" 
+      label="ex-task-description>
+      ...
+    </task>
+    ...
+  </exercise>
+</exercises>
+```
+
+#### Other Cases
+
+- If multiple chapters have the same section name (e.g. Appendix-A, Git Command Summary, etc) then append the `xml:id` of the chapter. For example:
+```
+  <section 
+    xml:id=”topic-appendix-a-chapter-name”>
+    ...
+  </section>
+```
+
+#### Creating Links
 
 Any division/element with an `xml:id` can then be linked to by using an `xref` as follows:
 
@@ -171,8 +211,19 @@ Use text styling consistently throughout the document as follows:
   - Specific file names or directory names.
 - `<term>` for bold italics
   - The first use of a new term.
-- `"..." (quotations)
+- `"..."` (quotations)
   - GitHub / VSCode / Linux UI elements (buttons / menus / text in output / etc)
+
+#### Escaping Characters
+
+The `<` symbol is the start of a tag and must be escaped as `&lt` when used in preText.  For consistency and readability is it generally a good idea to escape both `<` and `>`.  For example:
+```
+git branch &ltbranchName&gt
+```
+which will render as:
+```
+git branch <name>
+```
 
 #### Adding Images
 
@@ -210,22 +261,24 @@ An `<exercise>` containing `<task>`s can be used to create a question with multi
 <exercise
   xml:id="ex-sample-with-tasks"
   label="ex-sample-with-tasks">
-  <title>Bold face next to question number.</title>
   <introduction>
-    <p>Not boldface following title</p>
+    <p>Text introducing the set of questions.</p>
   </introduction>
   <task
-    xml:id="ex-first-task-description"
-    label="ex-first-task-description">
-    ... content for an exercise ...
+    xml:id="ex-sample-with-tasks-a"
+    label="ex-sample-with-tasks-a">
+    ... task content ...
   </task>
   <task
-    xml:id="ex-second-task-description"
-    label="ex-second-task-description">
-    ... content for an exsercise ...
+    xml:id="ex-sample-with-tasks-b"
+    label="ex-sample-with-tasks-b">
+    ... task content ...
   </task>
 </exercise>
 ```
+
+Note:
+- Fill-in questions are not currently suported within a `<task>`.  A [free response question](https://runestone.academy/ns/books/published/PTXSB/rune-20.html) (with [source](https://runestone.academy/ns/books/published/PTXSB/rune-20.html)) should be used instead. Note that the free response box only renders when running in Runestone.  This is because free response must be hand graded and cannot be auto checked in a static web deploy.  See [Using a fill in the blank exercise in a task](https://groups.google.com/g/pretext-support/c/VWLb_W0AT18) for updates on this issue.
 
 #### Adding Version Specific Content
 
@@ -248,6 +301,27 @@ pretext build instructor-web-linux
 pretext view instructor-web-linux
 ```
 
+##### Adding KitClient Specific Content
+
+Content specific to a given kit client is indicated by adding a `component` attribute to to divisions/elements as follows:
+
+```
+  <p 
+    component="linux-kit-client"
+    xml:id="topic-some-stuff-linux">
+    This text appears only in the Linux Kit Client versions.
+  </p>
+
+  <p 
+    component="vscode-kit-client"
+    xml:id="topic-some-stuff-vscode">
+    This text appears only in the VSCode Kit Client versions.
+  </p>
+```
+
+- If a division/element will appear only in the `linux` or `vscode` version of the text its `xml:id` should have a suffix indicating its version.  
+- If two divisions/elements provide alternate content for the `linux` and `vscode` versions their `xml:ids` will be the same except for the suffix. 
+
 ##### Instructor Version Content
 
 A `commentary` element with the `component="instructor"` attrribute is used to add instructor guide information directly to the source text as follows:
@@ -269,24 +343,6 @@ A `commentary` element with the `component="instructor"` attrribute is used to a
 
 Note:
 - The `<tabular>` is included to place all comments for the instructor into a box.
-
-##### Adding KitClient Specific Content
-
-Content specific to a given kit client is indicated by adding a `component` attribute to to divisions/elements as follows:
-
-```
-  <p 
-    component="linuc-kit-client"
-    xml:id="topic-some-stuff-linux">
-    This text appears only in the Linux Kit Client versions.
-  </p>
-
-  <p 
-    component="vscode-kit-client"
-    xml:id="topic-some-stuff-vscode">
-    This text appears only in the VSCode Kit Client versions.
-  </p>
-```
 
 ##### Defining a Version
 
