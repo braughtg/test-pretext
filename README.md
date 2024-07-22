@@ -216,14 +216,16 @@ Use text styling consistently throughout the document as follows:
 
 #### Escaping Characters
 
-The `<` symbol is the start of a tag and must be escaped as `&lt` when used in preText.  For consistency and readability is it generally a good idea to escape both `<` and `>`.  For example:
+The `<` symbol is the start of a tag and must be escaped as `&lt;` when used in preText.  For consistency and readability is it generally a good idea to escape both `<` and `>`.  For example:
 ```
-git branch &ltbranchName&gt
+git branch &lt;branchName&gt;
 ```
 which will render as:
 ```
 git branch <name>
 ```
+
+Similarly the `&` character can be escaped as `&amp;`.
 
 #### Adding Images
 
