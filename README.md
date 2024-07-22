@@ -46,6 +46,15 @@ The files and folders in `source` include:
   - Section titles should be Title Case
   - Use an “ing” word for sections that are actions tied to concepts (e.g. Forking the Upstream).
 
+## Terminology
+
+Use standard preTeXt terminology when refering to elements in the text.  For example:
+- Chapter
+- Section
+- Exercises
+- Exercise
+- Task
+
 ## Authoring Section Files
 
 ### Typcial File Structure
@@ -249,6 +258,12 @@ Images contained in one of the chapter's images folder can be placed in the text
 #### Adding Exercises
 
 The following subsections give general guidelines for adding `<exercise>`s.
+
+#### General Rules
+
+- `<exercise>` elements should use the `<introduction>` to state the context/question.
+- An `<exercise>` or a `<task>` that requests that students do something without requiring a response are okay.
+
 
 ##### Multiple Choice
 
