@@ -6,9 +6,13 @@
   <exercises xml:id="ex-pulling-the-upstream-main-branch">
   <title />
   <exercise xml:id="ex-active-branch" xml:label="ex-active-branch">
-    <title> The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo. This chapter walks you through that process </title>
+    <introduction>
+      The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo.
+      This section walks you through that process.
+    </introduction>
 
-    <task label="ex-git-pull-change-command">
+
+    <task xml:id="ex-active-branch-a" label="ex-active-branch-a">
       <statement>
         <p>
           To pull the changes from the upstream main branch into your local repo you first need to ensure that <c>main</c> is the active branch in your local repo.
@@ -16,59 +20,59 @@
           What command(s) did you use?
         </p>
       </statement>
-        <!-- these should be randomized -->
-        <choices>
-          <choice>
-            <statement>
-              <p>
-                <c>git </c>
-              </p>
-            </statement>
-          </choice>
-  
-          <choice>
-            <statement>
-              <p>
-                <c>git </c>
-              </p>
-            </statement>
-          </choice>
-  
-          <choice correct="yes">
-            <statement>
-              <p>
-                <c>git </c>
-              </p>
-            </statement>
-          </choice>
-  
-          <choice>
-            <statement>
-              <p>
-                <c>git </c>
-              </p>
-            </statement>
-          </choice>
-  
-          <choice correct="yes">
-            <statement>
-              <p>
-                <c>git </c>
-              </p>
-            </statement>
-          </choice>
-        </choices>
-  
-        <hint>
-          <p>
-            ADD HINT HERE
-          </p>
-        </hint>
 
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          ADD HINT HERE
+        </p>
+      </hint>
     </task>
 
 
-    <task xml:id="ex-pull-main" label="ex-pull-main">
+    <task xml:id="ex-active-branch-b" label="ex-active-branch-b">
       <statement>
         <p>
           The command
@@ -86,18 +90,18 @@
     </task>
 
 
-    <task label="ex-changed-files">
+    <task xml:id="ex-active-branch-c" label="ex-active-branch-c">
       <statement>
         <p>
-          Examine the output from <xref ref="ex-pull-main"/>.
+          Examine the output from <xref ref="ex-active-branch-b"/>.
           It should not contain any error messages.
-          If it does, return to <xref ref="ex-pull-main"/> and try again.
+          If it does, return to <xref ref="ex-active-branch-b"/> and try again.
           Which file(s) were changed by your <c>git pull</c> command?
         </p>
       </statement>
 
-      <!-- these should be randomized -->
-      <choices>
+
+      <choices randomized="yes">
         <choice>
           <statement>
             <p>
