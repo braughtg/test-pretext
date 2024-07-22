@@ -26,7 +26,7 @@
     </figure>
   </p>
 
-  <exercise xml:id="ex-merged-commits" xml:label="ex-merged-commits">
+  <exercise xml:id="ex-merged-commits" label="ex-merged-commits">
     <introduction>
       Answer the following questions using <xref ref="fig-changes-merged-into-upstream" />
     </introduction>
