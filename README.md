@@ -48,7 +48,7 @@ The files and folders in `source` include:
 
 ## Terminology
 
-Use standard preTeXt terminology when refering to elements in the text.  For example:
+Use standard preTeXt terminology when refering to content in the text.  For example:
 - Chapter
 - Section
 - Exercises
@@ -148,47 +148,44 @@ Every `<exercise>` and `<task>` will have both an `xml:id` and a `label` attribu
 To help ensure that `xml:id` and `label` values are unique across the entire text and are also discoverable they will follow a set of rules:
 - Use only lowercase letters and numbers.
 - Use only hyphens to separate words in multiword names: `this-is-an-example`
-- Prefix the name with the type of thing being linked to using the following previxes:
-- `fig-` for a Figure
-- `table-` for a Table
-- `topic-` for a block of text at any level of abstraction. Thus it can be used for a section, a subsection, a paragraph, a chapter, or even a part.
-- `ex-` for an `<exercises>` division, an `<exercise>` element, or a `<task>` element.
+- Prefix the name with the type of thing being linked to using the following prefixes:
+  - `fig-` for a Figure
+  - `table-` for a Table
+  - `topic-` for a block of text at any level of abstraction. Thus it can be used for a section, a subsection, a paragraph, a chapter, or even a part.
+  - `ex-` for an `<exercises>` division, an `<exercise>` element, or a `<task>` element.
 - Avoid including information that may change (like its structural information: e.g., fig-sec1-subsec2-flow). This avoids having to rename it if you move it to another section.
-
-Some examples follow:
-```
-<section 
-  xml:id="topic-section-title">
-  ...
-</section>
-
-<figure 
-  xml:id="fig-figure-description">
-  ...
-</figure>
-
-<exercises>
-  <exercise 
-    xml:id="ex-exercise-description" 
-    label="ex-exercise-description>
-    <task 
-      xml:id="ex-task-description" 
-      label="ex-task-description>
-      ...
-    </task>
-    ...
-  </exercise>
-</exercises>
-```
-
-#### Other Cases
-
 - If multiple chapters have the same section name (e.g. Appendix-A, Git Command Summary, etc) then append the `xml:id` of the chapter. For example:
 ```
   <section 
     xml:id=”topic-appendix-a-chapter-name”>
     ...
   </section>
+```
+
+Some examples follow:
+```
+<section 
+  xml:id="topic-section-title">
+  ...
+
+  <figure 
+    xml:id="fig-figure-description">
+    ...
+  </figure>
+
+  <exercises>
+    <exercise 
+      xml:id="ex-exercise-description" 
+      label="ex-exercise-description>
+      <task 
+        xml:id="ex-task-description" 
+        label="ex-task-description>
+        ...
+      </task>
+      ...
+    </exercise>
+  </exercises>
+</section>
 ```
 
 #### Creating Links
