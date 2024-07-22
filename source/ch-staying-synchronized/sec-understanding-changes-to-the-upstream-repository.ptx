@@ -9,7 +9,7 @@
     In class your instructor played the role of an upstream maintainer and demonstrated how the changes contained in pull requests are merged.
   </p>
 
-  <exercises xml:id="ex-understanding-changes-to-the-upstream-repository">
+  <exercises>
   <title />
   <p>
     <xref ref="fig-changes-merged-into-upstream" /> illustrates the state after several commits have been merged into upstream <c>main</c>.
