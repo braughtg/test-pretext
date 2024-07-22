@@ -32,7 +32,7 @@
     </figure>
   </p>
 
-  <exercises xml:id="ex-exploring-your-local-repository" >
+  <exercises xml:id="ex-understanding-your-local-repository" >
   <title/>
   <exercise xml:id="ex-restarting-kitclient" label="ex-restarting-kitclient">
     <p>
