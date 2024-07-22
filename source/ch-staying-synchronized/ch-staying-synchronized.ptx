@@ -19,8 +19,10 @@
   <!-- include sections -->
   <xi:include href="sec-understanding-changes-to-the-upstream-repository.ptx" />
   <xi:include href="sec-overview-of-synchronizing-with-the-upstream-repository.ptx" />
+
   <xi:include href="sec-verifying-the-upstream-remote.ptx" />
   <xi:include href="sec-creating-the-upstream-remote.ptx" />
+  
   <xi:include href="sec-pulling-the-upstream-main-branch.ptx" />
   <xi:include href="sec-pushing-main-to-your-origin.ptx" />
   <xi:include href="sec-deleting-a-feature-branch.ptx" />

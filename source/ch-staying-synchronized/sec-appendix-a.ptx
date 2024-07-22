@@ -21,7 +21,7 @@
   </p>
 
   <p>
-    Ensure that you are in the GitKit-FarmData2 directory then use the following commands:
+    Ensure that you are in the <em>GitKit-FarmData2</em> directory then use the following commands:
     <ol>
       <li>
         <c>git switch main</c>
