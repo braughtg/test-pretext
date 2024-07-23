@@ -10,7 +10,7 @@
       The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo.
       This section walks you through that process.
     </introduction>
-
+    
 
     <task xml:id="ex-active-branch-a" label="ex-active-branch-a">
       <statement>

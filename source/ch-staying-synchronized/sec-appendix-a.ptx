@@ -10,9 +10,11 @@
     </p>
   </introduction>
   -->
-  <p>
-    The information in this appendix is only important if you were directed here from <xref ref="ex-origin-main-behind-main" />, otherwise it may be ignored.
-  </p>
+  <introduction>
+    <p>
+      The information in this appendix is only important if you were directed here from <xref ref="ex-origin-main-behind-main" />, otherwise it may be ignored.
+    </p>
+  </introduction>
 
   <p>
     You found in <xref ref="ex-origin-main-behind-main" /> that the <c>main</c> branch in your origin repository was not behind the <c>main</c> branch in the upstream repository.
@@ -37,7 +39,9 @@
     </ol>
   </p>
 
-  <p>
-    You should now return to <xref ref="ex-origin-main-behind-main" /> and the <c>main</c> branch in your origin should now be behind the <c>main</c> branch in the upstream.
-  </p>
+  <conclusion>
+    <p>
+      You should now return to <xref ref="ex-origin-main-behind-main" /> and the <c>main</c> branch in your origin should now be behind the <c>main</c> branch in the upstream.
+    </p>
+  </conclusion>
 </section>
