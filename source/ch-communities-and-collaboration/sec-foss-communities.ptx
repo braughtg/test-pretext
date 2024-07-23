@@ -1,13 +1,492 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-foss-communities"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-foss-communities" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>FOSS Communities</title>
 
   <introduction>
- 	<p>Text of section.</p>
+    <p>
+      During class time you will have learned about the principles that guide FOSS Communities and the roles that are performed by FOSS community members. The exercises in this section ask about those principles and roles.
+    </p>
   </introduction>
 
+  <subsection>
+    <title>FOSS Community Principles</title>
+
+    <introduction>
+      <p>
+        Some of the key principles that guide FOSS communities are <term>shared values</term>, <term>collaboration</term>, <term>transparency</term>, <term>inclusivity</term>, <term>meritocracy</term> and <term>release early and often</term>. If you would like you can review a discussion of some of these principles at <url href="https://opensource.com/open-source-way" visual="opensource.com/open-source-way">The Open Source Way</url>
+      </p>
+    </introduction>
+
+    <exercises>
+      <title />
+      <exercise xml:id="ex-community-principles" label="ex-community-principles">
+        <introduction>
+          <p>
+            Consider each of the following statements about the operation of a FOSS community and choose the principle (or principles if multiple apply equally) with which it most closely aligns.
+          </p>
+        </introduction>
+
+        <task xml:id="ex-community-principles-a" label="ex-community-principles-a" >
+          <statement>
+            <p>
+              By building on each other's work the community can solve problems that no one could solve alone.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">shared values</area></cell>
+                <cell><area correct="yes">collaboration</area></cell>
+                <cell><area correct="no">transparency</area></cell>
+              </row>
+    
+              <row>
+                <cell><area correct="no">inclusivity</area></cell>
+                <cell><area correct="no">meritocracy</area></cell>
+                <cell><area correct="no">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-principles-b" label="ex-community-principles-b" >
+          <statement>
+            <p>
+              Decisions and the rationale for them are available to the community.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">shared values</area></cell>
+                <cell><area correct="no">collaboration</area></cell>
+                <cell><area correct="yes">transparency</area></cell>
+              </row>
+
+              <row>
+                <cell><area correct="yes">inclusivity</area></cell>
+                <cell><area correct="no">meritocracy</area></cell>
+                <cell><area correct="no">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-principles-c" label="ex-community-principles-c" >
+          <statement>
+            <p>
+              The mission and goals of the community are more important than individual agendas.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="yes">shared values</area></cell>
+                <cell><area correct="yes">collaboration</area></cell>
+                <cell><area correct="no">transparency</area></cell>
+              </row>
+
+              <row>
+                <cell><area correct="no">inclusivity</area></cell>
+                <cell><area correct="no">meritocracy</area></cell>
+                <cell><area correct="no">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-principles-d" label="ex-community-principles-d" >
+          <statement>
+            <p>
+              The best ideas should win, regardless of where they come from.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">shared values</area></cell>
+                <cell><area correct="no">collaboration</area></cell>
+                <cell><area correct="no">transparency</area></cell>
+              </row>
+
+              <row>
+                <cell><area correct="yes">inclusivity</area></cell>
+                <cell><area correct="yes">meritocracy</area></cell>
+                <cell><area correct="no">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-principles-e" label="ex-community-principles-e" >
+          <statement>
+            <p>
+              Incorporating new changes and features quickly generates feedback and leads to rapid improvement.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">shared values</area></cell>
+                <cell><area correct="no">collaboration</area></cell>
+                <cell><area correct="no">transparency</area></cell>
+              </row>
+
+              <row>
+                <cell><area correct="no">inclusivity</area></cell>
+                <cell><area correct="no">meritocracy</area></cell>
+                <cell><area correct="yes">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-principles-f" label="ex-community-principles-f" >
+          <statement>
+            <p>
+              Community members enhance and extend what others contribute in unanticipated ways.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">shared values</area></cell>
+                <cell><area correct="yes">collaboration</area></cell>
+                <cell><area correct="no">transparency</area></cell>
+              </row>
+
+              <row>
+                <cell><area correct="no">inclusivity</area></cell>
+                <cell><area correct="no">meritocracy</area></cell>
+                <cell><area correct="no">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-principles-g" label="ex-community-principles-g" >
+          <statement>
+            <p>
+              Decision makers continually seek diverse perspectives.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">shared values</area></cell>
+                <cell><area correct="no">collaboration</area></cell>
+                <cell><area correct="no">transparency</area></cell>
+              </row>
+
+              <row>
+                <cell><area correct="yes">inclusivity</area></cell>
+                <cell><area correct="no">meritocracy</area></cell>
+                <cell><area correct="no">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-principles-h" label="ex-community-principles-h" >
+          <statement>
+            <p>
+              All community members have access to the information necessary to do their best work.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">shared values</area></cell>
+                <cell><area correct="no">collaboration</area></cell>
+                <cell><area correct="yes">transparency</area></cell>
+              </row>
+
+              <row>
+                <cell><area correct="no">inclusivity</area></cell>
+                <cell><area correct="no">meritocracy</area></cell>
+                <cell><area correct="no">release early and often</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+      </exercise>
+    </exercises>
+  </subsection>
+    
+  <subsection>
+    <title>FOSS Community Roles</title>
+    <introduction>
+      <p>
+        There are a number of roles that tend to exist in FOSS communities. Some of these included <term>Users</term>, <term>Requestors</term>, <term>Contributors</term>, <term>Maintainers</term> and <term>Leaders</term>. Not all communities will have all of these rolls and often community members will take on multiple roles simultaneously or move between roles over time. 
+      </p>
+    </introduction>
+
+    <exercises>
+      <title />
+      <exercise xml:id="ex-community-roles" label="ex-community-roles">
+        <introduction>
+          <p>
+            Consider each of the actions described below. For each action, select the role (or roles) of the individual(s) that would most likely be responsible for the action.
+          </p>
+        </introduction>
+
+        <task xml:id="ex-community-roles-a" label="ex-community-roles-a" >
+          <statement>
+            <p>
+              Choosing the license under which the project will be released.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="no">Requestors</area></cell>
+                <cell><area correct="no">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="yes">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-b" label="ex-community-roles-b" >
+          <statement>
+            <p>
+              Using the software in a new, unanticipated or creative way.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="yes">Users</area></cell>
+                <cell><area correct="no">Requestors</area></cell>
+                <cell><area correct="no">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+        
+        <task xml:id="ex-community-roles-c" label="ex-community-roles-c" >
+          <statement>
+            <p>
+              Asking that a useful new feature be added to the software.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="yes">Requestors</area></cell>
+                <cell><area correct="no">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-d" label="ex-community-roles-d" >
+          <statement>
+            <p>
+              Discovering a bug in the software.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="yes">Users</area></cell>
+                <cell><area correct="yes">Requestors</area></cell>
+                <cell><area correct="no">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-e" label="ex-community-roles-e" >
+          <statement>
+            <p>
+              Providing a code patch that fixes a bug in the software.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="no">Requestors</area></cell>
+                <cell><area correct="yes">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-f" label="ex-community-roles-f" >
+          <statement>
+            <p>
+              Submitting an improved set of installation instructions.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="no">Requestors</area></cell>
+                <cell><area correct="yes">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-g" label="ex-community-roles-g" >
+          <statement>
+            <p>
+              Documenting a bug in the issue tracker so others can fix it.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="yes">Requestors</area></cell>
+                <cell><area correct="yes">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-h" label="ex-community-roles-h" >
+          <statement>
+            <p>
+              Defining the goals for the next year of work on the project.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="no">Requestors</area></cell>
+                <cell><area correct="no">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="no">Maintainers</area></cell>
+                <cell><area correct="yes">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-i" label="ex-community-roles-i" >
+          <statement>
+            <p>
+              Incorporating a contributed bug fix into the main branch.
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="no">Requestors</area></cell>
+                <cell><area correct="no">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="yes">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+
+        <task xml:id="ex-community-roles-j" label="ex-community-roles-j" >
+          <statement>
+            <p>
+              Redesigning a software module in the system. 
+            </p>
+            <p />
+          </statement>
+          <areas>
+            <tabular top="minor" bottom="minor" left="minor" right="minor">
+              <row>
+                <cell><area correct="no">Users</area></cell>
+                <cell><area correct="no">Requestors</area></cell>
+                <cell><area correct="yes">Contributors</area></cell>
+              </row>
+  
+              <row>
+                <cell><area correct="yes">Maintainers</area></cell>
+                <cell><area correct="no">Leaders</area></cell>
+              </row>
+            </tabular>
+            <p /> 
+          </areas>
+        </task>
+      </exercise>
+    </exercises>
+  </subsection>
 </section>

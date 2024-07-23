@@ -1,2 +1,4 @@
 foss
+inclusivity
+opensource
 Runestone
