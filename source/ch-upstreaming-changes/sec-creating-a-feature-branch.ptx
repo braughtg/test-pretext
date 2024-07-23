@@ -1,13 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-creating-a-feature-branch"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-creating-a-feature-branch" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Creating a Feature Branch</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      When you set out to make changes to the project you will do so by working on a feature branch.
+      <xref ref="fig-create-feature-branch-and-switch" /> illustrates the process of creating a feature branch.
+      The exercises in this section will walk you through the process of creating a feature branch on which you will fix the issue that you claimed in <xref provisional="a reference back to ch2-issue-tracker section" />.
+    </p>
   </introduction>
 
+  <p>
+    <figure xml:id="fig-create-feature-branch-and-switch">
+      <caption> Create feature branch. </caption>
+      <image source="images/ch-upstreaming-changes/create-feature-branch-and-switch.png" width="75%">
+        <description>
+          Cloud image of origin, upstream, and local branches.
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercises>
+  <title/>
+  <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
+    <introduction>
+      <p>
+        The <c>git status</c> command provides the current status of your local repository.
+        Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-git-status-command-a" label="ex-git-status-command-a">
+      <statement>
+        <p>
+          What part of the output tells you which branch is currently active in your repository?
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-git-status-command-b" label="ex-git-status-command-b">
+      <statement>
+        <p>
+          Your output should contain the text “Your branch is up to date with 'origin/main'.”  What do you think it means that your branch is “up to date”?
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-git-status-command-c" label="ex-git-status-command-c">
+      <statement>
+        <p>
+          Your output should contain the text “nothing to commit, working tree clean.”  What do you think it means that you have “nothing to commit.” Hint: when would you have something to commit?  This is the opposite of that!
+        </p>
+        <response />
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-creating-a-branch" label="ex-creating-a-branch">
+    <introduction>
+      <p>
+        The <c>git branch &lt;name&gt;</c> command creates a new branch with the given <em>name</em>.
+        When creating a branch, you should give it a short but descriptive name (e.g.
+        <em>FixTypoInReadme</em>).
+        Note: <em>name</em> may not have spaces, so you can use - (dashes) or CammelCaseText to divide words in your branch names.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-creating-a-branch-a" label="ex-creating-a-branch-a">
+      <statement>
+        <p>
+          <p>
+            Create a new feature branch with a descriptive name that you will use to fix the issue that you claimed.
+            Remember not to include the &lt; &gt; when writing your own command.
+            Type the command you entered below.
+          </p>
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-creating-a-branch-b" label="ex-creating-a-branch-b">
+      <statement correct="no">
+        <p>
+          Use the <c>git status</c> command again now.
+          Does creating a new branch with the <c>git branch</c> command make your new branch the active branch?
+        </p>
+      </statement>
+
+      <feedback>
+        <p>
+          <c>git branch [name]</c> only creates the branch.
+        </p>
+      </feedback>
+    </task>
+
+
+    <task xml:id="ex-creating-a-branch-c" label="ex-creating-a-branch-c">
+      <statement>
+        <p>
+          How can you tell from the output in (b) if it switched you to the new branch?
+        </p>
+        <response />
+      </statement>
+    </task>
+  </exercise>
+  </exercises>
 </section>

@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-switching-branches"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-switching-branches" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Switching Branches</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      In the previous section you learned how to create a branch.
+      In this section you will learn more about why branching is important and how to switch between existing branches.
+    </p>
   </introduction>
 
+  <exercises>
+  <title/>
+  <exercise xml:id="ex-switching-branches" label="ex-switching-branches">
+    <introduction>
+      <p>
+        As you saw in the previous section, the <c>git branch</c> command creates a branch (among other uses), but it does not change your active branch.
+        The <c>git switch &lt;name&gt;</c> command switches (i.e.
+        changes) the active branch.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-switching-branches-a" label="ex-switching-branches-a">
+      <statement>
+        <p>
+          What command that will change your active branch to the new feature branch that you created in the previous section?
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-switching-branches-b" label="ex-switching-branches-b">
+      <statement>
+        <p>
+          Use the <c>git status</c> command again now. What part of the output confirms that your feature branch is now the active branch?
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-switching-branches-c" label="ex-switching-branches-c">
+      <statement>
+        <p>
+          Placeholder for additional exercises on switching branches.
+        </p>
+        <response />
+      </statement>
+    </task>
+  </exercise>
+  </exercises>
 </section>

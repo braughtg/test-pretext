@@ -1,13 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-pulling-the-upstream-main-branch"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
-  <title>Pulling the Upstream main Branch</title>
+<section xml:id="topic-pulling-the-upstream-main-branch" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Pulling the Upstream <c>main</c> Branch</title>
 
-  <introduction>
- 			    <p>Text of section.</p>
-  </introduction>
+  <exercises xml:id="ex-pulling-the-upstream-main-branch">
+  <title />
+  <exercise xml:id="ex-active-branch" xml:label="ex-active-branch">
+    <introduction>
+      The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo.
+      This section walks you through that process.
+    </introduction>
+    
 
+    <task xml:id="ex-active-branch-a" label="ex-active-branch-a">
+      <statement>
+        <p>
+          To pull the changes from the upstream main branch into your local repo you first need to ensure that <c>main</c> is the active branch in your local repo.
+          Make sure that <c>main</c> is the active branch in your local repo.
+          What command(s) did you use?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git </c>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          ADD HINT HERE
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-active-branch-b" label="ex-active-branch-b">
+      <statement>
+        <p>
+          The command
+        </p>
+
+        <p>
+          <c>git pull --ff-only &lt;remote repo name&gt; &lt;branch&gt;</c>
+        </p>
+
+        <p>
+          will pull any new commits from the specified branch in the remote repo and add them onto the end of the active branch of your local repo.
+          Use the <c>git pull</c> command above to pull and add the commits from the main branch of the upstream repo to your <c>main</c> branch.
+        </p>
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-active-branch-c" label="ex-active-branch-c">
+      <statement>
+        <p>
+          Examine the output from <xref ref="ex-active-branch-b"/>.
+          It should not contain any error messages.
+          If it does, return to <xref ref="ex-active-branch-b"/> and try again.
+          Which file(s) were changed by your <c>git pull</c> command?
+        </p>
+      </statement>
+
+
+      <choices randomized="yes">
+        <choice>
+          <statement>
+            <p>
+              File 1
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              File 2
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              File 3
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              File 4
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              File 5
+            </p>
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          ADD HINT HERE
+        </p>
+      </hint>
+    </task>
+  </exercise>
+  </exercises>
 </section>

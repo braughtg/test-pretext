@@ -3,13 +3,15 @@
 <section xml:id="topic-understanding-changes-to-the-upstream-repository" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Understanding Changes to the Upstream Repository</title>
 
-  <p>
+  <introduction>
+    <p>
     If the upstream maintainers decide that the changes in your PR are good for the project, they will merge them into the upstream <c>main</c> branch.
     That way they become a part of the main project, and everyone can benefit from your work.
     In class your instructor played the role of an upstream maintainer and demonstrated how the changes contained in pull requests are merged.
-  </p>
+    </p>
+  </introduction>
 
-  <exercises xml:id="ex-understanding-changes-to-the-upstream-repository">
+  <exercises>
   <title />
   <p>
     <xref ref="fig-changes-merged-into-upstream" /> illustrates the state after several commits have been merged into upstream <c>main</c>.
@@ -26,13 +28,13 @@
     </figure>
   </p>
 
-  <exercise xml:id="ex-merged-commits" xml:label="ex-merged-commits">
-    <title>
-        Answer the following questions using <xref ref="fig-changes-merged-into-upstream" />
-    </title>
+  <exercise xml:id="ex-merged-commits" label="ex-merged-commits">
+    <introduction>
+      Answer the following questions using <xref ref="fig-changes-merged-into-upstream" />
+    </introduction>
 
 
-    <task label="ex-new-commits-merged">
+    <task xml:id="ex-merged-commits-a" label="ex-merged-commits-a">
       <statement>
         <p>
           Which commits (give the colors) were merged into the upstream <c>main</c> since the contributor created the feature branch that is shown?
@@ -98,7 +100,7 @@
     </task>
 
 
-    <task label="ex-developers-commits">
+    <task xml:id="ex-merged-commits-b" label="ex-merged-commits-b">
       <statement>
         <p>
           Which of the commits did the managers merge from the contributor's pull request?
@@ -198,46 +200,48 @@
         </p>
       </hint>
     </task>
+
+
+    <task xml:id="ex-merged-commits-c" label="ex-merged-commits-c">
+      <statement>
+        <p>
+          Briefly explain how the pink commit could have gotten into the upstream <c>main</c>.
+        </p>
+      </statement>
+      <response />
+    </task>
   </exercise>
-
-  <exercise xml:id="ex-pink-commit-explanation">
-    <statement>
-      <p>
-        Briefly explain how the pink commit could have gotten into the upstream <c>main</c>.
-      </p>
-
-      <p>
-        <var width="45" />
-      </p>
-    </statement>
-  </exercise>
-
-  <p>
-    GitHub will inform you when the active branch in your origin repo is out of synch with the upstream.
-  </p>
-
-  <p>
-    Use your browser to visit your origin repo on GitHub and ensure that the <c>main</c> branch is selected.
-    Find the part of the page that indicates that your <c>main</c> branch is <em>behind</em> (i.e.
-    not the same as, or out of synch with) the upstream <c>main</c>.
-  </p>
-
-  <p>
-    If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to <xref ref="topic-appendix-a-staying-synchronized" /> of this chapter and follow the instructions there.
-    Once you complete <xref ref="topic-appendix-a-staying-synchronized" />, return to this question.
-  </p>
 
   <exercise xml:id="ex-origin-main-behind-main" label="ex-origin-main-behind-main" >
-    <statement>
-      <p>
-        Briefly explain what has happened that caused your origin’s <c>main</c> branch to get behind the upstream <c>main</c>.
-      </p>
+    <introduction>
+      GitHub will inform you when the active branch in your origin repo is out of synch with the upstream.
+    </introduction>
 
-      <p>
-        <var width="45" />
-      </p>
-    </statement>
-    <!-- the response tag should allow for a multi-line textbox <response /> -->
+
+    <task xml:id="ex-origin-main-behind-main-a" label="ex-origin-main-behind-main-a">
+      <statement>
+        <p>
+          Use your browser to visit your origin repo on GitHub and ensure that the <c>main</c> branch is selected.
+          Find the part of the page that indicates that your <c>main</c> branch is <em>behind</em> (i.e.
+          not the same as, or out of synch with) the upstream <c>main</c>.
+        </p>
+      </statement>
+    </task>
+
+    <p>
+      If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to <xref ref="topic-appendix-a-staying-synchronized" /> of this chapter and follow the instructions there.
+      Once you complete <xref ref="topic-appendix-a-staying-synchronized" />, return to <xref ref="ex-origin-main-behind-main" />.
+    </p>
+
+
+    <task xml:id="ex-origin-main-behind-main-b" label="ex-origin-main-behind-main-b">
+      <statement>
+        <p>
+          Briefly explain what has happened that caused your origin’s <c>main</c> branch to get <em>behind</em> the upstream <c>main</c>.
+        </p>
+      </statement>
+      <response />
+    </task>
   </exercise>
   </exercises>
 </section>
