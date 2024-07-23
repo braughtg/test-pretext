@@ -1,13 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-understanding-merge-conflicts"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-understanding-merge-conflicts" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Understanding Merge Conflicts</title>
 
-  <introduction>
- 			    <p>Text of section.</p>
-  </introduction>
+  <exercises>
+  <title />
+
+  <p>
+    <xref ref="fig-merge-conflicts-1" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
+  </p>
+  <p>
+    <figure xml:id="fig-merge-conflicts-1" >
+      <caption> Example merge conflicts with Best Common Ancestor. </caption>
+      <image source="images/ch-merge-conflicts/merge-conflicts-1.png" width="75%">
+        <description>
+          Three panels of code (feature branch, common ancestor, main branch)
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <p>
+    <xref ref="fig-merge-conflicts-resolution-1" /> shows the <c>main</c> branch in the right panel the contributor's feature branch in the left panel, and a blank merged version in the middle.
+  </p>
+  <p>
+    <figure xml:id="fig-merge-conflicts-resolution-1" >
+      <caption> Example merge conflicts with Merged Result. </caption>
+      <image source="images/ch-merge-conflicts/merge-conflicts-resolution-1.png" width="75%">
+        <description>
+          Three panels of code (feature branch, blank merge, main branch)
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercise xml:id="ex-merge-conflicts-concepts-1" label="ex-merge-conflicts-concepts-1">
+    <introduction>
+      <p>
+        Consider the merge shown in <xref ref="fig-merge-conflicts-1" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
+      </p>
+    </introduction>
+    <task xml:id="ex-describe-computation-1" label="ex-describe-computation-1">
+      <statement>
+        <p>
+          Study the program in the <c>main</c> branch and then describe in a sentence the computation that the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-marking-main-and-feature-non-conflicting-1" label="ex-marking-main-and-feature-non-conflicting-1">
+      <statement>
+        <p>
+          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are non-conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              2
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              4
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              5
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              6
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              7
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              8
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </task>
+
+    <task xml:id="ex-marking-main-and-feature-conflicting-1" label="ex-marking-main-and-feature-conflicting-1">
+      <statement>
+        <p>
+          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
+        </p>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              2
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              4
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              5
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              6
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              7
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              8
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      <hint>
+        <p>
+          All lines should be either conflicting or non-conflicting.
+        </p>
+      </hint>
+    </task>
+
+    <task xml:id="ex-automatic-merge-1" label="ex-automatic-merge-1">
+      <statement>
+        <p>
+          Would the feature branch in <xref ref="fig-merge-conflicts-1" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
+        </p>
+      </statement>
+      <response />
+    </task>  
+    <task xml:id="ex-merged-result-1" label="ex-merged-result-1">
+      <statement>
+        <p>
+          Give a Merged Result of the program in <xref ref="fig-merge-conflicts-1" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names. That is, fill in the Merge Result panel in <xref ref="fig-merge-conflicts-resolution-1" />.
+        </p>
+      </statement>
+      <response />
+    </task>
+  </exercise>
+
+  <p>
+    <xref ref="fig-merge-conflicts-2" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
+  </p>
+  <p>
+    <figure xml:id="fig-merge-conflicts-2" >
+      <caption> Example merge conflicts with Best Common Ancestor. </caption>
+      <image source="images/ch-merge-conflicts/merge-conflicts-2.png" width="75%">
+        <description>
+          Three panels of code (feature branch, common ancestor, main branch)
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <p>
+    <xref ref="fig-merge-conflicts-resolution-2" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and a blank merged version in the middle.
+  </p>
+  <p>
+    <figure xml:id="fig-merge-conflicts-resolution-2" >
+      <caption> Example merge conflicts with Merged Result. </caption>
+      <image source="images/ch-merge-conflicts/merge-conflicts-resolution-2.png" width="75%">
+        <description>
+          Three panels of code (feature branch, blank merge, main branch)
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercise xml:id="ex-merge-conflicts-concepts-2" label="ex-merge-conflicts-concepts-2">
+    <introduction>
+      <p>
+        Now consider the merge shown in <xref ref="fig-merge-conflicts-2" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
+      </p>
+    </introduction>
+    <task xml:id="ex-describe-computation-2" label="ex-describe-computation-2">
+      <statement>
+        <p>
+          Study the program in the <c>main</c> branch and then describe in a sentence the computation that the program is trying to perform. Note: The ** indicates exponentiation (e.g. x**2 is x squared).  Note: The Common Ancestor contains a bug that is fixed in different ways by the <c>main</c> branch and the feature branch.
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-marking-main-and-feature-non-conflicting-2" label="ex-marking-main-and-feature-non-conflicting-2">
+      <statement>
+        <p>
+          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are non-conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
+        </p>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              2
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              4
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              5
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </task>
+
+    <task xml:id="ex-marking-main-and-feature-conflicting-2" label="ex-marking-main-and-feature-conflicting-2">
+      <statement>
+        <p>
+          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              2
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              4
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              5
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      <hint>
+        <p>
+          All lines should be either conflicting or non-conflicting.
+        </p>
+      </hint>
+    </task>
+
+    <task xml:id="ex-automatic-merge-2" label="ex-automatic-merge-2">
+      <statement>
+        <p>
+          Would the feature branch in <xref ref="fig-merge-conflicts-2" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
+        </p>
+      </statement>
+      <response />
+    </task>  
+    <task xml:id="ex-merged-result-2" label="ex-merged-result-2">
+      <statement>
+        <p>
+          Give a Merged Result of the program in <xref ref="fig-merge-conflicts-2" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names. That is, fill in the Merge Result panel in <xref ref="fig-merge-conflicts-resolution-2" />.
+        </p>
+      </statement>
+      <response />
+    </task>
+  </exercise>
+</exercises>
 
 </section>

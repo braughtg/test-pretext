@@ -8,7 +8,7 @@
 
   <introduction>
     <p>
-      Preliminary information for the instructor and the student.
+      This topic focuses on merge conflicts, why they arise and how they can be resolved. We saw that maintainers are regularly merging changes from contributor’s pull requests into the upstream main branch. If those changes are merged after you created your feature branch, it is possible for a merge conflict to arise.  If your changes and those merged into main affect different parts of the project, then the maintainers will still be able to merge your changes automatically. However, if the changes merged into main and the changes in your feature branch alter the same code or documentation, then a merge conflict will occur. Usually, you as the contributor and the expert on your work, will be asked to resolve the merge conflict so that the maintainers can merge your pull request automatically. We saw that this can be done by manually editing the raw merge conflict information or by using a graphical merge tool.  In completing the most recent homework, you will have created a pull request that, after other work was merged into the upstream main branch, has resulted in a merge conflict.  This set of activities takes you through the process of resolving that merge conflict.
     </p>
 
   </introduction>
