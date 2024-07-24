@@ -3,33 +3,33 @@
 <section xml:id="topic-verifying-the-upstream-remote" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title component="linux-kit-client">Creating the Upstream Remote</title>
   <title component="vscode-kit-client">Verifying the Upstream Remote</title>
-  <p component="linux-kit-client">
+  <introduction component="linux-kit-client">
     In order to pull changes from the upstream you will need to tell your local repository where the upstream is.
     In earlier figures, dotted orange lines were used to indicate that your local repository knew about the origin and that the origin knew about the upstream.
     But there was no orange dotted line from your local repository to the upstream.
     That is because, by default, your local repository isn’t aware of the upstream.
-  </p>
+  </introduction>
 
-  <p component="vscode-kit-client">
+  <introduction component="vscode-kit-client">
     When you open a fork in GitPod, GitPod clones its repository.
     This creates a remote named origin that points to the repository it cloned.
     When you clone a repository, this is typically the only remote created automatically.
     But GitPod goes a step further.
     It also creates upstream remote that points to the repository that your origin forked from.
-  </p>
+  </introduction>
 
   <p>
     Like the last activity, you will be working within the KitClient for this activity.
   </p>
 
-  <exercises xml:id="ex-exploring-your-local-repository" >
+  <exercises>
   <title/>
-  <exercise xml:id="ex-restarting-kitclient-for-synching" >
+  <exercise xml:id="ex-restarting-kitclient-for-synching" label="ex-restarting-kitclient-for-synching">
     <p> Restart your KitClient based on the instructions in <xref provisional="a reference back to ch2-restarting your development environment" />
     </p>
   </exercise>
 
-  <exercise xml:id="ex-setting-upstream">
+  <exercise xml:id="ex-setting-upstream" label="ex-setting-upstream">
     <introduction component="vscode-kit-client">To synchronize your fork, you will need to use this upstream remote. First, let's confirm that GitPod correctly created the upstream remote. This exercise will walk you through that process.</introduction>
     <introduction component="linux-kit-client"> In order to pull from the upstream you will first need to make your local repository aware of the upstream. This is done by setting a remote for it.  This exercise will walk you through that process. </introduction>
     <task xml:id="ex-setting-upstream-a" label="ex-setting-upstream-a">
@@ -240,9 +240,9 @@
     </task>
   </exercise>
 
-  <p component="linux-kit-client">
+  <conclusion component="linux-kit-client">
     Note that you will only need to set the upstream remote once for a repository.
     Once the upstream remote is set you will be able to pull from the upstream repo as often as is necessary.
-  </p>
+  </conclusion>
   </exercises>
 </section>

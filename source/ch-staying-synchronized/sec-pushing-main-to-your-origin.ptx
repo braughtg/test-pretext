@@ -1,13 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-pushing-main-to-your-origin"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
-  <title>Pushing main to Your Origin</title>
+<section xml:id="topic-pushing-main-to-your-origin" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Pushing <c>main</c> to Your Origin</title>
 
-  <introduction>
- 			    <p>Text of section.</p>
-  </introduction>
+  <exercises>
+  <title />
+  <exercise xml:id="ex-synching-main-to-origin" label="ex-synching-main-to-origin">
+    <introduction>
+      <p>
+        Your local main branch is now in synch with the upstream main branch.
+        What’s left is to also synch the main branch in your origin repo.
+      </p>
+    </introduction>
 
+
+    <task xml:id="ex-synching-main-to-origin-a" label="ex-synching-main-to-origin-a">
+      <statement>
+        <p>
+          Recall that you previously used the
+        </p>
+
+        <p>
+          <c> git push &lt;remote repo name&gt; &lt;branch&gt; </c>
+        </p>
+
+        <p>
+          command to push your feature branch from your local repo to your origin repo.
+          Use the <c>git push</c> command to push the <c>main</c> branch of your local repo to your remote <c>origin</c> repo.
+        </p>
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-synching-main-to-origin-b" label="ex-synching-main-to-origin-b">
+      <statement>
+        <p>
+          Examine the output from <xref ref="ex-synching-main-to-origin-a"/>.
+          You should see a lot of information about deltas and objects.
+          Those are terms related to the inner workings of git that we will not worry about.
+          If you don’t see this information about deltas and objects but see an error message instead, revisit <xref ref="ex-synching-main-to-origin-a"/> and try again.
+        </p>
+
+        <p>
+          The last two lines of the output in part a should contain some recognizable information.
+          What do you think that these lines are telling you?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              option
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              option
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              option
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              option
+            </p>
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          ADD HINT HERE
+        </p>
+      </hint>
+    </task>
+  </exercise>
+
+  <conclusion>
+    <p>
+      As with most things related to Git and GitHub, there are a number of different ways to synchronize.
+      For example, you can also fetch the changes from the upstream main to your origin and then pull them from there to your local repository.
+      If you are curious, you can check out this GitHub link: <url href="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" visual="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">Syncing a fork</url>
+    </p>
+  </conclusion>
+  </exercises>
 </section>

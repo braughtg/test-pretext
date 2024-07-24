@@ -22,7 +22,7 @@
     </figure>
   </p>
 
-  <exercises xml:id="ex-creating-a-feature-branch" >
+  <exercises>
   <title/>
   <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
     <introduction>
