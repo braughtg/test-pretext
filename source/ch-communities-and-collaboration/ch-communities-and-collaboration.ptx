@@ -22,6 +22,7 @@
   <xi:include href="sec-the-issue-tracker.ptx" />
   <xi:include href="sec-basic-foss-workflow.ptx" />
   <xi:include href="sec-forking-the-upstream.ptx" />
+  <xi:include href="sec-local-development-environment.ptx" />
   <xi:include href="sec-cloning-your-origin.ptx" />
   <xi:include href="sec-extra-practice.ptx" />
   <xi:include href="sec-git-command-summary.ptx" />

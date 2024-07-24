@@ -7,7 +7,13 @@
   <title>Your Local Development Environment</title>
 
   <introduction>
- 	<p>Text of section.</p>
+ 	<p>
+    You now have been assigned an <term>issue</term> to work on and have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space. The next step is to 
+    
+    
+    <term>local development environment</term>.  Your local development environment is where you will have your <term>clone</term> 
+    To do the work of fixing your issue you will use a 
+  </p>
   </introduction>
 
 </section>
