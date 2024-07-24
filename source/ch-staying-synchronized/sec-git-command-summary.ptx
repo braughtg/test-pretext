@@ -15,13 +15,49 @@ xmlns:xi="http://www.w3.org/2001/XInclude" >
   <exercises>
   <title />
   <exercise xml:id="ex-git-commands-summary-synching" label="ex-git-commands-summary-synching">
-    <introduction>
+
+    <statement>
       <p>
-        Complete the table below by filling in the right-hand column with the commands that accomplish the task listed on the left.
-        Use the &lt; &gt; notation appropriately to indicate parameters that need to be customized for each use.
+        Match the tasks on the right with the appropriate git command listed on the left.
+      </p>
+      <p>
         Note that the tasks listed are in approximately the same order as they appear in this activity.
       </p>
-    </introduction>
+    </statement>
+
+    <matches>
+      <match>
+        <premise><c>git </c></premise>
+        <response>List your remote repos</response>
+      </match>
+      <match>
+        <premise><c>git </c></premise>
+        <response>Add a new remote repo</response>
+      </match>
+      <match>
+        <premise><c>git </c></premise>
+        <response>Synch a branch of your local repo with the upstream</response>
+      </match>
+      <match>
+        <premise><c>git </c></premise>
+        <response>Synch a branch of your origin repo with your local repo</response>
+      </match>
+      <match>
+        <premise><c>git </c></premise>
+        <response>Delete a feature branch from your local repo</response>
+      </match>
+      <match>
+        <premise><c>git </c></premise>
+        <response>Delete a feature branch from your origin</response>
+      </match>
+    </matches>
+    <hint>
+      <p>
+        Review the commands in the previous sections of this chapter.
+      </p>
+    </hint>
+
+
   </exercise>
   </exercises>
 </section>
