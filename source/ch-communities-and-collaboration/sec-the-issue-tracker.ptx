@@ -371,7 +371,7 @@
           label="ex-claim-an-issue-b">
           <statement>
             <p>
-              Comment on the issue that you chose using the <xref ref="topic-issue-claim-message">message above</xref> to claim it.
+              Comment on the issue that you chose using the <xref ref="topic-issue-claim-message" text="custom">message above</xref> to claim it.
             </p>
           </statement> 
           <hint>
@@ -389,7 +389,7 @@
           </statement>
           <hint>
             <p>
-              If you did not receive a response, wait a few minutes and reload the issue tracker page again.  Sometimes it takes a few minutes for your comment to be noticed and the issue to be assigned. If you still do not receive a response check that you typed <xref ref="topic-issue-claim-message">the message</xref> correctly.
+              If you did not receive a response, wait a few minutes and reload the issue tracker page again.  Sometimes it takes a few minutes for your comment to be noticed and the issue to be assigned. If you still do not receive a response check that you typed <xref ref="topic-issue-claim-message" text="custom">the message</xref> correctly.
             </p>
             <p>
              If you received a response telling you that you were not assigned the issue, someone else slipped a comment in just ahead of you and was assigned the issue.  If this happens, just try <xref ref="ex-claim-an-issue-b" /> again.  
