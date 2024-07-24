@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      Once your changes have been merged into the upstream <c>main</c>, and you have synchronized there is no need for you to retain your feature branch.
+      Once your changes have been merged into the upstream <c>main</c>, and you have synchronized, there is no need for you to retain your feature branch.
       There is no harm in keeping it.
       But most developers will delete them to avoid having their repos become cluttered with old feature branches.
     </p>
@@ -44,8 +44,9 @@
           So, if you have not already, switch from your feature branch to the <c>main</c> branch.
           Then give a command that lists all of the branches in your local repository.
         </p>
+
         <p>
-          Which command did you type to list the repositories?
+          Which command did you type to list the local repositories?
         </p>
       </statement>
 
@@ -54,7 +55,7 @@
         <choice>
           <statement>
             <p>
-              option
+              <c>git switch</c>
             </p>
           </statement>
         </choice>
@@ -62,7 +63,7 @@
         <choice>
           <statement>
             <p>
-              option
+              <c>git pull</c>
             </p>
           </statement>
         </choice>
@@ -70,7 +71,7 @@
         <choice>
           <statement>
             <p>
-              option
+              <c>git commit</c>
             </p>
           </statement>
         </choice>
@@ -78,7 +79,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              option
+              <c>git branch</c>
             </p>
           </statement>
         </choice>
@@ -124,30 +125,74 @@
     <task xml:id="ex-deleting-feature-branch-on-github-a" label="ex-deleting-feature-branch-on-github-a">
       <statement>
         <p>
-          Does this feature branch still exist in your origin repo on GitHub?  How do you know?
+          Does this feature branch still exist in your <c>origin</c> repo on GitHub?
         </p>
       </statement>
-      <response />
+
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Yes
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              No
+            </p>
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          ADD HINT HERE
+        </p>
+      </hint>
     </task>
 
 
     <task xml:id="ex-deleting-feature-branch-on-github-b" label="ex-deleting-feature-branch-on-github-b">
       <statement>
         <p>
-          You can delete your feature branch from your origin repo using the git CLI.  The command <c>git push -d &lt;remote repo name&gt; &lt;branch&gt;</c> will delete the specified branch from the specified remote repository. Use this command to delete your feature branch from your origin repo.
+          Explain how you know whether the feature branch exists in your <c>origin</c> repo on GitHub?
         </p>
       </statement>
+      <response />
     </task>
 
 
     <task xml:id="ex-deleting-feature-branch-on-github-c" label="ex-deleting-feature-branch-on-github-c">
       <statement>
         <p>
-          Use your browser as you did in <xref ref="ex-deleting-feature-branch-on-github-a"/> to confirm that your feature branch is deleted from your origin repo on GitHub.  If it has not been deleted, revisit <xref ref="ex-deleting-feature-branch-on-github-b"/> and try again.
+          You can delete your feature branch from your origin repo using the git CLI.
+          The command
+        </p>
+
+        <p>
+          <c>git push -d &lt;remote repo name&gt; &lt;branch&gt;</c>
+        </p>
+
+        <p>
+          will delete the specified branch from the specified remote repository.
+          Use this command to delete your feature branch from your origin repo.
+        </p>
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-deleting-feature-branch-on-github-d" label="ex-deleting-feature-branch-on-github-d">
+      <statement>
+        <p>
+          Use your browser as you did in <xref ref="ex-deleting-feature-branch-on-github-a"/> to confirm that your feature branch is deleted from your origin repo on GitHub.
+          If it has not been deleted, revisit <xref ref="ex-deleting-feature-branch-on-github-c"/> and try again.
         </p>
       </statement>
     </task>
   </exercise>
-
   </exercises>
 </section>
