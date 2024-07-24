@@ -10,7 +10,7 @@
   </introduction>
 
   <p>
-    <figure xml:id="fig-staging-changes-and-committing">
+    <figure xml:id="fig-committing-changes">
       <caption> Staging Changes and Committing. </caption>
       <image source="images/ch-upstreaming-changes/staging-changes-and-committing.png" width="75%">
         <description>
