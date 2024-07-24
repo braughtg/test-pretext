@@ -12,7 +12,7 @@
     You now have been assigned an <term>issue</term> to work on and yuu have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space.
   </p>
   <p>
-    Now to work on your issue you will need to setup your <term>local development environment</term>.  Your local development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use `git` commands to add your changes to to your clone and <term>push</term> those changes to your <term>origin</term>.  
+    To work on your issue you will need to setup your <term>local development environment</term>.  Your local development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use `git` commands to add your changes to to your clone and <term>push</term> those changes to your <term>origin</term>.  
   </p>
   <p>
     Because individual computers can vary greatly, you will be using a <term>KitClient</term> as your local development environment. The KitClient is a local development environment that runs in the cloud and that you access through your web browser.  The KitClient has been created specifically for this text and includes a few features that are designed to help with the hands-on exercises.  Using the KitClient also ensures that everyone is working in the same environment, simplifying the instructions, and reducing the chances that things will go wrong.
@@ -37,16 +37,176 @@
     </exercise>
   </exercises>
 
-  <subsection 
+  <subsection>
     <title>Starting the KitClient</title>
     <introduction>
       <p>
-        The exercises in this section will guide you through the process of starting and configuring the KitClient as your local development environment.
+        In this section you will learn how to start, configure, stop, and restart your local development environment.
       </p>
     </introduction>
     <exercises>
       <title />
 
+      <exercise>
+        xml:id="ex-gitpod-login"
+        label="ex-gitpod-login">
+        <statement>
+          <p>
+            Your local development environment will run in the cloud using a service called GitPod. Visit <url href="https://gitpod.io/login" visual="gitpod.io/login"/> and login using the “Continue with GitHub” button and providing your GitHub username and password.
+          </p>
+        </statement>
+      </exercise>
+
+      <!-- The Linux KitClient Instructions -->
+      <exercise
+        xml:id="ex-run-kit-client-linux"
+        label="ex-run-kit-client-linux"
+        component="linux-kit-client">
+        <introduction>
+          <p>
+            The following tasks will guide you through the process of starting and configuring your local development environment. 
+          </p>
+        </introduction>
+        <task
+          xml:id="ex-run-kit-client-linux-a"
+          label="ex-run-kit-client-linux-a">
+          <statement>
+            <p>
+              Click this link to 
+              <url href="https://gitpod.io/#https://github.com/hfossedu/KitClient-Linux-GitPod" visual="gitpod.io/#https://github.com/hfossedu/KitClient-Linux-GitPod">Launch KitClient</url> in GitPod.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-run-kit-client-linux-b"
+          label="ex-run-kit-client-linux-b">
+          <statement>
+            <p>
+              Choose "Terminal" as the "Editor - Browser" as shown here:
+              <image source="images/ch-communities-and-collaboration/gitpod-create-linux-workspace.png"
+                width="50%">
+                <description>
+                  Creating the local development environment in GitPod.
+                </description>
+              </image>
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-run-kit-client-linux-c"
+          label="ex-run-kit-client-linux-c">
+          <statement>
+            <p>
+              Click the "Continue" button and wait for a few minutes until output that is similar to that shown here to appear:
+            </p>
+            <p>
+<c> *********************************************************************************
+  *********************************************************************************
+  Connect to the KitClient with your browser at:                                   
+  https://6901-hfossedu-kitclientlinux-kkguybiovbj.ws-us115.gitpod.io              
+  *********************************************************************************
+  *********************************************************************************</c>
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-run-kit-client-linux-d"
+          label="ex-run-kit-client-linux-d">
+          <statement>
+            <p>
+              Click the link in your output that is similar to the one that is shown above.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-run-kit-client-linux-e"
+          label="ex-run-kit-client-linux-e">
+          <statement>
+            <p>
+              Click the "Connect" button that appears in your browser.
+            </p>
+
+            <p>
+              After clicking the "Connect" button your local development environment should open in the browser. It will appear similar to the window shown in <xref ref="fig-linux-kit-client" />.
+            </p>
+
+            <p>
+              <figure 
+                xml:id="fig-linux-kit-client"
+                label="fig-linux-kit-client"
+                >
+                <caption>
+                  The local development environment.
+                </caption>
+                <image source="images/ch-communities-and-collaboration/linux-kitclient.png"
+                  width="75%">
+                  <description>
+                    The local development environment window.
+                  </description>
+                </image>
+              </figure>
+            </p>
+          </statement>
+        </task>
+      </exercise>
+
+      <exercise
+        xml:id="ex-configure-kit-client-linux"
+        label="ex-configure-kit-client-linux"
+        component="linux-kit-client">
+        <introduction>
+          <p>
+            There are a few additional things that you can to to make working in your local development environment more convenient.
+          </p>
+        </introduction>
+        <task
+          xml:id="ex-configure-kit-client-linux-a"
+          label="ex-configure-kit-client-linux-a">
+          <statement>
+            <p>
+              Use the following steps to make the development environment fill and resize with your browser window.
+            </p>
+            <ol marker="i">
+              <li>
+                Open the "noVNC Menu" by clicking the little tab at the left edge of the development environment window. <xref ref="fig-linux-kit-client" /> shows the "noVNC Menu" opened.
+              </li> 
+              <li>
+                Click "Gear Icon" to open the "noVNC Settings".  <xref ref="fig-linux-kit-client" /> shows the "noVNC Settings" open.
+              </li>
+              <li>
+                Set the "Scaling Mode" to "Remote Resizing".
+              </li>
+            </ol>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-configure-kit-client-linux-b"
+          label="ex-configure-kit-client-linux-b">
+          <statement>
+            <p>
+              To simplify pasting answers into this text, it is recommended that you open the text using the Firefox browser within the local development environment.
+            </p>
+            <p>
+              Copy and paste within the local development environment can be done via application menus, the right click menu, or keyboard shortcuts. 
+            </p>
+            <p>
+              Copy and paste between your host machine and the local development environment requires pasting content into the "Clipboard" on the "noVNC Menu".
+            </p>
+          </statement>
+        </task>
+      </exercise>
+
+      <!-- The VSCode KitClient Instructions -->
+      <exercise
+        xml:id="ex-run-kit-client-vscode"
+        label="ex-run-kit-client-vscode"
+        component="linux-kit-client">
+        <introduction>
+          <p>
+            The following tasks will guide you through the process of starting and configuring your local development environment. 
+          </p>
+        </introduction>
+      </exercise>
 
     </exercises>
 
