@@ -3,13 +3,6 @@
 <section xml:id="topic-appendix-a-staying-synchronized" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Appendix A</title>
 
-  <!--
-  <introduction>
-    <p>
-      Text of section.
-    </p>
-  </introduction>
-  -->
   <introduction>
     <p>
       The information in this appendix is only important if you were directed here from <xref ref="ex-origin-main-behind-main" />, otherwise it may be ignored.

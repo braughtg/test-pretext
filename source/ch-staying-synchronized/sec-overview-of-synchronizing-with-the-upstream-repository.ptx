@@ -16,8 +16,6 @@
     <xref ref="fig-synching-with-upstream" /> shows how pulling <c>main</c> from the upstream and then pushing it to your origin synchs the <c>main</c> branches.
   </p>
 
-  <exercises>
-  <title />
   <p>
     <figure xml:id="fig-synching-with-upstream" >
       <caption> Synch with Upstream. </caption>
@@ -28,5 +26,5 @@
       </image>
     </figure>
   </p>
-  </exercises>
+  
 </section>
