@@ -12,7 +12,7 @@
 
   <exercises>
   <title/>
-  <exercise xml:id="ex-locate-claimed -issue" label="ex-locate-claimed -issue">
+  <exercise xml:id="ex-locate-claimed-issue" label="ex-locate-claimed -issue">
     <introduction>
       <p>
         In order to make the changes to the appropriate local file, you will need to review the issue that you claimed.
