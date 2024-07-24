@@ -4,16 +4,51 @@
   xml:id="topic-local-development-environment"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
-  <title>Your Local Development Environment</title>
+  <title>Setting up Your Local Development Environment</title>
 
-  <introduction>
+  <introduction
+    xml:id="topic-local-dev-env-intro">
  	<p>
-    You now have been assigned an <term>issue</term> to work on and have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space. The next step is to 
-    
-    
-    <term>local development environment</term>.  Your local development environment is where you will have your <term>clone</term> 
-    To do the work of fixing your issue you will use a 
+    You now have been assigned an <term>issue</term> to work on and yuu have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space.
+  </p>
+  <p>
+    Now to work on your issue you will need to setup your <term>local development environment</term>.  Your local development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use `git` commands to add your changes to to your clone and <term>push</term> those changes to your <term>origin</term>.  
+  </p>
+  <p>
+    Because individual computers can vary greatly, you will be using a <term>KitClient</term> as your local development environment. The KitClient is a local development environment that runs in the cloud and that you access through your web browser.  The KitClient has been created specifically for this text and includes a few features that are designed to help with the hands-on exercises.  Using the KitClient also ensures that everyone is working in the same environment, simplifying the instructions, and reducing the chances that things will go wrong.
   </p>
   </introduction>
 
+  <exercises>
+    <title />
+
+    <exercise
+      xml:id="ex-why-use-kitclient"
+      label="ex-why-use-kitclient">
+      <statement>
+        <p>
+          Explain in a few sentences what the KitClient is and why it is being used.
+        </p>
+      </statement>
+      <response />
+      <hint>
+        Read the <xref ref="topic-local-dev-env-intro">introduction</xref> to this section carefully and summarize the relevant information in your own words.
+      </hint>
+    </exercise>
+  </exercises>
+
+  <subsection 
+    <title>Starting the KitClient</title>
+    <introduction>
+      <p>
+        The exercises in this section will guide you through the process of starting and configuring the KitClient as your local development environment.
+      </p>
+    </introduction>
+    <exercises>
+      <title />
+
+
+    </exercises>
+
+  </subsection>
 </section>

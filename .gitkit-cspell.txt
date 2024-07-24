@@ -1,5 +1,6 @@
 foss
 inclusivity
+kitclient
 opensource
 Runestone
 uiux
