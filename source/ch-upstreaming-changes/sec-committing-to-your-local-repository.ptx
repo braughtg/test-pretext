@@ -8,17 +8,6 @@
       In this section you will do the work necessary to commit the changes made to your <em>Local Files</em> to your local repository. <term>NOTE: need reference to new image for commit only.</term>
     </p>
   </introduction>
-
-  <p>
-    <figure xml:id="fig-committing-changes">
-      <caption> Staging Changes and Committing. </caption>
-      <image source="images/ch-upstreaming-changes/staging-changes-and-committing.png" width="75%">
-        <description>
-          Staging Changes and Committing.
-        </description>
-      </image>
-    </figure>
-  </p>
   
   <exercises>
   <title/>
