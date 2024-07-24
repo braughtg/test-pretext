@@ -5,11 +5,11 @@
 
   <introduction>
     <p>
-      As you saw in the previous section, you now have modifications to your local files that have not been staged or committed to your local repository.
+      As you saw in the previous section, you now have modifications to your local files that have not been staged. <term>NOTE: need a new image for staging only.</term>
       The process of staging changes (i.e.
-      adding the files to the stage) and then committing staged changes to your local repository is illustrated in <xref ref="fig-staging-changes-and-committing" />.
+      adding the files to the stage) is illustrated in <xref ref="fig-staging-changes-and-committing" />.
       Recall from <xref ref="fig-edit-local-files-on-feature-branch" /> that the blue dot in <em>Local Files</em> represents the changes you made.
-      In <xref ref="fig-staging-changes-and-committing" />, those changes are staged and then made into a commit that is added to your feature branch.
+      In <xref ref="fig-staging-changes-and-committing" />, those changes are staged and will be made into a commit that is added to your feature branch in the next section.
     </p>
   </introduction>
 
@@ -28,7 +28,7 @@
   <title/>
   <introduction>
     <p>
-      The exercises in this section will walk you through staging the changes you made to your <em>Local Files</em> and then committing them to your local repository.
+      The exercises in this section will walk you through staging the changes you made to your <em>Local Files</em>.
     </p>
   </introduction>
 
@@ -72,134 +72,6 @@
           Compare your output in (a) to the output in <xref ref="ex-verify-changes-a" />.
           What two changes have occurred that reflect that your changes have been staged? <term>NOTE: like previous question, may want to change this so that it asks which files are staged, untracked, etc.
           Then ask a question like "How do you know that your changes have been staged?"</term>
-        </p>
-        <response />
-      </statement>
-    </task>
-  </exercise>
-
-  <exercise xml:id="ex-meaningful-commit-messages" label="ex-meaningful-commit-messages">
-    <introduction>
-      <p>
-        As you saw earlier when looking at the output of <c>git log</c>, each commit has a commit message that briefly describes the changes that are contained in the commit.
-        These messages should be concise but meaningful without requiring the reader to refer to the ticket in the issue tracker.
-        A future reader of the <c>git log</c> output should be able to obtain an idea of the changes you have made and why you made them by reading your commit messages.
-      </p>
-
-      <p>
-        For each of the following issues, order the given commit messages from best (listed first) to worst (listed last).
-      </p>
-    </introduction>
-
-
-    <task xml:id="ex-meaningful-commit-messages-a" label="ex-meaningful-commit-messages-a">
-      <statement>
-        <p>
-          Issue: The documentation says “bug” instead of “bugs” where plural is needed.
-        </p>
-      </statement>
-      <blocks> <block order="1">
-      <p>
-        Pluralize bug (i.e.
-        bugs) for clarity
-      </p>
-      </block> <block order="2">
-
-      <p>
-        Fix issue #123
-      </p>
-      </block> <block order="3">
-
-      <p>
-        Fix typo
-      </p>
-      </block> </blocks>
-    </task>
-
-
-    <task xml:id="ex-meaningful-commit-messages-b" label="ex-meaningful-commit-messages-b">
-      <statement>
-        <p>
-          Issue: The harvesting log should be able to track insect presence.
-        </p>
-      </statement>
-      <blocks> <block order="1">
-      <p>
-        Add tracking for insects in harvesting logs
-      </p>
-      </block> <block order="2">
-
-      <p>
-        Insect tracking added
-      </p>
-      </block> <block order="3">
-
-      <p>
-        Extend harvest logs
-      </p>
-      </block> </blocks>
-    </task>
-  </exercise>
-
-  <exercise xml:id="ex-committing-changes" label="ex-committing-changes">
-    <introduction>
-      <p>
-        The <c>git commit -m "&lt;message&gt;"</c> command commits all of the staged files to the currently active branch with the specified commit message.
-        Use the <c>git commit</c> command to commit your staged changes to your local repository with a meaningful commit message.
-      </p>
-    </introduction>
-
-
-    <task xml:id="ex-committing-changes-a" label="ex-committing-changes-a">
-      <statement>
-        <p>
-          Provide the command you entered.
-        </p>
-        <response />
-      </statement>
-    </task>
-
-
-    <task xml:id="ex-committing-changes-b" label="ex-committing-changes-b">
-      <statement>
-        <p>
-          Now use the <c>git status</c> command again.
-          Compare your output to the output in <xref ref="ex-staging-changes-c" />.
-          What two changes have occurred that reflect that your changes have been staged? <term>NOTE: like previous question, may want to change this so that it asks which files are staged, untracked, etc.
-          Then ask a question like "How do you know your changes have been committed?</term>
-        </p>
-        <response />
-      </statement>
-    </task>
-
-
-    <task xml:id="ex-committing-changes-c" label="ex-committing-changes-c">
-      <statement>
-        <p>
-          Use the <c>git log</c> command to show the 3 most recent commits to your branch.
-          How is this output different from what you observed in Question #1?  Briefly explain why? <term>Note: Question #1 is now a multiple choice question.
-          Maybe there should be multiple choice questions here that are similar (showing that the new commit appears in the log).</term>
-        </p>
-        <response />
-      </statement>
-    </task>
-
-
-    <task xml:id="ex-committing-changes-d" label="ex-committing-changes-d">
-      <statement>
-        <p>
-          Switch to your <c>main</c> branch.
-          What command did you use?
-        </p>
-        <response />
-      </statement>
-    </task>
-
-
-    <task xml:id="ex-committing-changes-e" label="ex-committing-changes-e">
-      <statement>
-        <p>
-          Does the output of a <c>git log</c> command now show the information about the commit you made?  Briefly explain why or why not?
         </p>
         <response />
       </statement>
