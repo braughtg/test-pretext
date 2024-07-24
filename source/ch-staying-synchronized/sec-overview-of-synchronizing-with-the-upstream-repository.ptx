@@ -3,9 +3,9 @@
 <section xml:id="topic-overview-of-synchronizing-with-the-upstream-repository" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Overview of Synchronizing with the Upstream Repository</title>
 
-  <p>
+  <introduction>
     As changes from pull requests (yours and others) are merged into upstream <c>main</c>, the <c>main</c> branches in your local and origin repos will get <em>out of synch with the upstream</em>.
-  </p>
+  </introduction>
 
   <p>
     Now, recall that upstream <c>main</c> should be the starting point for all new work.
@@ -16,8 +16,6 @@
     <xref ref="fig-synching-with-upstream" /> shows how pulling <c>main</c> from the upstream and then pushing it to your origin synchs the <c>main</c> branches.
   </p>
 
-  <exercises xml:id="ex-overview-of-synchronizing-with-the-upstream-repository">
-  <title />
   <p>
     <figure xml:id="fig-synching-with-upstream" >
       <caption> Synch with Upstream. </caption>
@@ -28,5 +26,5 @@
       </image>
     </figure>
   </p>
-  </exercises>
+  
 </section>

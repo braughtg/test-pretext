@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-git-command-summary-synching" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Git Command Summary</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      It will take a while for this process and all of the commands to become a natural part of the way you work.
+      Until that happens it is often useful to have a short concise cheat sheet of the command for accomplishing each task.
+    </p>
   </introduction>
 
+  <exercises>
+  <title />
+  <exercise xml:id="ex-git-commands-summary-synching" label="ex-git-commands-summary-synching">
+    <statement>
+      <p>
+        Match the tasks on the right with the appropriate git command listed on the left.
+      </p>
+    </statement>
+    <matches> <match>
+    <premise>
+    <c>git remote -v</c></premise> <response>List your remote repos</response> </match> <match>
+    <premise>
+    <c>git remote add &lt;remote repo name&gt; &lt;remote repo URL&gt;</c></premise> <response>Add a new remote repo</response> </match> <match>
+    <premise>
+    <c>git pull --ff-only &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Synch a branch of your origin repo with your local repo</response> </match> <match>
+    <premise>
+    <c>git push &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Synch a branch of your local repo with the upstream</response> </match> <match>
+    <premise>
+    <c>git branch -D &lt;branch&gt; </c></premise> <response>Delete a feature branch from your local repo</response> </match> <match>
+    <premise>
+    <c>git push -d &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Delete a feature branch from your origin</response> </match> </matches>
+    <hint>
+      <p>
+        Note that the tasks listed are in approximately the same order as they appear in the sections of this chapter.
+      </p>
+    </hint>
+  </exercise>
+  </exercises>
 </section>

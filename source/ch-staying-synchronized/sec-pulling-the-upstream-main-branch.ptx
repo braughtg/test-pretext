@@ -3,14 +3,14 @@
 <section xml:id="topic-pulling-the-upstream-main-branch" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Pulling the Upstream <c>main</c> Branch</title>
 
-  <exercises xml:id="ex-pulling-the-upstream-main-branch">
+  <exercises>
   <title />
-  <exercise xml:id="ex-active-branch" xml:label="ex-active-branch">
+  <exercise xml:id="ex-active-branch" label="ex-active-branch">
     <introduction>
       The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo.
       This section walks you through that process.
     </introduction>
-
+    
 
     <task xml:id="ex-active-branch-a" label="ex-active-branch-a">
       <statement>
