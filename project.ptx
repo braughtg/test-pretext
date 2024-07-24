@@ -10,9 +10,9 @@
     <target name="instructor-web-linux" format="html" publication="publication-instructor-linux.ptx"/>
     <target name="instructor-print-linux" format="pdf" publication="publication-instructor-linux.ptx"/>
 
-    <target name="student-web-vscode" format="html" publication="publication-student-linux.ptx"/>
-    <target name="student-print-vscode" format="pdf" publication="publication-student-linux.ptx"/>
-    <target name="instructor-web-vscode" format="html" publication="publication-instructor-linux.ptx"/>
-    <target name="instructor-print-vsdcode" format="pdf" publication="publication-instructor-linux.ptx"/>
+    <target name="student-web-vscode" format="html" publication="publication-student-vscode.ptx"/>
+    <target name="student-print-vscode" format="pdf" publication="publication-student-vscode.ptx"/>
+    <target name="instructor-web-vscode" format="html" publication="publication-instructor-vscode.ptx"/>
+    <target name="instructor-print-vsdcode" format="pdf" publication="publication-instructor-vscode.ptx"/>
   </targets>
 </project>
