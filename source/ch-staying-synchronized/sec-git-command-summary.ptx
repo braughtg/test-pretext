@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-git-command-summary-synching"
+xmlns:xi="http://www.w3.org/2001/XInclude" >
+
   <title>Git Command Summary</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      It will take a while for this process and all of the commands to become a natural part of the way you work.
+      Until that happens it is often useful to have a short concise cheat sheet of the command for accomplishing each task.
+    </p>
   </introduction>
 
+  <exercises>
+  <title />
+  <exercise xml:id="ex-git-commands-summary-synching" label="ex-git-commands-summary-synching">
+    <introduction>
+      <p>
+        Complete the table below by filling in the right-hand column with the commands that accomplish the task listed on the left.
+        Use the &lt; &gt; notation appropriately to indicate parameters that need to be customized for each use.
+        Note that the tasks listed are in approximately the same order as they appear in this activity.
+      </p>
+    </introduction>
+  </exercise>
+  </exercises>
 </section>
