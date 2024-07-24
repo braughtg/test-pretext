@@ -24,7 +24,7 @@
   <xi:include href="sec-switching-branches.ptx" />
   <xi:include href="sec-editing-local-files.ptx" />
   <xi:include href="sec-staging-changes.ptx" />
-  <xi:include href="sec-commiting-to-your-local-repository.ptx" />
+  <xi:include href="sec-committing-to-your-local-repository.ptx" />
   <xi:include href="sec-pushing-a-branch-to-your-origin.ptx" />
   <xi:include href="sec-creating-a-pull-request.ptx" />
   <xi:include href="sec-git-command-summary.ptx" />

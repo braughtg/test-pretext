@@ -1,13 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-staging-changes"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-staging-changes" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Staging Changes</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      As you saw in the previous section, you now have modifications to your local files that have not been staged. <term>NOTE: need a new image for staging only.</term>
+      The process of staging changes (i.e.
+      adding the files to the stage) is illustrated in <xref ref="fig-staging-changes-and-committing" />.
+      Recall from <xref ref="fig-edit-local-files-on-feature-branch" /> that the blue dot in <em>Local Files</em> represents the changes you made.
+      In <xref ref="fig-staging-changes-and-committing" />, those changes are staged and will be made into a commit that is added to your feature branch in the next section.
+    </p>
   </introduction>
 
+  <p>
+    <figure xml:id="fig-staging-changes-and-committing">
+      <caption> Staging Changes and Committing. </caption>
+      <image source="images/ch-upstreaming-changes/staging-changes-and-committing.png" width="75%">
+        <description>
+          Staging Changes and Committing.
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercises>
+  <title/>
+  <introduction>
+    <p>
+      The exercises in this section will walk you through staging the changes you made to your <em>Local Files</em>.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-staging-changes" label="ex-staging-changes">
+    <introduction>
+      <p>
+        The <c>git stage &lt;file&gt;</c> command adds the indicated file to the stage, preparing it to become a part of the next commit.
+        Use the <c>git stage &lt;file&gt;</c> command now to stage the file that you edited.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-staging-changes-a" label="ex-staging-changes-a">
+      <statement>
+        <p>
+          Provide the command you entered.
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-staging-changes-b" label="ex-staging-changes-b">
+      <statement>
+        <p>
+          Note that git also has a <c>git add</c> command that is equivalent to <c>git stage</c>.
+          So, you can add files to the stage using either <c>git stage</c> or <c>git add</c>.
+          These activities will use <c>git stage</c> because it seems more descriptive of what is happening.
+          However, you are likely to see <c>git add</c> used in other resources, so it is worth knowing that they are equivalent.
+          Provide the <c>git add</c> command that would be equivalent to your answer in (a).
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-staging-changes-c" label="ex-staging-changes-c">
+      <statement>
+        <p>
+          Now run the <c>git status</c> command again.
+          Compare your output in (a) to the output in <xref ref="ex-verify-changes-a" />.
+          What two changes have occurred that reflect that your changes have been staged? <term>NOTE: like previous question, may want to change this so that it asks which files are staged, untracked, etc.
+          Then ask a question like "How do you know that your changes have been staged?"</term>
+        </p>
+        <response />
+      </statement>
+    </task>
+  </exercise>
+  </exercises>
 </section>
