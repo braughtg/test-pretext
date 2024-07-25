@@ -7,7 +7,28 @@
   <title>Cloning Your Origin</title>
 
   <introduction>
- 	<p>Text of section.</p>
+ 	  <p>
+      The next step in the basic FOSS workflow is to ensure that you have a <term>clone</term> your <term>origin</term> repository in your development environment as shown in <xref ref="fig-basic-workflow-clone" />.  Having a clone of your origin in your development environment will allow you to edit the files in the repository to fix the issue that you have been assigned.
+    </p>
+
+    <p>
+      <figure 
+        xml:id="fig-basic-workflow-clone"
+        >
+        <caption>
+          Cloning your origin repository from GitHub to your development environment.
+        </caption>
+        <image source="images/ch-communities-and-collaboration/basic-workflow-clone.png" width="75%">
+          <description>Creating a clone of your origin repository creates a copy of it in your development environment. This copy is your local copy.
+          </description>
+        </image>
+      </figure>
+    </p>
   </introduction>
 
+  <!-- Linux KitClient -->
+
+
+  <!-- VSCode KitClient -->
+   
 </section>
