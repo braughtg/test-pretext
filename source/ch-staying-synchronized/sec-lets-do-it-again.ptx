@@ -144,44 +144,47 @@
   </exercise>
 
   <exercise xml:id="ex-fixing-issue-process" label="ex-fixing-issue-process">
+    <introduction>
+      <p>
+        Use the process that you outlined in <xref ref="ex-fixing-issue-ordering"/> to fix your “Round2” issue and create a pull request to the upstream for your changes.
+      </p>
+
+      <p>
+        Be sure to:
+        <ul>
+          <li>
+            <p>
+              Use a descriptive name for your branch.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use a meaningful message when committing your changes to the feature branch.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Provide a useful title and description when creating your pull request.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Include a “Closes” or “Fixes” line in your pull request description so that the associated issue number will be closed automatically if your pull request is merged.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+
+
     <task xml:id="ex-fixing-issue-process-a" label="ex-fixing-issue-process-a">
       <statement>
         <p>
-          Use the process that you outlined in <xref ref="ex-fixing-issue-ordering"/> to fix your “Round2” issue and create a pull request to the upstream for your changes.
-        </p>
-
-        <p>
           Which of the following Git commands did you use for the steps indicated below.
           The command references that you created in <xref ref="ex-git-commands-summary-synching"/> may also come in handy here.
-        </p>
-
-        <p>
-          Also be sure to:
-          <ul>
-            <li>
-              <p>
-                Use a descriptive name for your branch.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Use a meaningful message when committing your changes to the feature branch.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Provide a useful title and description when creating your pull request.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Include a “Closes” or “Fixes” line in your pull request description so that the associated issue number will be closed automatically if your pull request is merged.
-              </p>
-            </li>
-          </ul>
         </p>
       </statement>
       <matches> <match>
@@ -318,20 +321,77 @@
       </hint>
     </task>
   </exercise>
+
   <exercise xml:id="ex-pull-request-info" label="ex-pull-request-info">
-    <statement>
+    <introduction>
       <p>
-        Give the following information about your pull request. Hint: You can revisit the prior activity to refresh your memory on the terms Base Repository, Head Repository, Base Branch and Compare Branch.
+        Give the following information about your pull request.
+        Hint: You can revisit the prior sections to refresh your memory on the terms <term>Base Repository</term>, <term>Head Repository</term>, <term>Base Branch</term> and <term>Compare Branch</term>.
       </p>
-      <p>
-        ADD QUESTION HERE - MUST BE FILL-IN?
-      </p>
-    </statement>
+    </introduction>
+    <task xml:id="ex-pull-request-info-a" label="ex-pull-request-info-a">
+      <statement>
+        <p>
+          The number of your PR
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-pull-request-info-b" label="ex-pull-request-info-b">
+      <statement>
+        <p>
+          Full URL of your PR
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-pull-request-info-c" label="ex-pull-request-info-c">
+      <statement>
+        <p>
+          Base Repository URL
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-pull-request-info-d" label="ex-pull-request-info-d">
+      <statement>
+        <p>
+          Head Repository URL
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-pull-request-info-e" label="ex-pull-request-info-e">
+      <statement>
+        <p>
+          Base Branch
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-pull-request-info-f" label="ex-pull-request-info-f">
+      <statement>
+        <p>
+          Compare Branch
+        </p>
+      </statement>
+      <response />
+    </task>
+    <task xml:id="ex-pull-request-info-g" label="ex-pull-request-info-g">
+      <statement>
+        <p>
+          The line number of the README.md file that you changed.  Hint: use the diff you saw in the prior chapter.
+        </p>
+      </statement>
+      <response />
+    </task>
   </exercise>
+
   <exercise xml:id="ex-pull-request-problem" label="ex-pull-request-problem">
     <statement>
       <p>
-        Because there were a limited number of “Round2” issues, other students will have been simultaneously making changes to fix the same lines in the same files.  Describe in a few sentences how this might create a problem in the future.
+        Because there were a limited number of “Round2” issues, other students will have been simultaneously making changes to fix the same lines in the same files.
+        Describe in a few sentences how this might create a problem in the future.
       </p>
     </statement>
     <response />
