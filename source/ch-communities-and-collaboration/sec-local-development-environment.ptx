@@ -183,7 +183,7 @@
       <exercise
         xml:id="ex-create-kit-client-vscode"
         label="ex-create-kit-client-vscode"
-        component="linux-kit-client">
+        component="vscode-kit-client">
         <introduction>
           <p>
             The following tasks will guide you through the process of starting and configuring your development environment. 
@@ -268,7 +268,7 @@
       <exercise
         xml:id="ex-vscode-kitty"
         label="ex-vscode-kitty"
-        component="linux-kit-client">
+        component="vscode-kit-client">
         <statement>
           <p>
             In the "TERMINAL" tab at the bottom of the window you should see "😺💻 Meow, Kit-tty here!" in the output. Read the associated text.
