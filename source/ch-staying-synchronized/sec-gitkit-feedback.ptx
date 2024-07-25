@@ -356,7 +356,7 @@
       <query label="ex-gitkit-feedback-words-a-poll">
       <statement>
         <p>
-          bored
+          <term>bored</term>
         </p>
       </statement>
 
@@ -394,7 +394,7 @@
       <query label="ex-gitkit-feedback-words-b-poll">
       <statement>
         <p>
-          confident
+          <term>confident</term>
         </p>
       </statement>
 
@@ -432,7 +432,7 @@
       <query label="ex-gitkit-feedback-words-c-poll">
       <statement>
         <p>
-          confused
+          <term>confused</term>
         </p>
       </statement>
 
@@ -470,7 +470,7 @@
       <query label="ex-gitkit-feedback-words-d-poll">
       <statement>
         <p>
-          engaged
+          <term>engaged</term>
         </p>
       </statement>
 
@@ -508,7 +508,7 @@
       <query label="ex-gitkit-feedback-words-e-poll">
       <statement>
         <p>
-          frustrated
+          <term>frustrated</term>
         </p>
       </statement>
 
@@ -546,7 +546,7 @@
       <query label="ex-gitkit-feedback-words-f-poll">
       <statement>
         <p>
-          interested
+          <term>interested</term>
         </p>
       </statement>
 
@@ -584,7 +584,7 @@
       <query label="ex-gitkit-feedback-words-g-poll">
       <statement>
         <p>
-          lost
+          <term>lost</term>
         </p>
       </statement>
 
@@ -622,7 +622,7 @@
       <query label="ex-gitkit-feedback-words-h-poll">
       <statement>
         <p>
-          overwhelmed
+          <term>overwhelmed</term>
         </p>
       </statement>
 
@@ -657,12 +657,63 @@
   </exercise>
 
   <exercise xml:id="ex-gitkit-feedback-time" label="ex-gitkit-feedback-time">
+    <query label="ex-gitkit-feedback-time-poll">
     <statement>
       <p>
         Approximately how much time did you spend on this chapter outside of class time?
       </p>
     </statement>
-    <response />
+
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            0 - 30 minutes
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            30 minutes - 1 hour
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            1 hour - 2 hours
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            2 hours - 3 hours
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            3 hours - 5 hours
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            more than 5 hours
+          </p>
+        </statement>
+      </choice>
+    </choices>
+    </query>
   </exercise>
 
   <exercise xml:id="ex-gitkit-feedback-challenge" label="ex-gitkit-feedback-challenge">
