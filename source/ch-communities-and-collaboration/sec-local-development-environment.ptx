@@ -286,6 +286,176 @@
   </subsection>
 
   <subsection>
+    <title>Configuring the Git Client</title>
+    <introduction>
+      <p>
+        Your development environment includes a <term>Git client</term>. The Git client is the tool that you will use to interact with Git repositories, such as the GitKit FarmData2 repository.
+      </p>
+      <p>
+        There are lots of different Git clients. Some are graphical and some use a text interface. These exercises, introduce you to Git using its text-based <term>command line interface (CLI)</term>.  This is the most general way to interact with Git and will provide a conceptual foundation for using any other Git client that you might encounter.
+      </p>
+    </introduction>
+    
+    <exercises>
+      <title />
+
+      <!-- Linux KitClient -->
+      <exercise
+        xml:id="ex-open-terminal-linux"
+        label="ex-open-terminal-linux"
+        component="linux-kit-client">
+        <introduction>
+          <p>
+            You will interact with Git using its command line interface via a <code>Terminal</code>.  Use the following steps to open a Terminal.
+          </p>
+        </introduction>
+        <task
+          xml:id="ex-open-terminal-a-linux"
+          label="ex-open-terminal-a-linux">
+          <statement>
+            <p>
+              Click the "Terminal" icon at the bottom of the development environment window to open a new Terminal.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-open-terminal-b-linux"
+          label="ex-open-terminal-b-linux">
+          <statement>
+            <p>
+              Enter your name at the prompt and press enter.  This will customize the Terminal prompt for you.
+            </p>
+          </statement>
+        </task>
+      </exercise>
+
+      <!-- VSCode KitClient -->
+      <exercise
+        xml:id="ex-open-terminal-vscode"
+        label="ex-open-terminal-vscode"
+        component="vscode-kit-client">
+        <statement>
+          <p>
+            You will interact with Git using its command line interface via a <code>Terminal</code>.  Use the following steps access the Terminal.
+          </p>
+          <p>
+            Click on the "TERMINAL" tab near the bottom of the development environment window to make the Terminal active.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise
+        xml:id="ex-git-version"
+        label="ex-git-version">
+        <introduction>
+          You can learn about the <c>git</c> command by running it without any additional arguments.
+        </introduction>
+        <task
+          xml:id="ex-git-version-a"
+          label="ex-git-version-a">
+          <statement>
+            <p>
+              Enter the command <c>git</c> into the Terminal.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-git-version-b"
+          label="ex-git-version-b">
+          <statement>
+            <p>
+              Give a <c>git</c> command that will cause ,<c>git</c> to display its version.
+            </p>
+            <response />
+          </statement>
+          <hint>
+            <p>
+              Use the output from <xref ref="ex-git-version-a" /> to determine what flag to pass to <c>git</c>.
+            </p>
+          </hint>
+        </task>
+        <task
+          xml:id="ex-git-version-c"
+          label="ex-git-version-c">
+          <statement>
+            <p>
+              What version of the <c>git</c> command line client is installed in your development environment?
+            </p>
+            <response />
+          </statement>
+          <hint>
+            <p>
+              Use the command that you identified in <xref ref="ex-git-version-b" /> to determine the <c>git</c> version.
+            </p>
+          </hint>
+        </task>
+      </exercise>
+
+      <exercise
+        xml:id="ex-configure-git"
+        label="ex-configure-git">
+        <introduction>
+          <p>
+            Recall from class that Git repositories maintain a complete history of all changes, including who made each change.  To do this, Git needs to know a little bit of information about you.
+          </p>
+          <p>
+            Git identifies the author of each change using two pieces of information: A name and an e-mail. For name, you might decide to your full name, or a nickname, or your GitHub username.  Just keep in mind that whatever name you use will be associated with all of the changes you make. For e-mail, you can again use any valid e-mail associated with you. 
+          </p>
+          <p>
+            The tasks in this exercise will guide you through the process of configuring the Git client in your development environment.
+          </p>
+        </introduction>
+        <task
+          xml:id="ex-configure-git-a"
+          label="ex-configure-git-a">
+          <statement>
+            <p>
+              Use the following command to set the name that Git will associate with your changes:
+            </p>
+            <p>
+              <c>git config --global user.name "&lt;name&gt;"</c>
+            </p>
+            <p>
+              Replace <c>"&lt;name&gt;"</c> with the name you wish to use and be sure not to include the &lt; and &gt;.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-configure-git-b"
+          label="ex-configure-git-b">
+          <statement>
+            <p>
+              Use the following command to set the e-mail that Git will associate with your changes:
+            </p>
+            <p>
+              <c>git config --global user.email "&lt;e-mail&gt;"</c>
+            </p>
+            <p>
+              Replace <c>"&lt;e-mail&gt;"</c> with the name you wish to use and be sure not to include the &lt; and &gt;.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-configure-git-c"
+          label="ex-configure-git-c">
+          <statement>
+            <p>
+              Use the following command to display Git's global configuration including the two new settings you just added:
+            </p>
+            <p>
+              <c>git config --global --list</c>
+            </p>
+            <p>
+              Give the output of this command as your answer for this task.
+            </p>
+          </statement>
+          <response />
+        </task>
+      </exercise>
+    </exercises>
+  </subsection>
+
+  <subsection>
     <title>Adjusting some GitPod Settings</title>
     <introduction>
       <p>
