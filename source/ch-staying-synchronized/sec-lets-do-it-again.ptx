@@ -329,6 +329,8 @@
         Hint: You can revisit the prior sections to refresh your memory on the terms <term>Base Repository</term>, <term>Head Repository</term>, <term>Base Branch</term> and <term>Compare Branch</term>.
       </p>
     </introduction>
+
+
     <task xml:id="ex-pull-request-info-a" label="ex-pull-request-info-a">
       <statement>
         <p>
@@ -337,6 +339,8 @@
       </statement>
       <response />
     </task>
+
+
     <task xml:id="ex-pull-request-info-b" label="ex-pull-request-info-b">
       <statement>
         <p>
@@ -345,6 +349,8 @@
       </statement>
       <response />
     </task>
+
+
     <task xml:id="ex-pull-request-info-c" label="ex-pull-request-info-c">
       <statement>
         <p>
@@ -353,6 +359,8 @@
       </statement>
       <response />
     </task>
+
+
     <task xml:id="ex-pull-request-info-d" label="ex-pull-request-info-d">
       <statement>
         <p>
@@ -361,6 +369,8 @@
       </statement>
       <response />
     </task>
+
+
     <task xml:id="ex-pull-request-info-e" label="ex-pull-request-info-e">
       <statement>
         <p>
@@ -369,6 +379,8 @@
       </statement>
       <response />
     </task>
+
+
     <task xml:id="ex-pull-request-info-f" label="ex-pull-request-info-f">
       <statement>
         <p>
@@ -377,10 +389,13 @@
       </statement>
       <response />
     </task>
+
+
     <task xml:id="ex-pull-request-info-g" label="ex-pull-request-info-g">
       <statement>
         <p>
-          The line number of the README.md file that you changed.  Hint: use the diff you saw in the prior chapter.
+          The line number of the README.md file that you changed.
+          Hint: use the diff you saw in the prior chapter.
         </p>
       </statement>
       <response />
