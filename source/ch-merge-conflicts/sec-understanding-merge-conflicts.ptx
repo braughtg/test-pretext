@@ -3,6 +3,11 @@
 <section xml:id="topic-understanding-merge-conflicts" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Understanding Merge Conflicts</title>
 
+  <introduction>
+    <p>
+      The exercises in this section provide practice in identifying merge conflicts and their resolutions.
+    </p>
+  </introduction>
   <exercises>
   <title />
 
@@ -23,9 +28,10 @@
   <p>
     <xref ref="fig-merge-conflicts-resolution-1" /> shows the <c>main</c> branch in the right panel the contributor's feature branch in the left panel, and a blank merged version in the middle.
   </p>
+
   <p>
     <figure xml:id="fig-merge-conflicts-resolution-1" >
-      <caption> Example merge conflicts with Merged Result. </caption>
+      <caption> Example merge conflicts with missing Merged Result. </caption> 
       <image source="images/ch-merge-conflicts/merge-conflicts-resolution-1.png" width="75%">
         <description>
           Three panels of code (feature branch, blank merge, main branch)
@@ -34,13 +40,14 @@
     </figure>
   </p>
 
-  <exercise xml:id="ex-merge-conflicts-concepts-1" label="ex-merge-conflicts-concepts-1">
+  <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1" language="python" adaptive="yes" indentation="show">
     <introduction>
       <p>
         Consider the merge shown in <xref ref="fig-merge-conflicts-1" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
       </p>
     </introduction>
-    <task xml:id="ex-describe-computation-1" label="ex-describe-computation-1">
+
+    <task xml:id="ex-merge-conflicts-practice-1-a" label="ex-merge-conflicts-practice-1-a">
       <statement>
         <p>
           Study the program in the <c>main</c> branch and then describe in a sentence the computation that the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
@@ -48,160 +55,132 @@
       </statement>
       <response />
     </task>
-    <task xml:id="ex-marking-main-and-feature-non-conflicting-1" label="ex-marking-main-and-feature-non-conflicting-1">
+
+    <task xml:id="ex-merge-conflicts-practice-1-b" label="ex-merge-conflicts-practice-1-b">
       <statement>
         <p>
-          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are non-conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
+          Highlight (by clicking, or by circling) all of the lines that are non-conflicting changes in the feature branch or the <c>main</c> branch. Use the example in the slides as a guide for highlighting.
         </p>
       </statement>
-
-      <choices>
-        <choice>
-          <statement>
-            <p>
-              1
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              2
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              3
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              4
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              5
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              6
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              7
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              8
-            </p>
-          </statement>
-        </choice>
-      </choices>
-    </task>
-
-    <task xml:id="ex-marking-main-and-feature-conflicting-1" label="ex-marking-main-and-feature-conflicting-1">
-      <statement>
-        <p>
-          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
-        </p>
-      </statement>
-
-      <choices>
-        <choice correct="yes">
-          <statement>
-            <p>
-              1
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              2
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              3
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              4
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              5
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              6
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              7
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              8
-            </p>
-          </statement>
-        </choice>
-      </choices>
+      <areas>
+      <tabular top="minor" bottom="minor" left="minor" right="minor">
+        <row header="yes">
+          <cell>Feature Branch</cell>
+          <cell>Best Common Ancestor</cell>
+          <cell><c>main</c> Branch</cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="yes">total=0</area></cell>
+          <cell>tot=0</cell>
+          <cell><area correct="no">tot=0</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="no">count=0</area></cell>
+          <cell>count=0</cell>
+          <cell><area correct="no">count=0</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="no">read n</area></cell>
+          <cell>read n</cell>
+          <cell><area correct="no">read n</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="no">while count &gt; n:</area></cell>
+          <cell>while count &gt; n:</cell>
+          <cell><area correct="yes">while count &lt; n:</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/>read m</cell>
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><nbsp/><nbsp/><nbsp/><area correct="yes">total=total+m</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/>tot=tot+m</cell>
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">tot=tot+m</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/><area>count--</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/><area correct="yes">count++</area></cell>
+        </row>
+        <row>
+          <cell><area correct="no">average=count/total</area></cell>
+          <cell>ave=count/tot</cell>
+          <cell><area correct="no">ave=tot/count</area></cell>
+        </row>
+      </tabular>
+      </areas>
       <hint>
         <p>
-          All lines should be either conflicting or non-conflicting.
+          Merge conflicts occur when both source branches change the same line.
         </p>
       </hint>
     </task>
 
-    <task xml:id="ex-automatic-merge-1" label="ex-automatic-merge-1">
+    <task xml:id="ex-merge-conflicts-practice-1-c" label="ex-merge-conflicts-practice-1-c">
+      <statement>
+        <p>
+          Highlight (by clicking, or by circling) all of the lines that are conflicting changes in the feature branch and the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
+        </p>
+      </statement>
+      <areas>
+      <tabular top="minor" bottom="minor" left="minor" right="minor">
+        <row header="yes">
+          <cell>Feature Branch</cell>
+          <cell>Best Common Ancestor</cell>
+          <cell><c>main</c> Branch</cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="no">total=0</area></cell>
+          <cell>tot=0</cell>
+          <cell><area correct="no">tot=0</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="no">count=0</area></cell>
+          <cell>count=0</cell>
+          <cell><area correct="no">count=0</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="no">read n</area></cell>
+          <cell>read n</cell>
+          <cell><area correct="no">read n</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><area correct="no">while count &gt; n:</area></cell>
+          <cell>while count &gt; n:</cell>
+          <cell><area correct="no">while count &lt; n:</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/>read m</cell>
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">total=total+m</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/>tot=tot+m</cell>
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">tot=tot+m</area></cell>
+        </row>
+        <row bottom="none" >
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/><area>count--</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/><area correct="no">count++</area></cell>
+        </row>
+        <row>
+          <cell><area correct="yes">average=count/total</area></cell>
+          <cell>ave=count/tot</cell>
+          <cell><area correct="yes">ave=tot/count</area></cell>
+        </row>
+      </tabular>
+      </areas>
+      <hint>
+        <p>
+          Merge conflicts occur when both source branches change the same line.
+        </p>
+      </hint>
+    </task>
+
+    <task xml:id="ex-merge-conflicts-practice-1-d" label="ex-merge-conflicts-practice-1-d">
       <statement>
         <p>
           Would the feature branch in <xref ref="fig-merge-conflicts-1" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
@@ -209,13 +188,57 @@
       </statement>
       <response />
     </task>  
-    <task xml:id="ex-merged-result-1" label="ex-merged-result-1">
+
+    <task xml:id="ex-merge-conflicts-practice-1-e" label="ex-merge-conflicts-practice-1-e">
       <statement>
         <p>
           Give a Merged Result of the program in <xref ref="fig-merge-conflicts-1" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names. That is, fill in the Merge Result panel in <xref ref="fig-merge-conflicts-resolution-1" />.
         </p>
       </statement>
-      <response />
+      <blocks>
+        <block order="6" correct="yes">
+          <cline>total=0</cline>
+        </block>
+        <block order="2" correct="no">
+          <cline>tot=0</cline>
+        </block>
+        <block order="10" correct="yes">
+          <cline>count=0</cline>
+        </block>
+        <block order="9" correct="yes">
+          <cline>read n</cline>
+        </block>
+        <block order="7" correct="no">
+          <cline>while count &gt; n:</cline>
+        </block>
+        <block order="8" correct="yes">
+          <cline>while count &lt; n:</cline>
+        </block>
+        <block order="11" correct="yes">
+          <cline>read m</cline>
+        </block>
+        <block order="3" correct="yes">
+          <cline>total=total+m</cline>
+        </block>
+        <block order="15" correct="no">
+          <cline>tot=tot+m</cline>
+        </block>
+        <block order="12" correct="no">
+          <cline>count--</cline>
+        </block>
+        <block order="4" correct="yes">
+          <cline>count++</cline>
+        </block>
+        <block order="1" correct="no">
+          <cline>average=count/total</cline>
+        </block>
+        <block order="5" correct="no">
+          <cline>ave=tot/count</cline>
+        </block>
+        <block order="14" correct="yes">
+          <cline>average=total/count</cline>
+        </block>
+      </blocks>
     </task>
   </exercise>
 
@@ -247,13 +270,13 @@
     </figure>
   </p>
 
-  <exercise xml:id="ex-merge-conflicts-concepts-2" label="ex-merge-conflicts-concepts-2">
+  <exercise xml:id="ex-merge-conflicts-practice-2" label="ex-merge-conflicts-practice-2">
     <introduction>
       <p>
         Now consider the merge shown in <xref ref="fig-merge-conflicts-2" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
       </p>
     </introduction>
-    <task xml:id="ex-describe-computation-2" label="ex-describe-computation-2">
+    <task xml:id="ex-merge-conflicts-practice-2-a" label="ex-merge-conflicts-practice-2-a">
       <statement>
         <p>
           Study the program in the <c>main</c> branch and then describe in a sentence the computation that the program is trying to perform. Note: The ** indicates exponentiation (e.g. x**2 is x squared).  Note: The Common Ancestor contains a bug that is fixed in different ways by the <c>main</c> branch and the feature branch.
@@ -261,112 +284,102 @@
       </statement>
       <response />
     </task>
-    <task xml:id="ex-marking-main-and-feature-non-conflicting-2" label="ex-marking-main-and-feature-non-conflicting-2">
+
+    <task xml:id="ex-merge-conflicts-practice-2-b" label="ex-merge-conflicts-practice-2-b">
       <statement>
         <p>
-          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are non-conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
+          Highlight (by clicking, or by circling) all of the lines that are non-conflicting changes in the feature branch or the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
         </p>
       </statement>
-
-      <choices>
-        <choice correct="yes">
-          <statement>
-            <p>
-              1
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              2
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              3
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              4
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              5
-            </p>
-          </statement>
-        </choice>
-      </choices>
-    </task>
-
-    <task xml:id="ex-marking-main-and-feature-conflicting-2" label="ex-marking-main-and-feature-conflicting-2">
-      <statement>
-        <p>
-          Select all of following to mark the lines in the feature branch and/or the <c>main</c> branch that are conflicting in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting (but now selecting).
-        </p>
-      </statement>
-
-      <choices>
-        <choice>
-          <statement>
-            <p>
-              1
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              2
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              3
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              4
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              5
-            </p>
-          </statement>
-        </choice>
-      </choices>
+      <areas>
+      <tabular top="minor" bottom="minor" left="minor" right="minor">
+        <row header="yes">
+          <cell>Feature Branch</cell>
+          <cell>Best Common Ancestor</cell>
+          <cell><c>main</c> Branch</cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="no">r=15</area></cell>
+          <cell>r=15</cell>
+          <cell><area correct="no">r=15</area></cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="yes">pi = 3.1415927</area></cell>
+          <cell>pi = 3.14</cell>
+          <cell><area correct="no">pi = 3.14</area></cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="yes">rsq = r**2</area></cell>
+          <cell>rsq = r*2</cell>
+          <cell><area correct="no">rsq = r*2</area></cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="no">a = pi*rsq</area></cell>
+          <cell>a = pi*rsq</cell>
+          <cell><area correct="yes">area = pi*(rsq/2)**2</area></cell>
+        </row>
+        <row>
+          <cell><area correct="no">print a</area></cell>
+          <cell>print a</cell>
+          <cell><area correct="yes">print area</area></cell>
+        </row>
+      </tabular>
+      </areas>
       <hint>
         <p>
-          All lines should be either conflicting or non-conflicting.
+          Merge conflicts occur when the feature, <c>main</c>, and common ancestor branches are all different.
         </p>
       </hint>
     </task>
 
-    <task xml:id="ex-automatic-merge-2" label="ex-automatic-merge-2">
+    <task xml:id="ex-merge-conflicts-practice-2-c" label="ex-merge-conflicts-practice-2-c">
+      <statement>
+        <p>
+          Highlight (by clicking, or by circling) all of the lines that are conflicting changes in the feature branch and the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
+        </p>
+      </statement>
+      <areas>
+      <tabular top="minor" bottom="minor" left="minor" right="minor">
+        <row header="yes">
+          <cell>Feature Branch</cell>
+          <cell>Best Common Ancestor</cell>
+          <cell><c>main</c> Branch</cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="no">r=15</area></cell>
+          <cell>r=15</cell>
+          <cell><area correct="no">r=15</area></cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="no">pi = 3.1415927</area></cell>
+          <cell>pi = 3.14</cell>
+          <cell><area correct="no">pi = 3.14</area></cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="no">rsq = r**2</area></cell>
+          <cell>rsq = r*2</cell>
+          <cell><area correct="no">rsq = r*2</area></cell>
+        </row>
+        <row bottom="none">
+          <cell><area correct="no">a = pi*rsq</area></cell>
+          <cell>a = pi*rsq</cell>
+          <cell><area correct="no">area = pi*(rsq/2)**2</area></cell>
+        </row>
+        <row>
+          <cell><area correct="no">print a</area></cell>
+          <cell>print a</cell>
+          <cell><area correct="no">print area</area></cell>
+        </row>
+      </tabular>
+      </areas>
+      <hint>
+        <p>
+          Merge conflicts occur when the feature, <c>main</c>, and common ancestor branches are all different.
+        </p>
+      </hint>
+    </task>
+
+    <task xml:id="ex-merge-conflicts-practice-2-d" label="ex-merge-conflicts-practice-2-d">
       <statement>
         <p>
           Would the feature branch in <xref ref="fig-merge-conflicts-2" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
@@ -374,14 +387,68 @@
       </statement>
       <response />
     </task>  
-    <task xml:id="ex-merged-result-2" label="ex-merged-result-2">
+
+    <task xml:id="ex-merge-conflicts-practice-2-e" label="ex-merge-conflicts-practice-2-e">
       <statement>
         <p>
           Give a Merged Result of the program in <xref ref="fig-merge-conflicts-2" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names. That is, fill in the Merge Result panel in <xref ref="fig-merge-conflicts-resolution-2" />.
         </p>
       </statement>
+      <blocks>
+        <block order="6" correct="yes">
+          <cline>r = 15</cline>
+        </block>
+        <block order="2" correct="yes">
+          <cline>pi = 3.1415927</cline>
+        </block>
+        <block order="10" correct="no">
+          <cline>pi = 3.14</cline>
+        </block>
+        <block order="9" correct="yes">
+          <cline>rsq = r**2</cline>
+        </block>
+        <block order="7" correct="no">
+          <cline>rsq = r*2</cline>
+        </block>
+        <block order="8" correct="no">
+          <cline>a = pi*rsq</cline>
+        </block>
+        <block order="11" correct="no">
+          <cline>area = p*rsq</cline>
+        </block>
+        <block order="3" correct="yes">
+          <cline>area = pi*(rqs/2)**2</cline>
+        </block>
+        <block order="5" correct="no">
+          <cline>print a</cline>
+        </block>
+        <block order="4" correct="yes">
+          <cline>print area</cline>
+        </block>
+        <block order="1" correct="no">
+          <cline>print rsq</cline>
+        </block>
+      </blocks>
+    </task>
+
+    <task xml:id="ex-merge-conflicts-practice-2-f" label="ex-merge-conflicts-practice-2-f">
+      <statement>
+        <p>
+          Look carefully at your result in <xref ref="ex-merge-conflicts-practice-2-e" />.  Will the resulting program perform the computation correctly? Briefly explain why or why not.
+        </p>
+      </statement>
       <response />
     </task>
+
+    <task xml:id="ex-merge-conflicts-practice-2-g" label="ex-merge-conflicts-practice-2-g">
+      <statement>
+        <p>
+          When a merge can be completed automatically, does it guarantee that the Merged Result will be correct?.
+        </p>
+      </statement>
+      <response />
+    </task>
+
   </exercise>
 </exercises>
 
