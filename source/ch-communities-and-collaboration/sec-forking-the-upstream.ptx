@@ -14,7 +14,6 @@
     <p>
       <figure 
         xml:id="fig-basic-workflow-fork"
-        label="fig-basic-workflow-fork"
         >
         <caption>
           Forking the main project repository.
