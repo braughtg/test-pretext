@@ -25,21 +25,6 @@
     </figure>
   </p>
 
-  <p>
-    <xref ref="fig-merge-conflicts-resolution-1" /> shows the <c>main</c> branch in the right panel the contributor's feature branch in the left panel, and a blank merged version in the middle.
-  </p>
-
-  <p>
-    <figure xml:id="fig-merge-conflicts-resolution-1" >
-      <caption> Example merge conflicts with missing Merged Result. </caption> 
-      <image source="images/ch-merge-conflicts/merge-conflicts-resolution-1.png" width="75%">
-        <description>
-          Three panels of code (feature branch, blank merge, main branch)
-        </description>
-      </image>
-    </figure>
-  </p>
-
   <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1" language="python" adaptive="yes" indentation="show">
     <introduction>
       <p>
@@ -192,7 +177,7 @@
     <task xml:id="ex-merge-conflicts-practice-1-e" label="ex-merge-conflicts-practice-1-e">
       <statement>
         <p>
-          Give a Merged Result of the program in <xref ref="fig-merge-conflicts-1" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names. That is, fill in the Merge Result panel in <xref ref="fig-merge-conflicts-resolution-1" />.
+          Give a Merged Result of the program in <xref ref="fig-merge-conflicts-1" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names.
         </p>
       </statement>
       <blocks>
@@ -251,20 +236,6 @@
       <image source="images/ch-merge-conflicts/merge-conflicts-2.png" width="75%">
         <description>
           Three panels of code (feature branch, common ancestor, main branch)
-        </description>
-      </image>
-    </figure>
-  </p>
-
-  <p>
-    <xref ref="fig-merge-conflicts-resolution-2" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and a blank merged version in the middle.
-  </p>
-  <p>
-    <figure xml:id="fig-merge-conflicts-resolution-2" >
-      <caption> Example merge conflicts with Merged Result. </caption>
-      <image source="images/ch-merge-conflicts/merge-conflicts-resolution-2.png" width="75%">
-        <description>
-          Three panels of code (feature branch, blank merge, main branch)
         </description>
       </image>
     </figure>
@@ -391,7 +362,7 @@
     <task xml:id="ex-merge-conflicts-practice-2-e" label="ex-merge-conflicts-practice-2-e">
       <statement>
         <p>
-          Give a Merged Result of the program in <xref ref="fig-merge-conflicts-2" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names. That is, fill in the Merge Result panel in <xref ref="fig-merge-conflicts-resolution-2" />.
+          Give the Merged Result to show the result of an automatic merge of the feature and <c>main</c> branches shown in <xref ref="fig-merge-conflicts-2" />.
         </p>
       </statement>
       <blocks>
