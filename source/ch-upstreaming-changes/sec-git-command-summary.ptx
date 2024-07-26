@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-git-command-summary-upstreaming" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Git Command Summary</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      It will take a while for this process and all of the commands to become a natural part of the way you work.
+      Until that happens it is often useful to have a short concise cheat sheet of the command for accomplishing each task.
+    </p>
   </introduction>
 
+  <exercises>
+  <title />
+  <exercise xml:id="ex-git-commands-summary-upstreaming" label="ex-git-commands-summary-upstreaming">
+    <statement>
+      <p>
+        Match the tasks on the right with the appropriate git command listed on the left.
+      </p>
+    </statement>
+    <matches> <match>
+    <premise>
+    <c>git log</c></premise> <response>Display recent commits made to the active branch.</response> </match> <match>
+    <premise>
+    <c>git branch &lt;branch&gt; </c></premise> <response>Create a new feature branch.</response> </match> <match>
+    <premise>
+    <c>git switch &lt;branch&gt; </c></premise> <response>Change the active branch</response> </match> <match>
+    <premise>
+    <c>git status </c></premise> <response>Check the current state of your local repo.</response> </match> <match>
+    <premise>
+    <c>git status &lt;file name&gt; </c></premise> <response>Display the changes that you made to a file.</response> </match> <match>
+    <premise>
+    <c>git add &lt;file name&gt; </c></premise> <response>Stage changed files to be committed to the repo.</response> </match> <match>
+    <premise>
+    <c>git add . </c></premise> <response>Another way to stage changed files for a commit.</response> </match> <match>
+    <premise>
+    <c>git commit -m "message" </c></premise> <response>Commit staged files with a message.</response> </match> <match>
+    <premise>
+    <c>git push -d &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Push a feature branch to your origin.</response> </match> </matches>
+    <hint>
+      <p>
+        Note that the tasks listed are in approximately the same order as they appear in the sections of this chapter.
+      </p>
+    </hint>
+  </exercise>
+  </exercises>
 </section>

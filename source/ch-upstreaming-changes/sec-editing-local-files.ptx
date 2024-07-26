@@ -1,13 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-editing-local-files"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-editing-local-files" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Editing Local Files</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      In the last two sections you created a feature branch and switched to that branch.
+      In this section you will edit your local files to fix the issue that you claimed in the issue tracker.
+    </p>
   </introduction>
 
+  <exercises>
+  <title/>
+  <exercise xml:id="ex-locate-claimed-issue" label="ex-locate-claimed -issue">
+    <introduction>
+      <p>
+        In order to make the changes to the appropriate local file, you will need to review the issue that you claimed.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-locate-claimed-issue-a" label="ex-locate-claimed-issue-a">
+      <statement>
+        <p>
+          Provide a link to the issue that you claimed in the issue tracker.
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-locate-claimed-issue-b" label="ex-locate-claimed-issue-b">
+      <statement>
+        <p>
+          In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
+        </p>
+        <response />
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-locate-claimed-issue-c" label="ex-locate-claimed-issue-c">
+      <statement>
+        <p>
+          Use a text editor to modify the file you identified in (b) so that the issue you claimed has been fixed.
+          Be sure to save your changes.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <p>
+    <xref ref="fig-fork-and-clone-local" />  illustrates the current situation where your <em>Local Files</em> have been modified. In <xref provisional="a reference back to ch3-switching-branches image which is not yet included" /> the <em>Local Files</em> in your feature branch were drawn in green. This reflected that they were, at that time, an exact copy of the last commit on the main branch, which was also drawn in green.  Here <em>Local Files</em> are drawn in blue to indicate that they have been changed as compared to the final commit in the main branch, which is still green.
+  </p>
+
+  <p>
+    <figure xml:id="fig-edit-local-files-on-feature-branch">
+      <caption> Editing Local Files on a Feature Branch. </caption>
+      <image source="images/ch-upstreaming-changes/edit-local-files-on-feature-branch.png" width="75%">
+        <description>
+          Editing local files on a feature branch.
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercise xml:id="ex-verify-changes" label="ex-verify-changes">
+    <introduction>
+      <p>
+        The <c>git status</c> command can now be used to check that your changes have been made.
+        Run the <c>git status</c> command now.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-verify-changes-a" label="ex-verify-changes-a">
+      <statement>
+        <p>
+          What two things does the output tell you about the file that you edited? If you see the message “nothing to commit, working tree clean,” it means that your edits in the previous exercise were not saved. <term>NOTE: may want to change this so that it asks which files are staged, untracked, etc.</term>
+          Go back and save your edits and then issue the <c>git status</c> command again before describing the two things that the output tells you.
+        </p>
+        <response />
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-verify-changes-with-diff" label="ex-verify-changes-with-diff">
+    <introduction>
+      <p>
+        The <c>git diff</c> command provides another way to examine or confirm the changes you have been making.
+        Note <em>diff</em> is just short for <em>difference</em>, and is called this because it is used to show differences.
+        By default the <c>git diff</c> command will show you any changes that have been made to your local files as compared to the version in the most recent commit in the active branch.
+        Run the <c>git diff</c> command now.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-verify-changes-with-diff-a" label="ex-verify-changes-with-diff-a">
+      <statement>
+        <p>
+          How is the change that you made indicated in the output from <c>git diff</c>?
+        </p>
+        <response />
+      </statement>
+    </task>
+  </exercise>
+  </exercises>
 </section>
