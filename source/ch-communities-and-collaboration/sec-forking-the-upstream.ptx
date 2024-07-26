@@ -270,5 +270,19 @@
         </hint>
       </task>
     </exercise>
+
+    <exercise
+      xml:id="ex-no-issue-tracker-in-fork"
+      label="ex-no-issue-tracker-in-fork">
+      <statement>
+        <p>
+          When you forked the upstream repository, GitHub made a copy of that repository into your GitHub space.
+        </p>
+        <p>
+          Did it also make a copy of the issue tracker and its issues into your GitHub space?  What reasons can you think of for why the designers of GitHub decided that the issue tracker should not be copied into the fork?
+        </p>
+      </statement>
+      <response />
+    </exercise>
   </exercises>
 </section>
