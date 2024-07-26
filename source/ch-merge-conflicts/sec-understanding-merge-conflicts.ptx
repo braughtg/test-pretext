@@ -8,6 +8,7 @@
       The exercises in this section provide practice in identifying merge conflicts and their resolutions.
     </p>
   </introduction>
+
   <exercises>
   <title />
 
@@ -15,7 +16,7 @@
     <xref ref="fig-merge-conflicts-1" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
   </p>
   <p>
-    <figure xml:id="fig-merge-conflicts-1" >
+    <figure xml:id="fig-merge-conflicts-1">
       <caption> Example merge conflicts with Best Common Ancestor. </caption>
       <image source="images/ch-merge-conflicts/merge-conflicts-1.png" width="75%">
         <description>
@@ -25,7 +26,9 @@
     </figure>
   </p>
 
-  <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1" language="python" adaptive="yes" indentation="show">
+
+  <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1">
+  
     <introduction>
       <p>
         Consider the merge shown in <xref ref="fig-merge-conflicts-1" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
@@ -86,13 +89,13 @@
         </row>
         <row bottom="none" >
           <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/><area>count--</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/>count--</cell>
           <cell><nbsp/><nbsp/><nbsp/><area correct="yes">count++</area></cell>
         </row>
         <row>
-          <cell><area correct="no">average=count/total</area></cell>
-          <cell>ave=count/tot</cell>
-          <cell><area correct="no">ave=tot/count</area></cell>
+          <cell><area correct="no">average=count <solidus/> total</area></cell>
+          <cell>ave=count <solidus/> tot</cell>
+          <cell><area correct="no">ave=tot <solidus/> count</area></cell>
         </row>
       </tabular>
       </areas>
@@ -148,13 +151,13 @@
         </row>
         <row bottom="none" >
           <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/><area>count--</area></cell>
+          <cell><nbsp/><nbsp/><nbsp/>count--</cell>
           <cell><nbsp/><nbsp/><nbsp/><area correct="no">count++</area></cell>
         </row>
         <row>
-          <cell><area correct="yes">average=count/total</area></cell>
-          <cell>ave=count/tot</cell>
-          <cell><area correct="yes">ave=tot/count</area></cell>
+          <cell><area correct="yes">average=count <solidus/> total</area></cell>
+          <cell>ave=count <solidus/> tot</cell>
+          <cell><area correct="yes">ave=tot <solidus/> count</area></cell>
         </row>
       </tabular>
       </areas>
@@ -172,59 +175,32 @@
         </p>
       </statement>
       <response />
-    </task>  
+    </task>
 
     <task xml:id="ex-merge-conflicts-practice-1-e" label="ex-merge-conflicts-practice-1-e">
       <statement>
         <p>
-          Give a Merged Result of the program in <xref ref="fig-merge-conflicts-1" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names.
+          Highlight the correct lines that give a Merged Result of the program in <xref ref="fig-merge-conflicts-1" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names.
         </p>
       </statement>
-      <blocks>
-        <block order="6" correct="yes">
-          <cline>total=0</cline>
-        </block>
-        <block order="2" correct="no">
-          <cline>tot=0</cline>
-        </block>
-        <block order="10" correct="yes">
-          <cline>count=0</cline>
-        </block>
-        <block order="9" correct="yes">
-          <cline>read n</cline>
-        </block>
-        <block order="7" correct="no">
-          <cline>while count &gt; n:</cline>
-        </block>
-        <block order="8" correct="yes">
-          <cline>while count &lt; n:</cline>
-        </block>
-        <block order="11" correct="yes">
-          <cline>read m</cline>
-        </block>
-        <block order="3" correct="yes">
-          <cline>total=total+m</cline>
-        </block>
-        <block order="15" correct="no">
-          <cline>tot=tot+m</cline>
-        </block>
-        <block order="12" correct="no">
-          <cline>count--</cline>
-        </block>
-        <block order="4" correct="yes">
-          <cline>count++</cline>
-        </block>
-        <block order="1" correct="no">
-          <cline>average=count/total</cline>
-        </block>
-        <block order="5" correct="no">
-          <cline>ave=tot/count</cline>
-        </block>
-        <block order="14" correct="yes">
-          <cline>average=total/count</cline>
-        </block>
-      </blocks>
+      <areas language="python">
+        <cline><area correct="yes">total=0</area></cline>
+        <cline><area correct="no">tot=0</area></cline>
+        <cline><area correct="yes">count=0</area></cline>
+        <cline><area correct="yes">read n</area></cline>
+        <cline><area correct="no">while count &gt; n:</area></cline>
+        <cline><area correct="yes">while count &lt; n:</area></cline>
+        <cline><area correct="yes">read m</area></cline>
+        <cline><area correct="yes">total=total+m</area></cline>
+        <cline><area correct="no">tot=tot+m</area></cline>
+        <cline><area correct="no">count--</area></cline>
+        <cline><area correct="yes">count++</area></cline>
+        <cline><area correct="no">average=count/total</area></cline>
+        <cline><area correct="no">ave=tot/count</area></cline>
+        <cline><area correct="yes">average=total/count</area></cline>
+      </areas>
     </task>
+      
   </exercise>
 
   <p>
@@ -365,41 +341,19 @@
           Give the Merged Result to show the result of an automatic merge of the feature and <c>main</c> branches shown in <xref ref="fig-merge-conflicts-2" />.
         </p>
       </statement>
-      <blocks>
-        <block order="6" correct="yes">
-          <cline>r = 15</cline>
-        </block>
-        <block order="2" correct="yes">
-          <cline>pi = 3.1415927</cline>
-        </block>
-        <block order="10" correct="no">
-          <cline>pi = 3.14</cline>
-        </block>
-        <block order="9" correct="yes">
-          <cline>rsq = r**2</cline>
-        </block>
-        <block order="7" correct="no">
-          <cline>rsq = r*2</cline>
-        </block>
-        <block order="8" correct="no">
-          <cline>a = pi*rsq</cline>
-        </block>
-        <block order="11" correct="no">
-          <cline>area = p*rsq</cline>
-        </block>
-        <block order="3" correct="yes">
-          <cline>area = pi*(rqs/2)**2</cline>
-        </block>
-        <block order="5" correct="no">
-          <cline>print a</cline>
-        </block>
-        <block order="4" correct="yes">
-          <cline>print area</cline>
-        </block>
-        <block order="1" correct="no">
-          <cline>print rsq</cline>
-        </block>
-      </blocks>
+      <areas language="python">
+        <cline><area correct="yes">r = 15</area></cline>
+        <cline><area correct="yes">pi = 3.1415927</area></cline>
+        <cline><area correct="no">pi = 3.14</area></cline>
+        <cline><area correct="yes">rsq = r**2</area></cline>
+        <cline><area correct="no">rsq = r*2</area></cline>
+        <cline><area correct="no">a = pi*rsq</area></cline>
+        <cline><area correct="no">area = p*rsq</area></cline>
+        <cline><area correct="yes">area = pi*(rqs/2)**2</area></cline>
+        <cline><area correct="no">print a</area></cline>
+        <cline><area correct="yes">print area</area></cline>
+        <cline><area correct="no">print rsq</area></cline>
+      </areas>
     </task>
 
     <task xml:id="ex-merge-conflicts-practice-2-f" label="ex-merge-conflicts-practice-2-f">
@@ -419,8 +373,9 @@
       </statement>
       <response />
     </task>
-
+    
   </exercise>
-</exercises>
+  </exercises>
 
+    
 </section>
