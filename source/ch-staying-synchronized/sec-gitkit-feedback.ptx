@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="topic-gitkit-feedback" xmlns:xi="http://www.w3.org/2001/XInclude" >
+<section xml:id="topic-gitkit-feedback-synching" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>GitKit Feedback</title>
 
   <introduction>
@@ -11,7 +11,7 @@
 
   <exercises>
   <title />
-  <exercise xml:id="ex-gitkit-feedback" label="ex-gitkit-feedback">
+  <exercise xml:id="ex-gitkit-feedback-synching" label="ex-gitkit-feedback-synching">
     <introduction>
       <p>
         For each of the following statements, rate your agreement or disagreement.
@@ -20,8 +20,8 @@
     </introduction>
 
 
-    <task xml:id="ex-gitkit-feedback-a" label="ex-gitkit-feedback-a">
-      <query label="ex-gitkit-feedback-a-poll">
+    <task xml:id="ex-gitkit-feedback-synching-a" label="ex-gitkit-feedback-synching-a">
+      <query label="ex-gitkit-feedback-synching-a-poll">
       <statement>
         <p>
           The figures helped me understand the relationship between my local repository, the origin repository and the upstream repository.
@@ -74,8 +74,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-b" label="ex-gitkit-feedback-b">
-      <query label="ex-gitkit-feedback-b-poll">
+    <task xml:id="ex-gitkit-feedback-synching-b" label="ex-gitkit-feedback-synching-b">
+      <query label="ex-gitkit-feedback-synching-b-poll">
       <statement>
         <p>
           The text descriptions provided with the figures helped me understand the state of the repositories depicted in the figure.
@@ -128,8 +128,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-c" label="ex-gitkit-feedback-c">
-      <query label="ex-gitkit-feedback-c-poll">
+    <task xml:id="ex-gitkit-feedback-synching-c" label="ex-gitkit-feedback-synching-c">
+      <query label="ex-gitkit-feedback-synching-c-poll">
       <statement>
         <p>
           The questions I answered helped me pause and think about what the commands I was typing did.
@@ -182,8 +182,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-d" label="ex-gitkit-feedback-d">
-      <query label="ex-gitkit-feedback-d-poll">
+    <task xml:id="ex-gitkit-feedback-synching-d" label="ex-gitkit-feedback-synching-d">
+      <query label="ex-gitkit-feedback-synching-d-poll">
       <statement>
         <p>
           Examples of the git commands in addition to the syntax would help me understand what I should be typing.
@@ -236,8 +236,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-e" label="ex-gitkit-feedback-e">
-      <query label="ex-gitkit-feedback-e-poll">
+    <task xml:id="ex-gitkit-feedback-synching-e" label="ex-gitkit-feedback-synching-e">
+      <query label="ex-gitkit-feedback-synching-e-poll">
       <statement>
         <p>
           There were too many questions in this activity.
@@ -290,8 +290,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-f" label="ex-gitkit-feedback-f">
-      <query label="ex-gitkit-feedback-f-poll">
+    <task xml:id="ex-gitkit-feedback-synching-f" label="ex-gitkit-feedback-synching-f">
+      <query label="ex-gitkit-feedback-synching-f-poll">
       <statement>
         <p>
           I am looking forward to doing the next chapter in the GitKit.
@@ -344,7 +344,7 @@
     </task>
   </exercise>
 
-  <exercise xml:id="ex-gitkit-feedback-words" label="ex-gitkit-feedback-words">
+  <exercise xml:id="ex-gitkit-feedback-words-synching" label="ex-gitkit-feedback-words-synching">
     <introduction>
       <p>
         Rate how each of the following words describes how you felt while completing the sections in this chapter.
@@ -352,8 +352,8 @@
     </introduction>
 
 
-    <task xml:id="ex-gitkit-feedback-words-a" label="ex-gitkit-feedback-words-a">
-      <query label="ex-gitkit-feedback-words-a-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-a" label="ex-gitkit-feedback-words-synching-a">
+      <query label="ex-gitkit-feedback-words-synching-a-poll">
       <statement>
         <p>
           <term>bored</term>
@@ -390,8 +390,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-words-b" label="ex-gitkit-feedback-words-b">
-      <query label="ex-gitkit-feedback-words-b-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-b" label="ex-gitkit-feedback-words-synching-b">
+      <query label="ex-gitkit-feedback-words-synching-b-poll">
       <statement>
         <p>
           <term>confident</term>
@@ -428,8 +428,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-words-c" label="ex-gitkit-feedback-words-c">
-      <query label="ex-gitkit-feedback-words-c-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-c" label="ex-gitkit-feedback-words-synching-c">
+      <query label="ex-gitkit-feedback-words-synching-c-poll">
       <statement>
         <p>
           <term>confused</term>
@@ -466,8 +466,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-words-d" label="ex-gitkit-feedback-words-d">
-      <query label="ex-gitkit-feedback-words-d-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-d" label="ex-gitkit-feedback-words-synching-d">
+      <query label="ex-gitkit-feedback-words-synching-d-poll">
       <statement>
         <p>
           <term>engaged</term>
@@ -504,8 +504,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-words-e" label="ex-gitkit-feedback-words-e">
-      <query label="ex-gitkit-feedback-words-e-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-e" label="ex-gitkit-feedback-words-synching-e">
+      <query label="ex-gitkit-feedback-words-synching-e-poll">
       <statement>
         <p>
           <term>frustrated</term>
@@ -542,8 +542,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-words-f" label="ex-gitkit-feedback-words-f">
-      <query label="ex-gitkit-feedback-words-f-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-f" label="ex-gitkit-feedback-words-synching-f">
+      <query label="ex-gitkit-feedback-words-synching-f-poll">
       <statement>
         <p>
           <term>interested</term>
@@ -580,8 +580,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-words-g" label="ex-gitkit-feedback-words-g">
-      <query label="ex-gitkit-feedback-words-g-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-g" label="ex-gitkit-feedback-words-synching-g">
+      <query label="ex-gitkit-feedback-words-synching-g-poll">
       <statement>
         <p>
           <term>lost</term>
@@ -618,8 +618,8 @@
     </task>
 
 
-    <task xml:id="ex-gitkit-feedback-words-h" label="ex-gitkit-feedback-words-h">
-      <query label="ex-gitkit-feedback-words-h-poll">
+    <task xml:id="ex-gitkit-feedback-words-synching-h" label="ex-gitkit-feedback-words-synching-h">
+      <query label="ex-gitkit-feedback-words-synching-h-poll">
       <statement>
         <p>
           <term>overwhelmed</term>
@@ -656,8 +656,8 @@
     </task>
   </exercise>
 
-  <exercise xml:id="ex-gitkit-feedback-time" label="ex-gitkit-feedback-time">
-    <query label="ex-gitkit-feedback-time-poll">
+  <exercise xml:id="ex-gitkit-feedback-time-synching" label="ex-gitkit-feedback-time-synching">
+    <query label="ex-gitkit-feedback-time-synching-poll">
     <statement>
       <p>
         Approximately how much time did you spend on this chapter outside of class time?
@@ -716,7 +716,7 @@
     </query>
   </exercise>
 
-  <exercise xml:id="ex-gitkit-feedback-challenge" label="ex-gitkit-feedback-challenge">
+  <exercise xml:id="ex-gitkit-feedback-challenge-synching" label="ex-gitkit-feedback-challenge-synching">
     <statement>
       <p>
         Please comment on any particular challenges you faced in completing this chapter.
