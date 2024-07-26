@@ -90,11 +90,31 @@
 
 
       <task xml:id="ex-pull-request-b-i" label="ex-pull-request-b-i">
-        <statement>
+        <introduction>
           <p>
-            Copy the URLs from the gray bar into the appropriate rows in the “URL” column of the table below.
+            Copy the URLs from the gray bar into the textboxes below.
           </p>
-        </statement>
+        </introduction>
+
+
+        <task xml:id="ex-pull-request-b-i-a" label="ex-pull-request-b-i-a">
+          <statement>
+            <p>
+              Base Repository
+            </p>
+          </statement>
+          <response />
+        </task>
+
+
+        <task xml:id="ex-pull-request-b-i-b" label="ex-pull-request-b-i-b">
+          <statement>
+            <p>
+              Head Repository
+            </p>
+          </statement>
+          <response />
+        </task>
       </task>
 
 
@@ -103,9 +123,19 @@
           <p>
             The terms “Base Repository” and “Head Repository” in <xref ref="ex-pull-request-b-i"/> are generic labels that GitHub uses for the two repositories that are involved in the pull request.
             Often, and in our case, these two repos will be your origin repository and the project's upstream repository.
-            Examine the URL's from <xref ref="ex-pull-request-b-i"/> and fill in the right hand column below with either head repository or base repository to indicate which term refers to your origin and which refers to the upstream.
+            Examine the URL's from <xref ref="ex-pull-request-b-i"/> and match the right hand column with either head repository or base repository to indicate which term refers to your origin and which refers to the upstream.
           </p>
         </statement>
+        <matches> <match>
+        <premise>
+        <c>head repository</c></premise> <response>your origin repository</response> </match> <match>
+        <premise>
+        <c>base repository</c></premise> <response>the upstream</response> </match>  </matches>
+        <hint>
+          <p>
+            HINT HERE
+          </p>
+        </hint>
       </task>
 
 
@@ -114,10 +144,19 @@
           <p>
             The information in the gray bar also indicates the branches involved in the pull request.
             It uses the generic labels of <em>base</em> and <em>compare</em> for these branches.
-            Complete the table below by filling in the rows of the “Branch Name” column with the names of the base and compare branches.
-            Then fill in the “Changes are…” column with “pulled from” or “merged onto” as appropriate.
+            Match the right hand column with either base branch or compare branch to indicate which is “pulled from” or “merged onto”.
           </p>
         </statement>
+        <!-- part of this original question has been omitted regarding the names of the branches --> <matches> <match>
+        <premise>
+        <c>base branch</c></premise> <response>merged into</response> </match> <match>
+        <premise>
+        <c>compare branch</c></premise> <response>pulled from</response> </match>  </matches>
+        <hint>
+          <p>
+            HINT HERE
+          </p>
+        </hint>
       </task>
     </task>
   </exercise>
