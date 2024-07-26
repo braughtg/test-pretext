@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="topic-verifying-the-upstream-remote" xmlns:xi="http://www.w3.org/2001/XInclude" >
-  <title component="linux-kit-client">Creating the Upstream Remote</title>
+  <title component="linux-kit-client">Creating and Verifying the Upstream Remote</title>
   <title component="vscode-kit-client">Verifying the Upstream Remote</title>
   <introduction component="linux-kit-client">
     In order to pull changes from the upstream you will need to tell your local repository where the upstream is.
@@ -9,6 +9,7 @@
     But there was no orange dotted line from your local repository to the upstream.
     That is because, by default, your local repository isn’t aware of the upstream.
   </introduction>
+
 
   <introduction component="vscode-kit-client">
     When you open a fork in GitPod, GitPod clones its repository.

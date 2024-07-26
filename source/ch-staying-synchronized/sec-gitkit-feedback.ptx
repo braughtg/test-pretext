@@ -1,12 +1,728 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-gitkit-feedback-synching" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>GitKit Feedback</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      To help us improve and scope this chapter for future semesters please consider providing the following feedback.
+    </p>
   </introduction>
 
+  <exercises>
+  <title />
+  <exercise xml:id="ex-gitkit-feedback-synching" label="ex-gitkit-feedback-synching">
+    <introduction>
+      <p>
+        For each of the following statements, rate your agreement or disagreement.
+        Refer to the chapter as needed.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-gitkit-feedback-synching-a" label="ex-gitkit-feedback-synching-a">
+      <query label="ex-gitkit-feedback-synching-a-poll">
+      <statement>
+        <p>
+          The figures helped me understand the relationship between my local repository, the origin repository and the upstream repository.
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Strongly Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Neither Agree nor Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Strongly Disagree
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-synching-b" label="ex-gitkit-feedback-synching-b">
+      <query label="ex-gitkit-feedback-synching-b-poll">
+      <statement>
+        <p>
+          The text descriptions provided with the figures helped me understand the state of the repositories depicted in the figure.
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Strongly Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Neither Agree nor Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Strongly Disagree
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-synching-c" label="ex-gitkit-feedback-synching-c">
+      <query label="ex-gitkit-feedback-synching-c-poll">
+      <statement>
+        <p>
+          The questions I answered helped me pause and think about what the commands I was typing did.
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Strongly Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Neither Agree nor Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Strongly Disagree
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-synching-d" label="ex-gitkit-feedback-synching-d">
+      <query label="ex-gitkit-feedback-synching-d-poll">
+      <statement>
+        <p>
+          Examples of the git commands in addition to the syntax would help me understand what I should be typing.
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Strongly Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Neither Agree nor Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Strongly Disagree
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-synching-e" label="ex-gitkit-feedback-synching-e">
+      <query label="ex-gitkit-feedback-synching-e-poll">
+      <statement>
+        <p>
+          There were too many questions in this activity.
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Strongly Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Neither Agree nor Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Strongly Disagree
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-synching-f" label="ex-gitkit-feedback-synching-f">
+      <query label="ex-gitkit-feedback-synching-f-poll">
+      <statement>
+        <p>
+          I am looking forward to doing the next chapter in the GitKit.
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Strongly Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Agree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Neither Agree nor Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Disagree
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Strongly Disagree
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gitkit-feedback-words-synching" label="ex-gitkit-feedback-words-synching">
+    <introduction>
+      <p>
+        Rate how each of the following words describes how you felt while completing the sections in this chapter.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-a" label="ex-gitkit-feedback-words-synching-a">
+      <query label="ex-gitkit-feedback-words-synching-a-poll">
+      <statement>
+        <p>
+          <term>bored</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-b" label="ex-gitkit-feedback-words-synching-b">
+      <query label="ex-gitkit-feedback-words-synching-b-poll">
+      <statement>
+        <p>
+          <term>confident</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-c" label="ex-gitkit-feedback-words-synching-c">
+      <query label="ex-gitkit-feedback-words-synching-c-poll">
+      <statement>
+        <p>
+          <term>confused</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-d" label="ex-gitkit-feedback-words-synching-d">
+      <query label="ex-gitkit-feedback-words-synching-d-poll">
+      <statement>
+        <p>
+          <term>engaged</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-e" label="ex-gitkit-feedback-words-synching-e">
+      <query label="ex-gitkit-feedback-words-synching-e-poll">
+      <statement>
+        <p>
+          <term>frustrated</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-f" label="ex-gitkit-feedback-words-synching-f">
+      <query label="ex-gitkit-feedback-words-synching-f-poll">
+      <statement>
+        <p>
+          <term>interested</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-g" label="ex-gitkit-feedback-words-synching-g">
+      <query label="ex-gitkit-feedback-words-synching-g-poll">
+      <statement>
+        <p>
+          <term>lost</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+
+
+    <task xml:id="ex-gitkit-feedback-words-synching-h" label="ex-gitkit-feedback-words-synching-h">
+      <query label="ex-gitkit-feedback-words-synching-h-poll">
+      <statement>
+        <p>
+          <term>overwhelmed</term>
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              Not at all
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Somewhat
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Quite a bit
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-gitkit-feedback-time-synching" label="ex-gitkit-feedback-time-synching">
+    <query label="ex-gitkit-feedback-time-synching-poll">
+    <statement>
+      <p>
+        Approximately how much time did you spend on this chapter outside of class time?
+      </p>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            0 - 30 minutes
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            30 minutes - 1 hour
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            1 hour - 2 hours
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            2 hours - 3 hours
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            3 hours - 5 hours
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            more than 5 hours
+          </p>
+        </statement>
+      </choice>
+    </choices>
+    </query>
+  </exercise>
+
+  <exercise xml:id="ex-gitkit-feedback-challenge-synching" label="ex-gitkit-feedback-challenge-synching">
+    <statement>
+      <p>
+        Please comment on any particular challenges you faced in completing this chapter.
+      </p>
+    </statement>
+    <response />
+  </exercise>
+  </exercises>
 </section>

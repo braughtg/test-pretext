@@ -77,7 +77,7 @@
     <task xml:id="ex-verify-changes-a" label="ex-verify-changes-a">
       <statement>
         <p>
-          What two things does the output tell you about the file that you edited? If you see the message “nothing to commit, working tree clean,” it means that your edits in the previous exercise were not saved.
+          What two things does the output tell you about the file that you edited? If you see the message “nothing to commit, working tree clean,” it means that your edits in the previous exercise were not saved. <term>NOTE: may want to change this so that it asks which files are staged, untracked, etc.</term>
           Go back and save your edits and then issue the <c>git status</c> command again before describing the two things that the output tells you.
         </p>
         <response />
