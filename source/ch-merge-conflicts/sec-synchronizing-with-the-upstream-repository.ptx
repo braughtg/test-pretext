@@ -46,10 +46,16 @@
   <exercise xml:id="ex-identifying-commits-that-conflict" label="ex-identifying-commits-that-conflict">
     <introduction>
       <p> 
-        Which of the commits (i.e. which colors) in <xref ref="fig-conflicting-upstream-changes" /> might contain merge conflicts after the dark blue commit was merged? 
+        Answer the following based on <xref ref="fig-conflicting-upstream-changes" />.
       </p>
     </introduction>
 
+    <task>
+      <statement>
+        <p>
+          Which of the commits (i.e. which colors) in <xref ref="fig-conflicting-upstream-changes" /> might contain merge conflicts after the dark blue commit was merged? 
+        </p>
+      </statement>
     <choices>
       <choice correct="yes">
         <statement>
@@ -59,7 +65,7 @@
         </statement>
       </choice>
 
-      <choice>
+      <choice correct="yes">
         <statement>
           <p>
             Lime Green
@@ -75,12 +81,14 @@
         </statement>
       </choice>
     </choices>
+
     
     <hint>
       <p>
         Look at which commits are new in upstream that are not part of the local repository's <c>main</c> or feature branch.
       </p>
     </hint>
+    </task>
   </exercise>
 
   <exercise xml:id="ex-num-commits-behind-upstream" label="ex-num-commits-behind-upstream">
@@ -134,7 +142,7 @@
     <exercise xml:id="ex-synch-main-local-upstream" label="ex-synch-main-local-upstream">
       <introduction>
         <p>
-          Use what you learned in the prior activity to synch the <c>main</c> branch of your local and <c>origin</c> repos with the upstream.  Don't forget to switch to your <c>main</c> branch first! 
+          Use what you learned in the prior chapter to synch the <c>main</c> branch of your local and <c>origin</c> repos with the upstream.  Don't forget to switch to your <c>main</c> branch first! 
         </p>
       </introduction>
       <task xml:id="ex-synch-main-local-upstream-a" label="ex-synch-main-local-upstream-a">
