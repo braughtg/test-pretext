@@ -26,5 +26,6 @@
   <xi:include href="sec-cloning-your-origin.ptx" />
   <xi:include href="sec-extra-practice.ptx" />
   <xi:include href="sec-git-command-summary.ptx" />
-  
+  <xi:include href="sec-gitkit-feedback.ptx" />
+
 </chapter>

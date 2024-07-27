@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="topic-gitkit-feedback-communities" 
+  xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>GitKit Feedback</title>
+
+  <introduction>
+    <p>
+      To help us improve and scope this chapter for future semesters please consider providing the following feedback.
+    </p>
+  </introduction>
+
+  <exercises>
+    <title />
+    
+    <exercise 
+      xml:id="ex-gitkit-feedback-time-communities" label="ex-gitkit-feedback-time-communities">
+      <query label="ex-gitkit-feedback-time-communities-poll">
+      <statement>
+        <p>
+          Approximately how much time did you spend on this chapter outside of class time?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              0 - 30 minutes
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              30 minutes - 1 hour
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              1 hour - 2 hours
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              2 hours - 3 hours
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              3 hours - 5 hours
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              more than 5 hours
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-gitkit-feedback-challenge-communities" label="ex-gitkit-feedback-challenge-communities">
+      <statement>
+        <p>
+          Please comment on any particular challenges you faced in completing this chapter.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+  </exercises>
+</section>

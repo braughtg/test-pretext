@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section
-  xml:id="topic-extra-practice"
+  xml:id="topic-extra-practice-communities"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Extra Practice</title>
@@ -19,7 +19,9 @@
         <title>
           Some FOSS Projects that can be used for extra practice with forking and cloning repositories.
         </title>
-        <tabular halign="top">
+        <tabular halign="left">
+          <col width="20%" />
+          <col />
           <row header="yes" bottom="minor" >
             <cell>Project</cell>
             <cell>Community Mission</cell>
