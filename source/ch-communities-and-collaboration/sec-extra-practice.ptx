@@ -1,12 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section
+  xml:id="topic-extra-practice"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Extra Practice</title>
 
   <introduction>
- 	<p>Text of section.</p>
+    <p>
+      There are literally millions of FOSS projects with repositories on GitHub that you can fork and clone and contribute to.  The exercises in this section will provide you with a little extra practice forking and cloning repositories.
+    </p>
+    <p>
+      Choose one of the projects in <xref ref="table-foss-projects" /> or search <url href="https://github.com">GitHub</url> for one that sounds interesting to you and then complete the exercises below.
+    </p>
+    <p>
+      <table
+        xml:id="table-foss-projects">
+        <title>
+          Some FOSS Projects that can be used for extra practice with forking and cloning repositories.
+        </title>
+        <tabular halign="top">
+          <row header="yes" bottom="minor" >
+            <cell>Project</cell>
+            <cell>Community Mission</cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <url href="https://github.com/openmrs/openmrs-distro-referenceapplication">OpenMRS</url>
+            </cell>
+            <cell>
+              <p>
+                Aims to "Improve healthcare delivery in resource-constrained environments by coordinating a global community that creates and sustains a robust, scalable, user-driven and open-source medical record platform."
+              </p>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <url href="https://github.com/apache/fineract">Fineract</url>
+            </cell>
+            <cell>
+              <p>
+                Aims to provide "a reliable, robust, and affordable core banking solution for financial institutions offering services to the world’s 3 billion underbanked and unbanked."
+              </p>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <url href="https://github.com/sahana/eden">Sahana Eden</url>
+            </cell>
+            <cell>
+              <p>
+                Aims to provide an "Open Source Humanitarian Platform which can be used to provide solutions for Disaster Management, Development, and Environmental Management sectors."
+              </p>
+            </cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <url href="https://github.com/oppia/oppia">Oppia</url>
+            </cell>
+            <cell>
+              <p>
+                Aims to provide "A free, online learning platform to make quality education accessible for all."
+              </p>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </p>
   </introduction>
 
+  <exercises>
+    <title />
+
+    <exercise
+      xml:id="ex-extra-practice-fork"
+      label="ex-extra-practice-fork">
+      <statement>
+        <p>
+          Fork the repository for the project into your GitHub space.  Give the full URL of your fork.
+        </p>
+        <p>
+          <var width="55" />
+        </p>
+      </statement>
+      <setup>
+        <var>
+          <condition string="^https://github.com/.+/.+">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Please give the full URL of your fork on GitHub.
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+      <hint>
+        Review <xref ref="topic-forking-the-upstream" /> for information on how to fork a repository on GitHub.
+      </hint>
+    </exercise>
+
+    <!-- Linux KitClient -->
+    <exercise
+      xml:id="ex-extra-practice-clone-linux"
+      label="ex-extra-practice-clone-linux"
+      component="linux-kit-client">
+      <statement>
+        <p>
+          Clone your origin (i.e. your fork) for the project you selected into your development environment.
+        </p>
+        <p>
+          Copy and paste the Git commands that you used and their output here.
+        </p>
+      </statement>
+      <response />
+      <hint>
+        Review <xref ref="topic-cloning-your-origin" /> for information about how to clone your origin repository.
+      </hint>
+    </exercise>
+
+    <!-- VSCode KitClient -->
+    <exercise
+      xml:id="ex-extra-practice-clone-vscode"
+      label="ex-extra-practice-clone-vscode"
+      component="vscode-kit-client">
+      <statement>
+        <p>
+          Clone your origin (i.e. your fork) for the project you selected by creating a new development environment (i.e. workspace) for it in GitPod.  Recall that creating a new GitPod workspace automatically clones the origin repository into the development environment.
+        </p>
+        <p>
+          Briefly describe how you created the the development environment, and thus cloned your origin, for the project you have chosen.
+        </p>
+      </statement>
+      <response />
+      <hint>
+        Review <xref ref="topic-development-environment" /> for information about how to create a new GitPod workspace (i.e. development environment).
+      </hint>
+    </exercise>
+
+    <exercise
+      xml:id="ex-extra-practice-remotes"
+      label="ex-extra-practice-remotes">
+      <statement>
+        <p>
+          Use the Git command that displays the remotes that your local repository knows about.  
+        </p>
+        <p>
+          Copy and paste the Git commands that you used and their output here.
+        </p>
+      </statement>
+      <response />
+      <hint>
+        Review <xref ref="ex-check-remotes" /> for information about how to display the remotes.
+      </hint>
+    </exercise>
+  </exercises>
 </section>

@@ -1,6 +1,9 @@
 foss
+halign
 inclusivity
 kitclient
 opensource
 Runestone
 uiux
+unbanked
+underbanked
