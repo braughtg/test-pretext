@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section
+  xml:id="topic-git-commands-summary-communities" 
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Git Command Summary</title>
 
   <introduction>
- 	<p>Text of section.</p>
+    <p>
+      It will take a while for this process and all of the commands to become a natural part of the way you work. To help speed that process, this section provides a chance to collect and review the Git commands that were used in this chapter. 
+    </p>
   </introduction>
 
+  <exercises>
+    <title />
+    <exercise 
+      xml:id="ex-git-commands-summary-communities" label="ex-git-commands-summary-communities">
+      <statement>
+        <p>
+          Match the tasks on the right with the appropriate git command listed on the left.
+        </p>
+      </statement>
+      <matches> 
+        <match>
+          <premise>
+            <c>git config</c>
+          </premise> 
+          <response>
+            Display Git settings.
+          </response> 
+        </match> 
+        <match>
+          <premise>
+            <c>git remote -v</c>
+          </premise> 
+          <response>
+            List your remote repos.
+          </response> 
+        </match> 
+        <match>
+          <premise>
+            <c>git clone &lt;clone URL&gt;</c>
+          </premise> 
+          <response>
+            Create a copy of the origin repository in your development environment.
+          </response> 
+        </match> 
+      </matches>
+      <hint>
+        <p>
+          Note that the tasks listed are in approximately the same order as they appear in the sections of this chapter.
+        </p>
+      </hint>
+    </exercise>
+  </exercises>
 </section>

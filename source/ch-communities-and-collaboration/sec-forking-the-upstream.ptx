@@ -7,7 +7,282 @@
   <title>Forking the Upstream Repository</title>
 
   <introduction>
- 	<p>Text of section.</p>
+    <p>
+      In <xref ref="topic-basic-foss-workflow" /> you saw how FOSS communities can use a basic workflow to collaborate. In this section you will begin to gain hands-on experience with that workflow. <xref ref="fig-basic-workflow-fork"/> illustrates first step in the workflow. In this step you will <term>fork</term> the main project repository, which creates a copy of it into your own GitHub space.
+    </p>
+  
+    <p>
+      <figure 
+        xml:id="fig-basic-workflow-fork"
+        >
+        <caption>
+          Forking the main project repository.
+        </caption>
+        <image source="images/ch-communities-and-collaboration/basic-workflow-fork.png" width="75%">
+          <description>Creating a fork of the main project repo creates a copy of it in your own GitHub space. This copy is your remote copy.
+          </description>
+        </image>
+      </figure>
+    </p>
+
+    <p>
+      Note that when working on the GitKit you will not actually be interacting with the main FarmData2 repository. Instead, you will be interacting with a copy of the FarmData2 repository that was created just for these activities. That said, you will be treating this copy exactly as if it is the “Main Project Repo” or the upstream repository.  This allows you, your classmates and many other students to practice interacting with an upstream project for learning purposes without affecting the main FarmData2 repository. 
+    </p>  
   </introduction>
 
+  <exercises>
+    <title />
+
+    <exercise 
+      xml:id="ex-upstream-url"
+      label="ex-upstream-url"
+      >
+      <statement>
+        <p>
+          Your instructor will have provided you with the URL of the GitKit FarmData2 repository that you will be using as the main project repo (i.e. the upstream) for the exercises in this text.
+        </p>
+        <p>
+          Give the full URL to the GitKit FarmData2 repository that you will be using as the upstream, for example: <c>https://github.com/yourClass/theRepoName</c>
+        </p>
+        <p>
+          <var width="55" />
+        </p>
+      </statement>
+      
+      <setup>
+        <var>
+          <condition string="^https://github.com/((?!(FarmData2/FarmData2|DickinsonCollege/FarmData2)).)*$">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/DickinsonCollege/FarmData2">
+            <feedback>
+              <p>
+                Looks like you might be trying to use the real FarmData2 upstream. Be sure to use the URL that your instructor has given you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/FarmData2/FarmData2">
+            <feedback>
+              <p>
+                Looks like you might be trying to use the real FarmData2 upstream. Be sure to use the URL that your instructor has given you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Please give the full URL using the format indicated in the question.
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+      <hint>
+        Check the course materials from your instructor. It should provide the URL of the GitKit FarmData2 repository that was created for your course.
+      </hint>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-create-your-fork"
+      label="ex-create-your-fork"
+      >
+      <introduction>
+        <p>
+          Visit the upstream repository from <xref ref="ex-upstream-url" /> in your browser and then complete the following tasks to create your fork.
+        </p>
+      </introduction>
+    
+      <task
+        xml:id="ex-find-fork"
+        label="ex-find-fork"
+        >
+        <statement>
+          <p>
+            Find the "Fork" button on the upstream repository page.
+              <image source="images/ch-community-collaboration/fork-button.png" width="25%">
+                <description>
+                    The fork button.
+                </description>
+              </image>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The fork button will be toward the upper right hand corner of the browser window.
+          </p>
+        </hint>
+      </task>
+    
+      <task
+        xml:id="ex-click-fork"
+        label="ex-click-fork"
+        >
+        <statement>
+          <p>
+            Click the “Fork” button to create your own fork of the upstream repository. Be sure to pick the GitHub username you used in <xref ref="ex-github-account-url" /> in the "Choose an owner" box so that your fork will be created in your GitHub space.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-fork-url"
+      label="ex-fork-url"
+      >
+      <statement>
+        <p>
+          Give the full URL of your fork of the upstream, for example: <c>https://github.com/yourGitHub/theRepoName</c>
+        </p>
+        <p>
+          <var width="55" />
+        </p>
+      </statement>
+
+      <setup>
+        <var>
+          <condition string="^https://github.com/((?!(FarmData2/FarmData2|DickinsonCollege/FarmData2)).)*$">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/DickinsonCollege/FarmData2">
+            <feedback>
+              <p>
+                Looks like you might be giving the URL of the real FarmData2 upstream. Be sure to give the URL of the fork you created in your GitHub space.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/FarmData2/FarmData2">
+            <feedback>
+              <p>
+                Looks like you might be trying to use the real FarmData2 upstream. Be sure to give the URL of the fork you created in your GitHub space.
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Please give the full URL using the format indicated in the question.
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+      <hint>
+        The URL you give here should contain your GitHub username. Be sure you are looking the copy of the GitKit FarmData2 repository that is in your GitHub space.
+      </hint>
+    </exercise>
+
+    <exercise
+      xml:id="ex-upstream-ref-from-origin"
+      label="ex-upstream-ref-from-origin"
+      >
+      <introduction>
+        <p>
+          Notice that in <xref ref="fig-basic-workflow-fork" /> there is an dashed orange arrow pointing from your remote copy (i.e. your origin) to the main project repo (i.e. the upstream). This arrow is indicating that your fork knows where the upstream project repository is located.
+        </p>
+      </introduction>
+
+      <task
+        xml:id="ex-upstream-ref-from-origin-a"
+        label="ex-upstream-ref-from-origin-a"
+        >
+        <statement>
+          <p>
+            Visit your origin repository on GitHub. There is some text and a link on that page that corresponds to the orange dashed arrow in <xref ref="fig-basic-workflow-fork" />.  Copy and paste that text and link here. 
+          </p>
+        </statement>
+        <response />
+        <hint>
+          This text and link will be near the repository name in the upper left corner of the window.
+        </hint>
+      </task>
+
+      <task
+        xml:id="ex-upstream-ref-from-origin-b"
+        label="ex-upstream-ref-from-origin-b"
+        >
+        <statement>
+          <p>
+            Which step of the basic FOSS workflow would require that your origin repository know the location of the upstream repository?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Pull request
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Fork
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Clone
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Edit
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Push
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        <hint>
+          Think about which step of the basic FOSS workflow needs to send information back to the main project.
+        </hint>
+      </task>
+
+      <task
+        xml:id="ex-upstream-ref-from-origin-c"
+        label="ex-upstream-ref-from-origin-c"
+        >
+        <statement>
+          <p>
+            Explain in a few sentences why your origin repository keeps track of the location of the upstream repository from which it was forked. 
+          </p>
+        </statement>
+        <response />
+        <hint>
+          Be sure to state which operation in the basic FOSS workflow uses this information and the function performed by that operation.
+        </hint>
+      </task>
+    </exercise>
+
+    <exercise
+      xml:id="ex-no-issue-tracker-in-fork"
+      label="ex-no-issue-tracker-in-fork">
+      <statement>
+        <p>
+          When you forked the upstream repository, GitHub made a copy of that repository into your GitHub space.
+        </p>
+        <p>
+          Did it also make a copy of the issue tracker and its issues into your GitHub space?  What reasons can you think of for why the designers of GitHub decided that the issue tracker should not be copied into the fork?
+        </p>
+      </statement>
+      <response />
+    </exercise>
+  </exercises>
 </section>
