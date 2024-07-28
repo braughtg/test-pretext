@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="topic-instructor-guide" 
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+  
+  <title>Instructor Guide</title>
+ 
+  <introduction>
+		<p>
+			This instructor guide contains everything you need to know about using GitKit in your class.  <xref ref="topic-quick-start" /> gives a <em>Quick Start</em> guide that may be sufficient if you have used GitKit previously and just need the bare minimum of reminders. <xref ref="topic-gitkit-overview" /> provides a more detailed guide for getting started.
+		</p>	
+
+		<p>
+			For help with GitKit, <url href="https://discord.gg/83Sb4csCeT">chat with us on Discord.</url> 
+		</p>
+
+		<p>
+			As part of our NSF-funded project, we are gathering information on the use of GitKit. If you are currently using GitKit in a course, we hope that you will consider participating in a brief survey by clicking the link below:
+		</p>
+		<p>
+			<url href="https://drexel.qualtrics.com/jfe/form/SV_81y8BL0zy3fBw22" /> 
+		</p>
+		<p>
+			Thank you!
+		</p>
+  </introduction>
+
+
+	<subsection 
+		xml:id="topic-quick-start">
+		<title>Quick Start</title>
+
+		<p>
+			This <em>quick start</em> guide provides a very brief outline of the steps necessary to use the GitKit in a course. <xref ref="topic-gitkit-overview" /> provides more details if necessary.
+		</p>
+
+		<ol>
+			<li>
+				<p>
+					Click to <url href="https://gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod" visual="gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod"> Deploy the GitKit FarmData2 Repository </url> to use as the upstream.
+				</p>
+			</li>
+			<li>
+				<p>
+					Copy the URL of the deployed GitKit FarmData2 upstream and make it available to your class.
+				</p>
+			</li>
+			<li>
+				<p>
+					Review and merge student Pull Requests into the upstream just before or during the class that covers <xref ref="topic-staying-synchronized" />.
+				</p>
+			</li>
+			<li>
+				<p>
+					Merge the <c>addRound2Conflicts</c> branch into the upstream just before or during the class that covers <xref ref="topic-merge-conflicts" />.
+				</p>
+			</li>
+		</ol>
+		<p>
+
+		</p>
+	</subsection>
+
+	<subsection xml:id="topic-gitkit-overview">
+		<title>Overview of the GitKit</title>
+		
+		<p>
+			GitKit Educational Materials, Delivering the GitKit and GitKit Topics section from current README.
+		</p>
+	</subsection>
+
+
+	<subsection xml:id="topic-gitkit-development-environments">
+		<title>Development Environments</title>
+		
+		<p>
+			Discussion of the two development environments, the Kit-tty, and community automatons, though this is a bit of a chicken and egg problem...
+		</p>
+	</subsection>
+
+	<subsection xml:id="topic-gitkit-deploy">
+		<title>Deploying the GitKit</title>
+		
+		<p>
+			Current Deploying the GitKit content.
+		</p>
+	</subsection>
+
+	<subsection xml:id="topic-instructor-notes">
+		<title>Instructor Notes</title>
+		
+		<introduction>
+			Current Instructor Notes Section
+		</introduction>
+
+		<subsubsection xml:id="topic-instructor-notes-communities">
+			<title>Communities and Collaboration</title>
+			<p>
+				Current content with "todo first"
+			</p>
+		</subsubsection>
+
+		<subsubsection xml:id="topic-instructor-notes-upstreaming">
+			<title>Working Locally and Upstreaming Changes</title>
+			<p>
+				Current content with "todo first"
+			</p>
+		</subsubsection>
+
+		<subsubsection xml:id="topic-instructor-notes-synchronizing">
+			<title>Staying Synchronized with the Upstream</title>
+			<p>
+				Current content with "todo first"
+			</p>
+		</subsubsection>
+		
+		<subsubsection xml:id="topic-instructor-notes-merge-conflicts">
+			<title>Handling Merge Conflicts</title>
+			<p>
+				Current content with "todo first"
+			</p>
+		</subsubsection>
+	</subsection>
+</section>
