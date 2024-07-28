@@ -7,7 +7,153 @@
   <title>Basic FOSS Workflow Concepts</title>
 
   <introduction>
- 	<p>Text of section.</p>
+    <p>
+      Now that you have found an issue to work on, you will need to collaborate with the project community to fix that issue. Collaboration in FOSS communities follows patterns of behavior known as <term>workflows</term>. <xref ref="fig-basic-foss-workflow" /> shows a basic version of one FOSS workflow that is used by contributors working on FOSS projects.
+    </p>
+    <p>
+      <figure 
+        xml:id="fig-basic-foss-workflow"
+        label="fig-basic-foss-workflow"
+        >
+        <caption>
+          A basic FOSS workflow.  
+        </caption>
+        <image source="images/ch-communities-and-collaboration/basic-foss-workflow.png" width="75%">
+          <description>Forking the main project repo creates your remote copy in your GitHub spacey.  Cloning your remote copy creates your local copy in your local development environment. Changes that you make to your local copy can be contributed to the main project by pushing them to your remote copy and creating a pull request.
+          </description>
+        </image>
+      </figure>
+    </p>
   </introduction>
 
+  <exercises>
+    <title />
+    
+    <introduction>
+      The exercises in this section will help to familiarize you with the terminology and the process of this basic FOSS workflow.
+    </introduction>
+
+    <exercise 
+      xml:id="ex-github-repository-terminology"
+      label="ex-github-repository-terminology"
+      >
+      <statement>
+        <p>
+          GitHub uses specific terminology to refer to the copies of the repository.  Match the GitHub terminology on the left with the repository in <xref ref="ch-cc_sec-bfw_fig-basic-foss-workflow" /> to which it refers on the right.
+        </p>
+      </statement>
+
+      <matches>
+        <match>
+          <premise>Upstream</premise>
+          <response>Main project repository</response>
+        </match>
+        <match>
+          <premise>Origin</premise>
+          <response>Your Remote Copy</response>
+        </match>
+        <match>
+          <premise>Local Clone</premise>
+          <response>Local Copy of Your Remote Copy</response>
+        </match>
+      </matches>
+      <hint>
+        <p>
+          Review the diagrams of the basic FOSS workflow from the in the class materials.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-workflow-step-definitions"
+      label="ex-workflow-step-definitions"
+      >
+      <statement>
+        <p>
+          <xref ref="fig-basic-foss-workflow" /> illustrates a basic FOSS workflow similar to what is used in many FOSS projects.  This workflow has the following 5 steps: <term>Fork</term>, <term>Clone</term>, <term>Edit</term>, <term>Push</term>, and <term>Pull Request</term>. Match each term on the left with the appropriate description on the right.
+        </p>
+      </statement>
+
+      <matches>
+        <match>
+          <premise>Fork</premise>
+          <response>
+            Create a copy of the main project repository in your GitHub space.
+          </response>
+        </match>
+        <match>
+          <premise>Clone</premise>
+          <response>
+            Create a copy of your remote copy of the repository into your local development environment.
+          </response>
+        </match>
+        <match>
+          <premise>Edit</premise>
+          <response>
+            Make changes to your local copy of the repository (e.g. to fix a bug).
+          </response>
+        </match>
+        <match>
+          <premise>Push</premise>
+          <response>
+            Copy your changes into your remote copy of the repository.
+          </response>
+        </match>
+        <match>
+          <premise>Pull Request</premise>
+          <response>
+            Ask that the project maintainers incorporate your changes into the main project repository.
+          </response>
+        </match>
+      </matches>
+      <hint>
+        <p>
+          Review the diagrams of the basic FOSS workflow from the in the class materials.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-workflow-step-order"
+      label="ex-workflow-step-order"
+      >
+      <statement>
+        <p>
+          Drag the steps of the basic FOSS workflow into the order that they are likely to occur when working on a project.
+        </p>
+      </statement>
+      <blocks>
+        <block order="3">
+          <p>
+            Fork
+          </p>
+        </block>
+        <block order="1">
+          <p>
+            Clone
+          </p>
+        </block>
+        <block order="5">
+          <p>
+            Edit
+          </p>
+        </block>
+        <block order="2">
+          <p>
+            Push
+          </p>
+        </block>
+        <block order="4">
+          <p>
+            Pull Request
+          </p>
+        </block>
+      </blocks>
+      <hint>
+        <p>
+          Imagine the process you would go through when starting to work on a project, fixing a bug, and contributing your changes back to the main project.
+        </p>
+      </hint>
+    </exercise>
+  </exercises>
 </section>

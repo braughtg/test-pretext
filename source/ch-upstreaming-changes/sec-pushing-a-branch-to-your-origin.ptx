@@ -1,13 +1,286 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-pushing-a-branch-to-your-origin"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-pushing-a-branch-to-your-origin" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Pushing a Branch to Your Origin</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      You have made the changes necessary to address the issue you were assigned, and you are now ready to upstream those changes.
+      In order to do that, the first step is to get the changes you have made into GitHub so that the upstream maintainers can be told about them.
+    </p>
   </introduction>
 
+  <exercises>
+  <title />
+  <p>
+    As shown in <xref ref="fig-pushing-feature-branch" />, this is done by <em>pushing your feature branch</em> to your origin repository.
+    More generally, pushing a branch, copies it from a local repo to a remote repo.
+  </p>
+
+  <p>
+    <figure xml:id="fig-pushing-feature-branch" >
+      <caption> Push Feature Branch to Origin. </caption>
+      <image source="images/ch-upstreaming-changes/pushing-feature-branch.png" width="75%">
+        <description>
+          Cloud image of the feature branch to be merged into your origin repository.
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercise xml:id="ex-list-branches" label="ex-list-branches">
+    <statement>
+      <p>
+        The <c>git branch -l</c> (lower case L, not one) command lists all of the branches that exist in your local repository.
+        What branches are in your local repository?
+      </p>
+    </statement>
+
+
+    <choices randomize="yes">
+      <choice>
+        <statement>
+          <p>
+            branch name
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            branch name
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            branch name
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            branch name
+          </p>
+        </statement>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            branch name
+          </p>
+        </statement>
+      </choice>
+    </choices>
+
+    <hint>
+      <p>
+        HINT HERE
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-branch-diff" label="ex-branch-diff">
+    <introduction>
+      <p>
+        Use your browser to look at your <c>origin</c> repository on GitHub.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-branch-diff-a" label="ex-branch-diff-a">
+      <statement>
+        <p>
+          What branches appear in your origin repository on GitHub?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              branch name
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              branch name
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              branch name
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              branch name
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              branch name
+            </p>
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          HINT HERE
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-branch-diff-b" label="ex-branch-diff-b">
+      <statement>
+        <p>
+          Why is there a difference between the branches in your origin repo and your local repo?
+        </p>
+      </statement>
+      <response />
+    </task>
+  </exercise>
+
+  <p component="linux-kit-client">
+    <term>Getting a Personal Access Token: </term>
+  </p>
+
+  <p component="linux-kit-client">
+    Before you will be able to push your feature branch to GitHub you will have to get a <term>Personal Access Token (PAT)</term> from GitHub.
+    A PAT is like a password but has some security benefits.
+    In particular, you can have multiple different PATs.
+    Each one can have different limits on what can be done with it and each one can be revoked individually without affecting the others.
+  </p>
+
+  <p component="linux-kit-client">
+    When interacting with GitHub using the git CLI (e.g.
+    when pushing a branch), GitHub requires that you use a PAT for authentication instead of your password.
+  </p>
+
+  <exercise xml:id="ex-getting-pat" label="ex-getting-pat" component="linux-kit-client">
+    <introduction>
+      <p>
+        Follow GitHub's instructions for creating a (classic) personal access token: <url href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic" visual="docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic">Creating a Personal Access Token (classic)</url>.
+      </p>
+
+      <p>
+        When doing so be sure to:
+        <ul>
+          <li>
+            <p>
+              Choose “repo” for the “scopes and permissions.”
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Be sure to copy and paste your PAT somewhere safe – maybe e-mail it to yourself.
+              You will not be able to retrieve it again after you leave the page.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Note: Typing or even copy and pasting your PAT every time it is needed can be a hassle.
+        To help, the git CLI provides what is known as the <term>credential helper</term>.
+        The git CLI in the KitClient has configured the credential helper so that your PAT will be stored when you enter it the first time.
+        It will then be used automatically for future commands.
+        If you are curious, you can learn more about the credential helper here: <url href="https://techexpertise.medium.com/storing-git-credentials-with-git-credential-helper-33d22a6b5ce7" visual="techexpertise.medium.com/storing-git-credentials-with-git-credential-helper-33d22a6b5ce7">Storing Git Credentials with Git Credential Helper</url>.
+      </p>
+    </introduction>
+  </exercise>
+
+  <p>
+    <term>Pushing your Feature Branch: </term>
+  </p>
+
+  <exercise xml:id="ex-push-branch-linux" label="ex-push-branch-linux" component="linux-kit-client">
+    <introduction>
+      <p>
+        The <c>git push &lt;remote repo name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repo to the specified remote repo (i.e.
+        on GitHub).
+      </p>
+
+      <p>
+        Use a command that will push your <em>feature branch</em> from your local repo to your <em>origin repo</em> on GitHub.
+      </p>
+
+      <p>
+        Note: You can use the name of the remote repo, so you do not need to use the full URL.
+        You will also need to paste your PAT as the password when it is requested.
+      </p>
+    </introduction>
+  </exercise>
+
+  <exercise xml:id="ex-push-error-linux" label="ex-push-error-linux" component="linux-kit-client">
+    <introduction>
+      <p>
+        The output from <xref ref="ex-push-branch-linux"/> should not contain any error messages.
+        The last few lines should also give you some indication that that your push was successful.
+        Visit your origin repository on GitHub and check that the branch was pushed.
+      </p>
+    </introduction>
+  </exercise>
+
+  <exercise xml:id="ex-push-branch-vscode" label="ex-push-branch-vscode" component="vscode-kit-client">
+    <introduction>
+      <p>
+        The <c>git push &lt;remote repo name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repo to the specified remote repo (i.e.
+        on GitHub).
+      </p>
+
+      <p>
+        Use a command that will push your <em>feature branch</em> from your local repo to your <em>origin repo</em> on GitHub.
+      </p>
+
+      <p>
+        Note: You can use the name of the remote repo, so you do not need to use the full URL.
+      </p>
+    </introduction>
+  </exercise>
+
+  <exercise xml:id="ex-push-error-vscode" label="ex-push-error-vscode" component="vscode-kit-client">
+    <introduction>
+      <p>
+        When you attempted to push in <xref ref="ex-push-branch-vscode"/>, you should have gotten an authorization error.
+        When this happens VSCode will prompt you in the lower right to open GitPod and configure the authorization.
+        Do that.
+        When done, return to your GitPod workspace and try the push again.
+        It should work.
+      </p>
+
+      <p>
+        If you get the same pop up, open it again.
+        Look for the GitHub authorization.
+        Click the "..." menu next to it and edit it.
+        Ensure that "repo" with read/write permissions are set and save it.
+        It will send you to GitHub to complete the authorization.
+        When done, return to your GitPod workspace and try the push again.
+        It should work.
+      </p>
+    </introduction>
+  </exercise>
+  </exercises>
 </section>

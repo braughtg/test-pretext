@@ -65,7 +65,7 @@
         </statement>
       </choice>
 
-      <choice correct="yes">
+      <choice>
         <statement>
           <p>
             Lime Green
@@ -73,10 +73,18 @@
         </statement>
       </choice>
 
-      <choice>
+      <choice correct="yes">
         <statement>
           <p>
             Brown
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            Green
           </p>
         </statement>
       </choice>
@@ -107,24 +115,25 @@
     <introduction>
       <p>
         Now find your pull request in the <c>upstream</c> repo on GitHub.  You should see that your pull request cannot be merged automatically. 
+        <ul marker="">
+          <li>If GitHub indicates that your pull request can be merged automatically follow the instructions in <xref ref="topic-appendix-a-merge-conflicts"/> at the end of this activity sheet and then return to this question when you have a pull request that cannot be merged automatically.</li>
+          <li>Do not continue unless your pull request on GitHub shows that it cannot be merged automatically.</li>
+        </ul>
       </p>
     </introduction>
-    <task xml:id="ex-no-automatic-merge-on-github-a" label="ex-no-automatic-merge-on-github-a">
-      <statement>
+    <task xml:id="ex-no-automatic-merge-on-github-a" label="ex-no-automatic-merge-on-github-a">    
+      <statement correct="yes">
         <p>
-          If GitHub indicates that your pull request can be merged automatically follow the instructions in <xref ref="topic-appendix-a-merge-conflicts"/> at the end of this activity sheet and then return to this question when you have a pull request that cannot be merged automatically.
+          Does your pull request on GitHub show that it cannot be merged automatically?
         </p>
       </statement>
-      <response />
+      <feedback>
+        <p>
+          If you don't have a merge conflict, you can't do the rest of the exercises in this section.
+        </p>
+      </feedback>
     </task>
     <task xml:id="ex-no-automatic-merge-on-github-b" label="ex-no-automatic-merge-on-github-b">    
-      <statement>
-        <p>
-          Do not continue unless your pull request on GitHub shows that it cannot be merged automatically.
-        </p>
-      </statement>
-    </task>
-    <task xml:id="ex-no-automatic-merge-on-github-c" label="ex-no-automatic-merge-on-github-c">    
       <statement>
         <p>
           Briefly explain in a sentence or two of your own words, what happened that made your pull request go from being able to be merged automatically to now not being able to be merged automatically.

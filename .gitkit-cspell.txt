@@ -1,2 +1,10 @@
 foss
+gitkit
+halign
+inclusivity
+kitclient
+opensource
 Runestone
+uiux
+unbanked
+underbanked

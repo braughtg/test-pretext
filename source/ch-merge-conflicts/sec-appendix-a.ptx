@@ -7,7 +7,61 @@
   <title>Appendix A</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+ 			    <p>
+            Skip this section if you were not directed here from <xref ref="ex-no-automatic-merge-on-github" />.
+          </p>
+          <p>
+            If you were directed here from <xref ref="ex-no-automatic-merge-on-github" />, then the pull request you created for your Round2 issue is showing that it can be merged automatically.  The most common reason that this happens is that you synchronized your local and origin <c>main</c> branches after the instructor merged the conflicting changes into the upstream <c>main</c> branch.  This could have happened if you did not complete the previous assignment on time. The instructions in this section will help you to resolve that issue but will require a little additional work on your part.
+          </p>
   </introduction>
+  <exercises>
+    <title />
+    <exercise xml:id="ex-restore-main" label="ex-restore-main">
+      <introduction>
+        <p>
+          Ensure that you are in your local repository in a Terminal.  Use the following commands to restore your main branch to the state before the conflicts were introduced:
+          <ul marker="">
+            <li><c>git switch main</c></li>
+            <li><c>git reset --hard~1</c></li>
+          </ul>
+        </p>
+        <p>
+          You should see output similar to:
+          <ul marker="">
+            <li><c>HEAD is now at …</c></li>
+          </ul>
+        </p>
+      </introduction>
+    </exercise>
+    
+    <exercise xml:id="ex-fix-round2" label="ex-fix-round2">
+      <introduction>
+        <p>
+          You will now need to repeat the steps you used to fix your Round2 issue:
+            <ul>
+              <li><p>make a new feature branch</p></li>
+              <li><p>switch to your feature branch</p></li>
+              <li><p>make the changes necessary to address your Round2 issue</p></li>
+              <li><p>stage and commit your changes to your feature branch</p></li>
+              <li><p>Push your feature branch to your origin</p></li>
+              <li><p>Make a pull request to the upstream for your new feature branch
+                <ul>
+                <li>When you look at this pull request it should indicate that it cannot be merged automatically.</li>
+                </ul>
+              </p></li>
+            </ul>
+        </p>
+      </introduction>
+    </exercise>
+    
+    <exercise>
+      <introduction>
+        <p>
+          Return to <xref ref="ex-no-automatic-merge-on-github" /> and continue with the exercise.
+        </p>
+      </introduction>
+    </exercise>
+    
+  </exercises>
 
 </section>
