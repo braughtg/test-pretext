@@ -6,15 +6,15 @@
   <introduction>
     <p>
       When you set out to make changes to the project you will do so by working on a feature branch.
-      <xref ref="fig-create-feature-branch-and-switch" /> illustrates the process of creating a feature branch.
+      <xref ref="fig-create-feature-branch" /> illustrates the process of creating a feature branch.
       The exercises in this section will walk you through the process of creating a feature branch on which you will fix the issue that you claimed in <xref provisional="a reference back to ch2-issue-tracker section" />.
     </p>
   </introduction>
 
   <p>
-    <figure xml:id="fig-create-feature-branch-and-switch">
+    <figure xml:id="fig-create-feature-branch">
       <caption> Create feature branch. </caption>
-      <image source="images/ch-upstreaming-changes/create-feature-branch-and-switch.png" width="75%">
+      <image source="images/ch-upstreaming-changes/create-feature-branch.png" width="75%">
         <description>
           Cloud image of origin, upstream, and local branches.
         </description>
