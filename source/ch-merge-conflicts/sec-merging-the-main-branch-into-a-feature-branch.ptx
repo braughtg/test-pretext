@@ -7,7 +7,148 @@
   <title>Merging the main Branch into a Feature Branch</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+ 		<p>
+      Your local main branch now contains the changes that were made to the upstream main branch. The next step is to merge the changes from the main branch into your feature branch. This is like the example from class, which is illustrated in <xref ref="fig-merge-main-into-feature" />. 
+    </p>
+    <p>
+      <xref ref="fig-merge-main-into-feature" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
+    </p>
+    <p>
+      <figure xml:id="fig-merge-main-into-feature">
+        <caption> Merge main into feature branch </caption>
+        <image source="images/ch-merge-conflicts/merge-main-into-feature.png" width="75%">
+          <description>
+            main branch timeline with feature branch merge
+          </description>
+        </image>
+      </figure>
+    </p>
   </introduction>
+
+  <exercises>
+    <title />
+
+    <exercise xml:id="ex-name-source-target-branches" label="ex-name-source-target-branches">
+      <statement>
+        <p>
+          If you are going to merge the changes from the <c>main</c> branch into your feature branch, which branches will be the source branches? Which branch will be the target branch?
+        </p>
+      </statement>
+      <matches>
+        <match order="1">
+        <premise>Source Branches</premise>
+        <response><c>main</c></response>
+        </match>
+        <match order="2">
+        <premise>Target Branch</premise>
+        <response>feature branch</response>
+        </match>
+      </matches>
+    </exercise>
+    
+    <exercise xml:id="ex-merge-main-branch" label="ex-merge-main-branch">
+      <introduction>
+        <p>
+          The <c>git merge &lt;branch name&gt;</c> command will attempt to merge the changes in the active branch with the changes in <c>&lt;branch name&gt;</c> (i.e. the source branches) into a merge commit in the currently active branch (i.e. the target branch). 
+        </p>
+      </introduction>
+      <task xml:id="ex-merge-main-branch-a" label="ex-merge-main-branch-a">
+        <statement>
+          <p>
+            To use the <c>merge</c> command as just described your feature branch (i.e. the target branch) must be the active branch.  Switch to your feature branch and confirm that it is now the active branch.  
+          </p>
+          <p>
+            What were the commands you used? And their output? You can copy your work into the provided textbox.
+          </p>
+        </statement>
+        <response />
+      </task>
+      <task xml:id="ex-merge-main-branch-b" label="ex-merge-main-branch-b">
+        <statement>
+          <p>
+            Use the <c>merge</c> command to try to merge the changes contained in the <c>main</c> branch and in your feature branch into your feature branch.
+          </p>
+          <p>
+            What were the commands you used? And their output? You can copy your work into the provided textbox.
+          </p>
+        </statement>
+        <response />
+      </task>
+    </exercise>
+    
+    <exercise xml:id="ex-merge-conflict-file" label="ex-merge-conflict-file">
+      <introduction>
+        <p>
+          The output from <xref ref="ex-merge-main-branch" /> should indicate that the automatic merge failed due to a conflict.  If your merge command did not fail due to a conflict, return to <xref ref="ex-no-automatic-merge-on-github" /> and follow the instructions from there again. 
+        </p>
+      </introduction>
+      <task xml:id="ex-merge-conflict-file-a" label="ex-merge-conflict-file-a">
+        <statement>
+          <p>
+            In which file is the conflict located?
+          </p>
+        </statement>
+        <response />
+      </task>
+      <task xml:id="ex-merge-conflict-file-b" label="ex-merge-conflict-file-b">
+        <statement>
+          <p>
+            Use the <c>cat</c> command to display the file containing the conflict. 
+          </p>
+          <p>
+            Find the part of the file that contains the <em>raw conflict information</em> and copy and paste it here.  Be sure to include the chevrons at the top and bottom of the conflict information.
+          </p>
+        </statement>
+        <response />
+      </task>
+      </exercise>
+
+      <exercise xml:id="ex-identify-ancestor-main-feature" label="ex-identify-ancestor-main-feature">
+        <introduction>
+          <p>
+            Answer the following questions by copying the appropriate portion of the output that you gave in <xref ref="ex-merge-conflict-file-b" />. 
+          </p>
+        </introduction>
+        <task xml:id="ex-identify-ancestor-main-feature-a" label="ex-identify-ancestor-main-feature-a">
+          <statement>
+            <p>
+              What is the part of the output that is the Best Common Ancestor?
+            </p>
+          </statement>
+          <response />
+        </task>
+        <task xml:id="ex-identify-ancestor-main-feature-b" label="ex-identify-ancestor-main-feature-b">
+          <statement>
+            <p>
+              What is the part of the output that shows the changes that the maintainers merged into the <c>main</c> branch after you made your feature branch?
+            </p>
+          </statement>
+          <response />
+        </task>
+        <task xml:id="ex-identify-ancestor-main-feature-c" label="ex-identify-ancestor-main-feature-c">
+          <statement>
+            <p>
+              What is the part of the output that shows your changes?
+            </p>
+          </statement>
+          <response />
+        </task>
+      </exercise>
+  
+      <exercise>
+        <statement>
+          <p>
+            Sometimes when you try to merge, and it fails due to a conflict you may want to undo the attempted merge.  The <c>git merge --abort</c> command will undo a failed merge.  
+          </p>
+          <p>
+            Undo the merge that you started in <xref ref="ex-merge-main-branch" /> and use the <c>cat</c> command to display the file that contains the conflict again. 
+          </p>
+          <p>
+            Briefly explain how you can tell from the output of <c>cat</c> that the failed merge has been undone?
+          </p>
+        </statement>
+        <response />
+      </exercise>
+    </exercises>
 
 </section>
