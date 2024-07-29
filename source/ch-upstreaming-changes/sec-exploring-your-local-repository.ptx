@@ -82,13 +82,13 @@
         <choice>
           <statement>
             <p>
-              Choice 1
+              d622e8d6d71e27890c73e2428e6dcf9d44ca606e
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 1
+              That commit was made on Oct 11. There is a more recent commit.
             </p>
           </feedback>
         </choice>
@@ -96,13 +96,13 @@
         <choice correct="yes">
           <statement>
             <p>
-              Choice 2
+              09ca29c9a4b5efa948c956c5af0896d773aa10d0
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 2
+              Correct! That commit was made most recently.
             </p>
           </feedback>
         </choice>
@@ -110,13 +110,13 @@
         <choice>
           <statement>
             <p>
-              Choice 3
+              80b4408aa0df6dadc4e5e2c310a5e5cbbc0b9d35
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 3
+              That commit was made on Oct 8. There are two more recent commits.
             </p>
           </feedback>
         </choice>
@@ -124,13 +124,13 @@
         <choice>
           <statement>
             <p>
-              Choice 4
+              1359864QU10776zp55552j8d868sn29q2w09877
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 4
+              This is not a valid SHA code as it contains capital letters and letters other than a-f.
             </p>
           </feedback>
         </choice>
@@ -138,7 +138,7 @@
 
       <hint>
         <p>
-          Some hint
+          Look at the dates of each commit. The SHA code appears above the author of the commit and date the commit was made.
         </p>
       </hint>
 
@@ -162,13 +162,13 @@
         <choice>
           <statement>
             <p>
-              Choice 1
+              Oct 11 2021
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 1
+              There is a more recent commit.
             </p>
           </feedback>
         </choice>
@@ -176,13 +176,13 @@
         <choice correct="yes">
           <statement>
             <p>
-              Choice 2
+              Jul 23 2024
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 2
+              Correct! The most recent commit is shown first in the list.
             </p>
           </feedback>
         </choice>
@@ -190,13 +190,13 @@
         <choice>
           <statement>
             <p>
-              Choice 3
+              Oct 8 2021
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 3
+              There is a more recent commit.
             </p>
           </feedback>
         </choice>
@@ -204,13 +204,13 @@
         <choice>
           <statement>
             <p>
-              Choice 4
+              today
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 4
+              There shouldn't be any commits today. 
             </p>
           </feedback>
         </choice>
@@ -218,7 +218,7 @@
 
       <hint>
         <p>
-          Some hint
+          To see the most recent commit you can scroll up in the terminal window or type the log command again.
         </p>
       </hint>
 
@@ -242,13 +242,13 @@
         <choice>
           <statement>
             <p>
-              Choice 1
+              Batese2001
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 1
+              This is not the author of the most recent commit.
             </p>
           </feedback>
         </choice>
@@ -256,13 +256,13 @@
         <choice correct="yes">
           <statement>
             <p>
-              Choice 2
+              kit
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 2
+              Correct! kit was the author of the most recent commit.
             </p>
           </feedback>
         </choice>
@@ -270,13 +270,13 @@
         <choice>
           <statement>
             <p>
-              Choice 3
+              IrisSC
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 3
+              This is not the author of the most recent commit.
             </p>
           </feedback>
         </choice>
@@ -284,13 +284,13 @@
         <choice>
           <statement>
             <p>
-              Choice 4
+              Grant Braught
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 4
+              This is not the author of the most recent commit.
             </p>
           </feedback>
         </choice>
@@ -298,7 +298,7 @@
 
       <hint>
         <p>
-          Some hint
+          The author's name will appear below the SHA and above the date of the commit.
         </p>
       </hint>
 
@@ -322,13 +322,13 @@
         <choice>
           <statement>
             <p>
-              Choice 1
+              chore: install kit
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 1
+              This is the most recent commit. Look for the fourth most recent commit.
             </p>
           </feedback>
         </choice>
@@ -336,13 +336,13 @@
         <choice correct="yes">
           <statement>
             <p>
-              Choice 2
+              Reoder Seeding Input (#281)
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 2
+              Correct! The fourth commit reordered the seeding input.
             </p>
           </feedback>
         </choice>
@@ -350,13 +350,13 @@
         <choice>
           <statement>
             <p>
-              Choice 3
+              Summary Table Timing and No Log Messages (#289)
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 3
+              This is the second most recent commit. Look for the fourth most recent commit.
             </p>
           </feedback>
         </choice>
@@ -364,13 +364,13 @@
         <choice>
           <statement>
             <p>
-              Choice 4
+              No Default Label For Drop Down Component (#293)
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback for choice 4
+              This is the most third recent commit. Look for the fourth most recent commit.
             </p>
           </feedback>
         </choice>
@@ -378,7 +378,7 @@
 
       <hint>
         <p>
-          Some hint
+          With your previous log command you only saw 3 commits. Try the command again so that it displays the 4 most recent commits.
         </p>
       </hint>
 
