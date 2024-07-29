@@ -8,21 +8,11 @@
  
   <introduction>
 		<p>
-			This instructor guide contains everything you need to know about using GitKit in your class.  <xref ref="topic-quick-start" /> gives a <em>Quick Start</em> guide that may be sufficient if you have used GitKit previously and just need the bare minimum of reminders. <xref ref="topic-gitkit-overview" /> provides a more detailed guide for getting started.
+			This instructor guide contains everything you need to know to use GitKit in your course.  <xref ref="topic-quick-start" text="type-global-title" /> gives a concise guide that may be sufficient if you have used GitKit previously and just need the bare minimum of reminders of what to do. <xref ref="topic-adopting-gitkit" text="type-global-title"/> provides a more detailed guide to getting familiar with the GitKit and using it in your course.
 		</p>	
 
 		<p>
 			For help with GitKit, you can <url href="https://discord.gg/83Sb4csCeT">chat with us on Discord.</url> 
-		</p>
-
-		<p>
-			As part of our NSF-funded project, we are gathering information on the use of GitKit. If you are currently using GitKit in a course, we hope that you will consider participating in a brief survey by clicking the link below:
-		</p>
-		<p>
-			<url href="https://drexel.qualtrics.com/jfe/form/SV_81y8BL0zy3fBw22" /> 
-		</p>
-		<p>
-			Thank you!
 		</p>
   </introduction>
 
@@ -32,7 +22,7 @@
 		<title>Quick Start</title>
 
 		<p>
-			This <em>quick start</em> guide provides a very brief outline of the steps necessary to use the GitKit in a course. It is intended to be sufficient for instructors who have used the GitKit previously and just need a reminder of the necessary steps. <xref ref="topic-gitkit-overview" /> provides more details.
+			This <em>quick start</em> guide provides a very brief outline of the steps necessary to use the GitKit in a course. It is intended to be sufficient for instructors who have used the GitKit previously and just need a reminder of the necessary steps. <xref ref="topic-adopting-gitkit" /> provides a more detailed guide to adopting the GitKit for use in a course.
 
 			<ol>
 				<li>
@@ -63,40 +53,66 @@
 				</li>
 				<li>
 					<p>
+						Please consider clicking the link to the brief survey that is included in the output of the GitKit deployer. Your feedback  helps us to better understand where and how the GitKit is being used. This survey can also be accessed <url href="https://drexel.qualtrics.com/jfe/form/SV_81y8BL0zy3fBw22">here</url>.
+					</p>
+				</li>
+				<li>
+					<p>
 						Use or adapt the provided slides to introduce the concepts and terminology, and assign students hands-on exercises from the chapters as appropriate for your course:
 						<ul>
 							<li>
 								<p>
-									Chapter 2: Community and Collaboration
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
-									<xref ref="topic-instructor-notes-communities" text="custom">Instructor Notes</xref> |
-									<xref ref="topic-communities-and-collaboration" text="custom">Exercises</xref> ]
+									<xref ref="topic-communities-and-collaboration" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
+												<xref ref="topic-instructor-notes-communities" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
 								</p>
 							</li>
 							<li>
 								<p>
-									Chapter 3: Working Locally and Upstreaming Changes
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> | 
-									<xref ref="topic-instructor-notes-upstreaming" text="custom">Instructor Notes</xref> |
-									<xref ref="topic-upstreaming-changes" text="custom">Exercises</xref> ]
-								</p>
-							</li>
-							<li>
-								<p>Chapter 4: Staying Synchronized
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
-									<xref ref="topic-instructor-notes-synchronizing" text="custom">Instructor Notes</xref> |
-									<xref ref="topic-staying-synchronized" text="custom">Exercises</xref> ]
+									<xref ref="topic-upstreaming-changes" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> |
+												 <xref ref="topic-instructor-notes-upstreaming" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
 								</p>
 							</li>
 							<li>
 								<p>
-									Chapter 5: Merge Conflicts
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
-									<xref ref="topic-instructor-notes-merge-conflicts" text="custom">Instructor Notes</xref> |
-									<xref ref="topic-merge-conflicts" text="custom">Exercises</xref> ]
+									<xref ref="topic-staying-synchronized" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
+												<xref ref="topic-instructor-notes-synchronizing" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
 								</p>
 							</li>
-						</ul>
+							<li>
+								<p>
+									<xref ref="topic-merge-conflicts" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
+												<xref ref="topic-instructor-notes-merge-conflicts" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
+								</p>
+							</li>
+						</ul>				
 					</p>
 				</li>
 				<li>
@@ -114,8 +130,77 @@
 	</subsection>
 
 	<subsection 
-		xml:id="topic-gitkit-overview">
-		<title>Overview of the GitKit</title>
+		xml:id="topic-adopting-gitkit">
+		<title>Adopting and Using the GitKit</title>
+
+		<p>
+			This section outlines a process for learning more about the GitKit and adopting it for use in a course.
+			<ol>
+				<li>
+					<p>
+					 	Read <xref ref="topic-delivering-gitkit" text="type-global-title" /> to understand the basic structure of the GitKit and the variety of ways that it has been delivered to learners.
+					</p>
+				</li>
+				<li>
+					<p>
+						Read <xref ref="topic-gitkit-content" text="type-global-title" /> to learn about the key concepts, terminology and skills contained in each chapter of the GitKit.
+					</p>
+				</li>
+				<li>
+					<p>
+						Read <xref ref="topic-gitkit-development-environments" text="type-global-title" /> to learn about the two development environments that can be used with the GitKit and select one for use in your course.
+					</p>
+				</li>
+				<li>
+					<p>
+						Read <xref ref="topic-gitkit-farmdata2" text="type-global-title" />:
+						to learn just a little bit about the FarmData2 project that was used to create the GitKit.
+					</p>
+				</li>
+				<li>
+					<p>
+						Follow the steps in <xref ref="topic-gitkit-deploy" text="type-global-title" /> to deploy the GitKit for use in your course.
+					</p>
+				</li>
+				<li>
+					<p>
+						Refer to <xref ref="topic-instructor-notes" text="type-global-title" /> and its subsections for the slides and instructor notes as you teach chapter of the GitKit.
+						<ul>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-communities" text="type-global-title" />
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-upstreaming" text="type-global-title" />
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-synchronizing" text="type-global-title" />
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-merge-conflicts" text="type-global-title" />
+								</p>
+							</li>
+						</ul> 
+					</p>
+				</li>
+				<li>
+					<p>
+						Refer to <xref ref="topic-gitkit-contributing" text="type-global-title" /> for information about contributing to the GitKit including where to report typos, errors, suggested improvements or bugs.
+					</p>
+				</li>
+			</ol>
+		</p>
+	</subsection>
+
+	<subsection 
+		xml:id="topic-delivering-gitkit">
+		<title>Delivering GitKit</title>
 		
 		<p>
 			The GitKit content is broken into 4 chapters (See <xref ref="topic-gitkit-chapters" />). Each chapter of the text contains the set of hands-on exercises to be completed by the students. <em>These exercises are not intended to stand alone.</em>  They require some prior introduction to the concepts and terminology that they use. A separate set of slides are provided that instructors can use or adapt to introduce the necessary concepts and terminology before students complete the hands-on exercises.
@@ -138,36 +223,56 @@
 		</p>
 
 		<p>
-			TODO: Pointers with links to additional information in other sections...
-
-
+			While the GitKit was designed for nominal delivery in four 50-75-minute periods with 2-3 hours of additional hands-on work by the students, instructors have found the GitKit to be adaptable to different educational settings, student experience levels and learning objectives.
+			<ul>
+				<li>
+					<p>
+						Limited Coverage: The first two GitKit topics form a cohesive unit and can be completed without continuing onto the final two topics. Two examples of how this can be used include:
+					</p>
+				</li>
+				<li>
+					<p>
+						Lower Level Courses: In lower level courses, or with less experienced students, the first two topics could be spread over a longer time with the hands-on activities being completed in class.
+					</p>
+				</li>
+				<li>
+					<p>
+						A One Day Workshop: An organization delivered the GitKit as a one-day workshop for students from low-income, first-generation, underrepresented minority backgrounds. This workshop covered just the first two GitKit topics.
+					</p>
+				</li>
+				<li>
+					<p>
+						Students with Prior git Experience: An instructor with students who have had prior exposure to git fundamentals (but not GitHub or the forking workflow) have skipped most of the class materials and used the hands-on activities as in-class lab activities rather than homework.
+					</p>
+				</li>
+				<li>
+					<p>
+						Alternative In-Class Activities: Instructors have had success using Process Oriented Guided Inquiry (POGIL) activities in class in place of the slides provided with GitKit.
+					</p>
+				</li>
+			</ul>
 		</p>
 	</subsection>
-	
+
 	<subsection 
-		xml:id="topic-gitkit-chapters">
-		<title>GitKit Chapters</title>
+		xml:id="topic-gitkit-content">
+		<title>GitKit Content</title>
 
 		<p>
 			The content of the GitKit is broken into the chapters below.  For each chapter the key topics and activities are outlined and links are given to the slides, the chapter of the text containing the hands-on exercises and instructor notes for the chapter.
 			<ul>
 				<li>
 					<p>
-						Chapter 2: Community and Collaboration
+						<xref ref="topic-communities-and-collaboration" text="type-global-title" />
 						<ul>
 							<li>
 								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> ]: Introduce Free and Open Source Software (FOSS) communities, and how they collaborate using Git, GitHub and the forking workflow.
+									Introduces Free and Open Source Software (FOSS) communities, and how they collaborate using Git, GitHub and the forking workflow.
 								</p>
 							</li>
 							<li>
 								<p>
-									[ <xref ref="topic-communities-and-collaboration" text="custom">Exercises</xref> ]: Provide hands-on practice with the issue tracker, and forking and cloning of a repository.
-								</p>
-							</li>
-							<li>
-								<p>
-									[ <xref ref="topic-instructor-notes-communities" text="custom">Instructor Notes</xref> ]
+									Provides hands-on practice with the issue tracker, and forking and cloning of a repository.
 								</p>
 							</li>
 						</ul>
@@ -175,21 +280,34 @@
 				</li>
 				<li>
 					<p>
-						Chapter 3: Working Locally and Upstreaming Changes
+						<xref ref="topic-upstreaming-changes" text="type-global-title" />
 						<ul>
 							<li>
 								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> ]: Introduce feature branches, commits, and pull requests as part of the forking workflow.
+									 Introduces feature branches, commits, and pull requests as part of the forking workflow.
 								</p>
 							</li>
 							<li>
 								<p>
-									[ <xref ref="topic-upstreaming-changes" text="custom">Exercises</xref> ]: Provide practice with creating and switching branches, staging and committing changes, pushing branches to origin and submitting pull requests.
+									Provides practice with creating and switching branches, staging and committing changes, pushing branches to origin and submitting pull requests.
+								</p>
+							</li>
+							
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>
+						<xref ref="topic-staying-synchronized" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									Introduces how merges into the upstream can result in a developer's origin and clone becoming out of synch, and explains how to re-synchronize.
 								</p>
 							</li>
 							<li>
 								<p>
-									[ <xref ref="topic-instructor-notes-upstreaming" text="custom">Instructor Notes</xref> ]
+									Provides practice with setting an upstream remote, pulling (non-conflicting) changes from upstream, and deleting feature branches. The exercises also provide repetition of practice with the skills from the previous chapters.
 								</p>
 							</li>
 						</ul>
@@ -197,43 +315,16 @@
 				</li>
 				<li>
 					<p>
-						Chapter 4: Staying Synchronized
+						<xref ref="topic-merge-conflicts" text="type-global-title" />
 						<ul>
 							<li>
 								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> ]: Introduce how merges into the upstream can result in a developer's origin and clone becoming out of synch, and explains how to re-synchronize.
+									Introduces how merging of changes into the upstream can lead to merge conflicts, how they are found and represented, and how they can be resolved.
 								</p>
 							</li>
 							<li>
 								<p>
-									[ <xref ref="topic-staying-synchronized" text="custom">Exercises</xref> ]: Provide practice with setting an upstream remote, pulling (non-conflicting) changes from upstream, and deleting feature branches. The exercises also provide repetition of practice with the skills from the previous chapters.
-								</p>
-							</li>
-							<li>
-								<p>
-									[ <xref ref="topic-instructor-notes-synchronizing" text="custom">Instructor Notes</xref> ]
-								</p>
-							</li>
-						</ul>
-					</p>
-				</li>
-				<li>
-					<p>
-						Chapter 5: Merge Conflicts
-						<ul>
-							<li>
-								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> ]: Introduce how merging of changes into the upstream can lead to merge conflicts, how they are found and represented, and how they can be resolved.
-								</p>
-							</li>
-							<li>
-								<p>
-									[ <xref ref="topic-merge-conflicts" text="custom">Exercises</xref> ]: Provide practice with understanding merge conflicts, merging main into a feature branch, using a graphical merge tool and updating a pull request.
-								</p>
-							</li>
-							<li>
-								<p>
-									[ <xref ref="topic-instructor-notes-merge-conflicts" text="custom">Instructor Notes</xref> ]
+									Provides practice with understanding merge conflicts, merging main into a feature branch, using a graphical merge tool and updating a pull request.
 								</p>
 							</li>
 						</ul>
@@ -485,6 +576,11 @@ https://github.com/braughtg/test-gitkit
 						Each deployed repository must have a unique name.  We recommend appending suffixes to "GitKit-FarmData2" for example "GitKit-FarmData2-group1", "GitKit-FarmData2-group2", etc.
 					</p>
 				</li>
+				<li>
+					<p>
+						Please consider clicking the link to the brief survey that is included in the output of the GitKit deployer. Your feedback  helps us to better understand where and how the GitKit is being used. This survey can also be accessed <url href="https://drexel.qualtrics.com/jfe/form/SV_81y8BL0zy3fBw22">here</url>.
+					</p>
+				</li>
 			</ol>
 		</p>
 	</subsection>
@@ -507,6 +603,15 @@ https://github.com/braughtg/test-gitkit
 			<title>Communities and Collaboration</title>
 			<p>
 				TODO: Current content with "todo first"
+
+				<ul>
+					<li>
+						<p>
+							[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
+							<xref ref="topic-instructor-notes-communities" text="custom">Instructor Notes</xref> ]
+						</p>
+					</li>
+				</ul>
 			</p>
 		</subsubsection>
 
@@ -514,6 +619,14 @@ https://github.com/braughtg/test-gitkit
 			<title>Working Locally and Upstreaming Changes</title>
 			<p>
 				TODO: Current content with "todo first"
+				<ul>
+					<li>
+						<p>
+							[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> |
+							 <xref ref="topic-instructor-notes-upstreaming" text="custom">Instructor Notes</xref> ]
+						</p>
+					</li>
+				</ul>
 			</p>
 		</subsubsection>
 
@@ -521,6 +634,14 @@ https://github.com/braughtg/test-gitkit
 			<title>Staying Synchronized with the Upstream</title>
 			<p>
 				TODO: Current content with "todo first"
+				<ul>
+					<li>
+						<p>
+							[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
+							<xref ref="topic-instructor-notes-synchronizing" text="custom">Instructor Notes</xref> ]
+						</p>
+					</li>
+				</ul>
 			</p>
 		</subsubsection>
 		
@@ -528,6 +649,13 @@ https://github.com/braughtg/test-gitkit
 			<title>Handling Merge Conflicts</title>
 			<p>
 				TODO: Current content with "todo first"
+
+				<li>
+					<p>
+						[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
+						<xref ref="topic-instructor-notes-merge-conflicts" text="custom">Instructor Notes</xref> ]
+					</p>
+				</li>
 			</p>
 		</subsubsection>
 	</subsection>
@@ -536,7 +664,19 @@ https://github.com/braughtg/test-gitkit
 		<title>Contributing to GitKit</title>
 		
 		<p>
-			All of the work on the GitKit is being conducted under open licenses (GPL3, CC-BY-NC-SA) that welcome participation, contribution and derivative work.  Active work on the GitKit is taking place in the <url href="https://gitlab.com/hfossedu/">Kits section of the HFOSSedu GitLab Organization</url>.
+			All of the work on the GitKit is being conducted under open licenses (GPL3, CC-BY-NC-SA) and we welcome participation, contribution and derivative work.  
+		</p>
+			
+		<p>
+			For any kind of question, difficulty, suggestion, or suspected bug, <url href="https://discord.gg/83Sb4csCeT">chatting with us on Discord</url> is a great place to start.
+		</p>
+
+		<p>
+			Errors, typos or suggestions for the textbook can be submitted using the <url href="https://github.com/HFOSSedu/GitKit-Text/issues">GitKit-Text Issue Tracker</url>. 
+		</p>
+
+		<p>
+			Active work on the deployer and the KitClients takes place in the <url href="https://gitlab.com/hfossedu/kits">Kits section</url> of the <url href="https://gitlab.com/hfossedu/kits">HFOSSedu GitLab Organization</url>.
 		</p>
 	</subsection>
 </section>
