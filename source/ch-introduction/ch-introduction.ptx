@@ -22,7 +22,7 @@
     <p>
       The GitKit minimizes prerequisite knowledge and hardware requirements.
       Learners are expected to have basic familiarity with files, directories and the Unix/Linux command line (e.g.
-      <c>cd</c> and <c>ls</c>).
+      <c>cd</c> and <c>ls</c>). Hands-on activities focus on small changes to documentation in markdown files, and require no prior knowledge of markdown or any programming language.
       The cloud-based development environment requires an internet connection and a modern web browser.
     </p>
   </introduction>

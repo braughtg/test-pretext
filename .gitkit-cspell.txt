@@ -1,6 +1,9 @@
+automations
+farmdata
 foss
 gitkit
 halign
+HFOSSedu
 inclusivity
 kitclient
 opensource
