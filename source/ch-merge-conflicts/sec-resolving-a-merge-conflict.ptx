@@ -7,7 +7,226 @@
   <title>Resolving a Merge Conflict</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+    <p>
+      <xref ref="fig-resolving-merge-conflict" /> shows the <c>main</c> branch has committed changes that conflict with what the local branch wants to commit.
+    </p>    
+    <p>
+      <figure xml:id="fig-resolving-merge-conflict" >
+        <caption> Resolving a Merge Conflict </caption>
+        <image source="images/ch-merge-conflicts/resolving-merge-conflict.png" width="75%">
+          <description>
+            Cloud image of the changes merged into the upstream that conflict with a local branch
+          </description>
+        </image>
+      </figure>
+    </p>
+    <p>
+      This section will walk you through the process of resolving the merge conflict using a graphical merge tool.  The flow of this process is illustrated in Figure 3.  You will switch to your feature branch, perform the merge, use the graphical merge tool to resolve the resulting conflict, and then stage and commit the merged content.
+    </p>
   </introduction>
 
+  <exercises>
+    <title />
+
+    <exercise xml:id="ex-preparing-resolution" label="ex-preparing-resolution">
+      <statement>
+        <p>
+          Ensure that you are on your feature branch.  Then issue the command to merge the <c>main</c> branch into your feature branch (like you did in <xref ref="ex-merge-main-branch" />).  The merge should once again fail because of the conflict.  Use the <c>cat</c> command to confirm that the raw merge conflict information now appears in the conflicted file again.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      As you have seen when a merge fails <c>git</c> places the raw merge conflict information into the conflicted files.  You could simply edit that file to resolve the merge conflict.  However, in practice it is usually easier to use a <em>mergetool</em>. 
+    </p>
+
+    <p>
+      <term>Opening the MergeTool: </term>
+    </p>
+    <p component="linux-kit-client">
+      The KitClient you are using has been configured so that the <c>git mergetool</c> command will launch the the VSCode graphical merge tool, which you can use to resolve the conflict.
+    </p>
+    <p component="vscode-kit-client">
+      The KitClient you are using has configured VS Code's Merge Editor as a mergetool.
+    </p>
+  
+    <exercise xml:id="ex-launch-mergetool" label="ex-launch-mergetool">
+      <introduction>
+        <p component="linux-kit-client">
+          The <c>git mergetool</c> command will launch the VSCode merge tool so that you can use it to resolve the conflict.
+        </p>
+        <p component="vscode-kit-client">
+          To open a file in VS Code's Merge Editor:
+        </p>
+      </introduction>
+      <task xml:id="ex-launch-mergetool-linux-a" label="ex-launch-mergetool-linux-a" component="linux-kit-client">
+        <statement>
+          <p>
+            Issue the <c>git mergetool</c> command. 
+          </p>
+          <p>
+            When VS Code's Merge Editor is first opened, it will open a window containing three panes (<c>LOCAL</c>, <c>REMOTE</c> and Result).  The content that you see will be different, but the window that you see should be similar to the one shown in <xref ref="fig-merge-editor-window" />.
+          </p>
+          <p>
+            <figure xml:id="fig-merge-editor-window" >
+              <caption> Merge Editor Window (example) </caption>
+              <image source="images/ch-merge-conflicts/mergetool-window.jpg" width="75%">
+                <description>
+                  merge editor window
+                </description>
+              </image>
+            </figure>
+          </p>
+        </statement>
+      </task>
+      <task xml:id="ex-launch-mergetool-vscode-a" label="ex-launch-mergetool-vscode-a" component="vscode-kit-client">
+        <statement>
+          <p>
+            Open the conflicted file, and click the "Resolve in Merge Editor" ( <xref ref="fig-vscode-launch-mergetool" />) button in the lower right corner of the editor pane.    
+          </p>
+          <p>
+            <figure xml:id="fig-vscode-launch-mergetool" >
+              <caption> Conflicting Upstream Changes. </caption>
+              <image source="images/ch-merge-conflicts/vscode-launch-mergetool.png" width="15%">
+                <description>
+                  VS Code's "Resolve in Merge Editor" button
+                </description>
+              </image>
+            </figure>
+          </p>
+          <p>
+            When VS Code's Merge Editor is first opened, it will open a window containing three panes (<c>LOCAL</c>, <c>REMOTE</c> and Result).  The content that you see will be different, but the window that you see should be similar to the one shown in <xref ref="fig-merge-editor-window-vscode" />.
+          </p>
+          <p>
+            <figure xml:id="fig-merge-editor-window-vscode" >
+              <caption> Merge Editor Window (example) </caption>
+              <image source="images/ch-merge-conflicts/mergetool-window.jpg" width="75%">
+                <description>
+                  merge editor window
+                </description>
+              </image>
+            </figure>
+          </p>
+        </statement>
+      </task>
+      <task xml:id="ex-launch-mergetool-b" label="ex-launch-mergetool-b">
+        <statement>
+          <p>
+            Changing a few of the default settings will make the use of the merge tool easier to understand by displaying the Best Common Ancestor and both non-conflicting and conflicting changes. 
+          </p>
+          <p>
+            Use the "…" menu in the upper right of the merge tool window and check the "" and "" options as shown in <xref ref="fig-merge-editor-window-settings" />.
+          </p>
+          <p>
+            <figure xml:id="fig-merge-editor-window-settings" >
+              <caption> Merge Editor Window settings selection</caption>
+              <image source="images/ch-merge-conflicts/mergetool-settings.png" width="25%">
+                <description>
+                  merge editor window settings selections
+                </description>
+              </image>
+            </figure>
+          </p>
+          <p>
+            With these options enabled, the merge tool window should now contain 4 panes (<c>LOCAL</c>, Base, <c>REMOTE</c> and Result) and look similar to the one shown in <xref ref="fig-merge-editor-window-new-settings" />.
+          </p>
+          <p>
+            <figure xml:id="fig-merge-editor-window-new-settings" >
+              <caption> Merge Editor Window (example) with new settings</caption>
+              <image source="images/ch-merge-conflicts/mergetool-window-new-settings.jpg" width="75%">
+                <description>
+                  merge editor window with new settings
+                </description>
+              </image>
+            </figure>
+          </p>
+        </statement>
+      </task>
+      <task xml:id="ex-launch-mergetool-c" label="ex-launch-mergetool-c">
+        <statement correct="yes">
+          <p>
+            Do you have your merge tool window showing four panes and their content?
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Do not make changes until you have your merge tool set up.
+          </p>
+        </feedback>
+      </task>
+      <task xml:id="ex-launch-mergetool-d" label="ex-launch-mergetool-d">
+        <statement>
+          <p>
+            Using your answer to <xref ref="ex-launch-mergetool-c" />, compare the Result pane to the Best Common Ancestor.  How are they different? Why?
+          </p>
+        </statement>
+        <response />
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-resolving-merge-conflict" label="ex=resolving-merge-conflict">
+      <statement>
+        <p>
+          When using the merge tool, you resolve conflicts by modifying the Result pane so that it appears as desired. You can use the point-and-click "Accept ..." and "Remove ..." options provided by the merge tool to move content into or out of the Result pane or you can edit the Result pane directly.
+        </p>
+        <p>
+          Use the merge tool to resolve the conflict so that the Result contains:
+          <ul>
+            <li>
+              your changes where there is a conflict.
+            </li>
+            <li>
+              all of the non-conflicting changes from the main branch.
+            </li>
+          </ul>
+        </p>
+        <p>
+          Copy your final merged result here.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+
+    <exercise xml:id="ex-saving-merge-resolution" label="ex-saving-merge-resolution">
+      <introduction>
+        <p>
+          Save your changes in the merge tool and close the merge tool window.  
+        </p>
+        <p>
+          Then issue a <c>git status</c> command.
+        </p>
+      </introduction>
+      <task xml:id="ex-saving-merge-resolution-a" label="ex-saving-merge-resolution-a">
+        <statement>
+          <p>
+            Copy the text for your command and its output.  Be sure that your output shows the names of any files containing changes that need to be committed.            
+          </p>
+        </statement>
+        <response />
+      </task>
+      <task xml:id="ex-saving-merge-resolution-b" label="ex-saving-merge-resolution-b">
+        <statement>
+          <p>
+            Briefly explain why the output you see in <xref ref="ex-saving-merge-resolution-a" /> makes sense based on what you have done.
+          </p>
+        </statement>
+        <response />
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-committing-merge-resolution" label="ex=committing-merge-resolution">
+      <statement>
+        <p>
+          From <xref ref="ex-saving-merge-resolution" /> you can see that you now have uncommitted changes. Those changes are all of the changes you made to the Result panel when performing the merge in the merge tool.
+        </p>
+        <p>
+          Commit the changes you made in resolving the conflict.  Be sure to use a meaningful commit message.
+        </p>
+        <p>
+          Copy the commands that you used and their output.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+
+  </exercises>
 </section>
