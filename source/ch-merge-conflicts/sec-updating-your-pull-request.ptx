@@ -7,7 +7,45 @@
   <title>Updating Your Pull Request</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+ 		<p>
+      At this point you have resolved the merge conflict on the feature branch in your local repository.  What is left is to push that branch to your <c>origin</c>.  When you do so, GitHub will automatically update your pull request to the <c>upstream</c> for that branch.
+    </p>
   </introduction>
+
+  <exercises>
+    <title />
+    <exercise xml:id="ex-push-merge-resolution" label="ex-push-merge-resolution">
+      <statement>
+        <p>
+          Push your modified feature branch to your <c>origin</c>.  Give the command you used and its output here.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+
+    <exercise xml:id="ex-pull-request-upstream" label="ex-pull-resquest-upstream">
+      <statement>
+        <p>
+          Now visit the upstream repo and find your pull request.  You should see that it can now be merged automatically.  
+        </p>
+        <p>
+          If your PR cannot be merged automatically you have not correctly resolved the merge conflict; return to <xref ref="ex-name-source-target-branches" /> and try again.
+        </p>
+        <p>
+          !!Give a screenshot from your pull request showing that it can now be merged automatically.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+    <exercise xml:id="ex-pull-request-url" label="ex-pull-request-url">
+      <statement>
+        <p>
+          Give the URL of your pull request.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+  
+  </exercises>
 
 </section>
