@@ -38,8 +38,74 @@
         <p>
           What part of the output tells you which branch is currently active in your repository?
         </p>
-        <response />
       </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              The branch name is displayed in the first line after "On branch".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The first line specifies the current branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name is displayed at the end of the second line.
+              It is "origin/main".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The second line specifies the origin branch not the active branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name is not displayed in the output from this git command.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look again, the active branch is listed.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name is displayed at the end of the last line.
+              It is "working tree".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The last line indicates if there are changes to commit.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look at the first line of the output from the <c>git status</c> command.
+        </p>
+      </hint>
     </task>
 
 
