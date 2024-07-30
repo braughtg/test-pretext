@@ -16,10 +16,6 @@ ln --symbolic --force \
    "assets/images/ch-introduction"
 
 ln --symbolic --force \
-   "../../source/ch-community-collaboration/images" \
-   "assets/images/ch-community-collaboration"
-
-ln --symbolic --force \
    "../../source/ch-communities-and-collaboration/images" \
    "assets/images/ch-communities-and-collaboration"
 
