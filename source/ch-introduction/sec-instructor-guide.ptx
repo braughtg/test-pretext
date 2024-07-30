@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section 
+  xml:id="topic-instructor-guide" 
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+  
+  <title>Instructor Guide</title>
+ 
+  <introduction>
+		<p>
+			This instructor guide contains everything you need to know to use GitKit in your course.  <xref ref="topic-quick-start" text="type-global-title" /> gives a concise guide that may be sufficient if you have used GitKit previously and just need the bare minimum of reminders of what to do. <xref ref="topic-adopting-gitkit" text="type-global-title"/> provides a more detailed guide to getting familiar with the GitKit and using it in your course.
+		</p>	
+
+		<p>
+			For help with GitKit, you can <url href="https://discord.gg/83Sb4csCeT">chat with us on Discord.</url> 
+		</p>
+  </introduction>
+
+
+	<subsection 
+		xml:id="topic-quick-start">
+		<title>Quick Start</title>
+
+		<p>
+			This <em>quick start</em> guide provides a very brief outline of the steps necessary to use the GitKit in a course. It is intended to be sufficient for instructors who have used the GitKit previously and just need a reminder of the necessary steps. <xref ref="topic-adopting-gitkit" /> provides a more detailed guide to adopting the GitKit for use in a course.
+
+			<ol>
+				<li>
+					<p>
+						TODO: INSERT RUNESTONE URLs HERE.
+
+						Adopt the <url href="???">GitKit with Linux</url> text or the <url href="???">GitKit with VSCode</url> text for your course.
+					</p>
+					<p>
+						You are currently viewing the 
+						<term component="linux-kit-client">GitKit with Linux</term>
+						<term component="vscode-kit-client">GitKit with VSCode</term>
+						text.
+					</p>
+				</li>
+				<li>
+					<p>
+						Click to <url href="https://gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod" visual="gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod"> Deploy the GitKit FarmData2 repository </url> to use as the upstream.
+					</p>
+					<p>
+						One deploy of the GitKit FarmData2 repository can support up to 32 students. Perform as many deploys as necessary for your course.  Be sure to give each deploy a distinct name.
+					</p>
+				</li>
+				<li>
+					<p>
+						Copy the URL(s) of the deployed GitKit FarmData2 upstream(s) and make it (them) available to your class.
+					</p>
+				</li>
+				<li>
+					<p>
+						Please consider clicking the link to the brief survey that is included in the output of the GitKit deployer. Your feedback  helps us to better understand where and how the GitKit is being used. This survey can also be accessed <url href="https://drexel.qualtrics.com/jfe/form/SV_81y8BL0zy3fBw22">here</url>.
+					</p>
+				</li>
+				<li>
+					<p>
+						Use or adapt the provided slides to introduce the concepts and terminology, and assign students hands-on exercises from the chapters as appropriate for your course:
+						<ul>
+							<li>
+								<p>
+									<xref ref="topic-communities-and-collaboration" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
+												<xref ref="topic-instructor-notes-communities" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-upstreaming-changes" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> |
+												 <xref ref="topic-instructor-notes-upstreaming" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-staying-synchronized" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
+												<xref ref="topic-instructor-notes-synchronizing" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-merge-conflicts" text="type-global-title" />
+									<ul>
+										<li>
+											<p>
+												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
+												<xref ref="topic-instructor-notes-merge-conflicts" text="custom">Instructor Notes</xref> ]
+											</p>
+										</li>
+									</ul>
+								</p>
+							</li>
+						</ul>				
+					</p>
+				</li>
+				<li>
+					<p>
+						Review and merge student Pull Requests into the upstream just before or during the class that covers <xref ref="topic-staying-synchronized" />.
+					</p>
+				</li>
+				<li>
+					<p>
+						Merge the <c>addRound2Conflicts</c> branch into the upstream just before or during the class that covers <xref ref="topic-merge-conflicts" />.
+					</p>
+				</li>
+			</ol>
+		</p>
+	</subsection>
+
+	<subsection 
+		xml:id="topic-adopting-gitkit">
+		<title>Adopting and Using the GitKit</title>
+
+		<p>
+			This section outlines a process for learning more about the GitKit and adopting it for use in a course.
+			<ol>
+				<li>
+					<p>
+					 	Read <xref ref="topic-delivering-gitkit" text="type-global-title" /> to understand the basic structure of the GitKit and the variety of ways that it has been delivered to learners.
+					</p>
+				</li>
+				<li>
+					<p>
+						Read <xref ref="topic-gitkit-content" text="type-global-title" /> to learn about the key concepts, terminology and skills contained in each chapter of the GitKit.
+					</p>
+				</li>
+				<li>
+					<p>
+						Read <xref ref="topic-gitkit-development-environments" text="type-global-title" /> to learn about the two development environments that can be used with the GitKit and select one for use in your course.
+					</p>
+				</li>
+				<li>
+					<p>
+						Read <xref ref="topic-gitkit-farmdata2" text="type-global-title" />:
+						to learn just a little bit about the FarmData2 project that was used to create the GitKit.
+					</p>
+				</li>
+				<li>
+					<p>
+						Consider doing the GitKit for yourself as described in <xref ref="topic-do-the-gitkit" />.  It is by far the best way to prepare to deliver the GitKit to a class.
+					</p>
+				</li>
+				<li>
+					<p>
+						Follow the steps in <xref ref="topic-gitkit-deploy" text="type-global-title" /> to deploy the GitKit for use in your course.
+					</p>
+				</li>
+				<li>
+					<p>
+						Refer to the instructor notes in <xref ref="topic-instructor-notes" text="type-global-title" /> for the slides, a ToDo list and tips as you teach each chapter of the GitKit.
+						<ul>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-communities" text="type-global-title" />
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-upstreaming" text="type-global-title" />
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-synchronizing" text="type-global-title" />
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-instructor-notes-merge-conflicts" text="type-global-title" />
+								</p>
+							</li>
+						</ul> 
+					</p>
+				</li>
+				<li>
+					<p>
+						Refer to <xref ref="topic-gitkit-contributing" text="type-global-title" /> for information about contributing to the GitKit including where to report typos, errors, suggested improvements or bugs.
+					</p>
+				</li>
+			</ol>
+		</p>
+	</subsection>
+
+	<subsection 
+		xml:id="topic-delivering-gitkit">
+		<title>Delivering GitKit</title>
+		
+		<p>
+			The GitKit content is broken into 4 chapters (See <xref ref="topic-gitkit-content" />). Each chapter of the text contains the set of hands-on exercises to be completed by the students. <em>These exercises are not intended to stand alone.</em>  They require some prior introduction to the concepts and terminology that they use. A separate set of slides are provided that instructors can use or adapt to introduce the necessary concepts and terminology before students complete the hands-on exercises.
+		</p>
+
+		<p>
+			In a nominal use of the GitKit:
+			<ul>
+				<li>
+					<p>
+						The instructor introduces each chapter by using or adapting the provided slides in a 50-75 minute class period.
+					</p>
+				</li>
+				<li>
+					<p>
+						Students complete the hands-on activities contained in the chapters of this text as 2-3 hours of homework or during an assigned lab period.
+					</p>
+				</li>
+			</ul> 
+		</p>
+
+		<p>
+			While the GitKit was designed for nominal delivery in four 50-75-minute periods with 2-3 hours of additional hands-on work by the students, instructors have found the GitKit to be adaptable to different educational settings, student experience levels and learning objectives.
+			<ul>
+				<li>
+					<p>
+						Limited Coverage: The first two GitKit topics form a cohesive unit and can be completed without continuing onto the final two topics. Two examples of how this can be used include:
+					</p>
+				</li>
+				<li>
+					<p>
+						Lower Level Courses: In lower level courses, or with less experienced students, the first two topics could be spread over a longer time with the hands-on activities being completed in class.
+					</p>
+				</li>
+				<li>
+					<p>
+						A One Day Workshop: An organization delivered the GitKit as a one-day workshop for students from low-income, first-generation, underrepresented minority backgrounds. This workshop covered just the first two GitKit topics.
+					</p>
+				</li>
+				<li>
+					<p>
+						Students with Prior git Experience: An instructor with students who have had prior exposure to git fundamentals (but not GitHub or the forking workflow) have skipped most of the class materials and used the hands-on activities as in-class lab activities rather than homework.
+					</p>
+				</li>
+				<li>
+					<p>
+						Alternative In-Class Activities: Instructors have had success using Process Oriented Guided Inquiry (POGIL) activities in class in place of the slides provided with GitKit.
+					</p>
+				</li>
+			</ul>
+		</p>
+	</subsection>
+
+	<subsection 
+		xml:id="topic-gitkit-content">
+		<title>GitKit Content</title>
+
+		<p>
+			The content of the GitKit is broken into the chapters below.  For each chapter the key topics and activities are outlined and links are given to the slides, the chapter of the text containing the hands-on exercises and instructor notes for the chapter.
+			<ul>
+				<li>
+					<p>
+						<xref ref="topic-communities-and-collaboration" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									Introduces Free and Open Source Software (FOSS) communities, and how they collaborate using Git, GitHub and the forking workflow.
+								</p>
+							</li>
+							<li>
+								<p>
+									Provides hands-on practice with the issue tracker, and forking and cloning of a repository.
+								</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>
+						<xref ref="topic-upstreaming-changes" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									 Introduces feature branches, commits, and pull requests as part of the forking workflow.
+								</p>
+							</li>
+							<li>
+								<p>
+									Provides practice with creating and switching branches, staging and committing changes, pushing branches to origin and submitting pull requests.
+								</p>
+							</li>
+							
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>
+						<xref ref="topic-staying-synchronized" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									Introduces how merges into the upstream can result in a developer's origin and clone becoming out of synch, and explains how to re-synchronize.
+								</p>
+							</li>
+							<li>
+								<p>
+									Provides practice with setting an upstream remote, pulling (non-conflicting) changes from upstream, and deleting feature branches. The exercises also provide repetition of practice with the skills from the previous chapters.
+								</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>
+						<xref ref="topic-merge-conflicts" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									Introduces how merging of changes into the upstream can lead to merge conflicts, how they are found and represented, and how they can be resolved.
+								</p>
+							</li>
+							<li>
+								<p>
+									Provides practice with understanding merge conflicts, merging main into a feature branch, using a graphical merge tool and updating a pull request.
+								</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+			</ul>
+		</p>
+	</subsection>
+
+	<subsection xml:id="topic-gitkit-development-environments">
+		<title>Student Development Environments</title>
+		<introduction>
+			<p>
+				The GitKit provides a cloud based development environment that students use to complete the hands-on GitKit activities. This development environment is called a <term>KitClient</term>. A KitClient is a pre-configured containerized development environment that provides all of the tools and configuration necessary to complete the activities.  The KitClient also includes the Kit-tty Virtual Assistant (See <xref ref="topic-kitty-virtual-assistant" /> and a set of automations that simulate project community (See <xref ref="topic-community-automations" />). 
+			</p>
+
+			<p>
+				There are currently two KitClients that can be used with GitKit and the instructor may choose the KitClient to use based on the needs of their course and students.
+
+				<ul>
+					<li>
+						<p>
+							<term>Linux KitClient</term>: <xref ref="fig-instructor-guide-linux-kit-client" /> shows the Linux KitClient where students complete the hands-on activities in a complete Linux virtual desktop environment.
+
+							<figure 
+                xml:id="fig-instructor-guide-linux-kit-client"
+                >
+                <caption>
+                  The Linux KitClient development environment.
+                </caption>
+                <image source="images/ch-introduction/linux-kitclient.png"
+                  width="75%">
+                  <description>
+                    The Linux KitClient development environment window displaying the Linux desktop.
+                  </description>
+                </image>
+              </figure>
+						</p>
+					</li>
+					<li>
+						<p>
+							<term>VSCode KitClient</term>: <xref ref="fig-instructor-guide-vscode-kit-client" /> shows the VSCode KitClient in which students complete the hands-on activities in the VSCode interface.
+
+							<figure 
+                xml:id="fig-instructor-guide-vscode-kit-client"
+                >
+                <caption>
+                  The VSCode development environment.
+                </caption>
+                <image source="images/ch-introduction/vscode-kitclient.png"
+                  width="75%">
+                  <description>
+                    The VSCode development environment window showing the VS Code interface.
+                  </description>
+                </image>
+              </figure>
+						</p>
+					</li>
+				</ul>
+
+				Both of these KitClients run remotely within GitPod Workspaces and students interact with them through a Web browser. To run a KitClient, students will need will need to have a free GitPod account, which they will created as a part of the activities.
+			</p>
+				
+			<p>
+				There is a different version of this text for each of the KitClients. The texts provide an equivalent experience, but adapt content to the specifics (e.g. user interface elements) of the KitClient as necessary. The instructor will need to adopt the text for the KitClient that has been chosen for the course.
+			</p>
+
+			<p>
+				You are currently viewing the 
+				<term component="linux-kit-client">GitKit with Linux</term> 
+				<term component="vscode-kit-client">GitKit with VSCode</term> 				
+				version of the text.
+
+				TODO: Insert RUNESTONE URLs here.
+
+				If you prefer you can switch to the
+				<url href="???" component="linux-kit-client">GitKit with VSCode</url> 
+				<url href="???" component="vscode-kit-client">GitKit with Linux</url>
+				version of the text.
+			</p>
+		</introduction>
+
+		<subsubsection xml:id="topic-kitty-virtual-assistant">
+			<title>The Kit-tty Virtual Assistant</title>
+			<p>
+				The Kit-tty (a play on Kit and TTY), pronounced kitty, is a virtual assistant built into the development environments (i.e. KitClients) that catches common student errors and provides hints on how to perform activity steps correctly. The Kit-tty has been designed to catch and correct student errors that were frequently observed in early uses of the GitKit. Many of the errors recognized by the Kit-tty are those that typically are not discovered until students progress several steps further into the activity, at which point they require more advanced git skills to undo.
+			</p>
+			<p>
+				For example, the Kit-tty intervenes when a student attempts to:
+				<ul>
+					<li>
+						<p>
+							commit to the main branch (an action that should not happen in the forking workflow).
+						</p>
+					</li>
+					<li>
+						<p>
+							merge a feature branch into main (instead of vice versa).
+						</p>
+					</li>
+					<li>
+						<p>
+							set the upstream remote to the origin (instead of the upstream).
+						</p>
+					</li>
+					<li>
+						<p>
+							clone the upstream (rather than their fork).
+						</p>
+					</li>
+					<li>
+						<p>
+							clone one repository inside of another.
+						</p>
+					</li>
+				</ul>
+			</p>
+		</subsubsection>
+
+		<subsubsection xml:id="topic-community-automations">
+			<title>Community Automations</title>
+			<p>
+				Community automations perform actions and comment on tickets in the issue tracker and on pull requests. These actions and comments are designed to simulate some common types of interaction with project maintainers and other FOSS community at appropriate points in the learning activities.
+			</p>
+			<p>
+				For example:
+				<ul>
+					<li>
+						<p>
+							When claiming an issue by adding a comment to its ticket in the issue tracker. An automation notices this comment, assigns the issue to the student (if it hasn't already been assigned to someone else). The automation then also responds personally as a maintainer might: "Great! I assigned you (@TheirUsername) to the issue.  Have fun working on it!"
+						</p>
+					</li>
+				</ul>
+			</p>
+		</subsubsection>
+	</subsection>
+
+	<subsection xml:id="topic-gitkit-farmdata2">
+		<title>The FarmData2 Project</title>
+		
+		<p>
+			The upstream repository deployed by the GitKit was captured from the <url href="https://github.com/DickinsonCollege/FarmData2">FarmData2 project</url>. FarmData2 aims to support farmers in the day-to-day operation and record keeping needs of their small organic diversified vegetable farms.
+		</p>
+		
+		<p>
+			While FarmData2 focuses on farming operations, students completing the GitKit activities work only with documentation files in markdown.  Thus, there is no farming knowledge required to compete the GitKit.
+		</p>
+
+		<p>
+			Current development work on FarmData2 is occurring in the <url href="https://github.com/FarmData2">FarmData2 Organization</url> on GitHub.
+		</p>
+	</subsection>
+
+	<subsection xml:id="topic-do-the-gitkit">
+		<title>Doing the GitKit Yourself</title>
+		<p>
+			By far the best, and highly recommended, way to prepare to deliver the GitKit is to do it yourself by playing the role of both the instructor and the student simultaneously. Use the following steps to do the GitKit yourself:
+			<ol>
+				<li>
+					<p>
+						Follow the steps in <xref ref="topic-gitkit-deploy" text="type-global-title" /> to deploy a GitKit FarmData2 upstream for you to use for practice.
+					</p>
+				</li>
+				<li>
+					<p>
+						For each Chapter in the text, find the section of <xref ref="topic-instructor-notes" text="type-global-title" /> for that chapter:
+						<ol>
+							<li>
+								<p>
+									Download and review the slides for the chapter and their speaker notes.
+								</p>
+							</li>
+							<li>
+								<p>
+									Review the <em>Instructor Slide Notes</em> for the chapter.
+								</p>
+							</li>
+							<li>
+								<p>
+									Review the <em>Instructor To-Do List</em> for any tasks to be done before the class.
+								</p>
+							</li>
+							<li>
+								<p>
+									Complete the exercises in the chapter while simultaneously following along with the <em>Instructor Exercise Notes</em>.
+								</p>
+							</li>
+						</ol>
+					</p>
+				</li>
+				<li>
+					<p>
+						When you are done, you can delete the practice GitKit FarmData2 repository that you created.
+					</p>
+				</li>
+			</ol>
+		</p>
+	</subsection>
+
+	<subsection xml:id="topic-gitkit-deploy">
+		<title>Deploying the GitKit</title>
+		
+		<p>
+			To use the GitKit the instructor for the course must deploy one or more instances of it. Deploying an instance of the GitKit creates a repository that students use as the upstream repository for the hands-on activities.
+		</p>
+		<p>
+			The repository that is created contains the code, documentation and history from the FarmData2 project (see <xref ref="topic-gitkit-farmdata2" />) and has an issue tracker that is populated with the tickets that are used in the GitKit activities. This repository is also configured to interact with the KitClient to install the Kit-tty virtual assistant (see <xref ref="topic-kitty-virtual-assistant" />) and to provide simulated community automations (see <xref ref="topic-community-automations" />).
+		</p>
+
+		<p>
+			Use the following steps to deploy an instance of the GitKit FarmData2 repository for use in your course:
+			<ol>
+				<li>
+					<p>
+						Identify the GitHub space where you would like to deploy the GitKit FarmData2 repository. The GitHub space can be your GitHub account or a GitHub organization that you have created for your course and for which you have write permission.
+					</p>
+				</li>
+				<li>
+					<p>
+						Visit GitHub using this link to create a <url href="https://github.com/settings/tokens/new">New personal access token (classic)</url> with:
+						<ul>
+							<li>
+								<p>
+									All "repo" permissions.
+								</p>
+							</li>
+							<li>
+								<p>
+									"workflow" permission.
+								</p>
+							</li>
+							<li>
+								<p>
+									"read:org" permission under "admin:org".
+								</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>
+						Be sure to copy your access token.
+					</p>
+				</li>
+				<li>
+					<p>
+						Click this link to <url href="https://gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod" visual="gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod"> Deploy the GitKit FarmData2 repository </url>.
+					</p>
+				</li>
+				<li>
+					<p>
+						Respond to the deployer prompts that appear in the "TERMINAL" area at the bottom of the window. It will ask you for:
+						<ol>
+							<li>
+								<p>
+									The name of the repository.  We recommend "GitKit-FarmData2".
+								</p>
+							</li>
+							<li>
+								<p>
+									You GitHub username to deploy into your GitHub space, or the name of a GitHub organization to which you have write permission to deploy into that organization's GitHub space.
+								</p>
+							</li>
+							<li>
+								<p>
+									The personal access token that you created.
+								</p>
+							</li>
+						</ol>
+					</p>
+				</li>
+				<li>
+					<p>
+						Wait for the deployer to complete.  This typically takes several minutes because the deployer must create the issues in the issue tracker slowly to avoid being rate-limited by the GitHub API.
+					</p>
+				</li>
+				<li>
+					<p>
+						When the deployer completes it will generate output similar to the following that shows the URL of your deployed GitKit FarmData2 repository.
+					</p>
+<p>
+<c>Your new repository is ready. Give the URL below to your students.
+https://github.com/braughtg/test-gitkit                           
+</c>
+</p>
+					<p>
+						Copy the URL of the repository and distribute it to your students using e-mail, LMS or whatever means is convenient for you.
+					</p>
+				</li>
+				<li>
+					<p>
+						Note that each deployed GitKit can support up to 32 students. If you have more than 32 students, you will need to repeat steps 4-7 to create additional deploys.
+					</p>
+					<p>  
+						Each deployed repository must have a unique name.  We recommend appending suffixes to "GitKit-FarmData2" for example "GitKit-FarmData2-group1", "GitKit-FarmData2-group2", etc.
+					</p>
+				</li>
+				<li>
+					<p>
+						Please consider clicking the link to the brief survey that is included in the output of the GitKit deployer. Your feedback  helps us to better understand where and how the GitKit is being used. This survey can also be accessed <url href="https://drexel.qualtrics.com/jfe/form/SV_81y8BL0zy3fBw22">here</url>.
+					</p>
+				</li>
+			</ol>
+		</p>
+	</subsection>
+
+	<subsection xml:id="topic-instructor-notes">
+		<title>Instructor Notes</title>
+		
+		<introduction>
+			The following subsections provide useful information about each of the Chapters for the instructor.  
+			
+			Each subsection provides a link to the chapter, a link to the slides for the chapter, <term>Instructor Slide Notes</term>, an <term>Instructor To-Do List</term>, and <term>Instructor Exercise Notes</term>. The Instructor Slide Notes give an overview of the slides and then slide-by-slide information for the instructor. The Instructor To-Do List enumerates any tasks that the instructor should be sure to do before the class meeting.  The Instructor Exercise Notes provide some helpful comments on specific hands-on exercises.
+		</introduction>
+
+		<subsubsection xml:id="topic-instructor-notes-communities">
+			<title>Communities and Collaboration</title>
+			<p>
+				<ul>
+					<li>
+						<p>
+							[ <xref ref="topic-communities-and-collaboration" /> |
+							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> ]
+						</p>
+					</li>
+				</ul>
+			</p>
+
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+				<p>
+					blah blah
+				</p>
+				<p>
+					blah blah
+				</p>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
+		</subsubsection>
+
+		<subsubsection xml:id="topic-instructor-notes-upstreaming">
+			<title>Working Locally and Upstreaming Changes</title>
+			<p>
+				<ul>
+					<li>
+						<p>
+							[ <xref ref="topic-upstreaming-changes" /> |
+							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> ]
+						</p>
+					</li>
+				</ul>
+			</p>
+
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
+		</subsubsection>
+
+		<subsubsection xml:id="topic-instructor-notes-synchronizing">
+			<title>Staying Synchronized with the Upstream</title>
+			<p>
+				TODO: Current content with "todo first"
+				<ul>
+					<li>
+						<p>
+							[ <xref ref="topic-staying-synchronized" /> | 
+							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> ]
+						</p>
+					</li>
+				</ul>
+			</p>
+
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
+		</subsubsection>
+		
+		<subsubsection xml:id="topic-instructor-notes-merge-conflicts">
+			<title>Handling Merge Conflicts</title>
+			<p>
+				TODO: Current content with "todo first"
+
+				<li>
+					<p>
+						[ <xref ref="topic-merge-conflicts" /> |
+						<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> ]
+					</p>
+				</li>
+			</p>
+			
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
+		</subsubsection>
+	</subsection>
+
+	<subsection xml:id="topic-gitkit-contributing">
+		<title>Contributing to GitKit</title>
+		
+		<p>
+			All of the work on the GitKit is being conducted under open licenses (GPL3, CC-BY-NC-SA) and we welcome participation, contribution and derivative work.  
+		</p>
+			
+		<p>
+			For any kind of question, difficulty, suggestion, or suspected bug, <url href="https://discord.gg/83Sb4csCeT">chatting with us on Discord</url> is a great place to start.
+		</p>
+
+		<p>
+			Errors, typos or suggestions for the textbook can be submitted using the <url href="https://github.com/HFOSSedu/GitKit-Text/issues">GitKit-Text Issue Tracker</url>. 
+		</p>
+
+		<p>
+			Active work on the deployer and the KitClients takes place in the <url href="https://gitlab.com/hfossedu/kits">Kits section</url> of the <url href="https://gitlab.com/hfossedu/kits">HFOSSedu GitLab Organization</url>.
+		</p>
+	</subsection>
+</section>
