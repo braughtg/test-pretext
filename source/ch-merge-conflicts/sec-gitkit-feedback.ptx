@@ -1,12 +1,883 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section
+xml:id="topic-gitkit-feedback-merging"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>GitKit Feedback</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+ 		<p>To help us improve and scope this chapter for future semesters please consider providing the following feedback.</p>
   </introduction>
 
+  <exercises>
+    <title />
+    <exercise xml:id="ex-gitkit-feedback-merging" label="ex-gitkit-feedback-merging">
+      <introduction>
+        <p>
+          For each of the following statements, rate your agreement or disagreement.
+          Refer to the chapter as needed.
+        </p>
+      </introduction>
+  
+  
+      <task xml:id="ex-gitkit-feedback-merging-a" label="ex-gitkit-feedback-merging-a">
+        <query label="ex-gitkit-feedback-merging-a-poll">
+        <statement>
+          <p>
+            The tables that contained code for the merge requests were easy to understand.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-merging-b" label="ex-gitkit-feedback-merging-b">
+        <query label="ex-gitkit-feedback-merging-b-poll">
+        <statement>
+          <p>
+            I understand what is meant by conflicting and non-conflicting code.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-merging-c" label="ex-gitkit-feedback-merging-c">
+        <query label="ex-gitkit-feedback-merging-c-poll">
+        <statement>
+          <p>
+            Based upon the descriptions provided I found it difficult to determine what the merged code would be.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-merging-d" label="ex-gitkit-feedback-merging-d">
+        <query label="ex-gitkit-feedback-merging-d-poll">
+        <statement>
+          <p>
+            The figures helped me understand the state of the repositories.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-merging-e" label="ex-gitkit-feedback-merging-e">
+        <query label="ex-gitkit-feedback-merging-e-poll">
+        <statement>
+          <p>
+            The screen captures of the merge tool helped me feel confident I was proceeding correctly.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+
+  
+      <task xml:id="ex-gitkit-feedback-merging-f" label="ex-gitkit-feedback-merging-f">
+        <query label="ex-gitkit-feedback-merging-f-poll">
+        <statement>
+          <p>
+            The questions I answered helped me pause and think about what the commands I was typing did.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-merging-g" label="ex-gitkit-feedback-merging-g">
+        <query label="ex-gitkit-feedback-merging-g-poll">
+        <statement>
+          <p>
+            I would have liked additional practice with the concepts presented.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+
+
+      <task xml:id="ex-gitkit-feedback-merging-h" label="ex-gitkit-feedback-merging-h">
+        <query label="ex-gitkit-feedback-merging-h-poll">
+        <statement>
+          <p>
+            After completing the activities in the GitKit I feel confident that I can use a Git workflow.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+
+
+      <task xml:id="ex-gitkit-feedback-merging-i" label="ex-gitkit-feedback-merging-i">
+        <query label="ex-gitkit-feedback-merging-i-poll">
+        <statement>
+          <p>
+            I would tell future students that the GitKit experience was good.
+          </p>
+        </statement>
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Strongly Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Agree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Neither Agree nor Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Disagree
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Strongly Disagree
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+    </exercise>
+  
+    <exercise xml:id="ex-gitkit-feedback-words-merging" label="ex-gitkit-feedback-words-merging">
+      <introduction>
+        <p>
+          Rate how each of the following words describes how you felt while completing the sections in this chapter.
+        </p>
+      </introduction>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-a" label="ex-gitkit-feedback-words-merging-a">
+        <query label="ex-gitkit-feedback-words-merging-a-poll">
+        <statement>
+          <p>
+            <term>bored</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-b" label="ex-gitkit-feedback-words-merging-b">
+        <query label="ex-gitkit-feedback-words-merging-b-poll">
+        <statement>
+          <p>
+            <term>confident</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-c" label="ex-gitkit-feedback-words-merging-c">
+        <query label="ex-gitkit-feedback-words-merging-c-poll">
+        <statement>
+          <p>
+            <term>confused</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-d" label="ex-gitkit-feedback-words-merging-d">
+        <query label="ex-gitkit-feedback-words-merging-d-poll">
+        <statement>
+          <p>
+            <term>engaged</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-e" label="ex-gitkit-feedback-words-merging-e">
+        <query label="ex-gitkit-feedback-words-merging-e-poll">
+        <statement>
+          <p>
+            <term>frustrated</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-f" label="ex-gitkit-feedback-words-merging-f">
+        <query label="ex-gitkit-feedback-words-merging-f-poll">
+        <statement>
+          <p>
+            <term>interested</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-g" label="ex-gitkit-feedback-words-merging-g">
+        <query label="ex-gitkit-feedback-words-merging-g-poll">
+        <statement>
+          <p>
+            <term>lost</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+  
+  
+      <task xml:id="ex-gitkit-feedback-words-merging-h" label="ex-gitkit-feedback-words-merging-h">
+        <query label="ex-gitkit-feedback-words-merging-h-poll">
+        <statement>
+          <p>
+            <term>overwhelmed</term>
+          </p>
+        </statement>
+  
+  
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                Not at all
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Somewhat
+              </p>
+            </statement>
+          </choice>
+  
+          <choice>
+            <statement>
+              <p>
+                Quite a bit
+              </p>
+            </statement>
+          </choice>
+        </choices>
+        </query>
+      </task>
+    </exercise>
+  
+    <exercise xml:id="ex-gitkit-feedback-time-merging" label="ex-gitkit-feedback-time-merging">
+      <query label="ex-gitkit-feedback-time-merging-poll">
+      <statement>
+        <p>
+          Approximately how much time did you spend on this chapter outside of class time?
+        </p>
+      </statement>
+  
+  
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              0 - 30 minutes
+            </p>
+          </statement>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              30 minutes - 1 hour
+            </p>
+          </statement>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              1 hour - 2 hours
+            </p>
+          </statement>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              2 hours - 3 hours
+            </p>
+          </statement>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              3 hours - 5 hours
+            </p>
+          </statement>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              more than 5 hours
+            </p>
+          </statement>
+        </choice>
+      </choices>
+      </query>
+    </exercise>
+  
+    <exercise xml:id="ex-gitkit-feedback-challenge-merging" label="ex-gitkit-feedback-challenge-merging">
+      <statement>
+        <p>
+          Please comment on any particular challenges you faced in completing this chapter.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+    </exercises>
 </section>

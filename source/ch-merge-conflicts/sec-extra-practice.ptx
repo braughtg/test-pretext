@@ -1,13 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section
-  xml:id="topic-extra-practice"
+  xml:id="topic-extra-practice-merging"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Extra Practice</title>
 
   <introduction>
- 			    <p>Text of section.</p>
+ 		<p>This section is optional but will provide you with more practice with Git, GitHub and with resolving merge conflicts if you would like it.</p>
   </introduction>
+  
+  <exercises>
+    <title />
+    <exercise xml:id="ex-extra-practice-merging-fetch-repo" label="ex-extra-practice-merging-fetch-repo">
+      <statement>
+        <p>
+          The upstream repository contains a branch created just for this practice. Use the following command to get this feature branch from the upstream into your local repo:
+          <ul marker="">
+            <li>
+              <p>
+                <c>git fetch upstream merge-conflict-practice</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          The <c>merge-conflict-practice</c> branch was created so that it contains some conflicts with the upstream <c>main</c> branch.  When you have fetched this branch, think of it as if you had created it from <c>main</c>, then made some changes that resulted in conflicts with the upstream <c>main</c> branch.  This leaves you at the point where you are trying to merge main into this feature branch and resolve the conflicts (e.g. like in <xref ref="fig-resolving-merge-conflict" />).
+        </p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              I have fetched the branch
+            </p>
+          </statement>
+        </choice>
 
+        <choice>
+          <statement>
+            <p>
+              I have not fetched the branch
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Do not make continue until you have the <c>merge-conflict-practice</c> branch set up.
+            </p>
+          </feedback>    
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise xml:id="ex-extra-practice-merging-active-branch" label="ex-extra-practice-merging-active-branch">
+      <statement>
+        <p>
+          Make the <c>merge-conflict-practice</c> branch active and try to merge <c>main</c> into it.  Give the commands that you used and their output here.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+
+    <exercise xml:id="ex-extra-practice-merging-resolve-conflicts" label="ex-extra-practice-merging-resolve-conflicts">
+      <statement>
+        <p>
+          The <c>merge-conflict-practice</c> branch contains a few conflicts so the merge you attempted in <xref ref="ex-extra-practice-merging-active-branch" /> should fail.  Resolve the conflicts by accepting the changes from the merge-conflict-practice branch and all of the non-conflicting changes from the main branch.
+        </p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              I have resolved the conflicts
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              I have not resolved the conflicts
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Do not make continue until you resolve the conflicts.
+            </p>
+          </feedback>    
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise xml:id="ex-extra-practice-merging-save-commit" label="ex-extra-practice-merging-save-commit">
+      <statement>
+        <p>
+          Save your changes and commit them to resolve the conflicts to your feature branch.  Be sure to use a meaningful commit message.  Give the commands that you used and their output here.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+
+    <exercise xml:id="ex-extra-practice-merging-push-pr" label="ex-extra-practice-merging-push-pr">
+      <statement>
+        <p>
+          Push the <c>merge-conflict-practice</c> branch to your <c>origin</c> and create a pull request to the upstream. Give a link to your pull request.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+
+  </exercises>
+  
 </section>
