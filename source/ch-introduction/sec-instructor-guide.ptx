@@ -159,12 +159,17 @@
 				</li>
 				<li>
 					<p>
+						Consider doing the GitKit for yourself as described in <xref ref="topic-do-the-gitkit" />.  It is by far the best way to prepare to deliver the GitKit to a class.
+					</p>
+				</li>
+				<li>
+					<p>
 						Follow the steps in <xref ref="topic-gitkit-deploy" text="type-global-title" /> to deploy the GitKit for use in your course.
 					</p>
 				</li>
 				<li>
 					<p>
-						Refer to <xref ref="topic-instructor-notes" text="type-global-title" /> and its subsections for the slides and instructor notes as you teach chapter of the GitKit.
+						Refer to the instructor notes in <xref ref="topic-instructor-notes" text="type-global-title" /> for the slides, a ToDo list and tips as you teach each chapter of the GitKit.
 						<ul>
 							<li>
 								<p>
@@ -203,7 +208,7 @@
 		<title>Delivering GitKit</title>
 		
 		<p>
-			The GitKit content is broken into 4 chapters (See <xref ref="topic-gitkit-chapters" />). Each chapter of the text contains the set of hands-on exercises to be completed by the students. <em>These exercises are not intended to stand alone.</em>  They require some prior introduction to the concepts and terminology that they use. A separate set of slides are provided that instructors can use or adapt to introduce the necessary concepts and terminology before students complete the hands-on exercises.
+			The GitKit content is broken into 4 chapters (See <xref ref="topic-gitkit-content" />). Each chapter of the text contains the set of hands-on exercises to be completed by the students. <em>These exercises are not intended to stand alone.</em>  They require some prior introduction to the concepts and terminology that they use. A separate set of slides are provided that instructors can use or adapt to introduce the necessary concepts and terminology before students complete the hands-on exercises.
 		</p>
 
 		<p>
@@ -478,6 +483,52 @@
 		</p>
 	</subsection>
 
+	<subsection xml:id="topic-do-the-gitkit">
+		<title>Doing the GitKit Yourself</title>
+		<p>
+			By far the best, and highly recommended, way to prepare to deliver the GitKit is to do it yourself by playing the role of both the instructor and the student simultaneously. Use the following steps to do the GitKit yourself:
+			<ol>
+				<li>
+					<p>
+						Follow the steps in <xref ref="topic-gitkit-deploy" text="type-global-title" /> to deploy a GitKit FarmData2 upstream for you to use for practice.
+					</p>
+				</li>
+				<li>
+					<p>
+						For each Chapter in the text, find the section of <xref ref="topic-instructor-notes" text="type-global-title" /> for that chapter:
+						<ol>
+							<li>
+								<p>
+									Download and review the slides for the chapter and their speaker notes.
+								</p>
+							</li>
+							<li>
+								<p>
+									Review the <em>Instructor Slide Notes</em> for the chapter.
+								</p>
+							</li>
+							<li>
+								<p>
+									Review the <em>Instructor To-Do List</em> for any tasks to be done before the class.
+								</p>
+							</li>
+							<li>
+								<p>
+									Complete the exercises in the chapter while simultaneously following along with the <em>Instructor Exercise Notes</em>.
+								</p>
+							</li>
+						</ol>
+					</p>
+				</li>
+				<li>
+					<p>
+						When you are done, you can delete the practice GitKit FarmData2 repository that you created.
+					</p>
+				</li>
+			</ol>
+		</p>
+	</subsection>
+
 	<subsection xml:id="topic-gitkit-deploy">
 		<title>Deploying the GitKit</title>
 		
@@ -589,45 +640,67 @@ https://github.com/braughtg/test-gitkit
 		<title>Instructor Notes</title>
 		
 		<introduction>
-			TODO: Current Instructor Notes Section
+			The following subsections provide useful information about each of the Chapters for the instructor.  
+			
+			Each subsection provides a link to the chapter, a link to the slides for the chapter, <term>Instructor Slide Notes</term>, an <term>Instructor To-Do List</term>, and <term>Instructor Exercise Notes</term>. The Instructor Slide Notes give an overview of the slides and then slide-by-slide information for the instructor. The Instructor To-Do List enumerates any tasks that the instructor should be sure to do before the class meeting.  The Instructor Exercise Notes provide some helpful comments on specific hands-on exercises.
 		</introduction>
-
-		<subsubsection xml:id="topic-instructor-doing-it-yourself">
-			<title>Doing the GitKit Yourself</title>
-			<p>
-				TODO: why and tips on how to!
-			</p>
-		</subsubsection>
 
 		<subsubsection xml:id="topic-instructor-notes-communities">
 			<title>Communities and Collaboration</title>
 			<p>
-				TODO: Current content with "todo first"
-
 				<ul>
 					<li>
 						<p>
-							[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
-							<xref ref="topic-instructor-notes-communities" text="custom">Instructor Notes</xref> ]
+							[ <xref ref="topic-communities-and-collaboration" /> |
+							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> ]
 						</p>
 					</li>
 				</ul>
 			</p>
+
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+				<p>
+					blah blah
+				</p>
+				<p>
+					blah blah
+				</p>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
 		</subsubsection>
 
 		<subsubsection xml:id="topic-instructor-notes-upstreaming">
 			<title>Working Locally and Upstreaming Changes</title>
 			<p>
-				TODO: Current content with "todo first"
 				<ul>
 					<li>
 						<p>
-							[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> |
-							 <xref ref="topic-instructor-notes-upstreaming" text="custom">Instructor Notes</xref> ]
+							[ <xref ref="topic-upstreaming-changes" /> |
+							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> ]
 						</p>
 					</li>
 				</ul>
 			</p>
+
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
 		</subsubsection>
 
 		<subsubsection xml:id="topic-instructor-notes-synchronizing">
@@ -637,12 +710,24 @@ https://github.com/braughtg/test-gitkit
 				<ul>
 					<li>
 						<p>
-							[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
-							<xref ref="topic-instructor-notes-synchronizing" text="custom">Instructor Notes</xref> ]
+							[ <xref ref="topic-staying-synchronized" /> | 
+							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> ]
 						</p>
 					</li>
 				</ul>
 			</p>
+
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
 		</subsubsection>
 		
 		<subsubsection xml:id="topic-instructor-notes-merge-conflicts">
@@ -652,11 +737,23 @@ https://github.com/braughtg/test-gitkit
 
 				<li>
 					<p>
-						[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
-						<xref ref="topic-instructor-notes-merge-conflicts" text="custom">Instructor Notes</xref> ]
+						[ <xref ref="topic-merge-conflicts" /> |
+						<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> ]
 					</p>
 				</li>
 			</p>
+			
+			<paragraphs>
+				<title>Instructor Slide Notes</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor To-Do List</title>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Instructor Exercise Notes</title>
+			</paragraphs>
 		</subsubsection>
 	</subsection>
 
