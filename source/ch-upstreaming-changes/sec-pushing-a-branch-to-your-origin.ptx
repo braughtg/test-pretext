@@ -14,7 +14,7 @@
   <title />
   <p>
     As shown in <xref ref="fig-pushing-feature-branch" />, this is done by <em>pushing your feature branch</em> to your origin repository.
-    More generally, pushing a branch, copies it from a local repo to a remote repo.
+    More generally, pushing a branch, copies it from a local repository to a remote repository.
   </p>
 
   <p>
@@ -155,7 +155,7 @@
     <task xml:id="ex-branch-diff-b" label="ex-branch-diff-b">
       <statement>
         <p>
-          Why is there a difference between the branches in your origin repo and your local repo?
+          Why is there a difference between the branches in your origin repository and your local repository?
         </p>
       </statement>
       <response />
@@ -219,16 +219,16 @@
   <exercise xml:id="ex-push-branch-linux" label="ex-push-branch-linux" component="linux-kit-client">
     <introduction>
       <p>
-        The <c>git push &lt;remote repo name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repo to the specified remote repo (i.e.
+        The <c>git push &lt;remote repository name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repository to the specified remote repository (i.e.
         on GitHub).
       </p>
 
       <p>
-        Use a command that will push your <em>feature branch</em> from your local repo to your <em>origin repo</em> on GitHub.
+        Use a command that will push your <em>feature branch</em> from your local repository to your <em>origin repository</em> on GitHub.
       </p>
 
       <p>
-        Note: You can use the name of the remote repo, so you do not need to use the full URL.
+        Note: You can use the name of the remote repository, so you do not need to use the full URL.
         You will also need to paste your PAT as the password when it is requested.
       </p>
     </introduction>
