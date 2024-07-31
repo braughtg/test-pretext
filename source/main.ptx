@@ -12,7 +12,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->    
-    <xi:include href="./ch-introduction/ch-introduction.ptx" />
+    <xi:include href="./ch-instructor-guide/ch-instructor-guide.ptx" />
     <xi:include href="./ch-communities-and-collaboration/ch-communities-and-collaboration.ptx" />
     <xi:include href="./ch-upstreaming-changes/ch-upstreaming-changes.ptx" />
     <xi:include href="./ch-staying-synchronized/ch-staying-synchronized.ptx" />

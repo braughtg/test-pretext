@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section 
-  xml:id="topic-instructor-guide" 
+  xml:id="topic-instructor-intro" 
   xmlns:xi="http://www.w3.org/2001/XInclude">
   
-  <title>Instructor Guide</title>
+  <title>Instructor Guide Introduction</title>
  
   <introduction>
 		<p>
@@ -40,7 +40,7 @@
 				</li>
 				<li>
 					<p>
-						Click to <url href="https://gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod" visual="gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod"> Deploy the GitKit FarmData2 repository </url> to use as the upstream.
+						Click to <url href="https://gitpod.io/?autostart=true&amp;useLatest=true&amp;editor=xterm#script_url=https%3A%2F%2Fgitlab.com%2Fhfossedu%2Fkits%2Fgitkit-deployer-gitpod%2F-%2Fraw%2Fmain%2Fdeploy.yaml%3Fref_type%3Dheads/https://github.com/HFOSSedu/GitKit-Deployer-GitPod"> Deploy the GitKit FarmData2 repository </url> to use as the upstream.
 					</p>
 					<p>
 						One deploy of the GitKit FarmData2 repository can support up to 32 students. Perform as many deploys as necessary for your course.  Be sure to give each deploy a distinct name.
@@ -58,61 +58,7 @@
 				</li>
 				<li>
 					<p>
-						Use or adapt the provided slides to introduce the concepts and terminology, and assign students hands-on exercises from the chapters as appropriate for your course:
-						<ul>
-							<li>
-								<p>
-									<xref ref="topic-communities-and-collaboration" text="type-global-title" />
-									<ul>
-										<li>
-											<p>
-												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
-												<xref ref="topic-instructor-notes-communities" text="custom">Instructor Notes</xref> ]
-											</p>
-										</li>
-									</ul>
-								</p>
-							</li>
-							<li>
-								<p>
-									<xref ref="topic-upstreaming-changes" text="type-global-title" />
-									<ul>
-										<li>
-											<p>
-												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> |
-												 <xref ref="topic-instructor-notes-upstreaming" text="custom">Instructor Notes</xref> ]
-											</p>
-										</li>
-									</ul>
-								</p>
-							</li>
-							<li>
-								<p>
-									<xref ref="topic-staying-synchronized" text="type-global-title" />
-									<ul>
-										<li>
-											<p>
-												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
-												<xref ref="topic-instructor-notes-synchronizing" text="custom">Instructor Notes</xref> ]
-											</p>
-										</li>
-									</ul>
-								</p>
-							</li>
-							<li>
-								<p>
-									<xref ref="topic-merge-conflicts" text="type-global-title" />
-									<ul>
-										<li>
-											<p>
-												[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
-												<xref ref="topic-instructor-notes-merge-conflicts" text="custom">Instructor Notes</xref> ]
-											</p>
-										</li>
-									</ul>
-								</p>
-							</li>
-						</ul>				
+						Review the chapters, slides and instructor notes in <xref ref="topic-instructor-notes" />, and create assignments as appropriate for your course.
 					</p>
 				</li>
 				<li>
@@ -169,29 +115,7 @@
 				</li>
 				<li>
 					<p>
-						Refer to the instructor notes in <xref ref="topic-instructor-notes" text="type-global-title" /> for the slides, a ToDo list and tips as you teach each chapter of the GitKit.
-						<ul>
-							<li>
-								<p>
-									<xref ref="topic-instructor-notes-communities" text="type-global-title" />
-								</p>
-							</li>
-							<li>
-								<p>
-									<xref ref="topic-instructor-notes-upstreaming" text="type-global-title" />
-								</p>
-							</li>
-							<li>
-								<p>
-									<xref ref="topic-instructor-notes-synchronizing" text="type-global-title" />
-								</p>
-							</li>
-							<li>
-								<p>
-									<xref ref="topic-instructor-notes-merge-conflicts" text="type-global-title" />
-								</p>
-							</li>
-						</ul> 
+						Refer <xref ref="topic-instructor-notes" text="type-global-title" /> for links to the chapters, the class slides, and instructor notes as you teach each chapter of the GitKit.
 					</p>
 				</li>
 				<li>
@@ -504,17 +428,17 @@
 							</li>
 							<li>
 								<p>
-									Review the <em>Instructor Slide Notes</em> for the chapter.
+									Review the <em>Slide Notes</em> in the Instructor Notes for the chapter.
 								</p>
 							</li>
 							<li>
 								<p>
-									Review the <em>Instructor To-Do List</em> for any tasks to be done before the class.
+									Review the <em>To-Do List</em> in the Instructor Notes for the chapter for a lits of tasks to be done before the class.
 								</p>
 							</li>
 							<li>
 								<p>
-									Complete the exercises in the chapter while simultaneously following along with the <em>Instructor Exercise Notes</em>.
+									Complete the exercises in the chapter while simultaneously following along with the <em>Exercise Notes</em> in the Instructor Notes for the chapter.
 								</p>
 							</li>
 						</ol>
@@ -576,12 +500,12 @@
 				</li>
 				<li>
 					<p>
-						Click this link to <url href="https://gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod" visual="gitpod.io/?autostart=true#https://github.com/hfossedu/gitkit-deployer-gitpod"> Deploy the GitKit FarmData2 repository </url>.
+						Click this link to <url href="https://gitpod.io/?autostart=true&amp;useLatest=true&amp;editor=xterm#script_url=https%3A%2F%2Fgitlab.com%2Fhfossedu%2Fkits%2Fgitkit-deployer-gitpod%2F-%2Fraw%2Fmain%2Fdeploy.yaml%3Fref_type%3Dheads/https://github.com/HFOSSedu/GitKit-Deployer-GitPod"> Deploy the GitKit FarmData2 repository </url>.
 					</p>
 				</li>
 				<li>
 					<p>
-						Respond to the deployer prompts that appear in the "TERMINAL" area at the bottom of the window. It will ask you for:
+						Respond to the deployer prompts that appear in the window. It will ask you for:
 						<ol>
 							<li>
 								<p>
@@ -640,121 +564,64 @@ https://github.com/braughtg/test-gitkit
 		<title>Instructor Notes</title>
 		
 		<introduction>
-			The following subsections provide useful information about each of the Chapters for the instructor.  
-			
-			Each subsection provides a link to the chapter, a link to the slides for the chapter, <term>Instructor Slide Notes</term>, an <term>Instructor To-Do List</term>, and <term>Instructor Exercise Notes</term>. The Instructor Slide Notes give an overview of the slides and then slide-by-slide information for the instructor. The Instructor To-Do List enumerates any tasks that the instructor should be sure to do before the class meeting.  The Instructor Exercise Notes provide some helpful comments on specific hands-on exercises.
-		</introduction>
+			The following links provide easy access to the chapters with the hands-on exercises, the presentation slides for each chapter and a set of instructor notes for each chapter. 
 
-		<subsubsection xml:id="topic-instructor-notes-communities">
-			<title>Communities and Collaboration</title>
-			<p>
-				<ul>
-					<li>
-						<p>
-							[ <xref ref="topic-communities-and-collaboration" /> |
-							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> ]
-						</p>
-					</li>
-				</ul>
-			</p>
-
-			<paragraphs>
-				<title>Instructor Slide Notes</title>
-				<p>
-					blah blah
-				</p>
-				<p>
-					blah blah
-				</p>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor To-Do List</title>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor Exercise Notes</title>
-			</paragraphs>
-		</subsubsection>
-
-		<subsubsection xml:id="topic-instructor-notes-upstreaming">
-			<title>Working Locally and Upstreaming Changes</title>
-			<p>
-				<ul>
-					<li>
-						<p>
-							[ <xref ref="topic-upstreaming-changes" /> |
-							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> ]
-						</p>
-					</li>
-				</ul>
-			</p>
-
-			<paragraphs>
-				<title>Instructor Slide Notes</title>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor To-Do List</title>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor Exercise Notes</title>
-			</paragraphs>
-		</subsubsection>
-
-		<subsubsection xml:id="topic-instructor-notes-synchronizing">
-			<title>Staying Synchronized with the Upstream</title>
-			<p>
-				TODO: Current content with "todo first"
-				<ul>
-					<li>
-						<p>
-							[ <xref ref="topic-staying-synchronized" /> | 
-							<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> ]
-						</p>
-					</li>
-				</ul>
-			</p>
-
-			<paragraphs>
-				<title>Instructor Slide Notes</title>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor To-Do List</title>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor Exercise Notes</title>
-			</paragraphs>
-		</subsubsection>
-		
-		<subsubsection xml:id="topic-instructor-notes-merge-conflicts">
-			<title>Handling Merge Conflicts</title>
-			<p>
-				TODO: Current content with "todo first"
-
+			The <term>Instructor Notes</term> for each chapter include <term>Slide Notes</term>, a <term>To-Do List</term>, and <term>Exercise Notes</term>. The Slide Notes give an overview of the slides and then slide-by-slide information for the instructor. The To-Do List enumerates any tasks that the instructor should be sure to do before the class meeting.  The Exercise Notes provide some helpful comments on specific hands-on exercises.
+			<ul>
 				<li>
 					<p>
-						[ <xref ref="topic-merge-conflicts" /> |
-						<url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> ]
+						<xref ref="topic-communities-and-collaboration" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
+									<xref ref="topic-instructor-communities" text="custom">Instructor Notes</xref> ]
+								</p>
+							</li>
+						</ul>
 					</p>
 				</li>
-			</p>
-			
-			<paragraphs>
-				<title>Instructor Slide Notes</title>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor To-Do List</title>
-			</paragraphs>
-
-			<paragraphs>
-				<title>Instructor Exercise Notes</title>
-			</paragraphs>
-		</subsubsection>
+				<li>
+					<p>
+						<xref ref="topic-upstreaming-changes" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> |
+									 <xref ref="topic-instructor-upstreaming" text="custom">Instructor Notes</xref> ]
+								</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>
+						<xref ref="topic-staying-synchronized" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
+									<xref ref="topic-instructor-synchronizing" text="custom">Instructor Notes</xref> ]
+								</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>
+						<xref ref="topic-merge-conflicts" text="type-global-title" />
+						<ul>
+							<li>
+								<p>
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
+									<xref ref="topic-instructor-merge-conflicts" text="custom">Instructor Notes</xref> ]
+								</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+			</ul>	
+		</introduction>
 	</subsection>
 
 	<subsection xml:id="topic-gitkit-contributing">

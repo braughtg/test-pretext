@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section
+  xml:id="topic-instructor-upstreaming"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Working Locally and Upstreaming Changes Instructor Notes</title>
+
+  <introduction>
+    <p>
+        <ul>
+          <li>
+            <p>
+              [ <xref ref="topic-upstreaming-changes" /> |
+              <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> ]
+            </p>
+          </li>
+        </ul>
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Instructor Slide Notes</title>
+    <p>
+      blah blah
+    </p>
+    <p>
+      blah blah
+    </p>
+  </subsection>
+
+  <subsection>>
+    <title>Instructor To-Do List</title>
+  </subsection>
+
+  <subsection>
+    <title>Instructor Exercise Notes</title>
+  </subsection>
+</section>
