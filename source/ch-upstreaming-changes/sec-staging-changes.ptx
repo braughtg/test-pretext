@@ -5,20 +5,19 @@
 
   <introduction>
     <p>
-      As you saw in the previous section, you now have modifications to your local files that have not been staged. <term>NOTE: need a new image for staging only.</term>
-      The process of staging changes (i.e.
-      adding the files to the stage) is illustrated in <xref ref="fig-staging-changes-and-committing" />.
+      As you saw in the previous section, you now have modifications to your local files that have not been staged. The process of staging changes (i.e.
+      adding the files to the stage) is illustrated in <xref ref="fig-staging-changes" />.
       Recall from <xref ref="fig-edit-local-files-on-feature-branch" /> that the blue dot in <em>Local Files</em> represents the changes you made.
-      In <xref ref="fig-staging-changes-and-committing" />, those changes are staged and will be made into a commit that is added to your feature branch in the next section.
+      In <xref ref="fig-staging-changes" />, those changes are staged and will be made into a commit that is added to your feature branch in the next section.
     </p>
   </introduction>
 
   <p>
-    <figure xml:id="fig-staging-changes-and-committing">
-      <caption> Staging Changes and Committing. </caption>
-      <image source="images/ch-upstreaming-changes/staging-changes-and-committing.png" width="75%">
+    <figure xml:id="fig-staging-changes">
+      <caption> Staging changes. </caption>
+      <image source="images/ch-upstreaming-changes/staging-changes.png" width="75%">
         <description>
-          Staging Changes and Committing.
+          Staging Changes.
         </description>
       </image>
     </figure>
@@ -58,7 +57,7 @@
           So, you can add files to the stage using either <c>git stage</c> or <c>git add</c>.
           These activities will use <c>git stage</c> because it seems more descriptive of what is happening.
           However, you are likely to see <c>git add</c> used in other resources, so it is worth knowing that they are equivalent.
-          Provide the <c>git add</c> command that would be equivalent to your answer in (a).
+          Provide the <c>git add</c> command that would be equivalent to your answer in <xref ref="ex-staging-changes-a" />.
         </p>
         <response />
       </statement>
@@ -69,7 +68,7 @@
       <statement>
         <p>
           Now run the <c>git status</c> command again.
-          Compare your output in (a) to the output in <xref ref="ex-verify-changes-a" />.
+          Compare your output in <xref ref="ex-staging-changes-a" /> to the output in <xref ref="ex-verify-changes-a" />.
           What two changes have occurred that reflect that your changes have been staged? <term>NOTE: like previous question, may want to change this so that it asks which files are staged, untracked, etc.
           Then ask a question like "How do you know that your changes have been staged?"</term>
         </p>

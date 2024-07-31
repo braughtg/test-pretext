@@ -13,7 +13,7 @@
 
   <p>
     <figure xml:id="fig-create-feature-branch">
-      <caption> Create feature branch. </caption>
+      <caption> Create Feature Branch. </caption>
       <image source="images/ch-upstreaming-changes/create-feature-branch.png" width="75%">
         <description>
           Cloud image of origin, upstream, and local branches.
@@ -114,8 +114,8 @@
         <p>
           Your output should contain the text “Your branch is up to date with 'origin/main'.”  What do you think it means that your branch is “up to date”?
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
@@ -124,8 +124,8 @@
         <p>
           Your output should contain the text “nothing to commit, working tree clean.”  What do you think it means that you have “nothing to commit.” Hint: when would you have something to commit?  This is the opposite of that!
         </p>
-        <response />
       </statement>
+      <response />
     </task>
   </exercise>
 
@@ -149,34 +149,57 @@
             Type the command you entered below.
           </p>
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
     <task xml:id="ex-creating-a-branch-b" label="ex-creating-a-branch-b">
-      <statement correct="no">
+      <statement>
         <p>
           Use the <c>git status</c> command again now.
           Does creating a new branch with the <c>git branch</c> command make your new branch the active branch?
         </p>
       </statement>
 
-      <feedback>
-        <p>
-          <c>git branch [name]</c> only creates the branch.
-        </p>
-      </feedback>
+      <choices randomize="no">
+        <choice correct="no">
+          <statement>
+            <p>
+              Yes.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              <c>git branch &lt;name&gt;</c> only creates the branch.
+            </p>
+          </feedback>
+        </choice>
+
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              No.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              <c>git branch &lt;name&gt;</c> only creates the branch.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
     </task>
 
 
     <task xml:id="ex-creating-a-branch-c" label="ex-creating-a-branch-c">
       <statement>
         <p>
-          How can you tell from the output in (b) if it switched you to the new branch?
+          How can you tell from the output in <xref ref="ex-creating-a-branch-b" /> if it switched you to the new branch?
         </p>
-        <response />
       </statement>
+      <response />
     </task>
   </exercise>
   </exercises>

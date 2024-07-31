@@ -25,31 +25,98 @@
     <task xml:id="ex-switching-branches-a" label="ex-switching-branches-a">
       <statement>
         <p>
-          What command that will change your active branch to the new feature branch that you created in the previous section?
+          What command will change your active branch to the new feature branch that you created in the previous section?
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
     <task xml:id="ex-switching-branches-b" label="ex-switching-branches-b">
       <statement>
         <p>
-          Use the <c>git status</c> command again now. What part of the output confirms that your feature branch is now the active branch?
+          Use the <c>git status</c> command again now.
+          What part of the output confirms that your feature branch is now the active branch?
         </p>
         <response />
       </statement>
     </task>
+  </exercise>
+
+  <p>
+    Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing that you have switched to your feature branch and that your Local Files have not been modified since the last commit on the main branch (drawn in green).
+  </p>
+  <p>
+    <figure xml:id="fig-switch-to-feature-branch">
+      <caption> Switch to Feature Branch. </caption>
+      <image source="images/ch-upstreaming-changes/switch-to-feature-branch.png" width="75%">
+        <description>
+          Cloud image of origin, upstream, and local branches (including new feature branch).
+        </description>
+      </image>
+    </figure>
+  </p>
+
+  <exercise xml:id="ex-switching-branches-git-branch" label="ex-switching-branches-git-branch">
+    <introduction>
+      <p>
+        You can also switch branches using the <c>git branch</c> command. 
+      </p>
+    </introduction>
 
 
-    <task xml:id="ex-switching-branches-c" label="ex-switching-branches-c">
+    <task xml:id="ex-switching-branches-git-branch-a" label="ex-switching-branches-git-branch-a">
       <statement>
         <p>
-          Placeholder for additional exercises on switching branches.
+          Issue the <c>git branch</c> command now. You should see a list of branches. How can you tell which branch is the active branch?
         </p>
-        <response />
       </statement>
+      <response />
     </task>
+
+
+    <task xml:id="ex-switching-branches-git-branch-b" label="ex-switching-branches-git-branch-b">
+      <statement>
+        <p>
+          <c>git branch &lt;name&gt;</c> will make <em>name</em> the active branch. Enter a <c>git branch</c> command that will make <c>main</c> the active branch. What command did you enter?
+        </p>
+      </statement>
+      <response />
+    </task>
+
+
+    <task xml:id="ex-switching-branches-git-branch-c" label="ex-switching-branches-git-branch-c">
+      <statement>
+        <p>
+          How do you know that <c>main</c> is the active branch?
+        </p>
+      </statement>
+      <response />
+    </task>
+    
+
+    <task xml:id="ex-switching-branches-git-branch-d" label="ex-switching-branches-git-branch-d">
+      <statement>
+        <p>
+          In the next chapter you will be making changes to your Local Files. It is essential that you are on your feature branch <em>before</em> making any changes. 
+        </p>
+        <p>
+          Enter a <c>git branch</c> command that will make your feature branch the active branch. What command did you enter?
+        </p>
+      </statement>
+      <response />
+    </task>
+
+
+    <task xml:id="ex-switching-branches-git-branch-e" label="ex-switching-branches-git-branch-e">
+      <statement>
+        <p>
+          How do you know that your feature branch is the active branch?
+        </p>
+      </statement>
+      <response />
+    </task>
+
   </exercise>
   </exercises>
 </section>

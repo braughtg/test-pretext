@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      Like the last exercise, you will be working within the KitClient for this exercise.
+      Like in the previous chapter, you will be working within the KitClient for this exercise.
     </p>
   </introduction>
 
@@ -36,7 +36,7 @@
   <title/>
   <exercise xml:id="ex-restarting-kitclient" label="ex-restarting-kitclient">
     <p>
-      Restart your KitClient based on the instructions in <xref provisional="a reference back to ch2-restarting your development environment" />.
+      Restart your KitClient based on the instructions in <xref ref="topic-restarting-dev-env" />.
     </p>
   </exercise>
 
@@ -142,11 +142,6 @@
         </p>
       </hint>
 
-      <hint>
-        <p>
-          Another hint
-        </p>
-      </hint>
     </task>
 
 
@@ -222,11 +217,6 @@
         </p>
       </hint>
 
-      <hint>
-        <p>
-          Another hint
-        </p>
-      </hint>
     </task>
 
 
@@ -302,11 +292,6 @@
         </p>
       </hint>
 
-      <hint>
-        <p>
-          Another hint
-        </p>
-      </hint>
     </task>
 
 
@@ -382,11 +367,6 @@
         </p>
       </hint>
 
-      <hint>
-        <p>
-          Another hint
-        </p>
-      </hint>
     </task>
   </exercise>
   </exercises>

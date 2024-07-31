@@ -41,7 +41,7 @@
       <statement>
         <p>
           When you first push a feature branch GitHub assumes that you are likely to make a pull request for it.
-          To make this easy it will automatically display a big green “Compare &amp; pull request” button at the top of the page for your origin repo.
+          To make this easy it will automatically display a big green “Compare &amp; pull request” button at the top of the page for your origin repository.
         </p>
 
         <p>
@@ -122,7 +122,7 @@
         <statement>
           <p>
             The terms “Base Repository” and “Head Repository” in <xref ref="ex-pull-request-b-i"/> are generic labels that GitHub uses for the two repositories that are involved in the pull request.
-            Often, and in our case, these two repos will be your origin repository and the project's upstream repository.
+            Often, and in our case, these two repositories will be your origin repository and the project's upstream repository.
             Examine the URL's from <xref ref="ex-pull-request-b-i"/> and match the right hand column with either head repository or base repository to indicate which term refers to your origin and which refers to the upstream.
           </p>
         </statement>
@@ -144,7 +144,7 @@
           <p>
             The information in the gray bar also indicates the branches involved in the pull request.
             It uses the generic labels of <em>base</em> and <em>compare</em> for these branches.
-            Match the right hand column with either base branch or compare branch to indicate which is “pulled from” or “merged onto”.
+            Match the right hand column with either base branch or compare branch to indicate which is “pulled from” or “merged into”.
           </p>
         </statement>
         <!-- part of this original question has been omitted regarding the names of the branches --> <matches> <match>
