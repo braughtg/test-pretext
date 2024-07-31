@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter 
-  xml:id="topic-introduction" 
+  xml:id="topic-instructor-guide" 
   xmlns:xi="http://www.w3.org/2001/XInclude" >
-  <title>Introduction</title>
+  <title>Instructor Guide</title>
 
   <introduction>
     <p>
@@ -28,5 +28,9 @@
   </introduction>
   
   <!-- include sections -->
-  <xi:include href="sec-instructor-guide.ptx" />
+  <xi:include href="sec-instructor-intro.ptx" />
+  <xi:include href="sec-instructor-communities.ptx" />
+  <xi:include href="sec-instructor-upstreaming.ptx" />
+  <xi:include href="sec-instructor-synchronization.ptx" />
+  <xi:include href="sec-instructor-merge-conflicts.ptx" />
 </chapter>

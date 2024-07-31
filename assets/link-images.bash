@@ -12,8 +12,8 @@ ln --symbolic --force \
    "assets/images/shared-images"
 
 ln --symbolic --force \
-   "../../source/ch-introduction/images" \
-   "assets/images/ch-introduction"
+   "../../source/ch-instructor-guide/images" \
+   "assets/images/ch-instructor-guide"
 
 ln --symbolic --force \
    "../../source/ch-communities-and-collaboration/images" \

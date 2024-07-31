@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section
+  xml:id="topic-instructor-communities"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Communities and Collaboration Instructor Notes</title>
+
+  <subsection
+    xml:id="topic-communities-slide-notes">
+    <title>Slide Notes</title>
+    <p>
+      blah blah
+    </p>
+  </subsection>
+
+  <subsection
+    xml:id="topic-communities-todo">
+    <title>To-Do List</title>
+  </subsection>
+
+  <subsection
+    xml:id="topic-communities-exercise-notes">
+    <title>Exercise Notes</title>
+  </subsection>
+</section>
