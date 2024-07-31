@@ -6,34 +6,21 @@
   >
   <title>Working Locally and Upstreaming Changes Instructor Notes</title>
 
-  <introduction>
-    <p>
-        <ul>
-          <li>
-            <p>
-              [ <xref ref="topic-upstreaming-changes" /> |
-              <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> ]
-            </p>
-          </li>
-        </ul>
-    </p>
-  </introduction>
-
-  <subsection>
-    <title>Instructor Slide Notes</title>
-    <p>
-      blah blah
-    </p>
+  <subsection
+    xml:id="topic-upstreaming-slide-notes">
+    <title>Slide Notes</title>
     <p>
       blah blah
     </p>
   </subsection>
 
-  <subsection>>
-    <title>Instructor To-Do List</title>
+  <subsection
+    xml:id="topic-upstreaming-todo">
+    <title>To-Do List</title>
   </subsection>
 
-  <subsection>
-    <title>Instructor Exercise Notes</title>
+  <subsection
+    xml:id="topic-upstreaming-exercise-notes">
+    <title>Exercise Notes</title>
   </subsection>
 </section>

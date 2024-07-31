@@ -6,11 +6,21 @@
   >
   <title>Communities and Collaboration Instructor Notes</title>
 
-  <introduction>
+  <subsection
+    xml:id="topic-communities-slide-notes">
+    <title>Slide Notes</title>
     <p>
-      blah
+      blah blah
     </p>
-  </introduction>
+  </subsection>
 
+  <subsection
+    xml:id="topic-communities-todo">
+    <title>To-Do List</title>
+  </subsection>
 
+  <subsection
+    xml:id="topic-communities-exercise-notes">
+    <title>Exercise Notes</title>
+  </subsection>
 </section>
