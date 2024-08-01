@@ -5,22 +5,184 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Communities and Collaboration Instructor Notes</title>
+  <introduction>
+    <p>
+      This chapter introduces students to Free and Open Source Software (FOSS), FOSS community principles and roles. The materials assume that this is the student's first introduction to FOSS and aim to develop a conceptual picture and an introductory working knowledge rather than mastery.
+    </p>
+  </introduction>
 
   <subsection
     xml:id="topic-communities-slide-notes">
     <title>Slide Notes</title>
     <p>
-      blah blah
+      <ul>
+        <li>
+          <title>Slide 2</title>
+          <p>
+            The <url href="https://www.youtube.com/watch?v=upxUAI-fAtE">Grandma Mae Cookie Video</url> provides a good working metaphor for how FOSS collaboration works.  Students are asked to identify key FOSS vocabulary terms from this video.  Of that vocabulary, the following terms are most essential and are useful to refer back to through the remainder of the GitKit materials. The discussion following the video should ensure that they are clearly defined:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <term>Roles</term> - captures the idea that different project community members have different responsibilities.  Two of the key roles mentioned are:
+                <ul>
+                  <li>
+                    <p>
+                      <term>Maintainer</term> - (e.g. Grandma Mae) - a trusted community member that has write access to the definitive version of the project (i.e. the main 
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <term>Contributor</term> - (e.g. Aunt Maria, Uncle Miles) - a community member who is helping the project in some way (i.e. is upstreaming), but does not have write access to the upstream. They contribute to the project through discussion, documentation, proposing changes, providing code that fixes bugs or implements features, and many other ways.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Upstreaming</term> - the process of contributors proposing changes and the maintainers integrating those changes into the definitive version of the project.
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Main branch</term> - the definitive version of the project (e.g. Grandma Mae's recipe).  Note that there may be multiple copies of this recipe (i.e. multiple copies of the main branch).
+                <ul>
+                  <li>
+                    <p>
+                      <term>Upstream</term> - This term is not given in the video but is worth grounding in the Cookie metaphor because it is important in the remainder of the GitKit materials.
+                    </p>
+                    <p>
+                        In this context, the upstream is what contains the copy of the main branch that can only be changed by the maintainers (i.e. Grandma Mae's copy of the main branch).  The term upstream captures the idea that changes that are <term>upstreamed</term> are integrated into the "upstream" copy of the main branch.
+                    </p>
+                    <p>
+                        Note that contributors may propose changes to the upstream main branch, but they will not have sufficient privileges to integrate those changes.  Only maintainers have the permissions necessary to make changes to the upstream main branch.
+                    </p>
+                    <p>
+                        This fact becomes important in the GitKit Topic 2, where the rule that "only maintainers should change the main branch" is introduced.  This discussion should foreshadow that rule.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Branch</term> or <term>Patch</term> - A collection of changes to the project that are developed aside from the definitive version (e.g. Aunt Maria or Uncle Mile's version of the recipe). A branch or a patch is sent to the maintainers as part of the upstreaming process.
+              </p>
+            </li>
+            <li>
+              <p>
+                <term>Fork</term> - In the video a fork is a permanent split in the project community, with each group taking the project in different directions (e.g. as happened with MySQL and MariaDB).
+              </p>
+              <p>
+                It is important to note that this is a different meaning than a fork in GitHub/GitLab. In GitHub/GitLab a fork most often refers to a personal copy of the upstream repository.  This copy is made as part of the upstreaming process, rather than to split the community and take the project in a different direction. Though, a fork (split) would often begin with a fork (copy).
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <title>Slides 3-5</title>
+          <p>
+            The discussions around FOSS communities, principles and roles asks students to build out from the Cookie metaphor. They are asked to use their understanding of the general terms (e.g. Transparency, Inclusivity, etc; Leaders, Requestors, etc) to imagine what these terms mean in the context of a FOSS community. Not every term will require clarification following small group discussion. Most commonly the principles of Meritocracy and Release Early and Often, and the distinction between the roles of User, Requestor and Contributor are topics for further clarification. This is also a good point at which to emphasize that a given individual may play different roles at the same time.  For example, Grandma Mae could put forth an idea for an improvement to her recipe as a contributor. Then if the community likes the idea, she may, as a maintainer, integrate it into the upstream main branch.
+          </p>
+        </li>
+        <li>
+          <title>Slides 6-8</title>
+          <p>
+            <term>Version control</term> and <term>repository hosting</term> are defined as collaboration tools and a distinction is drawn between them. A number of different examples of each, e.g. svn/mercurial for version control and GitLab/SourceForge for repository hosting, are mentioned for breadth. This can also help to emphasize that while the GitKit focuses on git and GitHub, that the concepts being covered apply to a broad range of similar tools. While the distinction between version control and repository hosting is a useful one, it is far less clear in practice and this can cause confusion for some students - particularly those with prior git/GitHub experience. For example, most repository hosting services provide access to some aspects of the underlying version control tools for the repositories that they host (e.g. it is possible to create branches and commit changes via the GitHub user interface).
+          </p>
+        </li>
+        <li>
+          <title>Slides 10-15</title>
+          <p>
+            The GitKit uses sequences of diagrams to visualize key concepts and processes related to the use of git and GitHub and the forking workflow. Diagrams in the same style are used throughout all of the GitKit topics. A key to success with the GitKit, for both faculty and students, is understanding these diagrams and being able to connect what they depict to the git / GitHub commands used in the forking workflow.
+          </p>
+          <p>
+            The first series of diagrams show the relationship between the three copies of a FOSS project's repository that a developer interacts with (upstream, origin and local). They also illustrate the connection between these three copies and the git and GitHub commands that create them (fork and clone).  A distinction is also made between remote copies of the repository, those residing in the cloud (the upstream and origin), and the local copy that resides in the student's development environment.  Note, that when using a KitClient the development environment is running via GitPod and not on the student's physical machine.  This can be a source of confusion and it is worth spending some time clarifying this relationship.
+          </p>
+          <p>
+            The hands-on activities provide detailed instructions for creating a fork in GitHub, starting the KitClient and creating a local clone.  However, if time allows it may be also be helpful to demonstrate these actions in class.
+          </p>
+        </li>
+        <li>
+          <title>Slides 17-20</title>
+          <p>
+            A second series of diagrams introduce a basic FOSS workflow that illustrates how upstreaming works. Note that this is not the full forking workflow, as it does not include the use of feature branches and ignores the details of staging and committing changes. The primary purpose of this sequence of diagrams is to illustrate how the concept of upstreaming from the Cookie video is implemented using git/GitHub. Additional details of the forking workflow (branch, edit, stage, commit) are added in the second topic and revisited in the third topic.
+          </p>
+        </li>
+        <li>
+          <title>Slide 21</title>
+          <p>
+            The slides conclude with a short introduction to the idea of an issue tracker and its role in a project. The use of the issue tracker tends to be fairly intuitive and the hands-on activities walk students through some of the details. The hands-on activity has each student claim an issue that is labeled as "Round 1." Note that they claim the issue in this activity, but do not fix it until the next activity. Each of these issues asks them to fix a typo that appears in one of the Markdown (<c>.md</c>) files in the root directory of the project.
+          </p>
+          <p>
+            If time permits, a live demo looking at the issue tracker in the upstream GitKit-FarmData2 repository, pointing out the "Round 1" label and how to tell if an issue has been assigned. Note that several of the issues will have been pre-assigned to whomever deployed the kit.
+          </p>
+        </li>
+      </ul>
     </p>
   </subsection>
 
   <subsection
     xml:id="topic-communities-todo">
     <title>To-Do List</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Follow the steps in <xref ref="topic-quick-start" text="type-global-title" /> or <xref ref="topic-adopting-gitkit" text="type-global-title" /> to prepare to use the GitKit in your course. 
+          </p>
+        </li>
+      </ol>
+    </p>
   </subsection>
 
   <subsection
     xml:id="topic-communities-exercise-notes">
     <title>Exercise Notes</title>
+    <p>
+      TODO: THE FIRST LINES NEED TO BE LINKED TO THE PROPER QUESTIONS. The questions referenced now are in the old MSWord sheets.
+
+      <ul>
+        <li>
+          <p>
+            Question 12b (Linux KitClient) / Question 8 (VSCode KitClient)
+          </p>
+          <p>
+            Some students will try to clone the upstream GitKit-FarmData2 repository instead of their origin repository.  A few may even attempt to clone the real FarmData2 repository.  The Kit-tty should prevent this and provide a helpful tip.
+          </p>
+        </li>
+        <li>
+          <p>
+            Question 13 (Linux KitClient) / Question 11 (VSCode KitClient)
+          </p>
+          <p>
+            Checking the origin remote that is given as the answer to this question will confirm that the student has correctly cloned their origin.  Again, the Kit-tty should prevent them doing this incorrectly, but if somehow it did not catching and correcting this early is important.
+          </p>
+        </li>
+        <li>
+          <p>
+            Question 15a
+          </p>
+          <p>
+            The answer to this question will reasonably differ depending upon when students complete the exercise.  There are initially 3 issues that are pre-assigned to the user that deployed the GitKit.  Students who complete the exercise early are likely to all identify these issues. As additional students claim issues, other students will identify those claimed issues as well.
+          </p>
+        </li>
+        <li>
+          <p>
+            Question 15b
+          </p>
+          <p>
+            The activity instructs students to claim an issue by commenting on it with the very specific phrase "I would like to work on this please!"  If they are the first to do so the issue will be assigned to them and they will receive a personalized message from a one of the community automations in response. If they are not the first to respond, they will also receive a message to that effect and a suggestion to try a different issue.  It is important that they use the exact message given in the assignment, otherwise the community automation will not recognize and respond to the question.
+          </p>
+          <p>
+            Question 19
+          </p>
+          <p>
+            Some students will attempt to clone the project that they select while they are inside the GitKit-FarmData2 repository that they already cloned.  If they do attempt this the Kit-tty should intervene, prevent the action and respond with a helpful message.
+          </p>
+        </li>
+      </ul>
+    </p>
   </subsection>
 </section>
