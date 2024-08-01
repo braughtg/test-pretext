@@ -5,6 +5,14 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Merge Conflicts Instructor Notes</title>
+  <introduction>
+    <p>
+      At the start of this chapter students will have made pull requests for the "Round 2" issues. Initially GitHub will report that these PRs can be merged automatically. However, the instructor will begin this topic by introducing changes to the upstream main that create merge conflicts with the fixes to each of the "Round 2" issues.  Students will then observe that their PRs go from being able to be merged automatically to containing conflicts.
+    </p>
+    <p>
+      This chapter then focuses on the resolution of merge conflicts.  The concepts of merge commits, common ancestors, best common ancestor, and non-conflicting and conflicting changes are introduced. The topic then covers the process of merging main into a feature branch, git's raw conflict information and the use of graphical merge tool.  The hands-on activity concludes with the students having resolved the merge conflict in their "Round 2" pull request.  Note that these PRs are never merged into the upstream as part of the GitKit activities.    
+    </p>
+  </introduction>
 
   <subsection
     xml:id="topic-merge-conflicts-slide-notes">

@@ -58,7 +58,7 @@
 				</li>
 				<li>
 					<p>
-						Review the chapters, slides and instructor notes in <xref ref="topic-instructor-notes" />, and create assignments as appropriate for your course.
+						Review the chapters, slides and instructor notes in <xref ref="topic-instructor-materials" />, and create assignments as appropriate for your course.
 					</p>
 				</li>
 				<li>
@@ -115,7 +115,7 @@
 				</li>
 				<li>
 					<p>
-						Refer <xref ref="topic-instructor-notes" text="type-global-title" /> for links to the chapters, the class slides, and instructor notes as you teach each chapter of the GitKit.
+						Refer <xref ref="topic-instructor-materials" text="type-global-title" /> for links to the chapters, the class slides, and instructor notes as you teach each chapter of the GitKit.
 					</p>
 				</li>
 				<li>
@@ -419,7 +419,7 @@
 				</li>
 				<li>
 					<p>
-						For each Chapter in the text, find the section of <xref ref="topic-instructor-notes" text="type-global-title" /> for that chapter:
+						For each Chapter in the text, find the section of <xref ref="topic-instructor-materials" text="type-global-title" /> for that chapter:
 						<ol>
 							<li>
 								<p>
@@ -428,17 +428,17 @@
 							</li>
 							<li>
 								<p>
-									Review the <em>Slide Notes</em> in the Instructor Notes for the chapter.
+									Review the <em>Slide Notes</em> for the chapter.
 								</p>
 							</li>
 							<li>
 								<p>
-									Review the <em>To-Do List</em> in the Instructor Notes for the chapter for a lits of tasks to be done before the class.
+									Review the <em>To-Do List</em> for the chapter for a list of tasks to be done before the class.
 								</p>
 							</li>
 							<li>
 								<p>
-									Complete the exercises in the chapter while simultaneously following along with the <em>Exercise Notes</em> in the Instructor Notes for the chapter.
+									Complete the exercises in the chapter while simultaneously following along with the <em>Exercise Notes</em> for the chapter.
 								</p>
 							</li>
 						</ol>
@@ -560,8 +560,8 @@ https://github.com/braughtg/test-gitkit
 		</p>
 	</subsection>
 
-	<subsection xml:id="topic-instructor-notes">
-		<title>Instructor Notes</title>
+	<subsection xml:id="topic-instructor-materials">
+		<title>Instructor Materials</title>
 		
 		<introduction>
 			The following links provide easy access to the chapters with the hands-on exercises, the presentation slides for each chapter and a set of instructor notes for each chapter. 
@@ -574,7 +574,7 @@ https://github.com/braughtg/test-gitkit
 						<ul>
 							<li>
 								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.ppt?raw=true">Slides</url> |
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch2-CommunitiesAndCollaboration.pptx?raw=true">Slides</url> |
 									<xref ref="topic-communities-slide-notes" text="custom">Slide Notes</xref> |
 									<xref ref="topic-communities-todo" text="custom">To-Do</xref> |
 									<xref ref="topic-communities-exercise-notes" text="custom">Exercise Notes</xref>
@@ -590,7 +590,7 @@ https://github.com/braughtg/test-gitkit
 						<ul>
 							<li>
 								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.ppt?raw=true">Slides</url> |
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-WorkingLocallyAndUpstreaming.pptx?raw=true">Slides</url> |
 									<xref ref="topic-upstreaming-slide-notes" text="custom">Slide Notes</xref> |
 									<xref ref="topic-upstreaming-todo" text="custom">To-Do</xref> |
 									<xref ref="topic-upstreaming-exercise-notes" text="custom">Exercise Notes</xref>
@@ -606,7 +606,7 @@ https://github.com/braughtg/test-gitkit
 						<ul>
 							<li>
 								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch3-StayingSynchronized.ppt?raw=true">Slides</url> |
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch4-StayingSynchronized.pptx?raw=true">Slides</url> |
 									<xref ref="topic-synchronizing-slide-notes" text="custom">Slide Notes</xref> |
 									<xref ref="topic-synchronizing-todo" text="custom">To-Do</xref> |
 									<xref ref="topic-synchronizing-exercise-notes" text="custom">Exercise Notes</xref>
@@ -622,7 +622,7 @@ https://github.com/braughtg/test-gitkit
 						<ul>
 							<li>
 								<p>
-									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.ppt?raw=true">Slides</url> |
+									[ <url href="https://github.com/HFOSSedu/GitKit-Text/tree/main/materials/slides/Ch5-MergeConflicts.pptx?raw=true">Slides</url> |
 									<xref ref="topic-merge-conflicts-slide-notes" text="custom">Slide Notes</xref> |
 									<xref ref="topic-merge-conflicts-todo" text="custom">To-Do</xref> |
 									<xref ref="topic-merge-conflicts-exercise-notes" text="custom">Exercise Notes</xref>

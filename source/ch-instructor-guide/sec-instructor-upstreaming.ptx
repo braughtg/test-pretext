@@ -5,6 +5,11 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Working Locally and Upstreaming Changes Instructor Notes</title>
+  <introduction>
+    <p>
+      This chapter focuses on the upstreaming process.  Students learn about feature branches, staging and committing changes, pushing feature branches to their origin repository, and making a pull request. At the end of the hands-on activity each student will have experienced the full forking workflow, resulting in a pull request to the upstream GitKit-FarmData2 repository for changes that fix the "Round 1" issue that they were assigned.  The "Round 1" issues have been created such that they do not conflict with each other.  Thus, all of the student pull requests should be able to be merged automatically.  The instructor will typically perform these merges as a demonstration at the start of <xref ref="topic-staying-synchronized" />.
+    </p>
+  </introduction>
 
   <subsection
     xml:id="topic-upstreaming-slide-notes">

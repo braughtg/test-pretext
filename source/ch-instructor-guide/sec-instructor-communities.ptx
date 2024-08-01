@@ -5,6 +5,11 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Communities and Collaboration Instructor Notes</title>
+  <introduction>
+    <p>
+      This chapter introduces students to Free and Open Source Software (FOSS), FOSS community principles and roles. The materials assume that this is the student's first introduction to FOSS and aim to develop a conceptual picture and an introductory working knowledge rather than mastery.
+    </p>
+  </introduction>
 
   <subsection
     xml:id="topic-communities-slide-notes">

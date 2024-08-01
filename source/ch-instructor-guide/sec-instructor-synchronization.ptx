@@ -5,6 +5,14 @@
   xmlns:xi="http://www.w3.org/2001/XInclude"
   >
   <title>Staying Synchronized Instructor Notes</title>
+  <introduction>
+    <p>
+      At the start of this chapter, the students will have made pull requests for fixes to the "Round 1" issues that they have claimed.  When these pull requests are merged into the upstream main branch it will contain changes that are not in the student's local and origin main branches.  That is, the student's main branches will be out of synch with the upstream main. This topic deals with how developers synchronize the main branches of their local and origin repositories with the upstream main branch.
+    </p>
+    <p>
+      The hands-on activity has the students synchronize their main branches. They then find a "Round 2" ticket in the issue tracker and repeat the forking workflow cycle to upstream a fix for it (i.e. branch, edit, stage, commit, push, pull request).  This provides students with additional practice with the skills and concepts introduced in <xref ref="topic-communities-and-collaboration" />. In addition, the PRs that the students create for the "Round 2" issues also set up for <xref ref="topic-merge-conflicts" />, which focuses on merge conflicts and how to resolve them.
+    </p>
+  </introduction>
 
   <subsection
     xml:id="topic-synchronizing-slide-notes">
