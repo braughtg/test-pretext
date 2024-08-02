@@ -6,21 +6,9 @@
   <introduction>
     <p>
       When you set out to make changes to the project you will do so by working on a feature branch.
-      <xref ref="fig-create-feature-branch" /> illustrates the process of creating a feature branch.
-      The exercises in this section will walk you through the process of creating a feature branch on which you will fix the issue that you claimed in <xref provisional="a reference back to ch2-issue-tracker section" />.
+      The exercises in this section will walk you through the process of creating a feature branch on which you will fix the issue that you claimed in <xref ref="topic-the-issue-tracker" />.
     </p>
   </introduction>
-
-  <p>
-    <figure xml:id="fig-create-feature-branch">
-      <caption> Create Feature Branch. </caption>
-      <image source="images/ch-upstreaming-changes/create-feature-branch.png" width="75%">
-        <description>
-          Cloud image of origin, upstream, and local branches.
-        </description>
-      </image>
-    </figure>
-  </p>
 
   <exercises>
   <title/>
@@ -155,43 +143,27 @@
 
 
     <task xml:id="ex-creating-a-branch-b" label="ex-creating-a-branch-b">
-      <statement>
+      <statement correct="no">
         <p>
           Use the <c>git status</c> command again now.
-          Does creating a new branch with the <c>git branch</c> command make your new branch the active branch?
+        </p>
+        <p>
+          Creating a new branch with the <c>git branch</c> command makes your new branch the active branch.
         </p>
       </statement>
 
-      <choices randomize="no">
-        <choice correct="no">
-          <statement>
-            <p>
-              Yes.
-            </p>
-          </statement>
-          <feedback>
-            <p>
-              <c>git branch &lt;name&gt;</c> only creates the branch.
-            </p>
-          </feedback>
-        </choice>
+      <feedback>
+        <p>
+          <c>git branch &lt;name&gt;</c> only creates the branch.
+        </p>
+      </feedback>
 
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              No.
-            </p>
-          </statement>
-          <feedback>
-            <p>
-              <c>git branch &lt;name&gt;</c> only creates the branch.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
+      <hint>
+        <p>
+          After you create a branch what needs to be done to make it active?
+        </p>
+      </hint>
     </task>
-
 
     <task xml:id="ex-creating-a-branch-c" label="ex-creating-a-branch-c">
       <statement>
@@ -202,5 +174,21 @@
       <response />
     </task>
   </exercise>
+
+  <p>
+    <xref ref="fig-create-feature-branch" /> illustrates the process you just completed to create a feature branch. The feature branch created is shown in orange.
+  </p>
+
+  <p>
+    <figure xml:id="fig-create-feature-branch">
+      <caption> Create Feature Branch. </caption>
+      <image source="images/ch-upstreaming-changes/create-feature-branch.png" width="75%">
+        <description>
+          Cloud image of origin, upstream, and local branches.
+        </description>
+      </image>
+    </figure>
+  </p>
+
   </exercises>
 </section>
