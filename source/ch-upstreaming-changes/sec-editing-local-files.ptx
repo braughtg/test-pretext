@@ -12,10 +12,27 @@
 
   <exercises>
   <title/>
-  <exercise xml:id="ex-locate-claimed-issue" label="ex-locate-claimed -issue">
-    <introduction>
+  <exercise xml:id="ex-claimed-issue-url" label="ex-claimed-issue-url">
+    <statement>
       <p>
         In order to make the changes to the appropriate local file, you will need to review the issue that you claimed.
+      </p>
+
+      <p>
+        Provide a link to the issue that you claimed in the issue tracker.
+      </p>
+
+      <p>
+        <var width="55" />
+      </p>
+    </statement>
+    <!-- THIS NEEDS TO BE UPDATED WITH FEEDBACK AND A REGULAR EXPRESSION TO MAKE SURE THE STUDENT IS IN THE ISSUE TRACKER -->
+  </exercise>
+
+  <exercise xml:id="ex-locate-claimed-issue" label="ex-locate-claimed-issue">
+    <introduction>
+      <p>
+        Read the issue that you claimed.
       </p>
     </introduction>
 
@@ -23,27 +40,17 @@
     <task xml:id="ex-locate-claimed-issue-a" label="ex-locate-claimed-issue-a">
       <statement>
         <p>
-          Provide a link to the issue that you claimed in the issue tracker.
+          In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
     <task xml:id="ex-locate-claimed-issue-b" label="ex-locate-claimed-issue-b">
       <statement>
         <p>
-          In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
-        </p>
-        <response />
-      </statement>
-    </task>
-
-
-    <task xml:id="ex-locate-claimed-issue-c" label="ex-locate-claimed-issue-c">
-      <statement>
-        <p>
-          Use a text editor to modify the file you identified in <xref ref="ex-locate-claimed-issue-b" /> so that the issue you claimed has been fixed.
+          Use a text editor to modify the file you identified in <xref ref="ex-locate-claimed-issue-a" /> so that the issue you claimed has been fixed.
           Be sure to save your changes.
         </p>
       </statement>
@@ -77,11 +84,11 @@
     <task xml:id="ex-verify-changes-a" label="ex-verify-changes-a">
       <statement>
         <p>
-          What two things does the output tell you about the file that you edited? If you see the message “nothing to commit, working tree clean,” it means that your edits in the previous exercise were not saved. <term>NOTE: may want to change this so that it asks which files are staged, untracked, etc.</term>
-          Go back and save your edits and then issue the <c>git status</c> command again before describing the two things that the output tells you.
+          What two things does the output tell you about the file that you edited? If you see the message “nothing to commit, working tree clean,” it means that your edits in the previous exercise were not saved.
+          <term>NOTE: may want to change this so that it asks which files are staged, untracked, etc.</term> Go back and save your edits and then issue the <c>git status</c> command again before describing the two things that the output tells you.
         </p>
-        <response />
       </statement>
+      <response />
     </task>
   </exercise>
 
@@ -101,8 +108,8 @@
         <p>
           How is the change that you made indicated in the output from <c>git diff</c>?
         </p>
-        <response />
       </statement>
+      <response />
     </task>
   </exercise>
   </exercises>
