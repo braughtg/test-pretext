@@ -5,10 +5,11 @@
 
   <introduction>
     <p>
-      In this section you will do the work necessary to commit the changes made to your <em>Local Files</em> to your local repository. The process of committing changes is illustrated in <xref ref="fig-committing-changes" />.
+      In this section you will do the work necessary to commit the changes made to your <em>Local Files</em> to your local repository.
+      The process of committing changes is illustrated in <xref ref="fig-committing-changes" />.
     </p>
   </introduction>
-  
+
   <p>
     <figure xml:id="fig-committing-changes">
       <caption> Committing changes. </caption>
@@ -22,7 +23,6 @@
 
   <exercises>
   <title/>
-
   <exercise xml:id="ex-meaningful-commit-messages" label="ex-meaningful-commit-messages">
     <introduction>
       <p>
@@ -100,8 +100,8 @@
         <p>
           Provide the command you entered.
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
@@ -110,46 +110,132 @@
         <p>
           Now use the <c>git status</c> command again.
           Compare your output to the output in <xref ref="ex-staging-changes-c" />.
-          What two changes have occurred that reflect that your changes have been staged? <term>NOTE: like previous question, may want to change this so that it asks which files are staged, untracked, etc.
-          Then ask a question like "How do you know your changes have been committed?</term>
+          What two changes have occurred that reflect that your changes have been staged?
         </p>
-        <response />
       </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              No files appear listed as modified in red (meaning they are unstaged).
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              No files appear listed as modified in green (meaning they are staged).
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The output states "nothing to commit".
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              All of the above.
+            </p>
+          </statement>
+        </choice>
+      </choices>
     </task>
 
 
     <task xml:id="ex-committing-changes-c" label="ex-committing-changes-c">
       <statement>
         <p>
-          Use the <c>git log</c> command to show the 3 most recent commits to your branch.
-          How is this output different from what you observed in Question #1?  Briefly explain why? <term>Note: Question #1 is now a multiple choice question.
-          Maybe there should be multiple choice questions here that are similar (showing that the new commit appears in the log).</term>
+          How do you know your changes have been committed?
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
     <task xml:id="ex-committing-changes-d" label="ex-committing-changes-d">
       <statement>
         <p>
-          Switch to your <c>main</c> branch.
-          What command did you use?
+          Use the <c>git log</c> command to show the 3 most recent commits to your branch.
+          How is this output different from what you observed in Question #1?  Briefly explain why? <term>Note: Question #1 is now a multiple choice question.
+          Maybe there should be multiple choice questions here that are similar (showing that the new commit appears in the log).
+          I'm not sure I understand this - Question #1 is a parson's question.</term>
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
     <task xml:id="ex-committing-changes-e" label="ex-committing-changes-e">
       <statement>
         <p>
-          Does the output of a <c>git log</c> command now show the information about the commit you made?  Briefly explain why or why not?
+          Switch to your <c>main</c> branch.
+          What command did you use?
         </p>
-        <response />
       </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              <c>git status</c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git stage main</c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git branch main</c>
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git switch main</c>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </task>
+
+
+    <task xml:id="ex-committing-changes-f" label="ex-committing-changes-f">
+      <statement correct="yes">
+        <p>
+          The output of the <c>git log</c> command now shows the information about the commit you made.
+        </p>
+      </statement>
+    </task>
+
+
+    <task xml:id="ex-committing-changes-g" label="ex-committing-changes-g">
+      <statement>
+        <p>
+          Briefly explain how you know.
+        </p>
+      </statement>
+      <response />
     </task>
   </exercise>
   </exercises>
 </section>
-

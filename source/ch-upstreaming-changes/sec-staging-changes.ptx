@@ -5,7 +5,8 @@
 
   <introduction>
     <p>
-      As you saw in the previous section, you now have modifications to your local files that have not been staged. The process of staging changes (i.e.
+      As you saw in the previous section, you now have modifications to your local files that have not been staged.
+      The process of staging changes (i.e.
       adding the files to the stage) is illustrated in <xref ref="fig-staging-changes" />.
       Recall from <xref ref="fig-edit-local-files-on-feature-branch" /> that the blue dot in <em>Local Files</em> represents the changes you made.
       In <xref ref="fig-staging-changes" />, those changes are staged and will be made into a commit that is added to your feature branch in the next section.
@@ -45,8 +46,8 @@
         <p>
           Provide the command you entered.
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
@@ -59,8 +60,8 @@
           However, you are likely to see <c>git add</c> used in other resources, so it is worth knowing that they are equivalent.
           Provide the <c>git add</c> command that would be equivalent to your answer in <xref ref="ex-staging-changes-a" />.
         </p>
-        <response />
       </statement>
+      <response />
     </task>
 
 
@@ -69,11 +70,151 @@
         <p>
           Now run the <c>git status</c> command again.
           Compare your output in <xref ref="ex-staging-changes-a" /> to the output in <xref ref="ex-verify-changes-a" />.
-          What two changes have occurred that reflect that your changes have been staged? <term>NOTE: like previous question, may want to change this so that it asks which files are staged, untracked, etc.
-          Then ask a question like "How do you know that your changes have been staged?"</term>
         </p>
-        <response />
+
+        <p>
+          How many files are not staged?
+        </p>
       </statement>
+
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              0
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! After issuing the <c>git stage</c> (or <c>git add</c>) command the file will be staged.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Once you have issued the <c>git stage</c> command it show that the file is ready to be committed.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Did you change more than 1 file by accident? Verify that you only changed the file specified in your issue.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Cannot be determined from the output provided by the <c>git status</c> command.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The <c>git status</c> command will show you all unstaged and staged files.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Staged means a file has been modified and added to the commit.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-staging-changes-d" label="ex-staging-changes-d">
+      <statement>
+        <p>
+          How many files are listed as ready to be committed?
+        </p>
+      </statement>
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              0
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              If you issued the <c>git stage</c> command properly the file you changed should appear as ready to be committed.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! After issuing the <c>git stage</c> (or <c>git add</c>) command the file will be staged.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Did you change more than 1 file by accident? Verify that you only changed the file specified in your issue.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Cannot be determined from the output provided by the <c>git status</c> command.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The <c>git status</c> command will show you all unstaged and staged files.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Staged means a file has been modified and added to the commit.
+        </p>
+      </hint>
     </task>
   </exercise>
   </exercises>
