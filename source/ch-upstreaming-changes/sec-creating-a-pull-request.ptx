@@ -133,7 +133,8 @@
         <c>base repository</c></premise> <response>the upstream</response> </match>  </matches>
         <hint>
           <p>
-            HINT HERE
+            The base is where you want your changes merged into/the repository you created your fork from.
+            The head is where your changes are being pulled from/the branch you pushed to your GitHub account from your local machine.
           </p>
         </hint>
       </task>
@@ -154,7 +155,8 @@
         <c>compare branch</c></premise> <response>pulled from</response> </match>  </matches>
         <hint>
           <p>
-            HINT HERE
+            The base is where you want your changes merged into.
+            The head is where your changes are being pulled from.
           </p>
         </hint>
       </task>
@@ -175,7 +177,7 @@
     <task xml:id="ex-pull-request-finish-a" label="ex-pull-request-finish-a">
       <statement>
         <p>
-          Give your PR a descriptive title – a similar idea to using meaningful commit messages.
+          Give your PR a descriptive title - a similar idea to using meaningful commit messages.
         </p>
       </statement>
     </task>
@@ -218,6 +220,7 @@
       <statement>
         <p>
           Check that status of your PR and confirm that it can be merged automatically.
+          The status will be listed at the top of the GitHub page below the image from <xref ref="ex-pull-request-b"/>
         </p>
       </statement>
     </task>
@@ -257,12 +260,16 @@
       <p>
         Find your Pull Request and give a link to it here.
       </p>
+
+      <p>
+        <var width="55" />
+      </p>
+      <!-- THIS NEEDS TO BE UPDATED WITH FEEDBACK AND A REGULAR EXPRESSION TO MAKE SURE THE STUDENT IS IN THE UPSTREAM REPOSITORY -->
     </statement>
-    <response />
   </exercise>
 
   <exercise xml:id="ex-pull-request-files" label="ex-pull-request-files">
-    <statement>
+    <introduction>
       <p>
         On your pull request page there will be “Files Changed” tab:
       </p>
@@ -282,12 +289,53 @@
         It also indicates the changes you have made.
         The project maintainers will often use this diff to see the details of what you have changed.
       </p>
+    </introduction>
 
-      <p>
-        Briefly describe how the diff indicates the changes that you made.
-      </p>
-    </statement>
-    <response />
+    
+    <task xml:id="ex-pull-request-files-a" label="ex-pull-request-files-a">
+      <statement>
+        <p>
+          Briefly describe how the diff indicates the changes that you made.
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              The line(s) which contains the change(s) appears twice.
+              Once in red with the old version and once in green with the new version.
+              The change(s) appear in both in bold.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The line(s) which contains the change(s) appears once in red.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The line(s) which contains the change(s) appears once in green.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Only the changed word(s) appear with the old in strike through and the new next to it.
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </task>
   </exercise>
   </exercises>
 </section>
