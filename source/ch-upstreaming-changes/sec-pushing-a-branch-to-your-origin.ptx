@@ -32,56 +32,69 @@
     <statement>
       <p>
         The <c>git branch -l</c> (lower case L, not one) command lists all of the branches that exist in your local repository.
-        What branches are in your local repository?
+      </p>
+      <p>
+        How many branches are in your local repository?
       </p>
     </statement>
 
-
-    <choices randomize="yes">
+    <choices>
       <choice>
         <statement>
           <p>
-            branch name
+            1 - <c>main</c>
           </p>
         </statement>
+        <feedback>
+          <p>
+            Look again, you should see more than just the <c>main</c> branch.
+          </p>
+        </feedback>
       </choice>
 
       <choice>
         <statement>
           <p>
-            branch name
+            1 - <c>feature branch</c>
           </p>
         </statement>
-      </choice>
-
-      <choice>
-        <statement>
+        <feedback>
           <p>
-            branch name
+            Look again, you should see more than just the <c>feature</c> branch.
           </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            branch name
-          </p>
-        </statement>
+        </feedback>
       </choice>
 
       <choice correct="yes">
         <statement>
           <p>
-            branch name
+            2 - <c>main</c> and <c>feature branch</c>
           </p>
         </statement>
+        <feedback>
+          <p>
+            Correct! Your local repository will have both the <c>main</c> branch and your <c>feature</c> branch.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            3 or more with differing branch names
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            If you have more than 2 branches perhaps you created a feature branch multiple times by accident.
+          </p>
+        </feedback>
       </choice>
     </choices>
 
     <hint>
       <p>
-        HINT HERE
+        Refer to <xref ref="fig-pushing-feature-branch"/> and look at the local branches on your machine.
       </p>
     </hint>
   </exercise>
@@ -97,56 +110,67 @@
     <task xml:id="ex-branch-diff-a" label="ex-branch-diff-a">
       <statement>
         <p>
-          What branches appear in your origin repository on GitHub?
+          How many branches appear in your origin repository on GitHub?
         </p>
       </statement>
 
-
-      <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              branch name
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              branch name
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              branch name
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              branch name
-            </p>
-          </statement>
-        </choice>
-
+      <choices>
         <choice correct="yes">
           <statement>
             <p>
-              branch name
+              1 - <c>main</c>
             </p>
           </statement>
+          <feedback>
+            <p>
+              Correct! There is only 1 branch, <c>main</c> in your origin repository on GitHub.
+            </p>
+          </feedback>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              1 - <c>feature branch</c>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Look again, your <c>feature</c> branch should not be listed in GitHub as it is only in your local repository.
+            </p>
+          </feedback>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              2 - <c>main</c> and <c>feature branch</c>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Look again, your <c>feature</c> branch should not be listed in GitHub as it is only in your local repository.
+            </p>
+          </feedback>
+        </choice>
+  
+        <choice>
+          <statement>
+            <p>
+              3 or more with differing branch names
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Perhaps you aren't in your origin repository. Make sure you see your GitHub userid in the upper left hand corner of your GitHub tab.
+            </p>
+          </feedback>
         </choice>
       </choices>
-
+  
       <hint>
         <p>
-          HINT HERE
+          Make sure you are in your origin repository, not the upstream repository. Refer to <xref ref="fig-pushing-feature-branch"/> and look at the origin to see what branches should appear on GitHub.
         </p>
       </hint>
     </task>
@@ -229,7 +253,7 @@
 
       <p>
         Note: You can use the name of the remote repository, so you do not need to use the full URL.
-        You will also need to paste your PAT as the password when it is requested.
+        You will also need to paste your PAT as the password when it is requested. <em>The cursor will not move when you put in the PAT nor will you see any characters. After you type or paste it hit Enter</em>
       </p>
     </introduction>
   </exercise>
