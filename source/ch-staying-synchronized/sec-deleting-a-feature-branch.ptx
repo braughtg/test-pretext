@@ -46,7 +46,7 @@
         </p>
 
         <p>
-          Which command did you type to list the local repositories?
+          Which command did you type to list the local branches?
         </p>
       </statement>
 
@@ -58,6 +58,11 @@
               <c>git switch</c>
             </p>
           </statement>
+          <feedback>
+            <p>
+              The <c>git switch</c> command is used to change the active branch.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
@@ -66,6 +71,11 @@
               <c>git pull</c>
             </p>
           </statement>
+          <feedback>
+            <p>
+              The <c>git pull</c> command is used to pull changes from a remote repository to your local repository.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
@@ -74,6 +84,11 @@
               <c>git commit</c>
             </p>
           </statement>
+          <feedback>
+            <p>
+              The <c>git commit</c> command is used to commit staged changes to the repository.
+            </p>
+          </feedback>
         </choice>
 
         <choice correct="yes">
@@ -82,18 +97,80 @@
               <c>git branch</c>
             </p>
           </statement>
+          <feedback>
+            <p>
+              Correct! The <c>git branch</c> command is used to display all of branches in your local repository.
+            </p>
+          </feedback>
         </choice>
       </choices>
 
       <hint>
         <p>
-          ADD HINT HERE
+          Refer back to the section on switching branches <xref ref="topic-switching-branches"/>
         </p>
       </hint>
     </task>
 
 
     <task xml:id="ex-deleting-feature-branch-b" label="ex-deleting-feature-branch-b">
+      <statement>
+        <p>
+          From the output provided by <xref ref="ex-deleting-feature-branch-a"/> how do you know which is the active branch?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              It has an * next to it.
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              It appears in green.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It appears in bold.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It appears in italics.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It is not possible to tell the active branch based upon the output provided.
+            </p>
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Refer back to the section on switching branches <xref ref="topic-switching-branches"/>
+        </p>
+      </hint>
+    </task>
+
+    <task xml:id="ex-deleting-feature-branch-c" label="ex-deleting-feature-branch-c">
       <statement>
         <p>
           The command <c>git branch -D &lt;branch&gt;</c> will delete a branch from your local repository.
@@ -103,7 +180,7 @@
     </task>
 
 
-    <task xml:id="ex-deleting-feature-branch-c" label="ex-deleting-feature-branch-c">
+    <task xml:id="ex-deleting-feature-branch-d" label="ex-deleting-feature-branch-d">
       <statement>
         <p>
           How can you check if your branch was deleted?  Be sure to check that it was deleted.
@@ -123,34 +200,20 @@
 
 
     <task xml:id="ex-deleting-feature-branch-on-github-a" label="ex-deleting-feature-branch-on-github-a">
-      <statement>
+      <statement correct="false">
         <p>
-          Does this feature branch still exist in your <c>origin</c> repo on GitHub?
+          This feature branch no longer exists in your <c>origin</c> repo on GitHub.
         </p>
       </statement>
-
-
-      <choices>
-        <choice correct="yes">
-          <statement>
-            <p>
-              Yes
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              No
-            </p>
-          </statement>
-        </choice>
-      </choices>
+      <feedback>
+        <p>
+          You have only deleted the feature branch in your local repository. It still exists in your <c>origin</c> repository on GitHub.
+        </p>
+      </feedback>
 
       <hint>
         <p>
-          ADD HINT HERE
+          Make sure you look at your repository on GitHub and click the "Branches" link.
         </p>
       </hint>
     </task>
