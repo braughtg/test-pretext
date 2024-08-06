@@ -10,14 +10,14 @@
       The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo.
       This section walks you through that process.
     </introduction>
-    
+
 
     <task xml:id="ex-active-branch-a" label="ex-active-branch-a">
       <statement>
         <p>
           To pull the changes from the upstream main branch into your local repo you first need to ensure that <c>main</c> is the active branch in your local repo.
-          Make sure that <c>main</c> is the active branch in your local repo.
-          What command(s) did you use?
+          Check the active branch in your local repo.
+          What command did you use?
         </p>
       </statement>
 
@@ -26,53 +26,144 @@
         <choice>
           <statement>
             <p>
-              <c>git </c>
+              <c>git log</c>
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              The <c>git log</c> command tells you the commits made to the active branch.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
           <statement>
             <p>
-              <c>git </c>
+              <c>git branch main</c>
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              The <c>git branch main</c> command will create a new branch with the name <c>main</c>.
+            </p>
+          </feedback>
         </choice>
 
         <choice correct="yes">
           <statement>
             <p>
-              <c>git </c>
+              <c>git status</c>
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              Correct! The <c>git status</c> command tells you active branch.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
           <statement>
             <p>
-              <c>git </c>
+              <c>git switch main</c>
             </p>
           </statement>
-        </choice>
 
-        <choice correct="yes">
-          <statement>
+          <feedback>
             <p>
-              <c>git </c>
+              The <c>git switch main</c> command will change the active branch to main, not check what is the active branch.
             </p>
-          </statement>
+          </feedback>
         </choice>
       </choices>
 
       <hint>
         <p>
-          ADD HINT HERE
+          Refer back to the section in the previous chapter on switching branches <xref ref="topic-switching-branches"/>
         </p>
       </hint>
     </task>
 
 
     <task xml:id="ex-active-branch-b" label="ex-active-branch-b">
+      <statement>
+        <p>
+          If your active branch in not the <c>main</c> branch change the active branch now.
+          What command changes the active branch to main?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              <c>git log</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The <c>git log</c> command tells you the commits made to the active branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git branch main</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The <c>git branch main</c> command will create a new branch with the name <c>main</c>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git status</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The <c>git status</c> command tells you active branch, it does not switch branches.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git switch main</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The <c>git switch main</c> command will change the active branch to main.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Refer back to the section in the previous chapter on switching branches <xref ref="topic-switching-branches"/>
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-active-branch-c" label="ex-active-branch-c">
       <statement>
         <p>
           The command
@@ -90,30 +181,22 @@
     </task>
 
 
-    <task xml:id="ex-active-branch-c" label="ex-active-branch-c">
+    <task xml:id="ex-active-branch-d" label="ex-active-branch-d">
       <statement>
         <p>
           Examine the output from <xref ref="ex-active-branch-b"/>.
           It should not contain any error messages.
           If it does, return to <xref ref="ex-active-branch-b"/> and try again.
-          Which file(s) were changed by your <c>git pull</c> command?
+          Which of the following is shown in the output of the <c>git pull</c> command?
         </p>
       </statement>
 
 
       <choices randomized="yes">
-        <choice>
+        <choice correct="yes">
           <statement>
             <p>
-              File 1
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              File 2
+              The file(s) that were changed.
             </p>
           </statement>
         </choice>
@@ -121,15 +204,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              File 3
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              File 4
+              The number of additions to the files.
             </p>
           </statement>
         </choice>
@@ -137,7 +212,23 @@
         <choice correct="yes">
           <statement>
             <p>
-              File 5
+              The URL of <c>upstream</c>.
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              The number of deletions to the files.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              All of the branches in your local repository.
             </p>
           </statement>
         </choice>
@@ -145,7 +236,7 @@
 
       <hint>
         <p>
-          ADD HINT HERE
+          Make sure you look at all of the lines of output and the color coding of the lines.
         </p>
       </hint>
     </task>
