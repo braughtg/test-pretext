@@ -233,15 +233,7 @@
         <choice>
           <statement>
             <p>
-              <c>CHOICE </c>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <c>CHOICE </c>
+              It is labeled as "origin".
             </p>
           </statement>
         </choice>
@@ -249,7 +241,21 @@
         <choice correct="yes">
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "upstream".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The diagram shows your upstream remote on the top right side with the label "upstream".
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It is labeled as "local".
             </p>
           </statement>
         </choice>
@@ -257,7 +263,7 @@
         <choice>
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "feature branch".
             </p>
           </statement>
         </choice>
@@ -265,7 +271,7 @@
 
       <hint>
         <p>
-          ADD HINT HERE
+          When you issued the <c>git remote -v</c> command pay attention to the name given to second set of fetch and pull URLs.
         </p>
       </hint>
     </task>
