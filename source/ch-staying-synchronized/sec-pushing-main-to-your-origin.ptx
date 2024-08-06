@@ -49,26 +49,10 @@
 
 
       <choices randomize="yes">
-        <choice>
+        <choice correct="yes">
           <statement>
             <p>
-              option
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              option
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              option
+              The URL of your origin on GitHub.
             </p>
           </statement>
         </choice>
@@ -76,7 +60,31 @@
         <choice correct="yes">
           <statement>
             <p>
-              option
+              The name of the branch pushed to GitHub.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The URL of the upstream repository on GitHub.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              A list of all the files changed in the local repository.
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              A list of all the branches in the local repository.
             </p>
           </statement>
         </choice>
@@ -84,7 +92,7 @@
 
       <hint>
         <p>
-          ADD HINT HERE
+          Only look at the last two lines, the one that starts with "To" and the one that starts with a SHA code.
         </p>
       </hint>
     </task>

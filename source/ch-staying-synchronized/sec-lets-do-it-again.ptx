@@ -35,26 +35,10 @@
 
 
         <choices>
-          <choice>
-            <statement>
-              <p>
-                option
-              </p>
-            </statement>
-          </choice>
-
-          <choice>
-            <statement>
-              <p>
-                option
-              </p>
-            </statement>
-          </choice>
-
           <choice correct="yes">
             <statement>
               <p>
-                option
+                4
               </p>
             </statement>
           </choice>
@@ -62,7 +46,23 @@
           <choice>
             <statement>
               <p>
-                option
+                6
+              </p>
+            </statement>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                35
+              </p>
+            </statement>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                40
               </p>
             </statement>
           </choice>
@@ -108,7 +108,7 @@
           They are listed below in a jumbled-up order, determine the proper order.
         </p>
       </statement>
-      <blocks> <block>
+      <blocks randomize="yes"> <block>
       <p>
         Create a new feature branch
       </p>
@@ -201,7 +201,7 @@
         <premise>
         <c>git switch &lt;branch&gt;</c></premise> <response>Switch to feature branch</response> </match> <match>
         <premise>
-        <c>git add .</c></premise> <response>Add changes to stage</response> </match> <match>
+        <c>git stage &lt;file&gt;</c></premise> <response>Add changes to stage</response> </match> <match>
         <premise>
         <c>git commit -m "message"</c></premise> <response>Commit changes</response> </match> <match>
         <premise>
@@ -217,7 +217,7 @@
       <task xml:id="ex-fixing-issue-process-b" label="ex-fixing-issue-process-b">
         <statement>
           <p>
-            Which of the following would be good names for a feature branch for issue x that does...?
+            Which of the following would be the best name for a feature branch for issue #37 that adds a link to the NSF award in the Acknowledgements section?
           </p>
         </statement>
 
@@ -226,47 +226,64 @@
           <choice>
             <statement>
               <p>
-                option
+                issue37
               </p>
             </statement>
+
+            <feedback>
+              <p>
+                This branch name doesn't provide enough information.
+                What is issue 37?
+              </p>
+            </feedback>
           </choice>
 
           <choice>
             <statement>
               <p>
-                option
+                adding-link
               </p>
             </statement>
+
+            <feedback>
+              <p>
+                This branch name is too generic.
+              </p>
+            </feedback>
           </choice>
 
           <choice correct="yes">
             <statement>
               <p>
-                option
+                adding-nsf-link-acknowledgement
               </p>
             </statement>
+
+            <feedback>
+              <p>
+                Correct! This branch name describes the work to be done in the branch.
+              </p>
+            </feedback>
           </choice>
 
           <choice>
             <statement>
               <p>
-                option
+                nsf-acknowledgement
               </p>
             </statement>
-          </choice>
 
-          <choice correct="yes">
-            <statement>
+            <feedback>
               <p>
-                option
+                This branch name doesn't specify what is being done with regard to the NSF acknowledgement.
               </p>
-            </statement>
+            </feedback>
           </choice>
         </choices>
 
         <hint>
           <p>
-            ADD HINT HERE
+            Refer back to the section on creating branches <xref ref="topic-creating-a-feature-branch"/> for information on branch names.
           </p>
         </hint>
       </task>
@@ -275,56 +292,72 @@
       <task xml:id="ex-fixing-issue-process-c" label="ex-fixing-issue-process-c">
         <statement>
           <p>
-            Which of the following would be a good commit message for issue x?
+            Which of the following would be the best commit message for the fix for issue 38 that adds a link to the GNOME Community Engagement Challenge in the acknowledgements?
           </p>
         </statement>
 
 
         <choices randomize="yes">
-          <choice>
-            <statement>
-              <p>
-                option
-              </p>
-            </statement>
-          </choice>
-
-          <choice>
-            <statement>
-              <p>
-                option
-              </p>
-            </statement>
-          </choice>
-
           <choice correct="yes">
             <statement>
               <p>
-                option
+                Added the URL for GNOME to the acknowledgements section of the REAMDE file.
               </p>
             </statement>
+
+            <feedback>
+              <p>
+                Correct! This commit message briefly but completing describes the change made.
+              </p>
+            </feedback>
           </choice>
 
           <choice>
             <statement>
               <p>
-                option
+                Added URL.
               </p>
             </statement>
+
+            <feedback>
+              <p>
+                This commit message doesn't provide enough information about the URL added.
+              </p>
+            </feedback>
           </choice>
 
-          <choice correct="yes">
+          <choice>
             <statement>
               <p>
-                option
+                Updated README.
               </p>
             </statement>
+
+            <feedback>
+              <p>
+                This commit message doesn't provide enough information about what has been changed in the README file.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Fixed typo.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This commit message is too generic and does not describe the change for this issue.
+              </p>
+            </feedback>
           </choice>
         </choices>
 
         <hint>
           <p>
-            ADD HINT HERE
+            Refer back to the section on creating branches <xref ref="topic-committing-to-your-local-repository"/> for information on commit messages.
           </p>
         </hint>
       </task>

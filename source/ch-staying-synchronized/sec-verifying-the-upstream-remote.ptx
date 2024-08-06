@@ -10,7 +10,6 @@
     That is because, by default, your local repository isn’t aware of the upstream.
   </introduction>
 
-
   <introduction component="vscode-kit-client">
     When you open a fork in GitPod, GitPod clones its repository.
     This creates a remote named origin that points to the repository it cloned.
@@ -26,13 +25,25 @@
   <exercises>
   <title/>
   <exercise xml:id="ex-restarting-kitclient-for-synching" label="ex-restarting-kitclient-for-synching">
-    <p> Restart your KitClient based on the instructions in <xref provisional="a reference back to ch2-restarting your development environment" />
+    <p>
+      Restart your KitClient based on the instructions in <xref ref="topic-restarting-dev-env"/>
     </p>
   </exercise>
 
   <exercise xml:id="ex-setting-upstream" label="ex-setting-upstream">
-    <introduction component="vscode-kit-client">To synchronize your fork, you will need to use this upstream remote. First, let's confirm that GitPod correctly created the upstream remote. This exercise will walk you through that process.</introduction>
-    <introduction component="linux-kit-client"> In order to pull from the upstream you will first need to make your local repository aware of the upstream. This is done by setting a remote for it.  This exercise will walk you through that process. </introduction>
+    <introduction component="vscode-kit-client">
+      To synchronize your fork, you will need to use this upstream remote.
+      First, let's confirm that GitPod correctly created the upstream remote.
+      This exercise will walk you through that process.
+    </introduction>
+
+    <introduction component="linux-kit-client">
+      In order to pull from the upstream you will first need to make your local repository aware of the upstream.
+      This is done by setting a remote for it.
+      This exercise will walk you through that process.
+    </introduction>
+
+
     <task xml:id="ex-setting-upstream-a" label="ex-setting-upstream-a">
       <statement>
         <p>
@@ -49,27 +60,27 @@
           How is the origin remote indicated in <xref ref="ex-setting-upstream-a" /> represented in <xref ref="fig-changes-merged-into-upstream" />?
         </p>
       </statement>
+
+
       <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              <c>CHOICE </c>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <c>CHOICE </c>
-            </p>
-          </statement>
-        </choice>
-
         <choice correct="yes">
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "origin".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The diagram shows your origin remote on the top left side with the label "origin".
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It is labeled as "upstream".
             </p>
           </statement>
         </choice>
@@ -77,7 +88,15 @@
         <choice>
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "local".
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It is labeled as "feature branch".
             </p>
           </statement>
         </choice>
@@ -85,7 +104,7 @@
 
       <hint>
         <p>
-          ADD HINT HERE
+          When you issued the <c>git remote -v</c> command pay attention to the name given to the fetch and pull URLs.
         </p>
       </hint>
     </task>
@@ -150,19 +169,13 @@
           How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
         </p>
       </statement>
+
+
       <choices randomize="yes">
         <choice>
           <statement>
             <p>
-              <c>CHOICE </c>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <c>CHOICE </c>
+              It is labeled as "origin".
             </p>
           </statement>
         </choice>
@@ -170,7 +183,21 @@
         <choice correct="yes">
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "upstream".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The diagram shows your upstream remote on the top right side with the label "upstream".
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It is labeled as "local".
             </p>
           </statement>
         </choice>
@@ -178,7 +205,7 @@
         <choice>
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "feature branch".
             </p>
           </statement>
         </choice>
@@ -186,10 +213,11 @@
 
       <hint>
         <p>
-          ADD HINT HERE
+          When you issued the <c>git remote -v</c> command pay attention to the name given to second set of fetch and pull URLs.
         </p>
       </hint>
     </task>
+
 
     <task xml:id="ex-setting-upstream-c-vscode" label="ex-setting-upstream-c-vscode" component="vscode-kit-client">
       <statement>
@@ -199,19 +227,13 @@
           How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
         </p>
       </statement>
+
+
       <choices randomize="yes">
         <choice>
           <statement>
             <p>
-              <c>CHOICE </c>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <c>CHOICE </c>
+              It is labeled as "origin".
             </p>
           </statement>
         </choice>
@@ -219,7 +241,21 @@
         <choice correct="yes">
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "upstream".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The diagram shows your upstream remote on the top right side with the label "upstream".
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It is labeled as "local".
             </p>
           </statement>
         </choice>
@@ -227,7 +263,7 @@
         <choice>
           <statement>
             <p>
-              <c>CHOICE </c>
+              It is labeled as "feature branch".
             </p>
           </statement>
         </choice>
@@ -235,7 +271,7 @@
 
       <hint>
         <p>
-          ADD HINT HERE
+          When you issued the <c>git remote -v</c> command pay attention to the name given to second set of fetch and pull URLs.
         </p>
       </hint>
     </task>
