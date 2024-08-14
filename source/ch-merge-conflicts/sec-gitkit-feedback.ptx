@@ -7,6 +7,16 @@ xml:id="topic-gitkit-feedback-merging"
   <title>GitKit Feedback</title>
 
   <introduction>
+    <p>
+      To help us improve this chapter for future semesters please consider clicking this <url href="https://wnecop.az1.qualtrics.com/jfe/form/SV_0HwqbSUS7SYlhFs" visual="wnecop.az1.qualtrics.com/jfe/form/SV_0HwqbSUS7SYlhFs">link</url> to complete a short survey which should take approximately 5 minutes to complete.
+    </p>
+    <p>
+      Thank you for your time and assistance, it is greatly appreciated!
+    </p>
+  </introduction>
+
+  <!--
+  <introduction>
  		<p>To help us improve and scope this chapter for future semesters please consider providing the following feedback.</p>
   </introduction>
 
@@ -880,4 +890,5 @@ xml:id="topic-gitkit-feedback-merging"
       <response />
     </exercise>
     </exercises>
+-->
 </section>
