@@ -6,9 +6,28 @@
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
   <titlepage>
     <author>
-      <personname>You</personname>
-      <department>Your department</department>
-      <institution>Your institution</institution>
+      <personname>Grant Braught</personname>
+      <institution>Dickinson College</institution>
+    </author>
+    <author>
+      <personname>Lori Postner</personname>
+      <institution>Nassau Community College</institution>
+    </author>
+    <author>
+      <personname>Darci Burdge</personname>
+      <institution>Nassau Community College</institution>
+    </author>
+    <author>
+      <personname>Ruth Lamprecht</personname>
+      <institution>Mount St. Mary's University</institution>
+    </author>
+    <author>
+      <personname>Stony Jackson</personname>
+      <institution>Western New England University</institution>
+    </author>
+    <author>
+      <personname>Karl Wurst</personname>
+      <institution>Worcester State University</institution>
     </author>
     <date>
       <today />
@@ -29,12 +48,12 @@
   <colophon>
 
     <website>
-      <url href="https://pretextbook.org">My Website</url>
+      <url href="https://gitlab.com/hfossedu/kits">HFOSS Kits</url>
     </website>
 
     <copyright>
       <year>2024<ndash /><today /></year>
-      <holder>You</holder>
+      <holder>HFOSS Kits</holder>
       <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
       </shortlicense>
     </copyright>
