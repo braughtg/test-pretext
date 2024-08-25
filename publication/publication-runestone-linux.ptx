@@ -57,22 +57,6 @@
     <footnotes level="2" />
   </numbering>
 
-  <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
-  <!-- for printing; set @sides="two" if the printing woudl be two- -->
-  <!-- sided.  @pageref="yes/no" controls whether page number are   -->
-  <!-- included in cross-references                                 -->
-  <latex print="yes" sides="two" font-size="10" draft="no">
-    <!-- Control text justification and bottom page behavior: -->
-    <page right-alignment="flush" bottom-alignment="ragged" />
-    <!-- Add content to \geometry{}: -->
-    <!-- <geometry></geometry> -->
-    <!-- The asymptote/@links set to "yes" would produce  -->
-    <!-- links the html version of asymptote graphics.    -->
-    <asymptote links="no" />
-    <!-- Set @formatted to "no" to remove formatting on worksheets: -->
-    <worksheets formatted="yes" />
-  </latex>
-
   <html>
     <platform host="runestone"/>
     <!-- The host above could also be "runestone" -->
