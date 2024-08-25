@@ -5,6 +5,9 @@
     <target name="web" format="html" publication="publication-instructor-linux.ptx"/>
     <target name="print" format="pdf" publication="publication-instructor-linux.ptx"/>
 
+    <target name="runestone-linux" format="html" publication="publication-runestone-linux.ptx" output-dir="publication/gitkit" />
+    <target name="runestone-vscode" format="html" publication="publication-runestone-vscode.ptx" output-dir="publication/gitkit" />
+
     <target name="student-web-linux" format="html" publication="publication-student-linux.ptx"/>
     <target name="student-print-linux" format="pdf" publication="publication-student-linux.ptx"/>
     <target name="instructor-web-linux" format="html" publication="publication-instructor-linux.ptx"/>
