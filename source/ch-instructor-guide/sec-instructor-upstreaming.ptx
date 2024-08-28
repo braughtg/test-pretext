@@ -9,23 +9,178 @@
     <p>
       This chapter focuses on the upstreaming process.  Students learn about feature branches, staging and committing changes, pushing feature branches to their origin repository, and making a pull request. At the end of the hands-on activity each student will have experienced the full forking workflow, resulting in a pull request to the upstream GitKit-FarmData2 repository for changes that fix the "Round 1" issue that they were assigned.  The "Round 1" issues have been created such that they do not conflict with each other.  Thus, all of the student pull requests should be able to be merged automatically.  The instructor will typically perform these merges as a demonstration at the start of <xref ref="topic-staying-synchronized" />.
     </p>
+    <p>
+      The exercises in this chapter have the students perform the following major tasks:
+      <ol>
+        <li>
+          <p>
+            Create a feature branch.
+          </p>
+        </li>
+        <li>
+          <p>
+            Switch to the feature branch.
+          </p>
+        </li>
+        <li>
+          <p>
+            Edit the local files to fix the issue that they were assigned.
+          </p>
+        </li>
+        <li>
+          <p>
+            Stage the changes that they made to the local files.
+          </p>
+        </li>
+        <li>
+          <p>
+            Commit the staged changes to their feature branch
+          </p>
+        </li>
+        <li>
+          <p>
+            Push their feature branch to their origin on GitHub.
+          </p>
+        </li>
+        <li>
+          <p>
+            Make a pull request to the upstream.
+          </p>
+        </li>
+      </ol>
+    </p>
   </introduction>
 
   <subsection
     xml:id="topic-upstreaming-slide-notes">
     <title>Slide Notes</title>
     <p>
-      blah blah
+      <ul>
+        <li>
+          <title>Slide 2</title>
+          <p>
+            Reviews the main git / GitHub concepts and vocabulary from Topic 1.  The terms <term>upstream repository</term>, <term>origin repository</term>, <term>local repository</term>, <term>local</term>, <term>remote</term>, <term>fork</term>, and <term>clone</term> should be reviewed so that they begin to be part of the student's working vocabulary.
+          </p>
+        </li>
+        <li>
+          <title>Slide 3</title>
+          <p>
+            Reviews the simplified workflow introduced in the previous topic.  It should be re-emphasized that this is a simplified view and that this topic is about "un-simplifying" this view by filling in the details.  The figure on this slide, shows a situation where a contributor has made changes to their local repository that they want to upstream.
+          </p>
+        </li>
+        <li>
+          <title>Slide 4</title>
+          <p>
+            Introduces branches and commits. In the diagrams on these slides, and throughout the remainder of the GitKit, different colors are used as the unique identifier for each commit (e.g. we can talk about the "red" or the "yellow" commit).
+    
+            This slide introduces a conceptual simplification to think of a commit as a complete "snapshot" of all files in the project repository at that point in time, along with some meta data. Depending on the level of the course being taught, it may be worth a moment here to to explore the idea that storing a complete copy of the files for each commit would be very inefficient and discuss that it does not work that way in practice. Git commits do not actually contain full copies of every file in the repo. Instead, for each file that is changed by the commit, the "snapshot" contains a full (compressed) copy of the file. For each file that is not changed by the commit, the "snapshot" contains only a link (like a shortcut) to that file.  This link points to the file in the most recent commit in which it was changed. Depending on the level of the course being taught, this can also provide an opportunity to distinguish git from other <em>delta-based</em> version control systems (cvs, svn) where commits record changes to files rather than complete copies of the changed files.
+          </p>
+        </li>
+        <li>
+          <title>Slide 5</title>
+          <p>
+            The rule that they should "only commit to feature branches" is introduced here. Rather than attempting to provide a full explanation of the technical reasons for not committing to the main branch, this rule is based on the following rationale. Any time new work is started it should begin from the definitive version of the project.  This definitive version is contained in the upstream <code>main</code> branch. Now recall, from the first topic, that only the project maintainers have the permissions necessary to change the upstream <code>main</code> branch.  Thus, keeping your copies of the <code>main</code> branch identical to the upstream (i.e. by not committing to it) allows you to start your work from the definitive version. This explanation often elicits the question of what happens when the maintainers change the upstream <code>main<code> branch? That question can be put off, as how to keep in synch with the upstream is the focus of the next topic.
+          </p>
+        </li>
+        <li>
+          <title>Slides 6-7</title>
+          <p>
+            The diagrams used by the GitKit to illustrate git and GitHub concepts are extended to include branches and commits. The convention of using colors as the unique identifier for each commit is also used in these diagrams. In doing so, it is important to emphasize the distinction between the final commit in the <term>active branch</term> and the <term>local files</term>. Before any changes are made, the local files can be thought of as a copy of the final commit in the active branch.  This is illustrated by initially having the "dot" in the local files be green, the same color as the final commit in the <code>main</code> branch.
+          </p>
+        </li>
+        <li>
+          <title>Slides 8-9</title>
+          <p>
+            The diagrams here illustrate creating and switching to a feature branch. With multiple branches, the concept of the <term>active branch</term> as the target for future commits becomes important and is introduced here.  Later slides will show the addition of new commits to the active feature branch.
+          </p>
+        </li>
+        <li>
+          <title>Slide 10</title>
+          <p>
+            This diagram illustrates the editing of the local files. The difference between this diagram and the previous one can be easy to miss. The color of the "dot" in the local files changes from green to blue indicating that the local files have been edited. The fact that the final commit has remained green can be used here to further emphasize the fact that the final commit and the local files are distinct.
+          </p>
+        </li>
+        <li>
+          <title>Slides 11-12</title>
+          <p>
+            The diagrams here illustrate the process of staging changes and then committing them to the active branch.  The notion that a <term>commit</term> should contain a "nameable unit of work" is introduced here.  Additional attention to the idea of "nameable" is provided by several exercises in the chapter that have students assess the quality of commit messages.  If time is available when presenting this topic, spending some class time on similar exercises in class would help to clarify that idea.
+          </p>
+        </li>    
+        <li>
+          <title>Slide 13-14</title>
+          <p>
+            The diagrams here complete a full cycle of the forking workflow by illustrating the feature branch being pushed to GitHub and a pull request being made to the upstream repository.  A point of emphasis here should be that pushing the branch to GitHub is necessary to make the changes that it contains available to the maintainers of the upstream.  This can be used as another point at which to draw distinction between version control (git) and repository hosting (GitHub).  Specifically, pull requests are a repository hosting feature created to facilitate collaboration by allowing many contributors to work on changes and submit them to the upstream for consideration.
+          </p>
+        </li>
+      </ul>
     </p>
   </subsection>
 
   <subsection
     xml:id="topic-upstreaming-todo">
     <title>To-Do List</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Prior to this class period it is a good idea to ensure that each student has claimed and been assigned a ticket in the issue tracker.  Some student may have tried to claim an issue but not been assigned it due to a race condition with other students, or they may not have used <em>exactly</em> the right phrase in their comment.  In the latter case, the instructor might reply to the errant comment in the issue tracker and suggest that the student try again.
+          </p>
+        </li>
+      </ol>
+    </p>
   </subsection>
 
   <subsection
     xml:id="topic-upstreaming-exercise-notes">
     <title>Exercise Notes</title>
+    <p>
+      TODO: THE FIRST LINES NEED TO BE LINKED TO THE PROPER QUESTIONS. The questions referenced now are in the old MSWord sheets.
+
+      <ul>
+        <li>
+          <title>
+            Question 2b
+          </title>
+          <p>
+            If a student is seeing commit dates, usernames and messages that differ from the correct answers then it is likely that they created their fork after PRs were merged at the start of <xref ref="topic-staying-synchronized" \>.  Other than difficulty answering these questions this will not cause an issue with continuing with this chapter. Issues will arise with the exercises in <xref ref="topic-staying-synchronized"/> and <xref ref="topic-resolving-a-merge-conflict"/>. Each of those chapters provide the students with instructions for resolving the issues at the point where they arise.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 9a
+          </title>
+          <p>
+            The <code>git status</code> command here should show one untracked file with modifications and that file should agree with the file that they identified in question #8a.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 16
+          </title>
+          <p>
+            This question is a good checkpoint to ensure that they have done things correctly to this point.  The most recent commit in the <code>git log</code> output should show that they committed changes to the correct file (i.e. the one from #8a) and that they have used a meaningful commit message.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 24
+          </title>
+          <p>
+            The instructor can use the link provided here to check the students' pull requests for several points:
+            <ul>
+              <li>
+                <p>
+                  All of the "Round 1" issues have been created such that the do not conflict.  Thus, every pull request for a "Round 1" issue should be able to be merged automatically.  If a given pull request cannot be merged automatically, a comment can be added to the student's pull request with suggestions on how to correct the issue.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Each pull request should contain a line with "Closes #xx" or "Fixes #xx" as per question #23c.  If the student PR does not contain this line, or the line is incorrect (e.g. "Closes#xx"), then a comment can be added to the student's pull request requesting that they add or correct this line.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+      </ul>
   </subsection>
 </section>
