@@ -79,7 +79,7 @@
         <li>
           <title>Slide 5</title>
           <p>
-            The rule that they should "only commit to feature branches" is introduced here. Rather than attempting to provide a full explanation of the technical reasons for not committing to the main branch, this rule is based on the following rationale. Any time new work is started it should begin from the definitive version of the project.  This definitive version is contained in the upstream <code>main</code> branch. Now recall, from the first topic, that only the project maintainers have the permissions necessary to change the upstream <code>main</code> branch.  Thus, keeping your copies of the <code>main</code> branch identical to the upstream (i.e. by not committing to it) allows you to start your work from the definitive version. This explanation often elicits the question of what happens when the maintainers change the upstream <code>main<code> branch? That question can be put off, as how to keep in synch with the upstream is the focus of the next topic.
+            The rule that they should "only commit to feature branches" is introduced here. Rather than attempting to provide a full explanation of the technical reasons for not committing to the main branch, this rule is based on the following rationale. Any time new work is started it should begin from the definitive version of the project.  This definitive version is contained in the upstream <code>main</code> branch. Now recall, from the first topic, that only the project maintainers have the permissions necessary to change the upstream <code>main</code> branch.  Thus, keeping your copies of the <code>main</code> branch identical to the upstream (i.e. by not committing to it) allows you to start your work from the definitive version. This explanation often elicits the question of what happens when the maintainers change the upstream <code>main</code> branch? That question can be put off, as how to keep in synch with the upstream is the focus of the next topic.
           </p>
         </li>
         <li>
@@ -142,7 +142,7 @@
             Question 2b
           </title>
           <p>
-            If a student is seeing commit dates, usernames and messages that differ from the correct answers then it is likely that they created their fork after PRs were merged at the start of <xref ref="topic-staying-synchronized" \>.  Other than difficulty answering these questions this will not cause an issue with continuing with this chapter. Issues will arise with the exercises in <xref ref="topic-staying-synchronized"/> and <xref ref="topic-resolving-a-merge-conflict"/>. Each of those chapters provide the students with instructions for resolving the issues at the point where they arise.
+            If a student is seeing commit dates, usernames and messages that differ from the correct answers then it is likely that they created their fork after PRs were merged at the start of <xref ref="topic-staying-synchronized" />.  Other than difficulty answering these questions this will not cause an issue with continuing with this chapter. Issues will arise with the exercises in <xref ref="topic-staying-synchronized"/> and <xref ref="topic-resolving-a-merge-conflict"/>. Each of those chapters provide the students with instructions for resolving the issues at the point where they arise.
           </p>
         </li>
         <li>
@@ -182,5 +182,6 @@
           </p>
         </li>
       </ul>
+    </p>
   </subsection>
 </section>
