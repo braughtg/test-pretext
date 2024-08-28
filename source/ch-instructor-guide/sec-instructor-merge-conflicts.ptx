@@ -12,23 +12,211 @@
     <p>
       This chapter then focuses on the resolution of merge conflicts.  The concepts of merge commits, common ancestors, best common ancestor, and non-conflicting and conflicting changes are introduced. The topic then covers the process of merging main into a feature branch, git's raw conflict information and the use of graphical merge tool.  The hands-on activity concludes with the students having resolved the merge conflict in their "Round 2" pull request.  Note that these PRs are never merged into the upstream as part of the GitKit activities.    
     </p>
+    <p>
+      The exercises in this chapter have the students perform the following major tasks:
+      <ol>
+        <li>
+          <p>
+            Synchronize their <code>main</code> branches with the upstream <code>main</code> branch, which will bring in the changes that conflict with their "Round 2" fixes.
+          </p>
+        </li>
+        <li>
+          <p>
+            Merge the <code>main</code> branch into their feature branch, which will create the merge conflict.
+          </p>
+        </li>
+        <li>
+          <p>
+            Examine the raw merge conflict information.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the VS Code merge tool to resolve the conflict.
+          </p>
+        </li>
+        <li>
+          <p>
+            Commit the merged result to their feature branch.
+          </p>
+        </li>
+        <li>
+          <p>
+            Push the feature branch to update their pull request.
+          </p>
+        </li>
+      </ol>
+    </p>
   </introduction>
 
   <subsection
     xml:id="topic-merge-conflicts-slide-notes">
     <title>Slide Notes</title>
     <p>
-      blah blah
+      <ul>
+        <li>
+          <title>
+            Slide 2
+          </title>
+          <p>
+            Another opportunity is taken to review of the steps involved in the forking workflow.  Students typically have a good handle on these steps and how they are ordered when using the forking workflow to upstream changes.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slides 3-4
+          </title>
+          <p>
+            The instructor may merge a provided branch that creates conflicts with the "Round 2" issues (See: <xref ref="topic-merge-conflicts-todo" />) either before or during class.  Merging the conflicts during class is the preferred option if time permits.  This allows the instructor to show a few student "Round 2" PRs and that indicate that they can currently be merged automatically.  Then merge the PR with the conflicts and look at the PR's again to show that they now contain conflicts. Slide 4 can be used to illustrate how the conflicts have arisen.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 5
+          </title>
+          <p>
+            Introduces the <term>merge</term> operation and <term>merge commits</term>.  At this point, a merge with no conflicts (i.e. like the "Round 1" PRs) is illustrated. This is shown from the project maintainer perspective with the feature branch from a PR being merged into the upstream <code>main</code> branch.  Later this will be reversed when students are merging their copy of the upstream <code>main</code> branch into their feature branch to resolve conflicts (see Slides 19-23).
+          </p>
+          <p>
+            Merge commits are shown in the diagram as a colored dot with a ring around them. A merge commit for non-conflicting changes are shown with a white ring around them.  The ring is added to indicate that the meta information about the commit is different than what was contained in the feature branch.  This also records, in the project history, the fact that the changes were merged into <code>main</code>.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slides 9-12
+          </title>
+          <p>
+            Uses a text based example to introduce the concepts of <term>common ancestors</term> and <term>best common ancestor</term>, and then uses those to identify <term>conflicting changes</term> and <term>non-conflicting changes</term>.  One way to identify these changes is first to compare the feature branch to the best common ancestor and highlight all changes in the feature branch.  Then repeat, but compare the <code>main</code> branch to the best common ancestor and highlight all differences in the <code>main</code> branch.  Then any lines that are highlighted in both the feature branch and the <code>main</code> branch are conflicting changes. All other highlighted lines are non-conflicting changes.
+          </p>
+          <p>
+            Note that in these examples the identification of conflicting changes is simplified to be <em>line based</em>.  That is, if a change is found, the entire line is marked as containing a change.  Similarly, if a line is changed in both the feature branch and the <code>main</code> branch, the entire line is marked as a conflict.  The algorithm used by git is more complex than this simplified approach, but the concept is sufficiently the same for the purposes of these activities.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slides 13-16
+          </title>
+          <p>
+            These slides contain some additional practice exercises for identifying non-conflicting and conflicting changes, and merging the results.  These activities can be done and discussed in small groups during class if time permits.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 17
+          </title>
+          <p>
+            Establishes the basis for how developers (i.e. the students) will resolve merge conflicts.  While a maintainer could resolve the conflict, more typically the developer who submitted the PR will be expected to resolve any conflicts in their PR.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 18
+          </title>
+          <p>
+            The way that a developer will resolve a merge conflicts is to pull the (conflicting) changes to the upstream <code>main</code> to their local repository. They then merge the <code>main</code> branch into their feature branch. They then push their updated feature branch to their origin, which automatically updates the PR for that branch.  Because the PR has been updated the maintainers are now able to review not only the proposed changes but also the way that the merge conflicts were resolved.
+          </p>
+          <p>
+            Note that this is backwards from what was done earlier. In <xref ref="topic-staying-synchronized" /> the maintainer was merging the feature branch into the <code>main</code> branch. Here the developer is merging the <code>main</code> branch into their feature branch. The rule that developers "only commit to feature branches" can be used as a grounding for why developers do the merge in this direction.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 19
+          </title>
+          <p>
+            Illustrates in more detail the merge of both non-conflicting and conflicting changes from the <code>main</code> branch into the feature branch. Here the merge commit contains a colored ring instead of a white ring (as it did earlier). The colored ring indicates that the merge commit blends the changes that were contained in its two parent commits.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 20
+          </title>
+          <p>
+            Shows the <code>raw merge conflict</code> information that is produced by git when a merge creates a conflict.  This information can be edited manually in any text editor.  However, it is often difficult to identify exactly what changes exist.  This is good motivation for the use of a <term>graphical merge tool</term> that makes it easier to see what changes have been made and where the conflicts exist.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slides 21-23
+          </title>
+          <p>
+            Shows the graphical merge tool that is built into VS Code. The exercises guide the students through use this tool to resolve the conflicts in their PRs for their "Round 2" issues.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 24-25
+          </title>
+          <p>
+            Here for review and reference and not much time needs to be spent on these slides.  The final slide collects into one diagram everything that is a part of the forking workflow.  It has a lot going on, but by this point students should be able to make sense of each of the actions that are illustrated.
+          </p>
+        </li>
+      </ul>
     </p>
   </subsection>
 
   <subsection
     xml:id="topic-merge-conflicts-todo">
     <title>To-Do List</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            If time permits, monitor the "Round 2" tickets in the issue tracker. There are only 4 "Round 2" issues and thus there will need to be multiple students working on each.  If a student uses the the comment from <xref ref="topic-foss-communities" />, and they are the first to do so, the issue will be assigned to them automatically. The instructor can manually assign the issue to all other students that comment on it.
+          </p>
+        </li>
+        <li>
+          <p>
+            Create, but do not merge, a pull request for the <code>addRound2Conflicts</code> branch in the upstream. When merged this branch will create a conflict with each of the changes requested in a "Round2" issue.  Thus, this PR should not be merged until after the students have synchronized with the upstream <code>main</code> at the start of this chapter.  If it is merged before they synchronize, then they will begin the fix for their "Round 2" issue with the (conflicting) changes already in place, and thus their fix will not generate the expected merge conflict. If students find themselves in this situation, there are instructions in the chapter guide them through a process that will create a conflict for them.
+          </p>
+        </li>
+        <li>
+          <p>
+            Just before class, or during class merge the PR for the <code>addRound2Conflicts</code> branch. It has been effective to do the merge of the PR for the <code>addRound2Conflicts</code> branch live in class.
+          </p>
+        </li>
+      </ol>
+    </p>
   </subsection>
 
   <subsection
     xml:id="topic-merge-conflicts-exercise-notes">
     <title>Exercise Notes</title>
+    <p>
+      <ul>
+        <li>
+          <title>
+            Question 2(e,f)
+          </title>
+          <p>
+            In this exercise there are no conflicting changes and the merge would be able to be completed automatically.  However, if all of the non-conflicting changes are merged into the result the program will not produce the correct result.  The point being that automatic merges can check for structural conflicts, but not logical or semantic conflicts and thus caution should be used when performing merges.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 6
+          </title>
+          <p>
+            Inevitably some students will be behind on their work and will complete their sync with upstream <code>main</code> after you have merged the PR for the <code>addRound2Conflicts</code> branch.  In these cases, their pull requests will not create a conflict to be resolved.  These students should follow the instructions given in <xref ref="topic-appendix-a-merge-conflicts" />.  These directions have them pull the <code>mergeConflictPractice</code> branch and create a pull request for it.  That PR will then contain conflicts with the changes in the <code>addRound2Conflicts</code> branch that was merged into <code>main</code>.  They will then complete the activity using the <code>mergeConflictPractice</code> branch as it it were their feature branch. Students not in this situation, but who would like additional practice can also pull and use the <code>mergeConflictPractice</code> branch at the end of the activity.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 14(a,b)
+          </title>
+          <p>
+            By default, VS Code does not display the best common ancestor in its merge tool. The steps given in these questions has the students change the VS Code configuration such that it includes the best common ancestor.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 22
+          </title>
+          <p>
+            If the student did not need to use the <code>merge-conflict-practice</code> branch in question #6, then they can use it at this point for additional practice with resolving merge conflicts.
+          </p>
+        </li>
+      </ul>
+    </p>
   </subsection>
 </section>
