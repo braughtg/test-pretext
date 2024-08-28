@@ -7,10 +7,37 @@
   <title>Staying Synchronized Instructor Notes</title>
   <introduction>
     <p>
-      At the start of this chapter, the students will have made pull requests for fixes to the "Round 1" issues that they have claimed.  When these pull requests are merged into the upstream main branch it will contain changes that are not in the student's local and origin main branches.  That is, the student's main branches will be out of synch with the upstream main. This topic deals with how developers synchronize the main branches of their local and origin repositories with the upstream main branch.
+      At the start of this chapter, the students will have made pull requests for fixes to the "Round 1" issues that they have claimed.  When these pull requests are merged into the upstream <code>main</code> branch it will contain changes that are not in the student's local and origin <code>main</code> branches.  That is, the student's <code>main</code> branches will be <term>out of synch</term> with the upstream <code>main</code>. This chapter deals with how developers synchronize the <code>main</code> branches of their local and origin repositories with the upstream <code>main</code> branch.
     </p>
     <p>
-      The hands-on activity has the students synchronize their main branches. They then find a "Round 2" ticket in the issue tracker and repeat the forking workflow cycle to upstream a fix for it (i.e. branch, edit, stage, commit, push, pull request).  This provides students with additional practice with the skills and concepts introduced in <xref ref="topic-communities-and-collaboration" />. In addition, the PRs that the students create for the "Round 2" issues also set up for <xref ref="topic-merge-conflicts" />, which focuses on merge conflicts and how to resolve them.
+      The exercises in this chapter have the students perform the following major tasks:
+      <ol>
+        <li>
+          <p>
+            Set an upstream remote.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pull changes from the upstream <code>main<code> into their local <code>main</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Push their local <code>main</code> to their origin.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find a "Round 2" ticket in the issue tracker.
+          </p>
+        </li>
+        <li>
+          <p>
+            Make changes for their "Round 2" issue and upstream them using the forking workflow from <xref ref="topic-upstreaming-changes"/>.
+          </p>
+        </li>
+      </ol>
     </p>
   </introduction>
 
@@ -18,17 +45,177 @@
     xml:id="topic-synchronizing-slide-notes">
     <title>Slide Notes</title>
     <p>
-      blah blah
+      <ol>
+        <li>
+          <title>
+            Slides 2-3
+          </title>
+          <p>
+            A review of the elements of the forking workflow introduced and practiced in <xref ref="topic-foss-communities"/> and <xref ref="topic-upstreaming-changes"/>.  Steps 3-9 on slide 3 are repeated for each contribution (e.g. bug fix, new feature). The feature branch should be pushed to the origin and the pull request made sooner rather than later, because it makes the changes available to the project maintainers for review and discussion as they are developed.  Some projects will even suggest creating a PR prior to making any changes. Once the PR is created, steps 5-8 can then be repeated for each "nameable unit of work" (i.e. each commit) that is involved in completing the contribution.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 4
+          </title>
+          <p>
+            This diagram shows the state at the start of this chapter.  The students have made pull requests for their "Round 1" issues, but those PRs will not have been merged yet. At this point, the instructor can model the actions of a project maintainer and merge a few of these PR's (see: <xref ref="topic-synchronizing-todo" />).
+          </p>
+          <p>
+            In addition to merging a few PRs it is worth also discussing other actions that a maintainer might take at this point, including:
+            <ul>
+              <li>
+                <p>
+                  Reading the body of the PR to understand what is being proposed.  In practice, if the change is more complex than our "Round 1" issues there would be a longer more detailed description expected. A review of the purpose of the "Closes" or "Fixes" line is also appropriate at this point.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Looking at the "diff" in the "Changes" tab to get a quick overview of how the contributor has implemented the proposed changes. A maintainer might insert comments directly in the code to request changes or ask questions.
+                </p>
+              </li>
+              <li>
+                <p>
+                  "Pulling" a copy of the branch so that they can:
+                  <ul>
+                    <li>
+                      <p>
+                        Run the program and observe the behavior of the proposed change.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Ensure that the proposed change passes all of the automated tests that the project contains.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </li>
+              <li>
+                <p>
+                  In practice there may be several rounds of feedback from the maintainers and additional changes by the contributor before a PR is ready to be merged into the upstream.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 5
+          </title>
+          <p>
+            This diagram shows the state just after a maintainer has merged some of the "Round 1" pull requests. The key observation here is that the upstream <code>main</code> branch will contain some commits (e.g. blue, and/or pink, and/or lime) that the <code>main</code> branches in the students' local and origin repositories do not.  That is, the students' copies of the <code>main</code> branch will now be <em>out of synch</em> with the upstream <code>main</code> branch.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 6
+          </title>
+          <p>
+            This diagram shows a developer pulling the changes to the <code>main</code> branch from the upstream repository into their local repository and then pushing them to their origin.  This brings their copies of the <code>main</code> branch into synch with the upstream <code>main</code> branch.  While it is not strictly necessary to push the <code>main</code> branch to the origin it keeps everything <em>in sync</em>.
+          </p>
+          <p>
+            The diagram shows a <term>fast forward merge</term> meaning that the commits in the upstream <code>main</code> branch can simply be added to the end of the local <code>main</code> branch without having a <term>merge commit</term>.  This is possible because the commits added to the upstream all build from the "green" commit AND there have been no changes to the local <code>main</code>.          
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 7
+          </title>
+          <p>
+            This diagram helps to justify the "Only commit to feature branches" rule.  It shows the state that could arise if a developer were to make a commit to their local <code>main</code> branch.  Here there could possibly be a conflict between the developer's "fuchsia" commit and the "lime" commit that was added to the upstream <code>main</code> by a maintainer.  This potential conflict prevents a fast-forward merge.  Thus, by not committing to the local <code>main</code> branch and by using only fast-forward merges, developers can ensure that their copies of the <code>main</code> branch stay <em>in synch</em> with the upstream <code>main</code>.  Doing so ensures that every time they create a new feature branch from <code>main</code> they will be starting from the most up to date state of the project.
+          </p>
+        </li>
+        <li>
+          <title>
+            Slide 8
+          </title>
+          <p>
+            This diagram shows the state after the developer deletes the feature branch from their local and origin repositories.  The changes that were contained in the feature branch have been merged into the <code>main</code> branches. Thus, there is no need to retain the feature branch and deleting it reduces clutter. For students, deleting their feature branches can feel like deleting their work and thus they may not want to do so.  There is no real harm in them retaining their feature branches.
+          </p>
+          <p>
+            It should be emphasized that they should not delete their feature branches before they have been merged into the upstream. If a PR is made for a feature branch and that branch is deleted from the developer's origin, then the maintainers will no longer have access to the changes.
+          </p>
+        </li>
+        <li>
+          <title>
+            Note
+          </title>
+          <p>
+            This set of materials may be a little short for a 75-minute class period. The remaining class time can be used to help students who had difficulties creating a PR, who's PR's cannot be merged automatically or are missing the "Closes" or "Fixes" lines.
+          </p>
+        </li>
+      </ol>
     </p>
   </subsection>
 
   <subsection
     xml:id="topic-synchronizing-todo">
     <title>To-Do List</title>
+    <ol>
+      <li>
+        <p>
+          If time permits, review the students "Round 1 pull requests as they are submitted and comment on any PRs that are missing a description or a "Closes"/"Fixes" line.  Occasionally, a student will also make a PR for an issue that has not been assigned to them, commenting that they should request that the issue be assigned to them as described in <xref ref="topic-foss-communities"/>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Prior to this class review the "Round 1" pull requests. Identify some that are suitable as examples of maintainers merging PRs into the upstream.
+        </p>
+      </li>
+      <li>
+        <p>
+          Demonstrate the activity of a project maintainer by merging a few of the student "Round 1" pull requests. Merging all of the PRs in a class with more than a few students becomes tedious and it is sufficient to do just a few live.  The remaining PRs can then be merged after introducing <xref ref="topic-staying-synchronized"/>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Follow up after introducing <xref ref="topic-staying-synchronized"/> with any students who have not yet made a "Round 1" PR.
+        </p>
+      </li>
+    </ol>
   </subsection>
 
   <subsection
     xml:id="topic-synchronizing-exercise-notes">
     <title>Exercise Notes</title>
+    <p>
+      TODO: THE FIRST LINES NEED TO BE LINKED TO THE PROPER QUESTIONS. The questions referenced now are in the old MSWord sheets.
+
+      <ul>
+        <li>
+          <title>
+            Question 3a
+          </title>
+          <p>
+            If a student begins the GitKit activities late they may make their fork and clone after the "Round 1" issues have been merged. This will result in their origin <code>main</code> branch not being <term>behind</term> the upstream <code>main</code> branch.  The directions in <xref ref="topic-appendix-a-staying-synchronized"/> of the activity have them reset the <code>HEAD</code> of their <code>main</code> branch to the commit before any "Round 1" issues were merged. Once they force push this change to their origin they will then see that their <code>main</code> branch is behind the upstream <code>main</code> as expected.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 3e
+          </title>
+          <p>
+            It is a good idea to check here that the student's upstream remote points to the correct GitKit-FarmData2 repository.  The Kit-tty should have caught this error and directed students on the correct way to set the upstream remote. However, some students have still managed to set their upstream to point to their origin or to the live FarmData2 repository.
+          </p>
+        </li>
+        <li>
+          <title>
+            Question 9b
+          </title>
+          <p>
+            After synchronizing with the upstream, the students go on to find a "Round2" ticket in the issue tracker. There are only 4 "Round2" issues, so multiple students will be working on each one.  This question requests that they comment on the issue they want to work on but should spread themselves across the available "Round 2" issues.  If you like you can manually assign each "Round2" issue to all students who commented on it, though this is not necessary.
+          </p>
+        </li>
+        <li>
+          <title>
+            Questions 10-12
+          </title>
+          <p>
+            These questions ask the student to use the forking workflow to create a fix for the "Round 2" ticket on which they chose to work. GitHub will indicate that the PRs created by each student for their "Round 2" issue can be merged automatically.  This is because even though multiple students are working on each "Round 2" issue, none of them will have been merged into the upstream <code>main</code> at this point. When introducing <xref ref="topic-resolving-a-merge-conflict" /> the instructor will merge a branch that creates conflicts with all of the student "Round2" PRs.
+          </p>
+        </li>
+      </ul>
+    </p>
   </subsection>
 </section>
