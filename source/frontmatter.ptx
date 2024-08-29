@@ -22,11 +22,11 @@
       <institution>Mount St. Mary's University</institution>
     </author>
     <author>
-      <personname>Stony Jackson</personname>
+      <personname>Stoney Jackson</personname>
       <institution>Western New England University</institution>
     </author>
     <author>
-      <personname>Karl Wurst</personname>
+      <personname>Karl R. Wurst</personname>
       <institution>Worcester State University</institution>
     </author>
     <date>
@@ -35,15 +35,66 @@
   </titlepage>
 
   <preface>
-    <title>Preface</title>
-    
+    <title>Overview</title>
     <introduction>
       <p>
-        The GitKit introduces students to the fundamental skills and concepts (including git / GitHub) used in collaborative Free and Open Source Software (FOSS) development. It introduces students to the <url href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow" visual="atlassian.com/git/tutorials/comparing-workflows/forking-workflow">forking workflow</url> and guides them through its use. The GitKit provides classroom materials, hands-on assignments, project artifacts (repository, code, documentation, issues), and a development environment that support teaching these skills and concepts in the context of an authentic FOSS project.
+        The GitKit introduces students to fundamental git and GitHub skills and concepts and the <url href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow">forking workflow</url> within the context of an authentic Free and Open Source Software (FOSS) project. 
+      </p>
+
+      <p>
+        The GitKit is designed to be used as a module within a course where students are first introduced to git and GitHub, but has been adapted for use in other settings. A nominal use of the GitKit requires four 75-minute class periods where the instructor introduces each chapter and four 2-3 hour homework assignments where concepts are reinforced and students gain hands-on experience.  
+      </p>
+      
+      <p>
+        This GitKit text provides:
+        <ul>
+          <li>
+            <p>
+              A complete instructor guide (<xref ref="topic-instructor-guide" />).
+            </p>
+          </li>
+          <li>
+            <p>
+              Slide decks with in-class activities that can be used to introduce each chapter.
+            </p>
+          </li>
+          <li>
+            <p>
+              Chapters that guide students through exercises that reinforce concepts from class and give them hands-on experience with git and GitHub.
+            </p>
+          </li>
+          <li>
+            <p>
+              An easy to setup cloud-based development environment in which students complete the hands-on exercises.
+            </p>
+          </li>
+          <li>
+            <p>
+              The project artifacts (repository, code, documentation, issues) that provide the context of an authentic FOSS project.
+            </p>
+          </li>
+        </ul>
       </p>
     </introduction>
-
   </preface>
+
+  <acknowledgement>
+    <p>
+      In addition to the authors many others have helped in the production of the GitKit in various ways, from conversations, guidance, critiques and providing feedback from pilot uses in their courses.  These following individuals have provided substantial help in one or more of these ways:
+      <ul>
+        <li>Michael Caines</li>
+        <li>Heidi Ellis</li>
+        <li>Greg Hislop</li>
+        <li>Clif Kussmaul</li>
+        <li>Emily Lovell</li>
+        <li>Cam Macdonell</li>
+      </ul>
+    </p>
+
+    <p>
+      The authors have been active in the <url href="https://teachingopensource.org/Main_Page">Teaching Open Source</url> community. Many of the resources on their <url href="https://teachingopensource.org/Learning_Resources">Learning Resources</url> page have informed the exercises in the GitKit.
+    </p>
+  </acknowledgement>
 
   <colophon>
 

@@ -9,6 +9,36 @@
     <p>
       This chapter introduces students to Free and Open Source Software (FOSS), FOSS community principles and roles. The materials assume that this is the student's first introduction to FOSS and aim to develop a conceptual picture and an introductory working knowledge rather than mastery.
     </p>
+    <p>
+      The exercises in this chapter have the students perform the following major tasks:
+      <ol>
+        <li>
+          <p>
+            Review FOSS Community principles and roles.
+          </p>
+        </li>
+        <li>
+          <p>
+            Explore the issue tracker and claim a Round1 issue to work on.
+          </p>
+        </li>
+        <li>
+          <p>
+            Fork the upstream `GitKit-FarmData2` repository into their own GitHub space.
+          </p>
+        </li>
+        <li>
+          <p>
+            Setup their development environment.
+          </p>
+        </li>
+        <li>
+          <p>
+            Clone their fork (i.e. their origin) of the `GitKit-FarmData2` repository.
+          </p>
+        </li>
+      </ol>
+    </p>
   </introduction>
 
   <subsection
@@ -144,44 +174,44 @@
       TODO: Update - THE NOTE FOR EXERCISE 2.3.2.1 DOESN'T SEEM TO BE NEEDED ANYMORE
       <ul>
         <li>
-          <p component="linux-kit-client">
+          <title component="linux-kit-client">
             <xref ref="ex-find-clone-url-linux" /> 
-          </p>
-          <p component="vscode-kit-client">
+          </title>
+          <title component="vscode-kit-client">
             <xref ref="ex-create-kit-client-vscode-b" />
-          </p>
+          </title>
           <p>
             Some students will try to clone the upstream GitKit-FarmData2 repository instead of their origin repository.  A few may even attempt to clone the real FarmData2 repository.  The Kit-tty should prevent this and provide a helpful tip.
           </p>
         </li>
         <li>
-          <p>
+          <title>
             <xref ref="ex-check-remotes" /> 
-          </p>
+          </title>
           <p>
             Checking the origin remote that is given as the answer to this question will confirm that the student has correctly cloned their origin.  Again, the Kit-tty should prevent them doing this incorrectly, but if somehow it did not catching and correcting this early is important.
           </p>
         </li>
         <li>
-          <p>
+          <title>
             <xref ref="ex-identifying-assigned-issues" />
-          </p>
+          </title>
           <p>
             The answer to this question will reasonably differ depending upon when students complete the exercise.  There are initially 3 issues that are pre-assigned to the user that deployed the GitKit.  Students who complete the exercise early are likely to all identify these issues. As additional students claim issues, other students will identify those claimed issues as well.
           </p>
         </li>
         <li>
-          <p>
+          <title>
             <xref ref="ex-claim-an-issue" />
-          </p>
+          </title>
           <p>
             The activity instructs students to claim an issue by commenting on it with the very specific phrase "I would like to work on this please!"  If they are the first to do so the issue will be assigned to them and they will receive a personalized message from a one of the community automations in response. If they are not the first to respond, they will also receive a message to that effect and a suggestion to try a different issue.  It is important that they use the exact message given in the assignment, otherwise the community automation will not recognize and respond to the question.
           </p>
         </li>
         <li>
-          <p>
+          <title>
             <xref ref="topic-extra-practice-communities" />
-          </p>
+          </title>
           <p>
             Some students will attempt to clone the project that they select while they are inside the GitKit-FarmData2 repository that they already cloned.  If they do attempt this the Kit-tty should intervene, prevent the action and respond with a helpful message.
           </p>
