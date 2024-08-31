@@ -134,39 +134,39 @@
     xml:id="topic-upstreaming-exercise-notes">
     <title>Exercise Notes</title>
     <p>
-      TODO: THE FIRST LINES NEED TO BE LINKED TO THE PROPER QUESTIONS. The questions referenced now are in the old MSWord sheets.
+      TODO: update. ARE THE TITLES GOOD DESCRIPTORS? Using the title tag means the reference isn't a clickable link.
 
       <ul>
         <li>
           <title>
-            Question 2b
+            Checking Repository Status
           </title>
           <p>
-            If a student is seeing commit dates, usernames and messages that differ from the correct answers then it is likely that they created their fork after PRs were merged at the start of <xref ref="topic-staying-synchronized" />.  Other than difficulty answering these questions this will not cause an issue with continuing with this chapter. Issues will arise with the exercises in <xref ref="topic-staying-synchronized"/> and <xref ref="topic-resolving-a-merge-conflict"/>. Each of those chapters provide the students with instructions for resolving the issues at the point where they arise.
+            <xref ref="ex-understanding-project-history" />. If a student is seeing commit dates, usernames and messages that differ from the correct answers then it is likely that they created their fork after PRs were merged at the start of <xref ref="topic-staying-synchronized" />.  Other than difficulty answering these questions this will not cause an issue with continuing with this chapter. Issues will arise with the exercises in <xref ref="topic-staying-synchronized"/> and <xref ref="topic-resolving-a-merge-conflict"/>. Each of those chapters provide the students with instructions for resolving the issues at the point where they arise.
           </p>
         </li>
         <li>
           <title>
-            Question 9a
+            Checking File Changed
           </title>
           <p>
-            The <code>git status</code> command here should show one untracked file with modifications and that file should agree with the file that they identified in question #8a.
+            <xref ref="ex-verify-changes" />.The <code>git status</code> command here should show one untracked file with modifications and that file should agree with the file that they identified in <xref ref="ex-claimed-issue-url" />.
           </p>
         </li>
         <li>
           <title>
-            Question 16
+            Checking Commit
           </title>
           <p>
-            This question is a good checkpoint to ensure that they have done things correctly to this point.  The most recent commit in the <code>git log</code> output should show that they committed changes to the correct file (i.e. the one from #8a) and that they have used a meaningful commit message.
+            <xref ref="ex-committing-changes-d" />. This question is a good checkpoint to ensure that they have done things correctly to this point.  The most recent commit in the <code>git log</code> output should show that they committed changes to the correct file (i.e. the one from <xref ref="ex-claimed-issue-url" />) and that they have used a meaningful commit message.
           </p>
         </li>
         <li>
           <title>
-            Question 24
+            Checking PR format
           </title>
           <p>
-            The instructor can use the link provided here to check the students' pull requests for several points:
+            <xref ref="ex-pull-request-find" />. The instructor can use the link provided here to check the students' pull requests for several points:
             <ul>
               <li>
                 <p>
@@ -175,7 +175,7 @@
               </li>
               <li>
                 <p>
-                  Each pull request should contain a line with "Closes #xx" or "Fixes #xx" as per question #23c.  If the student PR does not contain this line, or the line is incorrect (e.g. "Closes#xx"), then a comment can be added to the student's pull request requesting that they add or correct this line.
+                  Each pull request should contain a line with "Closes #xx" or "Fixes #xx" as per <xref ref="ex-pull-request-finish-c" />.  If the student PR does not contain this line, or the line is incorrect (e.g. "Closes#xx"), then a comment can be added to the student's pull request requesting that they add or correct this line.
                 </p>
               </li>
             </ul>
