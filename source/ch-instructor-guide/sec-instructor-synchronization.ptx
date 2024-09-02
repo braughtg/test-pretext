@@ -180,39 +180,42 @@
     xml:id="topic-synchronizing-exercise-notes">
     <title>Exercise Notes</title>
     <p>
-      TODO: THE FIRST LINES NEED TO BE LINKED TO THE PROPER QUESTIONS. The questions referenced now are in the old MSWord sheets.
+      TODO: Update ARE THE TITLES GOOD DESCRIPTORS?
 
       <ul>
         <li>
           <title>
-            Question 3a
+            Late Forks
           </title>
           <p>
-            If a student begins the GitKit activities late they may make their fork and clone after the "Round 1" issues have been merged. This will result in their origin <code>main</code> branch not being <term>behind</term> the upstream <code>main</code> branch.  The directions in <xref ref="topic-appendix-a-staying-synchronized"/> of the activity have them reset the <code>HEAD</code> of their <code>main</code> branch to the commit before any "Round 1" issues were merged. Once they force push this change to their origin they will then see that their <code>main</code> branch is behind the upstream <code>main</code> as expected.
+            <xref ref="ex-origin-main-behind-main-a" />. If a student begins the GitKit activities late they may make their fork and clone after the "Round 1" issues have been merged. This will result in their origin <code>main</code> branch not being <term>behind</term> the upstream <code>main</code> branch.  The directions in <xref ref="topic-appendix-a-staying-synchronized"/> of the activity have them reset the <code>HEAD</code> of their <code>main</code> branch to the commit before any "Round 1" issues were merged. Once they force push this change to their origin they will then see that their <code>main</code> branch is behind the upstream <code>main</code> as expected.
           </p>
         </li>
         <li>
           <title>
-            Question 3e
+            Check Remote Upstream
           </title>
-          <p>
-            It is a good idea to check here that the student's upstream remote points to the correct GitKit-FarmData2 repository.  The Kit-tty should have caught this error and directed students on the correct way to set the upstream remote. However, some students have still managed to set their upstream to point to their origin or to the live FarmData2 repository.
+          <p component="vscode-kit-client">
+            <xref ref="ex-setting-upstream-b-vscode" />. It is a good idea to check here that the student's upstream remote points to the correct GitKit-FarmData2 repository.  The Kit-tty should have caught this error and directed students on the correct way to set the upstream remote. However, some students have still managed to set their upstream to point to their origin or to the live FarmData2 repository.
+          </p>
+          <p component="linux-kit-client">
+            <xref ref="ex-setting-upstream-e-linux" />. It is a good idea to check here that the student's upstream remote points to the correct GitKit-FarmData2 repository.  The Kit-tty should have caught this error and directed students on the correct way to set the upstream remote. However, some students have still managed to set their upstream to point to their origin or to the live FarmData2 repository.
           </p>
         </li>
         <li>
           <title>
-            Question 9b
+            Claiming Round 2 Issues
           </title>
           <p>
-            After synchronizing with the upstream, the students go on to find a "Round2" ticket in the issue tracker. There are only 4 "Round2" issues, so multiple students will be working on each one.  This question requests that they comment on the issue they want to work on but should spread themselves across the available "Round 2" issues.  If you like you can manually assign each "Round2" issue to all students who commented on it, though this is not necessary.
+            <xref ref="ex-claim-issue-b" />. After synchronizing with the upstream, the students go on to find a "Round2" ticket in the issue tracker. There are only 4 "Round2" issues, so multiple students will be working on each one.  This question requests that they comment on the issue they want to work on but should spread themselves across the available "Round 2" issues.  If you like you can manually assign each "Round2" issue to all students who commented on it, though this is not necessary.
           </p>
         </li>
         <li>
           <title>
-            Questions 10-12
+            Fixing Round 2 Issues
           </title>
           <p>
-            These questions ask the student to use the forking workflow to create a fix for the "Round 2" ticket on which they chose to work. GitHub will indicate that the PRs created by each student for their "Round 2" issue can be merged automatically.  This is because even though multiple students are working on each "Round 2" issue, none of them will have been merged into the upstream <code>main</code> at this point. When introducing <xref ref="topic-resolving-a-merge-conflict" /> the instructor will merge a branch that creates conflicts with all of the student "Round2" PRs.
+            <xref ref="ex-fixing-issue-ordering" /> - <xref ref="ex-pull-request-info" />. These questions ask the student to use the forking workflow to create a fix for the "Round 2" ticket on which they chose to work. GitHub will indicate that the PRs created by each student for their "Round 2" issue can be merged automatically.  This is because even though multiple students are working on each "Round 2" issue, none of them will have been merged into the upstream <code>main</code> at this point. When introducing <xref ref="topic-resolving-a-merge-conflict" /> the instructor will merge a branch that creates conflicts with all of the student "Round2" PRs.
           </p>
         </li>
       </ul>

@@ -38,7 +38,7 @@
   <exercise xml:id="ex-restarting-kitclient-for-synching-with-conflicts" label="ex-restarting-kitclient-for-synching-with-conflicts">
     <introduction>
       <p> 
-        Restart your KitClient based on the instructions in <xref provisional="a reference back to ch2-restarting your development environment" />
+        Restart your KitClient based on the instructions in <xref ref="topic-restarting-dev-env" />
       </p>
     </introduction>
   </exercise>
