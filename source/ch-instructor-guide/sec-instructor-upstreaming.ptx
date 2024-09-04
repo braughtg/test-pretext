@@ -134,39 +134,45 @@
     xml:id="topic-upstreaming-exercise-notes">
     <title>Exercise Notes</title>
     <p>
-      TODO: update. ARE THE TITLES GOOD DESCRIPTORS? Using the title tag means the reference isn't a clickable link.
-
       <ul>
         <li>
-          <title>
-            Checking Repository Status
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-understanding-project-history" /> 
+            </p>
+          </em>
           <p>
-            <xref ref="ex-understanding-project-history" />. If a student is seeing commit dates, usernames and messages that differ from the correct answers then it is likely that they created their fork after PRs were merged at the start of <xref ref="topic-staying-synchronized" />.  Other than difficulty answering these questions this will not cause an issue with continuing with this chapter. Issues will arise with the exercises in <xref ref="topic-staying-synchronized"/> and <xref ref="topic-resolving-a-merge-conflict"/>. Each of those chapters provide the students with instructions for resolving the issues at the point where they arise.
+            If a student is seeing commit dates, usernames and messages that differ from the correct answers then it is likely that they created their fork after PRs were merged at the start of <xref ref="topic-staying-synchronized" />.  Other than difficulty answering these questions this will not cause an issue with continuing with this chapter. Issues will arise with the exercises in <xref ref="topic-staying-synchronized"/> and <xref ref="topic-resolving-a-merge-conflict"/>. Each of those chapters provide the students with instructions for resolving the issues at the point where they arise.
           </p>
         </li>
         <li>
-          <title>
-            Checking File Changed
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-verify-changes" />
+            </p>
+          </em>
           <p>
-            <xref ref="ex-verify-changes" />.The <code>git status</code> command here should show one untracked file with modifications and that file should agree with the file that they identified in <xref ref="ex-claimed-issue-url" />.
+            The <code>git status</code> command here should show one untracked file with modifications and that file should agree with the file that they identified in <xref ref="ex-claimed-issue-url" />.
           </p>
         </li>
         <li>
-          <title>
-            Checking Commit
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-committing-changes-d" />
+            </p>
+          </em>
           <p>
-            <xref ref="ex-committing-changes-d" />. This question is a good checkpoint to ensure that they have done things correctly to this point.  The most recent commit in the <code>git log</code> output should show that they committed changes to the correct file (i.e. the one from <xref ref="ex-claimed-issue-url" />) and that they have used a meaningful commit message.
+            This question is a good checkpoint to ensure that they have done things correctly to this point.  The most recent commit in the <code>git log</code> output should show that they committed changes to the correct file (i.e. the one from <xref ref="ex-claimed-issue-url" />) and that they have used a meaningful commit message.
           </p>
         </li>
         <li>
-          <title>
-            Checking PR format
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-pull-request-find" />
+            </p>
+          </em>
           <p>
-            <xref ref="ex-pull-request-find" />. The instructor can use the link provided here to check the students' pull requests for several points:
+            The instructor can use the link provided here to check the students' pull requests for several points:
             <ul>
               <li>
                 <p>
