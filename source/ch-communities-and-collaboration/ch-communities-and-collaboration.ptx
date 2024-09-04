@@ -17,6 +17,7 @@
   </introduction>
 
   <!-- include sections -->
+  <xi:include href="sec-gitkit-pre-survey.ptx" />
   <xi:include href="sec-foss-communities.ptx" />
   <xi:include href="sec-github-account.ptx" />
   <xi:include href="sec-the-issue-tracker.ptx" />

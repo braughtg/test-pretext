@@ -22,5 +22,6 @@
   <xi:include href="sec-extra-practice.ptx" />
   <xi:include href="sec-git-command-summary.ptx" />
   <xi:include href="sec-gitkit-feedback.ptx" />
+  <xi:include href="sec-gitkit-post-survey.ptx" />
   <xi:include href="sec-appendix-a.ptx" />
 </chapter>

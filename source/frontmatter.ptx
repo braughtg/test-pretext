@@ -80,7 +80,7 @@
 
   <acknowledgement>
     <p>
-      In addition to the authors many others have helped in the production of the GitKit in various ways, from conversations, guidance, critiques and providing feedback from pilot uses in their courses.  These following individuals have provided substantial help in one or more of these ways:
+      In addition to the authors many others have helped in the production of the GitKit in various ways, including conversations, guidance, critiques and providing feedback from pilot uses in their courses.  These following individuals have provided substantial help in one or more of these ways:
       <ul>
         <li>Michael Caines</li>
         <li>Heidi Ellis</li>
@@ -93,6 +93,10 @@
 
     <p>
       The authors have been active in the <url href="https://teachingopensource.org/Main_Page">Teaching Open Source</url> community. Many of the resources on their <url href="https://teachingopensource.org/Learning_Resources">Learning Resources</url> page have informed the exercises in the GitKit.
+    </p>
+
+    <p>
+      This work was supported under National Science Foundation Grants <url href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2012966">DUE-2012966</url>, <url href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2013069">DUE-2013069</url>, <url href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2012979">DUE-2012979</url>, <url href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2012999">DUE-2012999</url>, and <url href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2012990">DUE-2012990</url>. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of NSF.
     </p>
   </acknowledgement>
 
@@ -111,4 +115,3 @@
   </colophon>
 
 </frontmatter>
-
