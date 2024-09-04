@@ -183,38 +183,45 @@
     xml:id="topic-merge-conflicts-exercise-notes">
     <title>Exercise Notes</title>
     <p>
-      TODO: Update ARE THE TITLES GOOD DESCRIPTORS? 
       <ul>
         <li>
-          <title>
-            Structural vs Logical/Semanitic Conflicts
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-merge-conflicts-practice-2-e" />- <xref ref="ex-merge-conflicts-practice-2-f" />
+            </p>
+          </em>
           <p>
-            <xref ref="ex-merge-conflicts-practice-2-e" />, <xref ref="ex-merge-conflicts-practice-2-f" />. In this exercise there are no conflicting changes and the merge would be able to be completed automatically.  However, if all of the non-conflicting changes are merged into the result the program will not produce the correct result.  The point being that automatic merges can check for structural conflicts, but not logical or semantic conflicts and thus caution should be used when performing merges.
+            In this exercise there are no conflicting changes and the merge would be able to be completed automatically.  However, if all of the non-conflicting changes are merged into the result the program will not produce the correct result.  The point being that automatic merges can check for structural conflicts, but not logical or semantic conflicts and thus caution should be used when performing merges.
           </p>
         </li>
         <li>
-          <title>
-            No Conflicts in PR
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-no-automatic-merge-on-github" />
+            </p>
+          </em>
           <p>
-            <xref ref="ex-no-automatic-merge-on-github" />. Inevitably some students will be behind on their work and will complete their sync with upstream <code>main</code> after you have merged the PR for the <code>addRound2Conflicts</code> branch.  In these cases, their pull requests will not create a conflict to be resolved.  These students should follow the instructions given in <xref ref="topic-appendix-a-merge-conflicts" />.  These directions have them pull the <code>mergeConflictPractice</code> branch and create a pull request for it.  That PR will then contain conflicts with the changes in the <code>addRound2Conflicts</code> branch that was merged into <code>main</code>.  They will then complete the activity using the <code>mergeConflictPractice</code> branch as it it were their feature branch. Students not in this situation, but who would like additional practice can also pull and use the <code>mergeConflictPractice</code> branch at the end of the activity.
+            Inevitably some students will be behind on their work and will complete their sync with upstream <code>main</code> after you have merged the PR for the <code>addRound2Conflicts</code> branch.  In these cases, their pull requests will not create a conflict to be resolved.  These students should follow the instructions given in <xref ref="topic-appendix-a-merge-conflicts" />.  These directions have them pull the <code>mergeConflictPractice</code> branch and create a pull request for it.  That PR will then contain conflicts with the changes in the <code>addRound2Conflicts</code> branch that was merged into <code>main</code>.  They will then complete the activity using the <code>mergeConflictPractice</code> branch as it it were their feature branch. Students not in this situation, but who would like additional practice can also pull and use the <code>mergeConflictPractice</code> branch at the end of the activity.
           </p>
         </li>
         <li>
-          <title>
-            Merge Tool Common Ancestor
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-launch-mergetool" />.
+            </p>
+          </em>
           <p>
-            <xref ref="ex-launch-mergetool" />. By default, VS Code does not display the best common ancestor in its merge tool. The steps given in these questions has the students change the VS Code configuration such that it includes the best common ancestor.
+            By default, VS Code does not display the best common ancestor in its merge tool. The steps given in these questions has the students change the VS Code configuration such that it includes the best common ancestor.
           </p>
         </li>
         <li>
-          <title>
-            Extra Practice
-          </title>
+          <em>
+            <p>
+              <xref ref="ex-extra-practice-merging-fetch-repo" />.
+            </p>
+          </em>
           <p>
-            <xref ref="ex-extra-practice-merging-fetch-repo" />. If the student did not need to use the <code>merge-conflict-practice</code> branch in <xref ref="ex-no-automatic-merge-on-github" />, then they can use it at this point for additional practice with resolving merge conflicts.
+            If the student did not need to use the <code>merge-conflict-practice</code> branch in <xref ref="ex-no-automatic-merge-on-github" />, then they can use it at this point for additional practice with resolving merge conflicts.
           </p>
         </li>
       </ul>
