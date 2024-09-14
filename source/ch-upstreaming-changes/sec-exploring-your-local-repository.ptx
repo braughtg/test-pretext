@@ -52,8 +52,8 @@
       <p>
         Ensure that you are in your cloned repo (i.e.
         the <em>GitKit-FarmData2</em> directory is your working directory).
-        Then use the <c>git log</c> command to display the information about the 3 most recent commits.
-        (If you don't see more than two recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
+        Then use the <c>git log</c> command to display the information about the 4 most recent commits.
+        (If you don't see more all four recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
       </p>
 
       <p>
@@ -65,7 +65,7 @@
       </p>
 
       <p>
-        Use the output from the <c>git log</c> command to answer the following questions about the project history:
+        Use the output from the <c>git log</c> command to answer the following questions about the project history. Note, if you have started this exercise late, new commits may have been added. If so, you will need to look at more than the 5 most recent commits to answer the question.
       </p>
     </introduction>
 
@@ -73,12 +73,26 @@
     <task xml:id="ex-understanding-project-history-a" label="ex-understanding-project-history-a">
       <statement>
         <p>
-          What is the SHA of the most recent commit?
+          What is the SHA of the most recent commit by IrisSC?
         </p>
       </statement>
 
 
       <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              f7330b62bf421c4a87830fee758105a790f6b6ba
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              That commit was not made by IrisSC.
+            </p>
+          </feedback>
+        </choice>
+
         <choice>
           <statement>
             <p>
@@ -88,26 +102,12 @@
 
           <feedback>
             <p>
-              That commit was made on Oct 11. There is a more recent commit.
+              That commit was not made by IrisSC.
             </p>
           </feedback>
         </choice>
 
         <choice correct="yes">
-          <statement>
-            <p>
-              09ca29c9a4b5efa948c956c5af0896d773aa10d0
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! That commit was made most recently.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
           <statement>
             <p>
               80b4408aa0df6dadc4e5e2c310a5e5cbbc0b9d35
@@ -116,7 +116,7 @@
 
           <feedback>
             <p>
-              That commit was made on Oct 8. There are two more recent commits.
+              Correct!
             </p>
           </feedback>
         </choice>
@@ -124,13 +124,13 @@
         <choice>
           <statement>
             <p>
-              1359864QU10776zp55552j8d868sn29q2w09877
+              73feb3808ae8978deaddfeb9eb14ef6d99457d18
             </p>
           </statement>
 
           <feedback>
             <p>
-              This is not a valid SHA code as it contains capital letters and letters other than a-f.
+              That commit was made by IrisSC, but it is not her most recent commit.
             </p>
           </feedback>
         </choice>
@@ -141,17 +141,14 @@
           Look at the dates of each commit. The SHA code appears above the author of the commit and date the commit was made.
         </p>
       </hint>
-
     </task>
-
 
     <task xml:id="ex-understanding-project-history-b" label="ex-understanding-project-history-b">
       <statement>
         <p>
-          What is the date of the most recent commit?
+          What is the date of the most recent commit to the repository?
         </p>
       </statement>
-
 
       <choices randomize="yes">
         <choice>
@@ -171,13 +168,13 @@
         <choice correct="yes">
           <statement>
             <p>
-              Jul 23 2024
+              None of those listed.
             </p>
           </statement>
 
           <feedback>
             <p>
-              Correct! The most recent commit is shown first in the list.
+              Correct! The most recent commit is always shown first in the list.
             </p>
           </feedback>
         </choice>
@@ -199,13 +196,13 @@
         <choice>
           <statement>
             <p>
-              today
+              Oct 5, 2021
             </p>
           </statement>
 
           <feedback>
             <p>
-              There shouldn't be any commits today. 
+              There is a more recent commit. 
             </p>
           </feedback>
         </choice>
@@ -216,20 +213,17 @@
           To see the most recent commit you can scroll up in the terminal window or type the log command again.
         </p>
       </hint>
-
     </task>
-
 
     <task xml:id="ex-understanding-project-history-c" label="ex-understanding-project-history-c">
       <statement>
         <p>
-          Who is the author of the third most recent commit?
+          Who authored a commit on October 11, 2021?
         </p>
       </statement>
 
-
       <choices randomize="yes">
-        <choice>
+        <choice correct="yes">
           <statement>
             <p>
               Batese2001
@@ -238,12 +232,12 @@
 
           <feedback>
             <p>
-              This is not the author of the most recent commit.
+              Correct! Bates2001 authored a commit on October 11, 2021.
             </p>
           </feedback>
         </choice>
 
-        <choice correct="yes">
+        <choice>
           <statement>
             <p>
               kit
@@ -252,7 +246,7 @@
 
           <feedback>
             <p>
-              Correct! kit was the author of the most recent commit.
+              kit did not author a commit on October 11, 2021.
             </p>
           </feedback>
         </choice>
@@ -266,7 +260,7 @@
 
           <feedback>
             <p>
-              This is not the author of the most recent commit.
+              IrisSC did not author a commit on October 11, 2021.
             </p>
           </feedback>
         </choice>
@@ -280,7 +274,7 @@
 
           <feedback>
             <p>
-              This is not the author of the most recent commit.
+              Grant Braught did not author a commit on October 11, 2021.
             </p>
           </feedback>
         </choice>
@@ -291,19 +285,30 @@
           The author's name will appear below the SHA and above the date of the commit.
         </p>
       </hint>
-
     </task>
-
 
     <task xml:id="ex-understanding-project-history-d" label="ex-understanding-project-history-d">
       <statement>
         <p>
-          What is the purpose of the fourth most recent commit?
+          What is the purpose of the most recent commit by shes-dev?
         </p>
       </statement>
 
-
       <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              Updated comment (#288)
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! shes-dev made this commit on October 5, 2021.
+            </p>
+          </feedback>
+        </choice>
+
         <choice>
           <statement>
             <p>
@@ -313,21 +318,21 @@
 
           <feedback>
             <p>
-              This is the most recent commit. Look for the fourth most recent commit.
+              This commit was not made by shes-dev.
             </p>
           </feedback>
         </choice>
 
-        <choice correct="yes">
+        <choice>
           <statement>
             <p>
-              Reoder Seeding Input (#281)
+              Reorder Seeding Input (#281)
             </p>
           </statement>
 
           <feedback>
             <p>
-              Correct! The fourth commit reordered the seeding input.
+              This commit was not made by shes-dev.
             </p>
           </feedback>
         </choice>
@@ -341,7 +346,7 @@
 
           <feedback>
             <p>
-              This is the second most recent commit. Look for the fourth most recent commit.
+              This commit was not made by shes-dev.
             </p>
           </feedback>
         </choice>
@@ -355,7 +360,7 @@
 
           <feedback>
             <p>
-              This is the most third recent commit. Look for the fourth most recent commit.
+              This commit was not made by shes-dev.
             </p>
           </feedback>
         </choice>
@@ -363,7 +368,7 @@
 
       <hint>
         <p>
-          With your previous log command you only saw 3 commits. Try the command again so that it displays the 4 most recent commits.
+          This commit is older than the others, try a <c>git log</c> command that shows a few more commits.
         </p>
       </hint>
 
