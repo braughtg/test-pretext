@@ -5,7 +5,7 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="the-gitkit-book">
-    <title>GitKit</title>
+    <title>GitKit (Linux Desktop Edition)</title>
     <subtitle>Learn git and GitHub in Context</subtitle>
 
     <!-- Include frontmatter -->
