@@ -12,7 +12,10 @@ If changes are to be made to the GitKit text, including any changes that are edi
 
 Once the edits have been made, this repository can be updated to include those changes as follows:
 1. Open the [GitKit-VSCode Branches](https://github.com/HFOSSedu/GitKit-VSCode/branches) page.
-2. Create a new Pull Request to merge the `VSCode-Edition-Changes` branch into the `main` branch.
+2. Create a new Pull Request to merge the `VSCode-Edition-Changes` branch into the `main` branch of the [GitKit-VSCode](https://github.com/HFOSSedu/GitKit-VSCode) repository.
+   - **BE CAREFUL HERE**
+     - By default PR will go to the `main` branch of the [GitKit-Text](https://github.com/HFOSSedu/GitKit-Text) repository. But we need it to go to the `main` branch of the [GitKit-VSCode](https://github.com/HFOSSedu/GitKit-VSCode) repository.
+     - To do this, change the `base repository` to be the [GitKit-VSCode](https://github.com/HFOSSedu/GitKit-VSCode).
 3. Open the main [GitKit-VSCode](https://github.com/HFOSSedu/GitKit-VSCode) repository page.
 4. Click the "Synch fork" button.
 5. Click the "Discard x commits" button (where x will be some number).
