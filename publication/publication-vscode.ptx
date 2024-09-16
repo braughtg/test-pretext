@@ -21,7 +21,7 @@
     <!-- Style of fill-in-the-blanks: -->
     <fillin textstyle="underline" mathstyle="shade" />
     <!-- You can set a watermark: -->
-    <watermark scale="1.0">DRAFT</watermark>
+    <!-- <watermark scale="1.0">DRAFT</watermark> -->
   </common>
 
 
