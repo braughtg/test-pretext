@@ -25,6 +25,10 @@
       <c>cd</c> and <c>ls</c>). Hands-on activities focus on small changes to documentation in markdown files, and require no prior knowledge of markdown or any programming language.
       The cloud-based development environment requires an internet connection and a modern web browser.
     </p>
+
+		<p>
+			If you have questions about the GitKit, need help getting setup to use it in a class, or have feedback for us, please <url href="https://discord.gg/83Sb4csCeT">chat with us on Discord.</url> 
+		</p>
   </introduction>
   
   <!-- include sections -->
