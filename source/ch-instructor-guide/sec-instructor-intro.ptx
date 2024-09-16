@@ -27,15 +27,28 @@
 			<ol>
 				<li>
 					<p>
-						TODO: INSERT RUNESTONE URLs HERE.
-
-						Adopt the <url href="???">GitKit with Linux</url> text or the <url href="???">GitKit with VSCode</url> text for your course.
+						<url href="https://guide.runestone.academy/InstructorGuide-6.html">Create a Runestone course</url> using the 
+						<url href="https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing">GitKit (Linux Desktop Edition)</url> or the
+						<url href="https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing">GitKit (VSCode Edition)</url>.
 					</p>
 					<p>
-						You are currently viewing the 
-						<term component="linux-kit-client">GitKit with Linux</term>
-						<term component="vscode-kit-client">GitKit with VSCode</term>
-						text.
+						Note that you are currently viewing the 
+						<term component="linux-kit-client">GitKit (Linux Desktop Edition)</term>
+						<term component="vscode-kit-client">GitKit (VSCode Edition)</term>
+						.
+					</p>
+				</li>
+				<li>
+					<p>
+						<url href="https://guide.runestone.academy/working-with-assignments-chap.html#instructor-interface_copying-assignments-4">Copy the Course Pack</url> for the GitKit from the 
+						<term component="linux-kit-client">gitkitlinux</term>
+						<term component="vscode-kit-client">gitkitvscode</term>
+						base course into your course if you would like to use the provided assignments.
+					</p>
+				</li>
+				<li>
+					<p>
+						<url href="https://guide.runestone.academy/InstructorGuide-7.html">Manage the students in your course</url> either by registering them or by having them self-register.
 					</p>
 				</li>
 				<li>
@@ -110,12 +123,17 @@
 				</li>
 				<li>
 					<p>
+						Follow the steps in <xref ref="topic-adopt-gitkit-text" text="type-global-title" /> to create a Runestone course using the GitKit text for your class.
+					</p>
+				</li>
+				<li>
+					<p>
 						Follow the steps in <xref ref="topic-gitkit-deploy" text="type-global-title" /> to deploy the GitKit for use in your course.
 					</p>
 				</li>
 				<li>
 					<p>
-						Refer <xref ref="topic-instructor-materials" text="type-global-title" /> for links to the chapters, the class slides, and instructor notes as you teach each chapter of the GitKit.
+						Refer to <xref ref="topic-instructor-materials" text="type-global-title" /> for links to the chapters, the class slides, and instructor notes as you teach each chapter of the GitKit.
 					</p>
 				</li>
 				<li>
@@ -276,7 +294,7 @@
 				<ul>
 					<li>
 						<p>
-							<term>Linux KitClient</term>: <xref ref="fig-instructor-guide-linux-kit-client" /> shows the Linux KitClient where students complete the hands-on activities in a complete Linux virtual desktop environment.
+							<term>Linux Desktop KitClient</term>: <xref ref="fig-instructor-guide-linux-kit-client" /> shows the Linux KitClient where students complete the hands-on activities in a complete Linux virtual desktop environment.
 
 							<figure 
                 xml:id="fig-instructor-guide-linux-kit-client"
@@ -284,7 +302,7 @@
                 <caption>
                   The Linux KitClient development environment.
                 </caption>
-                <image source="images/ch-introduction/linux-kitclient.png"
+                <image source="images/ch-instructor-guide/linux-kitclient.png"
                   width="75%">
                   <description>
                     The Linux KitClient development environment window displaying the Linux desktop.
@@ -303,7 +321,7 @@
                 <caption>
                   The VSCode development environment.
                 </caption>
-                <image source="images/ch-introduction/vscode-kitclient.png"
+                <image source="images/ch-instructor-guide/vscode-kitclient.png"
                   width="75%">
                   <description>
                     The VSCode development environment window showing the VS Code interface.
@@ -318,21 +336,17 @@
 			</p>
 				
 			<p>
-				There is a different version of this text for each of the KitClients. The texts provide an equivalent experience, but adapt content to the specifics (e.g. user interface elements) of the KitClient as necessary. The instructor will need to adopt the text for the KitClient that has been chosen for the course.
+				There is a different edition of this text for each of the KitClients. The texts provide an equivalent experience, but adapt content to the specifics (e.g. user interface elements) of the KitClient as necessary. The instructor will adopt the text for the KitClient that has been chosen for the course (see <xref ref="topic-adopt-gitkit-text" />).
 			</p>
-
+			
 			<p>
 				You are currently viewing the 
-				<term component="linux-kit-client">GitKit with Linux</term> 
-				<term component="vscode-kit-client">GitKit with VSCode</term> 				
-				version of the text.
-
-				TODO: Insert RUNESTONE URLs here.
-
-				If you prefer you can switch to the
-				<url href="???" component="linux-kit-client">GitKit with VSCode</url> 
-				<url href="???" component="vscode-kit-client">GitKit with Linux</url>
-				version of the text.
+				<term component="linux-kit-client">GitKit (Linux Desktop Edition)</term> 
+				<term component="vscode-kit-client">GitKit (VSCode Edition)</term> 				
+				of the text. You can use the following link to find the
+				<url href="https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing"  component="vscode-kit-client">GitKit (Linux Desktop Edition)</url>
+				<url href="https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing" component="linux-kit-client">GitKit (VSCode Edition)</url> if you would like to review it.
+				.
 			</p>
 		</introduction>
 
@@ -404,6 +418,73 @@
 
 		<p>
 			Current development work on FarmData2 is occurring in the <url href="https://github.com/FarmData2">FarmData2 Organization</url> on GitHub.
+		</p>
+	</subsection>
+
+  <subsection xml:id="topic-adopt-gitkit-text">
+		<title>Creating a Runestone Course using the GitKit Text</title>
+		
+		<p>
+			The GitKit text is an e-text that is available on <url href="https://runestone.academy/">Runestone Academy</url>. It contains a large number of interactive elements, many of which are auto-graded and provide instant feedback to students as they work through the GitKit.	If you are not familiar with Runestone Academy it is recommended that you read the first 6 sections of the <url href="https://runestone.academy/ns/books/published/instructorguide/InstructorGuide.html">Using eBooks with Runestone Academy</url> guide to familiarize yourself with it.
+		</p>
+
+		<p>
+			Once you are familiar with Runestone Academy, use the following steps to adopt the GitKit text for a course:
+			<ol>
+				<li>
+					<p>
+						<url href="https://guide.runestone.academy/InstructorGuide-6.html">Create a Runestone course</url> using the 
+						<url href="https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing">GitKit (Linux Desktop Edition)</url> or the
+						<url href="https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing">GitKit (VSCode Edition)</url> 
+						of the text.
+					</p>
+					<p>
+						Note that you are currently viewing the 
+						<term component="linux-kit-client">GitKit (Linux Desktop Edition)</term>
+						<term component="vscode-kit-client">GitKit (VSCode Edition)</term>
+						.
+					</p>
+				</li>
+				<li>
+					<p>
+						You can either <url href="https://guide.runestone.academy/working-with-assignments-chap.html">create assignments</url> for your students from the GitKit sections and exercises, or you can <url href="https://guide.runestone.academy/working-with-assignments-chap.html#instructor-interface_copying-assignments-4">Copy the Course Pack</url> for the GitKit from the 
+						<term component="linux-kit-client">gitkitlinux</term>
+						<term component="vscode-kit-client">gitkitvscode</term>
+						base course into your course. 
+					</p>
+					<p>
+						The course pack includes a <term>reading assignment</term> and a <term>problem assignment</term> for each of the chapter of the GitKit text (except <xref ref="topic-instructor-guide" text="type-global-title" />). The provided reading assignment for each chapter includes all sections of the chapter and is auto-grading based on student interaction with each of he chapter's sections. The provided problem assignment for each chapter includes every interactive exercise in the chapter. Every exercise that can be auto-graded is graded using <term>% Correct</term> and the students <term>last answer</term>. If you adopt the course pack you can modify the sections and questions that are included in the assignments, how they are graded and also add your own questions. See the <url href="https://guide.runestone.academy/working-with-assignments-chap.html">Working with Assignments</url> section of the <url href="https://guide.runestone.academy/InstructorGuide-3.html">Using eBooks with Runestone Academy</url> guide for more details.
+					</p>
+
+					<p>
+						Note that the GitKit text and the reading assignments provided in the course pack include sections that ask students to complete some surveys.
+				
+						<ul>
+							<li>
+								<p>
+									<xref ref="topic-gitkit-pre-survey" /> and <xref ref="topic-gitkit-post-survey" /> are a pre/post survey pair. These surveys aim to help the authors better understand the impact and effectiveness of the GitKit.
+								</p>
+							</li>
+							<li>
+								<p>
+									<xref ref="topic-gitkit-feedback-communities" />, <xref ref="topic-gitkit-feedback-upstreaming" />, <xref ref="topic-gitkit-feedback-synching" />, and <xref ref="topic-gitkit-feedback-merging" /> ask for feedback on each of the chapters to help improve future versions of the GitKit.
+								</p>
+							</li>
+						</ul>
+					</p>
+					<p>
+						Completion of these surveys is optional and is fully anonymous.  The authors hope that you will leave these sections in the assignments to give your students the option to complete them. However, if you prefer not to include them they can be removed from the reading assignments in <term>Assignments</term> tab on the <term>Instructor's Page</term> for your course.
+					</p>
+					<p>
+						These surveys have been approved by the Institutional Review Board (IRB) at Western New England University. If you have any questions about this study, you may contact either: Faculty contact: Dr. Ellis (ellis@wne.edu) Professor, Computer Science and Information Technology department, Western New England University, or IRB contact: Dr. Jess Carlson, Professor of Psychology, jessica.outhouse@wne.edu.
+					</p>
+				</li>
+				<li>
+					<p>
+						<url href="https://guide.runestone.academy/InstructorGuide-7.html">Manage the students in your course</url> either by registering them or by having them self-register.
+					</p>
+				</li>
+			</ol>
 		</p>
 	</subsection>
 
@@ -536,7 +617,7 @@
 					</p>
 <p>
 <c>Your new repository is ready. Give the URL below to your students.
-https://github.com/braughtg/test-gitkit                           
+https://github.com/someLocation/GitKit-FarmData2                           
 </c>
 </p>
 					<p>

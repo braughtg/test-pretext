@@ -1,6 +1,10 @@
-# The GitKit Activities
+# The GitKit Text
 
-This repository contains the pretext source for the GitKit activities.
+This repository contains the pretext source for the GitKit Runestone texts.  
+
+If you are interested in using the GitKit Text please see the Instructor Guide in the text on Runestone by using one of the following links:
+- [GitKit (Linux Desktop Edition)](https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing) - students work in a full Linux desktop environment in this edition.
+- [GitKit (VSCode Edition)](https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing) - students work within the VSCode IDE in this edition.
 
 ## Licensing
 
@@ -10,7 +14,7 @@ Licensing information for the GitKit activities can be found in the [LICENSE.md]
 
 1. Fork the upstream repo.
 2. Open your fork in a Codespace using the green "Code" button.
-3. Edit and commit chagnes to a feature branch.
+3. Edit and commit changes to a feature branch.
 4. Push and make a Pull Request
 
 ## PreTeXt References
@@ -21,7 +25,7 @@ These are some helpful PreTeXt references:
     - Tip: Use the search feature!
 
 - PreTeXt Sample Books:
-  - A omprehensive set of exercise and media type exampeles with source:
+  - A comprehensive set of exercise and media type examples with source:
     - https://pretextbook.org/examples/sample-book/annotated/rune.html
       - The same book running on Runestone w/o annotations but useful for seeing some features that do not work outside of Runestone:
         - https://runestone.academy/ns/books/published/PTXSB/rune.html
@@ -365,3 +369,8 @@ Note:
 
 The available versions are defined by the `<target>`s in the `project.ptx` file.  Each `<target>` references a `.ptx` file in the `publication` folder that indicates the content that will appear in the version.
 
+##### Publishing a Version
+
+Runestone does not currently support the publication of different versions of a text from a single repository. Instead, the solution is to create a fork of this repository. Then in that repository change the `publication` file that is the `target` of the `runestone` target to point to the `publication` file for the version that you would like to publish.  Then create a new Runestone text using that repository.
+
+See the [GitKit-VSCode Repository](https://github.com/HFOSSedu/GitKit-VSCode) for an example.  That repository also includes information about how to update it from this repository when edits are made.
