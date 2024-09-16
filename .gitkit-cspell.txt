@@ -2,6 +2,8 @@ automations
 farmdata
 foss
 gitkit
+gitkitlinux
+gitkitvscode
 halign
 HFOSSedu
 inclusivity
