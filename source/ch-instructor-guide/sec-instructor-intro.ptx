@@ -45,6 +45,10 @@
 						<term component="vscode-kit-client">gitkitvscode</term>
 						base course into your course if you would like to use the provided assignments.
 					</p>
+
+					<p>
+						Note that the reading assignments in the course pack include sections that allow students to elect to participate in a research project aimed at (1) understanding what they think and know about open source tools and techniques and (2) assessing the effectiveness of the GitKit. The inclusion of these sections is option and may be removed at the discretion of the instructor. See <xref ref="topic-adopt-gitkit-text" text="type-global-title" /> for additional information.
+					</p>
 				</li>
 				<li>
 					<p>
@@ -457,23 +461,27 @@
 					</p>
 
 					<p>
-						Note that the GitKit text and the reading assignments provided in the course pack include sections that ask students to complete some surveys.
+						The reading assignments in the course pack include sections that allow students to elect to participate in a research project aimed at (1) understanding what they think and know about open source tools and techniques and (2) assessing the effectiveness of the GitKit. In addition, there are surveys at the end of each chapter by which students can provide feedback to help improve the GitKit for future students.
 				
 						<ul>
 							<li>
 								<p>
 									<xref ref="topic-gitkit-pre-survey" /> and <xref ref="topic-gitkit-post-survey" /> are a pre/post survey pair. These surveys aim to help the authors better understand the impact and effectiveness of the GitKit.
 								</p>
+
+								<p>
+									The <xref ref="topic-gitkit-pre-survey" /> also allows students to consent to providing the GitKit authors with their responses to all of the GitKit exercises. If you would like to provide the GitKit authors with exercise responses from students in your course who consented please contact Dr. Braught (braught@dickinson.edu) Professor of Computer Science at Dickinson College for additional information.
+								</p>
 							</li>
 							<li>
 								<p>
-									<xref ref="topic-gitkit-feedback-communities" />, <xref ref="topic-gitkit-feedback-upstreaming" />, <xref ref="topic-gitkit-feedback-synching" />, and <xref ref="topic-gitkit-feedback-merging" /> ask for feedback on each of the chapters to help improve future versions of the GitKit.
+									<xref ref="topic-gitkit-feedback-communities" />, <xref ref="topic-gitkit-feedback-upstreaming" />, <xref ref="topic-gitkit-feedback-synching" />, and <xref ref="topic-gitkit-feedback-merging" /> ask for feedback on each of the individual chapters and will be used to help improve future versions of the GitKit.
 								</p>
 							</li>
 						</ul>
 					</p>
 					<p>
-						Completion of these surveys is optional and is fully anonymous.  The authors hope that you will leave these sections in the assignments to give your students the option to complete them. However, if you prefer not to include them they can be removed from the reading assignments in <term>Assignments</term> tab on the <term>Instructor's Page</term> for your course.
+						Completion of any of these surveys is completely optional.  The authors hope that you will leave these sections in the assignments to give your students the option to complete them. However, if you prefer not to include them they can be removed from the reading assignments in <term>Assignments</term> tab on the <term>Instructor's Page</term> for your course.
 					</p>
 					<p>
 						These surveys have been approved by the Institutional Review Board (IRB) at Western New England University. If you have any questions about this study, you may contact either: Faculty contact: Dr. Ellis (ellis@wne.edu) Professor, Computer Science and Information Technology department, Western New England University, or IRB contact: Dr. Jess Carlson, Professor of Psychology, jessica.outhouse@wne.edu.
