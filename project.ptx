@@ -8,7 +8,7 @@
     <!-- This is the target that is built on runestone -->
     <!-- It will need to be made to point to the vscode publication file in the fork for that edition. -->
     <!-- The output-dir should also be changed to a unique directory for the VSCode version. -->
-    <target name="runestone" format="html" publication="publication-runestone-linux.ptx" output-dir="runestone-linux" />
+    <target name="runestone" format="html" publication="publication-runestone-linux.ptx" output-dir="published/gitkitlinux" />
     
     <!--
     <target name="runestone-linux" format="html" publication="publication-runestone-linux.ptx" output-dir="publication/gitkit" />
