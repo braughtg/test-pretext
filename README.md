@@ -2,9 +2,7 @@
 
 This repository contains the pretext source for the GitKit Runestone texts.  
 
-If you are interested in using the GitKit Text please see the Instructor Guide in the text on Runestone by using one of the following links:
-- [GitKit (Linux Desktop Edition)](https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing) - students work in a full Linux desktop environment in this edition.
-- [GitKit (VSCode Edition)](https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing) - students work within the VSCode IDE in this edition.
+If you are interested in using the GitKit Text please see the Instructor Guide in the text on Runestone by using one of the following link: [GitKit](https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing)
 
 ## Licensing
 
@@ -301,76 +299,19 @@ An `<exercise>` containing `<task>`s can be used to create a question with multi
 Note:
 - Fill-in questions are not currently suported within a `<task>`.  A [free response question](https://runestone.academy/ns/books/published/PTXSB/rune-20.html) (with [source](https://runestone.academy/ns/books/published/PTXSB/rune-20.html)) should be used instead. Note that the free response box only renders when running in Runestone.  This is because free response must be hand graded and cannot be auto checked in a static web deploy.  See [Using a fill in the blank exercise in a task](https://groups.google.com/g/pretext-support/c/VWLb_W0AT18) for updates on this issue.
 
-#### Adding Version Specific Content
+#### Text Versions
 
-There are 10 versions of the text that can be built:
+There are 3 versions of the text that can be built:
 
-- `student-web-linux` and `student-print-linux` - The Linux KitClient book as students will see it.
-- `student-web-vscode` and `student-print-vscde` - The VSCode KitClient book as students will see it.
-
-- `instructor-web-linux` and `instructor-print-linux` - The Linux KitClient book including notes to the instructor (see below).
-- `instructor-web-vscode` and `instructor-print-vscode` - The VSCode KitClient book including notes to the instructor (see below).
-
-- `web` and `print` - same as the instructor Linux version.  This is included for the CodeChat preview.
+- `web` - An HTML version of the text.  This will some but not all of the interactive Runestone question types.
+- `print` - A PDF version of the text.
+- `runestone` - The version built to be served by Runestone Academy.
 
 ##### Building a Specific Version
 
 Any of these versions can be built using "Build another target..." option on the `PreTeXt` menu or by using terminal commands similar to:
 
 ```text
-pretext build instructor-web-linux
-pretext view instructor-web-linux
+pretext build web
+pretext view web
 ```
-
-##### Adding KitClient Specific Content
-
-Content specific to a given kit client is indicated by adding a `component` attribute to to divisions/elements as follows:
-
-```
-  <p 
-    component="linux-kit-client"
-    xml:id="topic-some-stuff-linux">
-    This text appears only in the Linux Kit Client versions.
-  </p>
-
-  <p 
-    component="vscode-kit-client"
-    xml:id="topic-some-stuff-vscode">
-    This text appears only in the VSCode Kit Client versions.
-  </p>
-```
-
-- If a division/element will appear only in the `linux` or `vscode` version of the text its `xml:id` should have a suffix indicating its version.  
-- If two divisions/elements provide alternate content for the `linux` and `vscode` versions their `xml:ids` will be the same except for the suffix. 
-
-##### Instructor Version Content
-
-A `commentary` element with the `component="instructor"` attrribute is used to add instructor guide information directly to the source text as follows:
-
-```xml
- <commentary component="instructor">
-    <tabular top="major" bottom="major" left="major" right="major">
-      <col width="100%" />
-      <row>
-        <cell>
-          <p>
-            <alert>Instructor Note:</alert>: Information for the instructor appears here.
-          </p>
-        </cell>
-      </row>
-    </tabular>
-  </commentary>
-```
-
-Note:
-- The `<tabular>` is included to place all comments for the instructor into a box.
-
-##### Defining a Version
-
-The available versions are defined by the `<target>`s in the `project.ptx` file.  Each `<target>` references a `.ptx` file in the `publication` folder that indicates the content that will appear in the version.
-
-##### Publishing a Version
-
-Runestone does not currently support the publication of different versions of a text from a single repository. Instead, the solution is to create a fork of this repository. Then in that repository change the `publication` file that is the `target` of the `runestone` target to point to the `publication` file for the version that you would like to publish.  Then create a new Runestone text using that repository.
-
-See the [GitKit-VSCode Repository](https://github.com/HFOSSedu/GitKit-VSCode) for an example.  That repository also includes information about how to update it from this repository when edits are made.
