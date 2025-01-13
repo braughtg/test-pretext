@@ -42,8 +42,7 @@
       <!-- The Linux KitClient Instructions -->
       <exercise
         xml:id="ex-create-kit-client"
-        label="ex-create-kit-client"
-        component="linux-kit-client">
+        label="ex-create-kit-client">
         <introduction>
           <p>
             The following tasks will guide you through the process of starting and configuring your  development environment. 
@@ -135,8 +134,7 @@
 
       <exercise
         xml:id="ex-configure-kit-client-linux"
-        label="ex-configure-kit-client-linux"
-        component="linux-kit-client">
+        label="ex-configure-kit-client-linux">
         <introduction>
           <p>
             There are a few additional things that you can to to make working in your development environment more convenient.
@@ -178,110 +176,6 @@
           </statement>
         </task>
       </exercise>
-
-      <!-- The VSCode KitClient Instructions -->
-      <exercise
-        xml:id="ex-create-kit-client-vscode"
-        label="ex-create-kit-client-vscode"
-        component="vscode-kit-client">
-        <introduction>
-          <p>
-            The following tasks will guide you through the process of starting and configuring your development environment. 
-          </p>
-        </introduction>
-
-        <task
-          xml:id="ex-create-kit-client-vscode-a"
-          label="ex-create-kit-client-vscode-a">
-          <statement>
-            <p>
-              Click this link to 
-              <url href="https://gitpod.io/workspaces" visual="https://gitpod.io/workspaces">Launch KitClient</url> in GitPod.
-            </p>
-          </statement>
-        </task>
-
-        <task
-          xml:id="ex-create-kit-client-vscode-b"
-          label="ex-create-kit-client-vscode-b">
-          <statement>
-            <p>
-              Paste the URL of your GitKit FarmData2 repository from <xref ref="ex-fork-url" /> into the text box and press "Enter".
-            </p>
-          </statement>
-        </task>
-
-        <task
-          xml:id="ex-create-kit-client-vscode-c"
-          label="ex-create-kit-client-vscode-c">
-          <statement>
-            <p>
-              Choose "VS Code..." as the "Editor - Browser" and "Standard" as the machine "Class" as shown here:
-              
-              <image source="images/ch-communities-and-collaboration/gitpod-create-linux-workspace.png"
-                width="50%">
-                <description>
-                  Creating the development environment in GitPod.
-                </description>
-              </image>
-            </p>
-          </statement>
-        </task>
-
-        <task
-          xml:id="ex-create-kit-client-vscode-d"
-          label="ex-create-kit-client-vscode-d">
-          <statement>
-            <p>
-              Click the "Continue" button and wait for the development environment to open in the browser. It will appear similar to the window shown in <xref ref="fig-vscode-kit-client" />.
-            </p>
-            <p>
-              <figure 
-                xml:id="fig-vscode-kit-client"
-                label="fig-vscode-kit-client"
-                >
-                <caption>
-                  The development environment.
-                </caption>
-                <image source="images/ch-communities-and-collaboration/vscode-kitclient.png"
-                  width="75%">
-                  <description>
-                    The development environment window showing the VS Code interface.
-                  </description>
-                </image>
-              </figure>
-            </p>
-          </statement>
-        </task>
-
-        <task
-          xml:id="ex-create-kit-client-vscode-e"
-          label="ex-create-kit-client-vscode-e">
-          <statement>
-            <p>
-              A message box may appear in the lower right corner of the development environment asking if you would like to reopen the project in "VS Code Desktop". If this happens you can click the "X" to close the box, or ignore it and it will go away on its own.
-            </p>
-          </statement>
-        </task>
-      </exercise>
-
-      <exercise
-        xml:id="ex-vscode-kitty"
-        label="ex-vscode-kitty"
-        component="vscode-kit-client">
-        <statement>
-          <p>
-            In the "TERMINAL" tab at the bottom of the window you should see "😺💻 Meow, Kit-tty here!" in the output. Read the associated text.
-
-            What is the Kit-tty?
-          </p>
-        </statement>
-        <response />
-        <hint>
-          Everything you need to know about Kit-tty for now is in the text that appears in the "TERMINAL" tab.
-        </hint>
-      </exercise>
-
     </exercises>
   </subsection>
 
@@ -302,8 +196,7 @@
       <!-- Linux KitClient -->
       <exercise
         xml:id="ex-open-terminal-linux"
-        label="ex-open-terminal-linux"
-        component="linux-kit-client">
+        label="ex-open-terminal-linux">
         <introduction>
           <p>
             You will interact with Git using its command line interface via a <code>Terminal</code>.  Use the following steps to open a Terminal.
@@ -327,21 +220,6 @@
             </p>
           </statement>
         </task>
-      </exercise>
-
-      <!-- VSCode KitClient -->
-      <exercise
-        xml:id="ex-open-terminal-vscode"
-        label="ex-open-terminal-vscode"
-        component="vscode-kit-client">
-        <statement>
-          <p>
-            You will interact with Git using its command line interface via a <code>Terminal</code>.  Use the following steps access the Terminal.
-          </p>
-          <p>
-            Click on the "TERMINAL" tab near the bottom of the development environment window to make the Terminal active.
-          </p>
-        </statement>
       </exercise>
 
       <exercise
@@ -604,8 +482,7 @@
         </task>
         <task 
           xml:id="ex-restarting-dev-env-c"
-          label="ex-restarting-dev-env-c"
-          component="linux-kit-client">
+          label="ex-restarting-dev-env-c">
           <statement>
             <p>
               Wait for the text similar to that in <xref ref="ex-create-kit-client-linux-c" /> to appear and click the link.

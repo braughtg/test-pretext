@@ -186,23 +186,23 @@
     </task>
   </exercise>
 
-  <p component="linux-kit-client">
+  <p>
     <term>Getting a Personal Access Token: </term>
   </p>
 
-  <p component="linux-kit-client">
+  <p>
     Before you will be able to push your feature branch to GitHub you will have to get a <term>Personal Access Token (PAT)</term> from GitHub.
     A PAT is like a password but has some security benefits.
     In particular, you can have multiple different PATs.
     Each one can have different limits on what can be done with it and each one can be revoked individually without affecting the others.
   </p>
 
-  <p component="linux-kit-client">
+  <p>
     When interacting with GitHub using the git CLI (e.g.
     when pushing a branch), GitHub requires that you use a PAT for authentication instead of your password.
   </p>
 
-  <exercise xml:id="ex-getting-pat" label="ex-getting-pat" component="linux-kit-client">
+  <exercise xml:id="ex-getting-pat" label="ex-getting-pat">
     <introduction>
       <p>
         Follow GitHub's instructions for creating a (classic) personal access token: <url href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic" visual="docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic">Creating a Personal Access Token (classic)</url>.
@@ -240,7 +240,7 @@
     <term>Pushing your Feature Branch: </term>
   </p>
 
-  <exercise xml:id="ex-push-branch-linux" label="ex-push-branch-linux" component="linux-kit-client">
+  <exercise xml:id="ex-push-branch-linux" label="ex-push-branch-linux">
     <introduction>
       <p>
         The <c>git push &lt;remote repository name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repository to the specified remote repository (i.e.
@@ -258,51 +258,12 @@
     </introduction>
   </exercise>
 
-  <exercise xml:id="ex-push-error-linux" label="ex-push-error-linux" component="linux-kit-client">
+  <exercise xml:id="ex-push-error-linux" label="ex-push-error-linux">
     <introduction>
       <p>
         The output from <xref ref="ex-push-branch-linux"/> should not contain any error messages.
         The last few lines should also give you some indication that that your push was successful.
         Visit your origin repository on GitHub and check that the branch was pushed.
-      </p>
-    </introduction>
-  </exercise>
-
-  <exercise xml:id="ex-push-branch-vscode" label="ex-push-branch-vscode" component="vscode-kit-client">
-    <introduction>
-      <p>
-        The <c>git push &lt;remote repo name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repo to the specified remote repo (i.e.
-        on GitHub).
-      </p>
-
-      <p>
-        Use a command that will push your <em>feature branch</em> from your local repo to your <em>origin repo</em> on GitHub.
-      </p>
-
-      <p>
-        Note: You can use the name of the remote repo, so you do not need to use the full URL.
-      </p>
-    </introduction>
-  </exercise>
-
-  <exercise xml:id="ex-push-error-vscode" label="ex-push-error-vscode" component="vscode-kit-client">
-    <introduction>
-      <p>
-        When you attempted to push in <xref ref="ex-push-branch-vscode"/>, you should have gotten an authorization error.
-        When this happens VSCode will prompt you in the lower right to open GitPod and configure the authorization.
-        Do that.
-        When done, return to your GitPod workspace and try the push again.
-        It should work.
-      </p>
-
-      <p>
-        If you get the same pop up, open it again.
-        Look for the GitHub authorization.
-        Click the "..." menu next to it and edit it.
-        Ensure that "repo" with read/write permissions are set and save it.
-        It will send you to GitHub to complete the authorization.
-        When done, return to your GitPod workspace and try the push again.
-        It should work.
       </p>
     </introduction>
   </exercise>

@@ -28,21 +28,13 @@
 				<li>
 					<p>
 						<url href="https://guide.runestone.academy/InstructorGuide-6.html">Create a Runestone course</url> using the 
-						<url href="https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing">GitKit (Linux Desktop Edition)</url> or the
-						<url href="https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing">GitKit (VSCode Edition)</url>.
-					</p>
-					<p>
-						Note that you are currently viewing the 
-						<term component="linux-kit-client">GitKit (Linux Desktop Edition)</term>
-						<term component="vscode-kit-client">GitKit (VSCode Edition)</term>
-						.
+						<url href="https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing">GitKit</url> text
 					</p>
 				</li>
 				<li>
 					<p>
 						<url href="https://guide.runestone.academy/working-with-assignments-chap.html#instructor-interface_copying-assignments-4">Copy the Course Pack</url> for the GitKit from the 
-						<term component="linux-kit-client">gitkitlinux</term>
-						<term component="vscode-kit-client">gitkitvscode</term>
+						<term>gitkitlinux</term>
 						base course into your course if you would like to use the provided assignments.
 					</p>
 
@@ -342,16 +334,6 @@
 			<p>
 				There is a different edition of this text for each of the KitClients. The texts provide an equivalent experience, but adapt content to the specifics (e.g. user interface elements) of the KitClient as necessary. The instructor will adopt the text for the KitClient that has been chosen for the course (see <xref ref="topic-adopt-gitkit-text" />).
 			</p>
-			
-			<p>
-				You are currently viewing the 
-				<term component="linux-kit-client">GitKit (Linux Desktop Edition)</term> 
-				<term component="vscode-kit-client">GitKit (VSCode Edition)</term> 				
-				of the text. You can use the following link to find the
-				<url href="https://runestone.academy/ns/books/published/gitkitlinux/the-gitkit-book.html?mode=browsing"  component="vscode-kit-client">GitKit (Linux Desktop Edition)</url>
-				<url href="https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing" component="linux-kit-client">GitKit (VSCode Edition)</url> if you would like to review it.
-				.
-			</p>
 		</introduction>
 
 		<subsubsection xml:id="topic-kitty-virtual-assistant">
@@ -442,19 +424,11 @@
 						<url href="https://runestone.academy/ns/books/published/gitkitvscode/the-gitkit-book.html?mode=browsing">GitKit (VSCode Edition)</url> 
 						of the text.
 					</p>
-					<p>
-						Note that you are currently viewing the 
-						<term component="linux-kit-client">GitKit (Linux Desktop Edition)</term>
-						<term component="vscode-kit-client">GitKit (VSCode Edition)</term>
-						.
-					</p>
 				</li>
 				<li>
 					<p>
 						You can either <url href="https://guide.runestone.academy/working-with-assignments-chap.html">create assignments</url> for your students from the GitKit sections and exercises, or you can <url href="https://guide.runestone.academy/working-with-assignments-chap.html#instructor-interface_copying-assignments-4">Copy the Course Pack</url> for the GitKit from the 
-						<term component="linux-kit-client">gitkitlinux</term>
-						<term component="vscode-kit-client">gitkitvscode</term>
-						base course into your course. 
+						<term>gitkitlinux</term> base course into your course. 
 					</p>
 					<p>
 						The course pack includes a <term>reading assignment</term> and a <term>problem assignment</term> for each of the chapter of the GitKit text (except <xref ref="topic-instructor-guide" text="type-global-title" />). The provided reading assignment for each chapter includes all sections of the chapter and is auto-grading based on student interaction with each of he chapter's sections. The provided problem assignment for each chapter includes every interactive exercise in the chapter. Every exercise that can be auto-graded is graded using <term>% Correct</term> and the students <term>last answer</term>. If you adopt the course pack you can modify the sections and questions that are included in the assignments, how they are graded and also add your own questions. See the <url href="https://guide.runestone.academy/working-with-assignments-chap.html">Working with Assignments</url> section of the <url href="https://guide.runestone.academy/InstructorGuide-3.html">Using eBooks with Runestone Academy</url> guide for more details.

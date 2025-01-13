@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="topic-verifying-the-upstream-remote" xmlns:xi="http://www.w3.org/2001/XInclude" >
-  <title component="linux-kit-client">Creating and Verifying the Upstream Remote</title>
-  <title component="vscode-kit-client">Verifying the Upstream Remote</title>
-  <introduction component="linux-kit-client">
+  <title>Creating and Verifying the Upstream Remote</title>
+  <introduction >
     In order to pull changes from the upstream you will need to tell your local repository where the upstream is.
     In earlier figures, dotted orange lines were used to indicate that your local repository knew about the origin and that the origin knew about the upstream.
     But there was no orange dotted line from your local repository to the upstream.
     That is because, by default, your local repository isn’t aware of the upstream.
-  </introduction>
-
-  <introduction component="vscode-kit-client">
-    When you open a fork in GitPod, GitPod clones its repository.
-    This creates a remote named origin that points to the repository it cloned.
-    When you clone a repository, this is typically the only remote created automatically.
-    But GitPod goes a step further.
-    It also creates upstream remote that points to the repository that your origin forked from.
   </introduction>
 
   <p>
@@ -31,18 +22,12 @@
   </exercise>
 
   <exercise xml:id="ex-setting-upstream" label="ex-setting-upstream">
-    <introduction component="vscode-kit-client">
-      To synchronize your fork, you will need to use this upstream remote.
-      First, let's confirm that GitPod correctly created the upstream remote.
-      This exercise will walk you through that process.
-    </introduction>
 
-    <introduction component="linux-kit-client">
+    <introduction>
       In order to pull from the upstream you will first need to make your local repository aware of the upstream.
       This is done by setting a remote for it.
       This exercise will walk you through that process.
     </introduction>
-
 
     <task xml:id="ex-setting-upstream-a" label="ex-setting-upstream-a">
       <statement>
@@ -54,7 +39,7 @@
     </task>
 
 
-    <task xml:id="ex-setting-upstream-b-linux" label="ex-setting-upstream-b-linux" component="linux-kit-client">
+    <task xml:id="ex-setting-upstream-b-linux" label="ex-setting-upstream-b-linux">
       <statement>
         <p>
           How is the origin remote indicated in <xref ref="ex-setting-upstream-a" /> represented in <xref ref="fig-changes-merged-into-upstream" />?
@@ -109,19 +94,7 @@
       </hint>
     </task>
 
-
-    <task xml:id="ex-setting-upstream-b-vscode" label="ex-setting-upstream-b-vscode" component="vscode-kit-client">
-      <statement>
-        <p>
-          Confirm that <c>upstream</c> points to the upstream project on GitHub.
-          How did you confirm it?
-        </p>
-      </statement>
-      <response />
-    </task>
-
-
-    <task xml:id="ex-setting-upstream-c-linux" label="ex-setting-upstream-c-linux" component="linux-kit-client">
+    <task xml:id="ex-setting-upstream-c-linux" label="ex-setting-upstream-c-linux">
       <statement>
         <p>
           To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo.
@@ -134,7 +107,7 @@
     </task>
 
 
-    <task xml:id="ex-setting-upstream-d-linux" label="ex-setting-upstream-d-linux" component="linux-kit-client">
+    <task xml:id="ex-setting-upstream-d-linux" label="ex-setting-upstream-d-linux">
       <statement>
         <p>
           The git remote command can also be used to add a new remote to your local repo.
@@ -152,7 +125,7 @@
     </task>
 
 
-    <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-e-linux" component="linux-kit-client">
+    <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-e-linux">
       <statement>
         <p>
           Use the <c>git remote -v</c> command to confirm that the new upstream remote has been added.
@@ -161,65 +134,7 @@
     </task>
 
 
-    <task xml:id="ex-setting-upstream-f-linux" label="ex-setting-upstream-f-linux" component="linux-kit-client">
-      <statement>
-        <p>
-          The upstream remote provides your local repo with the information it needs to find the upstream repo.
-          In git this information is represented using a URL.
-          How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              It is labeled as "origin".
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              It is labeled as "upstream".
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! The diagram shows your upstream remote on the top right side with the label "upstream".
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It is labeled as "local".
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It is labeled as "feature branch".
-            </p>
-          </statement>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          When you issued the <c>git remote -v</c> command pay attention to the name given to second set of fetch and pull URLs.
-        </p>
-      </hint>
-    </task>
-
-
-    <task xml:id="ex-setting-upstream-c-vscode" label="ex-setting-upstream-c-vscode" component="vscode-kit-client">
+    <task xml:id="ex-setting-upstream-f-linux" label="ex-setting-upstream-f-linux">
       <statement>
         <p>
           The upstream remote provides your local repo with the information it needs to find the upstream repo.
@@ -277,7 +192,7 @@
     </task>
   </exercise>
 
-  <conclusion component="linux-kit-client">
+  <conclusion>
     Note that you will only need to set the upstream remote once for a repository.
     Once the upstream remote is set you will be able to pull from the upstream repo as often as is necessary.
   </conclusion>
