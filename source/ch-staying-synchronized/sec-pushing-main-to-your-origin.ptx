@@ -21,7 +21,7 @@
         </p>
 
         <p>
-          <c> git push &lt;remote repo name&gt; &lt;branch&gt; </c>
+          <c> git push &lt;remote&gt; &lt;branch&gt; </c>
         </p>
 
         <p>
