@@ -4,9 +4,9 @@
   <title>Overview of Synchronizing with the Upstream Repository</title>
 
   <introduction>
-  <p>
-    As changes from pull requests (yours and others) are merged into upstream <c>main</c>, the <c>main</c> branches in your local and origin repos will get <em>out of synch with the upstream</em>.
-  </p>
+    <p>
+      As changes from pull requests (yours and others) are merged into upstream <c>main</c>, the <c>main</c> branches in your local and origin repos will get <em>out of synch with the upstream</em>.
+    </p>
   </introduction>
 
   <p>
@@ -54,6 +54,7 @@
               Pushing to origin's main branch.
             </p>
           </statement>
+
           <feedback>
             <p>
               Pushing to your origin's main is the left side of the figure and takes your local changes and puts them to GitHub.
@@ -67,6 +68,7 @@
               Pulling from origin's main branch.
             </p>
           </statement>
+
           <feedback>
             <p>
               You don't pull from origin's main branch, you push your changes to it.
@@ -80,9 +82,11 @@
               Pushing to upstream <c>main</c>.
             </p>
           </statement>
+
           <feedback>
             <p>
-              You don't have permission to push to upstream <c>main</c>. Code gets merged into upstream <c>main</c> when a pull request is accepted by the manager.
+              You don't have permission to push to upstream <c>main</c>.
+              Code gets merged into upstream <c>main</c> when a pull request is accepted by the manager.
             </p>
           </feedback>
         </choice>
@@ -93,11 +97,12 @@
               Pulling from upstream <c>main</c>.
             </p>
           </statement>
+
           <feedback>
             <p>
               Pulling from upstream <c>main</c> takes the changes that have been merged into the main branch and pulls them to your local repository.
             </p>
-          </feedback>          
+          </feedback>
         </choice>
 
         <choice>
@@ -106,13 +111,14 @@
               Switching to your feature branch.
             </p>
           </statement>
+
           <feedback>
             <p>
               Switching to your feature branch is done on your local machine so you can make changes that will eventually be part of a pull request.
             </p>
           </feedback>
         </choice>
-       </choices>
+      </choices>
 
       <hint>
         <p>
@@ -121,7 +127,8 @@
       </hint>
     </task>
 
-        <task xml:id="ex-over-synch-b" label="ex-over-synch-b">
+
+    <task xml:id="ex-over-synch-b" label="ex-over-synch-b">
       <statement>
         <p>
           Which action copies changes from your local repository to your origin repository?
@@ -136,6 +143,7 @@
               Pushing to origin's main branch.
             </p>
           </statement>
+
           <feedback>
             <p>
               Pushing to your origin's main is the left side of the figure and takes your local changes and puts them to GitHub.
@@ -149,6 +157,7 @@
               Pulling from origin's main branch.
             </p>
           </statement>
+
           <feedback>
             <p>
               You don't pull from origin's main branch, you push your changes to it.
@@ -162,9 +171,11 @@
               Pushing to upstream <c>main</c>.
             </p>
           </statement>
+
           <feedback>
             <p>
-              You don't have permission to push to upstream <c>main</c>. Code gets merged into upstream <c>main</c> when a pull request is accepted by the manager.
+              You don't have permission to push to upstream <c>main</c>.
+              Code gets merged into upstream <c>main</c> when a pull request is accepted by the manager.
             </p>
           </feedback>
         </choice>
@@ -175,11 +186,12 @@
               Pulling from upstream <c>main</c>.
             </p>
           </statement>
+
           <feedback>
             <p>
               Pulling from upstream <c>main</c> takes the changes that have been merged into the main branch and pulls them to your local repository.
             </p>
-          </feedback>          
+          </feedback>
         </choice>
 
         <choice>
@@ -188,13 +200,14 @@
               Switching to your feature branch.
             </p>
           </statement>
+
           <feedback>
             <p>
               Switching to your feature branch is done on your local machine so you can make changes that will eventually be part of a pull request.
             </p>
           </feedback>
         </choice>
-       </choices>
+      </choices>
 
       <hint>
         <p>
@@ -204,5 +217,4 @@
     </task>
   </exercise>
   </exercises>
-  
 </section>
