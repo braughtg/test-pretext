@@ -212,7 +212,7 @@
       </statement>
 
 
-      <choices>
+      <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -280,33 +280,150 @@
 
   <exercise xml:id="ex-origin-main-behind-main" label="ex-origin-main-behind-main" >
     <introduction>
-      GitHub will inform you when the active branch in your origin repo is out of synch with the upstream.
+      <p>
+        GitHub will inform you when the active branch in your origin repo is out of synch with the upstream.
+      </p>
+      <p>
+        Use your browser to visit your origin repo on GitHub and ensure that the <c>main</c> branch is selected.
+        Find the part of the page that indicates that your <c>main</c> branch is <em>behind</em> (i.e.
+        not the same as, or out of synch with) the upstream <c>main</c>.
+      </p>
+      <p>
+        If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to <xref ref="topic-appendix-a-staying-synchronized" /> of this chapter and follow the instructions there.
+        Once you complete <xref ref="topic-appendix-a-staying-synchronized" />, return to <xref ref="ex-origin-main-behind-main" />.
+      </p>
     </introduction>
 
-
     <task xml:id="ex-origin-main-behind-main-a" label="ex-origin-main-behind-main-a">
-      <statement>
+     <statement>
         <p>
-          Use your browser to visit your origin repo on GitHub and ensure that the <c>main</c> branch is selected.
-          Find the part of the page that indicates that your <c>main</c> branch is <em>behind</em> (i.e.
-          not the same as, or out of synch with) the upstream <c>main</c>.
+          Which of the following messages do you see that indicates that your origin’s main branch is behind the upstream <c>main</c>?
         </p>
       </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              This branch is xxx commits behind <c>main</c>. Where xxx is a number.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              This branch is xxx commits ahead of <c>main</c>. Where xxx is a number.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Your origin main branch would be ahead of upstream <c>main</c> if it contains changes that upstream <c>main</c> does not which is not the case.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              This branch is up to date with <c>main</c>.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Your origin's main branch should not be up to date with the upstream <c>main</c>.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Think about what happens if the manager accepts pull requests. Where do those changes go, upstream or origin?
+        </p>
+      </hint>
     </task>
 
-    <p>
-      If you do not see a message that your main branch is behind the upstream <c>main</c> branch go to <xref ref="topic-appendix-a-staying-synchronized" /> of this chapter and follow the instructions there.
-      Once you complete <xref ref="topic-appendix-a-staying-synchronized" />, return to <xref ref="ex-origin-main-behind-main" />.
-    </p>
-
-
     <task xml:id="ex-origin-main-behind-main-b" label="ex-origin-main-behind-main-b">
-      <statement>
+     <statement>
         <p>
-          Briefly explain what has happened that caused your origin’s <c>main</c> branch to get <em>behind</em> the upstream <c>main</c>.
+          Which of the following describes what has happened that caused your origin’s main branch to get behind the upstream <c>main</c>?
         </p>
       </statement>
-      <response />
+
+
+      <choices  randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              Another contributor pushed to upstream <c>main</c>.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              No one can push to upstream <c>main</c>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              You have changes in your local branch that have not been pushed up to the upstream <c>main</c>.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You cannot push to upsteam <c>main</c>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              You haven't pushed your local changes to your remote branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Your origin's feature branch does not impact whether or not the origin's main branch is up to date with the upstream <c>main</c>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              The manager accepted a pull request of another contributor which is now part of the upstream <c>main</c>. Your origin's main branch has not been updated to include these changes.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              When the manager accepted the pull request those changes were merged into the upstream <c>main</c>. You need to pull those changes into your local main branch and push those changes to the origin.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Think about what changes may have been made while you were working on your branch. What might have happened during that time.
+        </p>
+      </hint>
     </task>
   </exercise>
   </exercises>
