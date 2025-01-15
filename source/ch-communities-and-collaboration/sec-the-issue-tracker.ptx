@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section
-  xml:id="topic-the-issue-tracker"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  >
+<section xml:id="topic-the-issue-tracker" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>The Issue Tracker</title>
 
   <introduction>
     <p>
-      FOSS projects often use an issue tracker to maintain a list of bugs to be fixed, features to be added and other tasks to be completed. Thus, the issue tracker is a good place to go in order to find something to work on in a FOSS project. The exercises in this section will guide you through interaction with the GitKit FarmData2 issue tracker as shown in <xref ref="fig-issue-tracker"/>. By the end of the section you will have found an issue to work on. 
+      FOSS projects often use an issue tracker to maintain a list of bugs to be fixed, features to be added and other tasks to be completed.
+      Thus, the issue tracker is a good place to go in order to find something to work on in a FOSS project.
+      The exercises in this section will guide you through interaction with the GitKit FarmData2 issue tracker as shown in <xref ref="fig-issue-tracker"/>.
+      By the end of the section you will have found an issue to work on.
     </p>
 
     <p>
-      <figure 
-        xml:id="fig-issue-tracker"
-        label="fig-issue-tracker"
-        >
-        <caption>
-          The GitKit FarmData2 issue tracker in GitHub.
-        </caption>
+      <figure xml:id="fig-issue-tracker" label="fig-issue-tracker" >
+        <caption> The GitKit FarmData2 issue tracker in GitHub. </caption>
         <image source="images/ch-communities-and-collaboration/issueTracker.png">
           <description>
             The GitHub issue tracker displaying issues from the GitKit FarmData2 repository.
@@ -28,255 +23,294 @@
     </p>
   </introduction>
 
+
   <subsection>
     <title>Exploring the Issue Tracker</title>
+
     <exercises>
-      <title />
-      <exercise
-        xml:id="ex-find-the-issue-tracker"
-        label="ex-find-the-issue-tracker"
-        >
-        <introduction>
+    <title />
+    <exercise xml:id="ex-find-the-issue-tracker" label="ex-find-the-issue-tracker" >
+      <introduction>
+        <p>
+          The tasks in this exercise will help you to find the issue tracker for the GitKit FarmData2 repository that you will be using.
+        </p>
+      </introduction>
+
+
+      <task xml:id="ex-find-the-issue-tracker-a" label="ex-find-the-issue-tracker-a">
+        <statement>
           <p>
-            The tasks in this exercise will help you to find the issue tracker for the GitKit FarmData2 repository that you will be using.
+            Visit the URL that your instructor provided for the GitKit FarmData2 repository that you will be using as the upstream repository for your course.
           </p>
-        </introduction>
+        </statement>
+      </task>
 
-        <task
-          xml:id="ex-find-the-issue-tracker-a"
-          label="ex-find-the-issue-tracker-a">
-          <statement>
-            <p>
-              Visit the URL that your instructor provided for the GitKit FarmData2 repository that you will be using as the upstream repository for your course. 
-            </p>
-          </statement>
-        </task>
 
-        <task
-          xml:id="ex-find-the-issue-tracker-b"
-          label="ex-find-the-issue-tracker-b">
-          <statement>
-            <p>
-              Click the "Issues" tab near the top of the page to go to the issue tracker.  This will take you to a page similar to the one shown in <xref ref="fig-issue-tracker"/>.
-            </p>
-          </statement>
-        </task>
-      </exercise>
-
-      <exercise
-        xml:id="ex-explore-the-issue-tracker"
-        label="ex-explore-the-issue-tracker"
-        >
-        <introduction>
+      <task xml:id="ex-find-the-issue-tracker-b" label="ex-find-the-issue-tracker-b">
+        <statement>
           <p>
-            Use the issue tracker in the GitKit FarmData2 repository to complete the following tasks.
+            Click the "Issues" tab near the top of the page to go to the issue tracker.
+            This will take you to a page similar to the one shown in <xref ref="fig-issue-tracker"/>.
           </p>
-        </introduction>
+        </statement>
+      </task>
+    </exercise>
 
-        <task
-          xml:id="ex-explore-the-issue-tracker-a"
-          label="ex-explore-the-issue-tracker-a"
-          >
-          <statement>
-            <p>
-              Every issue has a number and a title.  What is the title of issue #10?
-            </p>
-          </statement>
-          <choices randomize="yes">
-            <choice correct="yes">
-              <statement>
-                <p>
-                  Add Missing "that"
-                </p>
-              </statement>
-            </choice>
-            <choice>
-              <statement>
-                <p>
-                  Seeding Report: Allows Invalid Inputs
-                </p>
-              </statement>
-            </choice>
-            <choice>
-              <statement>
-                <p>
-                  Seeding Input: Duplicates appearing in Area Dropdown
-                </p>
-              </statement>
-            </choice>
-            <choice>
-              <statement>
-                <p>
-                  Dickinson College Farm Link
-                </p>
-              </statement>
-            </choice>
-          </choices>
-          <hint>
+    <exercise xml:id="ex-explore-the-issue-tracker" label="ex-explore-the-issue-tracker" >
+      <introduction>
+        <p>
+          Use the issue tracker in the GitKit FarmData2 repository to complete the following tasks.
+        </p>
+      </introduction>
+
+
+      <task xml:id="ex-explore-the-issue-tracker-a" label="ex-explore-the-issue-tracker-a" >
+        <statement>
+          <p>
+            Every issue has a number and a title.
+            What is the title of issue #10?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Add Missing "that"
+              </p>
+            </statement>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Seeding Report: Allows Invalid Inputs
+              </p>
+            </statement>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Seeding Input: Duplicates appearing in Area Dropdown
+              </p>
+            </statement>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Dickinson College Farm Link
+              </p>
+            </statement>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
             Be sure you are looking at issue #10.
-          </hint>
-        </task>
-        
-        <task
-          xml:id="ex-explore-the-issue-tracker-b"
-          label="ex-explore-the-issue-tracker-b"
-          >
-          <statement>
-            <p>
-              Each issue can have <term>tags</term> that can be used to sort and categorize issues. Select all of the tags that are associated with issue #8?
-            </p>
-          </statement>
-          <choices randomize="yes">
-            <choice correct="yes">
-              <statement>  
-                <image source="images/ch-communities-and-collaboration/documentation-tag.png">
-                  <description>Documentation</description>
-                </image>
-              </statement>
-            </choice>
-            <choice correct="yes">
-              <statement>  
-                <image source="images/ch-communities-and-collaboration/round1-tag.png">
-                  <description>Round1</description>
-                </image>
-              </statement>
-            </choice>
-            <choice correct="yes">
-              <statement>  
-                <image source="images/ch-communities-and-collaboration/enhancement-tag.png">
-                  <description>Enhancement</description>
-                </image>
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
-                <image source="images/ch-communities-and-collaboration/typos-tag.png">
-                  <description>Typos</description>
-                </image>
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
-                <image source="images/ch-communities-and-collaboration/bug-tag.png">
-                  <description>Bug</description>
-                </image>
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
-                <image source="images/ch-communities-and-collaboration/uiux-tag.png">
-                  <description>UI/UX</description>
-                </image>
-              </statement>
-            </choice>
-          </choices>    
-          <hint>
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-explore-the-issue-tracker-b" label="ex-explore-the-issue-tracker-b" >
+        <statement>
+          <p>
+            Each issue can have <term>tags</term> that can be used to sort and categorize issues.
+            Select all of the tags that are associated with issue #8?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <image source="images/ch-communities-and-collaboration/documentation-tag.png">
+                <description>
+                  Documentation
+                </description>
+              </image>
+            </statement>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              <image source="images/ch-communities-and-collaboration/round1-tag.png">
+                <description>
+                  Round1
+                </description>
+              </image>
+            </statement>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              <image source="images/ch-communities-and-collaboration/enhancement-tag.png">
+                <description>
+                  Enhancement
+                </description>
+              </image>
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              <image source="images/ch-communities-and-collaboration/typos-tag.png">
+                <description>
+                  Typos
+                </description>
+              </image>
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              <image source="images/ch-communities-and-collaboration/bug-tag.png">
+                <description>
+                  Bug
+                </description>
+              </image>
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              <image source="images/ch-communities-and-collaboration/uiux-tag.png">
+                <description>
+                  UI/UX
+                </description>
+              </image>
+            </statement>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
             Be sure you are looking at issue #8.
-          </hint>
-        </task>
+          </p>
+        </hint>
+      </task>
 
-        <task
-            xml:id="ex-explore-the-issue-tracker-c"
-            label="ex-explore-the-issue-tracker-c"
-            >
-          <statement>
-            <p>
-              Which file in the repo would you need to modify in order to fix the typo described in issue #11?
-            </p>
-          </statement>
-          <choices randomize="yes">
-            <choice correct="yes">
-              <statement>  
-                ONBOARDING.md
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
+
+      <task xml:id="ex-explore-the-issue-tracker-c" label="ex-explore-the-issue-tracker-c" >
+        <statement>
+          <p>
+            Which file in the repo would you need to modify in order to fix the typo described in issue #11?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              ONBOARDING.md
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
               INSTALL.md
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
-                CONTRIBUTING.md
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
-                LICENSE.md
-              </statement>
-            </choice>
-          </choices>     
-          <hint>
-              Be sure you are looking at issue #11.
-          </hint>
-        </task>
+            </statement>
+          </choice>
 
-        <task
-            xml:id="ex-explore-the-issue-tracker-d"
-            label="ex-explore-the-issue-tracker-d"
-            >
-          <statement>
-            <p>
-              Which of the following indicate an order by which the issues can be sorted?
-            </p>
-          </statement>
-          <choices randomize="yes">
-            <choice correct="yes">
-              <statement>  
-                Newest
-              </statement>
-            </choice>
-            <choice correct="yes">
-              <statement>  
-                Oldest
-              </statement>
-            </choice>
-            <choice correct="yes">
-              <statement>  
-                Recently updated
-              </statement>
-            </choice>
-            <choice correct="yes">
-              <statement>  
-                Most commented
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
-                Most difficult
-              </statement>
-            </choice>
-            <choice correct="no">
-              <statement>  
-                Highest priority
-              </statement>
-            </choice>
-          </choices>
-          <hint>
+          <choice correct="no">
+            <statement>
+              CONTRIBUTING.md
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              LICENSE.md
+            </statement>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            Be sure you are looking at issue #11.
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-explore-the-issue-tracker-d" label="ex-explore-the-issue-tracker-d" >
+        <statement>
+          <p>
+            Which of the following indicate an order by which the issues can be sorted?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              Newest
+            </statement>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              Oldest
+            </statement>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              Recently updated
+            </statement>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              Most commented
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              Most difficult
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              Highest priority
+            </statement>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
             Find the "Sort" drop-down in the issue tracker and see what "Sort by" options there are.
-          </hint>        
-        </task>
+          </p>
+        </hint>
+      </task>
 
-        <task
-            xml:id="ex-explore-the-issue-tracker-e"
-            label="ex-explore-the-issue-tracker-e"
-            >
-          <statement>
-            <p>
-              Pick one of the sort orders that can be used with issues and briefly explain why it might be useful to sort the issues in that order.
-            </p>
-          </statement>
-          <response />
-          <hint>
-            Think about why it might bue useful for a requestor, contributor or maintainer to find the types of issues that would be at the top of the sorted list. 
-          </hint>
-        </task>
-      </exercise>
-    </exercises>    
+
+      <task xml:id="ex-explore-the-issue-tracker-e" label="ex-explore-the-issue-tracker-e" >
+        <statement>
+          <p>
+            Pick one of the sort orders that can be used with issues and briefly explain why it might be useful to sort the issues in that order.
+          </p>
+        </statement>
+        <response />
+        <hint>
+          <p>
+            Think about why it might bue useful for a requestor, contributor or maintainer to find the types of issues that would be at the top of the sorted list.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    </exercises>
   </subsection>
+
 
   <subsection>
     <title>Claiming an Issue</title>
+
     <introduction>
       <p>
         Because projects often have many people working asynchronously many will have a process by which contributors can <term>claim</term> an issue that they are interested in working on and have that issue <term>assigned</term> to them in the issue tracker.
@@ -286,162 +320,170 @@
         The following exercises will guide you through the process of claiming an issue to work on in the GitKit FarmData2 issue tracker.
       </p>
     </introduction>
+
     <exercises>
-      <title />
+    <title />
+    <exercise xml:id="ex-identifying-assigned-issues" label="ex-identifying-assigned-issues" >
+      <statement>
+        <p>
+          Examine the GitKit FarmData2 issue tracker.
+          How can you tell which issue have already been assigned?
+        </p>
+      </statement>
 
-      <exercise
-        xml:id="ex-identifying-assigned-issues"
-        label="ex-identifying-assigned-issues"
-        >
-        <statement>
-          <p>
-            Examine the GitKit FarmData2 issue tracker. 
-            How can you tell which issue have already been assigned?
-          </p>
-        </statement>
-        <choices randomize="yes">
-          <choice correct="yes">
-            <statement>  
-              The avatar of the assigned user appears to the right of the issue title.
-            </statement>
-          </choice>
-          <choice correct="no">
-            <statement>  
-              The issue no longer appears in the issue tracker.
-            </statement>
-          </choice>
-          <choice correct="no">
-            <statement>  
-              The username of assigned user appears next to the issue title.
-            </statement>
-          </choice>
-          <choice correct="no">
-            <statement>  
-              The issue is moved to a separate list of assigned issues.
-            </statement>
-          </choice>
-          <choice correct="no">
-            <statement>  
-              The issue tracker does not show any indication that an issue has been assigned.
-            </statement>
-          </choice>
-        </choices>
-        <hint>
-          Look for some lines for issues that look different than the others and hover your mouse over the different parts.
-        </hint>        
-      </exercise>
 
-      <p>
-        In the GitKit FarmData2 issue tracker, contributors interested in working on an issue can request that it be assigned to them by commenting on the issue with the exact message:
-      </p>
-        
-      <p
-        xml:id="topic-issue-claim-message">
-        <c>I would like to work on this please!</c>
-      </p>
-
-      <p>
-        The first person who comments on an unclaimed issue with this message will receive a response from the project maintainers. This messages will indicate that the issue has been assigned to them and the issue tracker will update to show this as you saw in <xref ref="ex-identifying-assigned-issues" />.
-      </p>
-
-      <exercise  
-        xml:id="ex-claim-an-issue"
-        label="ex-claim-an-issue">
-        <statement> 
-          <p>
-            Use the GitKit FarmData2 issue tracker to complete the following tasks.
-          </p>
-        </statement>
-        
-        <task
-          xml:id="ex-claim-an-issue-a"
-          label="ex-claim-an-issue-a">
+      <choices randomize="yes">
+        <choice correct="yes">
           <statement>
-            <p>
-              Choose an unassigned issue with a "Round 1" tag.
-            </p>
-          </statement> 
-          <hint>
-            See <xref ref="ex-identifying-assigned-issues" /> for information about identifying assigned and unassigned issues.
-          </hint>
-        </task>
-
-        <task
-          xml:id="ex-claim-an-issue-b"
-          label="ex-claim-an-issue-b">
-          <statement>
-            <p>
-              Comment on the issue that you chose using the <xref ref="topic-issue-claim-message" text="custom">message above</xref> to claim it.
-            </p>
-          </statement> 
-          <hint>
-            Click on the issue title to open the issue and use the "Add a comment" box at the bottom of the page.
-          </hint>
-        </task>
-
-        <task 
-          xml:id="ex-claim-an-issue-c"
-          label="ex-claim-an-issue-c">
-          <statement>
-            <p>
-              Reload the issue tracker and check that you received a response and that the issue has been assigned to you.
-            </p>
+            The avatar of the assigned user appears to the right of the issue title.
           </statement>
-          <hint>
-            <p>
-              If you did not receive a response, wait a few minutes and reload the issue tracker page again.  Sometimes it takes a few minutes for your comment to be noticed and the issue to be assigned. If you still do not receive a response check that you typed <xref ref="topic-issue-claim-message" text="custom">the message</xref> correctly.
-            </p>
-            <p>
-             If you received a response telling you that you were not assigned the issue, someone else slipped a comment in just ahead of you and was assigned the issue.  If this happens, just try <xref ref="ex-claim-an-issue-b" /> again.  
-            </p>
-          </hint>
-        </task>
-      </exercise>
+        </choice>
 
-      <exercise
-        xml:id="ex-round1-issue-url"
-        label="ex-round1-issue-url">
+        <choice correct="no">
+          <statement>
+            The issue no longer appears in the issue tracker.
+          </statement>
+        </choice>
+
+        <choice correct="no">
+          <statement>
+            The username of assigned user appears next to the issue title.
+          </statement>
+        </choice>
+
+        <choice correct="no">
+          <statement>
+            The issue is moved to a separate list of assigned issues.
+          </statement>
+        </choice>
+
+        <choice correct="no">
+          <statement>
+            The issue tracker does not show any indication that an issue has been assigned.
+          </statement>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look for some lines for issues that look different than the others and hover your mouse over the different parts.
+        </p>
+      </hint>
+    </exercise>
+
+    <p>
+      In the GitKit FarmData2 issue tracker, contributors interested in working on an issue can request that it be assigned to them by commenting on the issue with the exact message:
+    </p>
+
+    <p xml:id="topic-issue-claim-message">
+      <c>I would like to work on this please!</c>
+    </p>
+
+    <p>
+      The first person who comments on an unclaimed issue with this message will receive a response from the project maintainers.
+      This messages will indicate that the issue has been assigned to them and the issue tracker will update to show this as you saw in <xref ref="ex-identifying-assigned-issues" />.
+    </p>
+
+    <exercise xml:id="ex-claim-an-issue" label="ex-claim-an-issue">
+      <statement>
+        <p>
+          Use the GitKit FarmData2 issue tracker to complete the following tasks.
+        </p>
+      </statement>
+
+
+      <task xml:id="ex-claim-an-issue-a" label="ex-claim-an-issue-a">
         <statement>
           <p>
-            Give the full URL to the issue that you have been assigned, for example <c>https://github.com/my-class/GitKit-FarmData2/issues/2</c>
-          </p>
-          <p>
-            <var width="60" />
+            Choose an unassigned issue with a "Round 1" tag.
           </p>
         </statement>
-        <setup>
-          <var>
-            <condition string="^https://github.com/.+/issues/[0-9]+$">
-              <feedback>
-                <p>
-                  Thank you.
-                </p>
-              </feedback>
-            </condition>
-            <condition string=".*">
-              <feedback>
-                <p>
-                  Please give the full URL using the format indicated in the question.
-                </p>
-              </feedback>
-            </condition>
-          </var>
-        </setup>
-      </exercise>
 
-      <exercise  
-        xml:id="ex-why-not-assign-issues"
-        label="ex-why-not-assign-issues">
-        <statement> 
+        <hint>
           <p>
-            It is worth noting that different projects will have different processes for claiming and assigning issues, and some projects may not assign issues at all. What are some advantages and disadvantages of assigning issues to specific individuals?
+            See <xref ref="ex-identifying-assigned-issues" /> for information about identifying assigned and unassigned issues.
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-claim-an-issue-b" label="ex-claim-an-issue-b">
+        <statement>
+          <p>
+            Comment on the issue that you chose using the <xref ref="topic-issue-claim-message" text="custom">message above</xref> to claim it.
           </p>
         </statement>
-        <response />
+
         <hint>
-          Think about this from both the individual developer's perspective and from the overall project's perspective.
+          <p>
+            Click on the issue title to open the issue and use the "Add a comment" box at the bottom of the page.
+          </p>
         </hint>
-      </exercise>
-    </exercises>    
+      </task>
+
+
+      <task xml:id="ex-claim-an-issue-c" label="ex-claim-an-issue-c">
+        <statement>
+          <p>
+            Reload the issue tracker and check that you received a response and that the issue has been assigned to you.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            If you did not receive a response, wait a few minutes and reload the issue tracker page again.
+            Sometimes it takes a few minutes for your comment to be noticed and the issue to be assigned.
+            If you still do not receive a response check that you typed <xref ref="topic-issue-claim-message" text="custom">the message</xref> correctly.
+          </p>
+
+          <p>
+            If you received a response telling you that you were not assigned the issue, someone else slipped a comment in just ahead of you and was assigned the issue.
+            If this happens, just try <xref ref="ex-claim-an-issue-b" /> again.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-round1-issue-url" label="ex-round1-issue-url">
+      <statement>
+        <p>
+          Give the full URL to the issue that you have been assigned, for example <c>https://github.com/my-class/GitKit-FarmData2/issues/2</c>
+        </p>
+
+        <p>
+          <var width="60" />
+        </p>
+      </statement>
+      <setup> <var> <condition string="^https://github.com/.+/issues/[0-9]+$">
+      <feedback>
+        <p>
+          Thank you.
+        </p>
+      </feedback>
+      </condition> <condition string=".*">
+
+      <feedback>
+        <p>
+          Please give the full URL using the format indicated in the question.
+        </p>
+      </feedback>
+      </condition> </var> </setup>
+    </exercise>
+
+    <exercise xml:id="ex-why-not-assign-issues" label="ex-why-not-assign-issues">
+      <statement>
+        <p>
+          It is worth noting that different projects will have different processes for claiming and assigning issues, and some projects may not assign issues at all.
+          What are some advantages and disadvantages of assigning issues to specific individuals?
+        </p>
+      </statement>
+      <response />
+      <hint>
+        <p>
+          Think about this from both the individual developer's perspective and from the overall project's perspective.
+        </p>
+      </hint>
+    </exercise>
+    </exercises>
   </subsection>
 </section>
