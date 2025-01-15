@@ -14,7 +14,7 @@
 <subsection xml:id="topic-github-account">
     <title>GitHub Account</title>
 
-    <exercises>
+    <exercises><title />
     <exercise xml:id="ex-create-github-account" label="ex-create-github-account">
       <statement>
         <p>
@@ -66,7 +66,7 @@
     Each one can have different limits on what can be done with it and each one can be revoked individually without affecting the others.
   </p>
 
-<exercises>
+<exercises><title />
   <exercise xml:id="ex-getting-pat" label="ex-getting-pat">
     <introduction>
       <p>

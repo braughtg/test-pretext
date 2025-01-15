@@ -202,7 +202,7 @@
     when pushing a branch), GitHub requires that you use a PAT for authentication instead of your password.
   </p>
 
-  <exercise xml:id="ex-getting-pat" label="ex-getting-pat">
+  <exercise xml:id="ex-getting-pat-remove" label="ex-getting-pat-remove">
     <introduction>
       <p>
         Follow GitHub's instructions for creating a (classic) personal access token: <url href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic" visual="docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic">Creating a Personal Access Token (classic)</url>.
