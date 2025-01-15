@@ -290,6 +290,7 @@
       </task>
 
 
+      <!-- This needs to be changed to a matching question
       <task xml:id="ex-explore-the-issue-tracker-e" label="ex-explore-the-issue-tracker-e" >
         <statement>
           <p>
@@ -302,7 +303,7 @@
             Think about why it might bue useful for a requestor, contributor or maintainer to find the types of issues that would be at the top of the sorted list.
           </p>
         </hint>
-      </task>
+      </task>-->
     </exercise>
     </exercises>
   </subsection>
@@ -416,7 +417,10 @@
 
         <hint>
           <p>
-            Click on the issue title to open the issue and use the "Add a comment" box at the bottom of the page.
+            Click on the issue title to open the issue and use the "Add a comment" box at the bottom of the page. 
+          </p>
+          <p>
+            Remember you must type <xref ref="topic-issue-claim-message" text="custom">the message</xref> exactly as shown.
           </p>
         </hint>
       </task>
@@ -470,7 +474,7 @@
       </condition> </var> </setup>
     </exercise>
 
-    <exercise xml:id="ex-why-not-assign-issues" label="ex-why-not-assign-issues">
+   <!-- This needs to be changed to a matching question <exercise xml:id="ex-why-not-assign-issues" label="ex-why-not-assign-issues">
       <statement>
         <p>
           It is worth noting that different projects will have different processes for claiming and assigning issues, and some projects may not assign issues at all.
@@ -483,7 +487,7 @@
           Think about this from both the individual developer's perspective and from the overall project's perspective.
         </p>
       </hint>
-    </exercise>
+    </exercise> -->
     </exercises>
   </subsection>
 </section>

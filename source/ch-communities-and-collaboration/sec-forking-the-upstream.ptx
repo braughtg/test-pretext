@@ -82,7 +82,12 @@
         </var>
       </setup>
       <hint>
-        Check the course materials from your instructor. It should provide the URL of the GitKit FarmData2 repository that was created for your course.
+        <p>
+          Check the course materials from your instructor. It should provide the URL of the GitKit FarmData2 repository that was created for your course.
+        </p>
+        <p>
+          The URL should include something that refers to your course name, not your GitHub username.
+        </p>
       </hint>
     </exercise>
 
@@ -175,7 +180,9 @@
         </var>
       </setup>
       <hint>
-        The URL you give here should contain your GitHub username. Be sure you are looking the copy of the GitKit FarmData2 repository that is in your GitHub space.
+        <p>
+          The URL you give here should contain your GitHub username. Be sure you are looking the copy of the GitKit FarmData2 repository that is in your GitHub space.
+        </p>
       </hint>
     </exercise>
 
@@ -193,14 +200,38 @@
         xml:id="ex-upstream-ref-from-origin-a"
         label="ex-upstream-ref-from-origin-a"
         >
-        <statement>
+                <statement>
           <p>
-            Visit your origin repository on GitHub. There is some text and a link on that page that corresponds to the orange dashed arrow in <xref ref="fig-basic-workflow-fork" />.  Copy and paste that text and link here. 
+            Visit your origin repository on GitHub. There is a link on that page that corresponds to the orange dashed arrow in <xref ref="fig-basic-workflow-fork" />.  What appears before the link? 
           </p>
-        </statement>
-        <response />
+          </statement>
+          <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                forked from
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The Octokitty (GitHub) logo
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Fork your own copy of (in the Fork drop-down)
+              </p>
+            </statement>
+          </choice>
+        </choices>
         <hint>
-          This text and link will be near the repository name in the upper left corner of the window.
+          <p>
+            This text and link will be near the repository name in the upper left corner of the window.
+          </p>
         </hint>
       </task>
 
@@ -251,7 +282,9 @@
           </choice>
         </choices>
         <hint>
-          Think about which step of the basic FOSS workflow needs to send information back to the main project.
+          <p>
+            Think about which step of the basic FOSS workflow needs to send information back to the main project.
+          </p>
         </hint>
       </task>
 
