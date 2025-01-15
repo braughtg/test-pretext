@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section
+  xml:id="topic-github-set-up"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>GitHub Set Up</title>
+  <introduction>
+    <p>
+      You will be using GitHub in many of the exercises in this text. In order to use GitHub it is necessary that you have an account, and a Personal Access Token.
+    </p>
+  </introduction>
+
+  <subsection xml:id="topic-github-account">
+    GitHub Account</title>
+    
+    <exercises>
+      <title />
+
+      <exercise
+        xml:id="ex-create-github-account"
+        label="ex-create-github-account">
+        <statement>
+          <p>
+            If you do not have a GitHub account, or would like to have a separate account just for this course, you can create a GitHub account here:  <url href="https://github.com/signup" visual="github.com/signup">https://github.com/signup</url>. 
+          </p>
+          <p>
+            When you have a GitHub account to use for this class, move on to the next exercise.  
+          </p>
+        </statement>
+      </exercise>
+        
+      <exercise
+        xml:id="ex-github-account-url"
+        label="ex-github-account-url">
+        <statement>
+          <p>
+            Give the full URL to your GitHub profile, for example <c>https://github.com/yourUsername</c>
+          </p>
+          <p>
+            <var width="45" />
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="^https://github.com/.+">
+              <feedback>
+                <p>
+                  Thank you.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Please give the full URL using the format indicated in the question.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </exercise>
+    </exercises>
+  </subsection>
+
+  <subsection xml:id="topic-github-pat">
+    GitHub Personal Access Token</title>
+  When starting your development environment for the first time (in Section <xref ref="topic-development-environmen"/>) you will be asked to enter a <term>Personal Access Token (PAT)</term> from GitHub.
+    A PAT is like a password but has some security benefits.
+    In particular, you can have multiple different PATs.
+    Each one can have different limits on what can be done with it and each one can be revoked individually without affecting the others.
+  </p>
+  <p>
+    <term>Getting a Personal Access Token: </term>
+  </p>
+  <p>
+    When interacting with GitHub using the git CLI (e.g.
+    when pushing a branch), GitHub requires that you use a PAT for authentication instead of your password.
+  </p>
+
+  <exercise xml:id="ex-getting-pat" label="ex-getting-pat">
+    <introduction>
+      <p>
+        Follow GitHub's instructions for creating a (classic) personal access token: <url href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic" visual="docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic">Creating a Personal Access Token (classic)</url>.
+      </p>
+
+      <p>
+        When doing so be sure to:
+        <ul>
+          <li>
+            <p>
+              Choose “repo” for the “scopes and permissions.”
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Be sure to copy and paste your PAT somewhere safe – maybe e-mail it to yourself.
+              You will not be able to retrieve it again after you leave the page.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Note: Typing or even copy and pasting your PAT every time it is needed can be a hassle.
+        To help, the git CLI provides what is known as the <term>credential helper</term>.
+        The git CLI in the KitClient has configured the credential helper so that your PAT will be stored when you enter it the first time.
+        It will then be used automatically for future commands.
+        If you are curious, you can learn more about the credential helper here: <url href="https://techexpertise.medium.com/storing-git-credentials-with-git-credential-helper-33d22a6b5ce7" visual="techexpertise.medium.com/storing-git-credentials-with-git-credential-helper-33d22a6b5ce7">Storing Git Credentials with Git Credential Helper</url>.
+      </p>
+    </introduction>
+  </exercise>
+</section>
