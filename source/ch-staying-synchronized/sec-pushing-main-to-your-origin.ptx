@@ -8,8 +8,8 @@
   <exercise xml:id="ex-synching-main-to-origin" label="ex-synching-main-to-origin">
     <introduction>
       <p>
-        Your local main branch is now in synch with the upstream main branch.
-        What’s left is to also synch the main branch in your origin repo.
+        Your local <c>main</c> branch is now in synch with the upstream <c>main</c> branch.
+        What’s left is to also synch the <c>main</c> branch in your origin repo.
       </p>
     </introduction>
 
