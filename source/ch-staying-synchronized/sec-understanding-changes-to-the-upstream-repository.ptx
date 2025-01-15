@@ -205,12 +205,76 @@
 
 
     <task xml:id="ex-merged-commits-c" label="ex-merged-commits-c">
-      <statement>
+     <statement>
         <p>
-          Briefly explain how the pink commit could have gotten into the upstream <c>main</c>.
+          How could have the pink commit gotten into the upstream <c>main</c>?
         </p>
       </statement>
-      <response />
+
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              The contributor made the pink commit as part of their branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The contributor's branch did not contain the pink commit.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The manager accepted the contributor's pull request.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The contributor's pull request contained the blue commit, not the pink commit.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              The manager accepted a pull request of another contributor which contained the pink commit.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The pink commit was part of a branch that another contributor submitted as part of a pull request.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The pink commit is not part of the upstream <c>main</c>.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Pink is part of the upstream <c>main</c>. It was merged after the pull request that contained the blue commit.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look at which commits are in the local repository's feature branch. This shows the changes made by this contributor. Other changes were made by other contributors and accepted by the manager as part of a pull request.
+        </p>
+      </hint>
     </task>
   </exercise>
 
