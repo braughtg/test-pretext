@@ -7,8 +7,10 @@
   <title />
   <exercise xml:id="ex-active-branch" label="ex-active-branch">
     <introduction>
-      The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo.
-      This section walks you through that process.
+      <p>
+        The next step is to pull the changes to the <c>main</c> branch from the upstream repo to your local repo.
+        This section walks you through that process.
+      </p>
     </introduction>
 
 

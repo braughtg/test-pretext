@@ -13,199 +13,371 @@
   </introduction>
 
   <p>
-    Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
-    Please be patient as this can take a few minutes.
-    When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to the following: <image source="images/shared-images/DevEnv-Kitty-Ready.png" width="75%">
-    <description>
-      The GitKit Development Environment.
-      The development environment is ready when you see the "Kit development environment is ready for use" message.
-    </description>
-  </image>
-</p>
-
-<exercises>
-<title/>
-<exercise xml:id="ex-restarting-kitclient-for-synching" label="ex-restarting-kitclient-for-synching">
-  <p>
-    Restart your KitClient based on the instructions in <xref ref="topic-restarting-dev-env"/>
+    Like the last activity, you will be working within the development environment for this activity.
   </p>
-</exercise>
+  <title/>
+  <subsection xml:id="subsec-restarting-dev_environment">
+    <title>Restarting the Development Environment</title>
 
-<exercise xml:id="ex-setting-upstream" label="ex-setting-upstream">
-  <introduction>
-    In order to pull from the upstream you will first need to make your local repository aware of the upstream.
-    This is done by setting a remote for it.
-    This exercise will walk you through that process.
-  </introduction>
+    <exercises>
+    <title />
+    <exercise xml:id="ex-restarting-kitclient-for-synching" label="ex-restarting-kitclient-for-synching">
+      <p>
+        Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+        Please be patient as this can take a few minutes.
+        When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to the following: <image source="images/shared-images/DevEnv-Kitty-Ready.png" width="75%">
+        <description>
+          The GitKit Development Environment.
+          The development environment is ready when you see the "Kit development environment is ready for use" message.
+        </description>
+      </image>
+    </p>
+  </exercise>
+  </exercises>
+</subsection>
 
 
-  <task xml:id="ex-setting-upstream-a" label="ex-setting-upstream-a">
+<subsection xml:id="subsec-setting-upstream">
+  <title>Understanding Upstream</title>
+
+  <exercises>
+  <title/>
+  <statement>
+    <p>
+      In order to pull from the upstream you will first need to make your local repository aware of the upstream.
+      This is done by setting a remote for it.
+      This exercise will walk you through that process.
+    </p>
+  </statement>
+
+  <exercise xml:id="ex-setting-upstream-1" label="ex-setting-upstream-1">
     <statement>
       <p>
         The <c>git remote -v</c> command lists the names and URLs of all of the remote repositories (or just <term>remotes</term> for short) that your local repo knows about.
         Run this command in the directory that contains your local repository.
       </p>
     </statement>
-  </task>
+  </exercise>
+
+  <exercise xml:id="ex-setting-upstream-2" label="ex-setting-upstream-2">
+    <introduction>
+      <p>
+        Examine the output of the <c>git remote -v</c> command from <xref ref="ex-setting-upstream-1" />.
+      </p>
+    </introduction>
 
 
-  <task xml:id="ex-setting-upstream-b-linux" label="ex-setting-upstream-b-linux">
+    <task xml:id="ex-setting-upstream-b-linux" label="ex-setting-upstream-b-linux">
+      <statement>
+        <p>
+          Is the URL for the <c>origin</c> remote in the main project GitHub space or in your GitHub space?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              main project GitHub space
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              the main project GitHub space is the upstream, not the origin.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              your GitHub space
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The origin is in your GitHub space.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Think about where you cloned from and where you push your changes to.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-setting-upstream-b-2-linux" label="ex-setting-upstream-b-2-linux">
+      <statement>
+        <p>
+          Where does this remote appear in <xref ref="fig-changes-merged-into-upstream" />?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              lower left
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The lower left is your local repository.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              upper left
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The upper left is the origin repository in your GitHub space.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              upper right
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The upper right is the main GitHub project space.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look at the diagram again.
+          The top part is the GitHub space, the bottom is your local machine.
+        </p>
+      </hint>
+    </task>
+  </exercise>
+  </exercises>
+</subsection>
+
+
+<subsection>
+  <title>Finding Upstream</title>
+
+  <exercises>
+  <title/>
+  <statement>
+    <p>
+      To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo.
+      Use your browser to navigate to the <em>upstream FarmData2 repo</em> that you are using for this course.
+      Hint: You can find the <c>upstream</c> using the link from your origin repo in GitHub.
+      Once you find the upstream, you can get the URL by using the “Code” button in the upstream repo, it ends in <c>.git</c>.
+    </p>
+  </statement>
+
+  <exercise xml:id="ex-setting-upstream-c-linux" label="ex-setting-upstream-c-linux">
     <statement>
       <p>
-        How is the origin remote indicated in <xref ref="ex-setting-upstream-a" /> represented in <xref ref="fig-changes-merged-into-upstream" />?
+        Enter the URL of the upstream below.
+      </p>
+
+      <p>
+        <var width="45" />
       </p>
     </statement>
-
-
-    <choices randomize="yes">
-      <choice correct="yes">
-        <statement>
-          <p>
-            It is labeled as "origin".
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Correct! The diagram shows your origin remote on the top left side with the label "origin".
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            It is labeled as "upstream".
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            It is labeled as "local".
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            It is labeled as "feature branch".
-          </p>
-        </statement>
-      </choice>
-    </choices>
-
-    <hint>
+    <setup> <var> <condition string="^https://github.com/(?!(FarmData2/FarmData2|DickinsonCollege/FarmData2).)*$">
+    <feedback>
       <p>
-        When you issued the <c>git remote -v</c> command pay attention to the name given to the fetch and pull URLs.
+        Thank you.
       </p>
-    </hint>
-  </task>
+    </feedback>
+    </condition> <condition string=".*">
 
-
-  <task xml:id="ex-setting-upstream-c-linux" label="ex-setting-upstream-c-linux">
-    <statement>
+    <feedback>
       <p>
-        To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo.
-        Use your browser to navigate to the <em>upstream FarmData2 repo</em> that you are using for this course and give its URL here.
-        Hint: You can find the <c>upstream</c> using the link from your origin repo in GitHub.
-        Once you find the upstream, you can get the URL by using the “Code” button in the upstream repo, it ends in <c>.git</c>.
+        Please give the full URL using the format indicated in the question.
       </p>
-    </statement>
-    <response />
-  </task>
+    </feedback>
+    </condition> </var> </setup>
+  </exercise>
+  </exercises>
+</subsection>
 
 
-  <task xml:id="ex-setting-upstream-d-linux" label="ex-setting-upstream-d-linux">
-    <statement>
-      <p>
-        The git remote command can also be used to add a new remote to your local repo.
-        The format for this command is:
-      </p>
+<subsection xml:id="subsec-setting-upstream-2">
+  <title>Setting your Upstream Remote</title>
 
-      <p>
-        <c>	git remote add &lt;remote repo name&gt; &lt;remote repo URL&gt;</c>
-      </p>
+  <statement>
+    <p>
+      The <c>git remote</c> command can also be used to add a new remote to your local repo.
+    </p>
+  </statement>
 
-      <p>
-        Use the above command to create a remote named <c>upstream</c> that points to the <em>FarmData2 upstream repository</em> that you are using for this exercise.
-      </p>
-    </statement>
-  </task>
+  <exercises>
+  <title/>
+  <exercise xml:id="ex-setting-upstream-d-linux" label="ex-setting-upstream-d-linux">
+    <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-d1-linux">
+      <statement>
+        <p>
+          The format for this command is:
+        </p>
 
+        <p>
+          <c>	git remote add &lt;remote repo name&gt; &lt;remote repo URL&gt;</c>
+        </p>
 
-  <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-e-linux">
-    <statement>
-      <p>
-        Use the <c>git remote -v</c> command to confirm that the new upstream remote has been added.
-      </p>
-    </statement>
-  </task>
-
-
-  <task xml:id="ex-setting-upstream-f-linux" label="ex-setting-upstream-f-linux">
-    <statement>
-      <p>
-        The upstream remote provides your local repo with the information it needs to find the upstream repo.
-        In git this information is represented using a URL.
-        How is this information represented in <xref ref="fig-changes-merged-into-upstream" />?
-      </p>
-    </statement>
+        <p>
+          Use the above command to create a remote named <c>upstream</c> that points to the <em>FarmData2 upstream repository</em> that you are using for this exercise.
+        </p>
+      </statement>
+    </task>
 
 
-    <choices randomize="yes">
-      <choice>
-        <statement>
-          <p>
-            It is labeled as "origin".
-          </p>
-        </statement>
-      </choice>
+    <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-b-linux">
+      <statement>
+        <p>
+          Use the <c>git remote -v</c> command.
+          What do you see that confirms that the new upstream remote has been added?
+        </p>
+      </statement>
 
-      <choice correct="yes">
-        <statement>
-          <p>
-            It is labeled as "upstream".
-          </p>
-        </statement>
 
-        <feedback>
-          <p>
-            Correct! The diagram shows your upstream remote on the top right side with the label "upstream".
-          </p>
-        </feedback>
-      </choice>
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              option 1
+            </p>
+          </statement>
 
-      <choice>
-        <statement>
-          <p>
-            It is labeled as "local".
-          </p>
-        </statement>
-      </choice>
+          <feedback>
+            <p>
+              feedback 1
+            </p>
+          </feedback>
+        </choice>
 
-      <choice>
-        <statement>
-          <p>
-            It is labeled as "feature branch".
-          </p>
-        </statement>
-      </choice>
-    </choices>
+        <choice>
+          <statement>
+            <p>
+              option 2
+            </p>
+          </statement>
 
-    <hint>
-      <p>
-        When you issued the <c>git remote -v</c> command pay attention to the name given to second set of fetch and pull URLs.
-      </p>
-    </hint>
-  </task>
-</exercise>
+          <feedback>
+            <p>
+              feedback 2
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              option 3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              feedback 3
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          HINT HERE
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-setting-upstream-f-linux" label="ex-setting-upstream-b-2-linux">
+      <statement>
+        <p>
+          The upstream remote provides your local repo with the information it needs to find the upstream repo.
+          In git this information is represented using a URL.
+          Where does this remote appear in <xref ref="fig-changes-merged-into-upstream" />?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              lower left
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The lower left is your local repository.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              upper left
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The upper left is the origin repository in your GitHub space.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              upper right
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The upper right is upstream remote.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look at the diagram again.
+          The top part is the GitHub space, the bottom is your local machine.
+          The left side is your space, the right side is the GitHub project space.
+        </p>
+      </hint>
+    </task>
+  </exercise>
+  </exercises>
+</subsection>
 
 <conclusion>
   Note that you will only need to set the upstream remote once for a repository.
   Once the upstream remote is set you will be able to pull from the upstream repo as often as is necessary.
 </conclusion>
-</exercises>
 </section>
