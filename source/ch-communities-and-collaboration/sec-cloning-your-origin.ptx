@@ -131,24 +131,20 @@
         </var>
       </setup>
       <hint>
-        Be sure you are using your GitHub origin repository (see <xref ref="ex-fork-url" />). This clone URL should contain your GitHub username and end in <c>.git</c>.
+        <p>
+          Be sure you are using your GitHub origin repository (see <xref ref="ex-fork-url" />). This clone URL should contain your GitHub username and end in <c>.git</c>.
+        </p>
       </hint>
     </exercise>
 
-    <exercise
-      xml:id="ex-clone-origin-linux"
-      label="ex-clone-origin-linux">
-      <introduction>
-        <p>
+  <p>
+    The <c>git clone</c> command will make a copy of your remote copy on GitHub and make the Local Copy on your computer (in your development environment). Refer to <xref ref="fig-basic-workflow-clone">Figure</xref>.
+  </p>
+          <p>
           Now that you have the clone URL for your origin repository, use the tasks in this exercise to clone your origin into your development environment.
         </p>
-      </introduction>
-      <task
-        xml:id="ex-clone-origin-linux-a"
-        label="ex-clone-origin-linux-a">
-        <statement>
-          <p>
-            Use the following command in the Terminal to clone your origin repository into your development environment:
+                  <p>
+            You will use the following command in the Terminal to clone your origin repository into your development environment:
           </p>
           <p>
             <c>git clone &lt;clone URL&gt;</c>
@@ -156,8 +152,60 @@
           <p>
             Be sure to replace <c>&lt;clone URL&gt;</c> with the clone URL you found in <xref ref="ex-clone-url-linux" />.
           </p>
-        </statement>
-      </task>
+    <exercise
+      xml:id="ex-clone-origin-linux"
+      label="ex-clone-origin-linux">
+        <statement>
+          <p>
+          Enter the full command that you will use to clone your origin as your answer to this exercise. 
+          </p>
+          <p>
+          <var width="55" />
+        </p>
+      </statement>
+
+      <setup>
+        <var>
+          <condition string="^https://github.com/(?!(FarmData2|DickinsonCollege)).+/.+.git$">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/DickinsonCollege/.+.git">
+            <feedback>
+              <p>
+                It looks like you might be trying to use the upstream repository instead of your origin. 
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^https://github.com/FarmData2/.+.git">
+            <feedback>
+              <p>
+                It looks like you might be trying to use the upstream repository instead of your origin. 
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                 The clone URL should have the format <c>https://github.com/yourGitHubUsername/theRepoName.git</c>.
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+
+      </exercise>
+      <exercise>
+      <introduction>
+        <p>
+            Enter the command above into your terminal.
+        </p>
+      </introduction>
+
+    
       <task
         xml:id="ex-clone-origin-linux-b"
         label="ex-clone-origin-linux-b">
