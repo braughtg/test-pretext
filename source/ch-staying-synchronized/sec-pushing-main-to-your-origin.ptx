@@ -5,7 +5,9 @@
 
   <exercises>
   <title />
+  <!--
   <exercise xml:id="ex-synching-main-to-origin" label="ex-synching-main-to-origin">
+    -->
     <introduction>
       <p>
         Your local <c>main</c> branch is now in synch with the upstream <c>main</c> branch.
@@ -13,8 +15,7 @@
       </p>
     </introduction>
 
-
-    <task xml:id="ex-synching-main-to-origin-a" label="ex-synching-main-to-origin-a">
+    <exercise xml:id="ex-synching-main-to-origin-a" label="ex-synching-main-to-origin-a">
       <statement>
         <p>
           Recall that you previously used the
@@ -29,10 +30,43 @@
           Use the <c>git push</c> command to push the <c>main</c> branch of your local repo to your remote <c>origin</c> repo.
         </p>
       </statement>
-    </task>
 
+      <statement>
+        <p>
+          Enter the modified <c>git push</c> command below.
+        </p>
 
-    <task xml:id="ex-synching-main-to-origin-b" label="ex-synching-main-to-origin-b">
+        <p>
+          <var width="45" />
+        </p>
+      </statement>
+      <setup> <var> <condition string="^git push orign main$">
+      <feedback>
+        <p>
+          Thank you.
+        </p>
+      </feedback>
+      </condition> <condition string=".*">
+
+      <feedback>
+        <p>
+          Please give the full <c>git push</c> command using the format indicated in the question.
+          Be sure not to leave in the &lt; and &gt; symbols.
+          Replace the words remote and branch with the appropriate names.
+        </p>
+      </feedback>
+      </condition> </var> </setup>
+    </exercise>
+
+    <exercise xml:id="ex-synching-main-to-origin-b" label="ex-synching-main-to-origin-b">
+      <statement>
+        <p>
+          Type in the command you wrote in <xref ref="ex-synching-main-to-origin-a"/> and examine the output given.
+          It should not contain any error messages.
+          If it does, look at the format of the command from <xref ref="ex-synching-main-to-origin-a"/> and try again.
+        </p>
+      </statement>
+
       <statement>
         <p>
           Examine the output from <xref ref="ex-synching-main-to-origin-a"/>.
@@ -95,15 +129,14 @@
           Only look at the last two lines, the one that starts with "To" and the one that starts with a SHA code.
         </p>
       </hint>
-    </task>
-  </exercise>
+    </exercise>
 
-  <conclusion>
-    <p>
-      As with most things related to Git and GitHub, there are a number of different ways to synchronize.
-      For example, you can also fetch the changes from the upstream main to your origin and then pull them from there to your local repository.
-      If you are curious, you can check out this GitHub link: <url href="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" visual="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">Syncing a fork</url>
-    </p>
-  </conclusion>
-  </exercises>
-</section>
+    <conclusion>
+      <p>
+        As with most things related to Git and GitHub, there are a number of different ways to synchronize.
+        For example, you can also fetch the changes from the upstream main to your origin and then pull them from there to your local repository.
+        If you are curious, you can check out this GitHub link: <url href="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" visual="https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">Syncing a fork</url>
+      </p>
+    </conclusion>
+    </exercises>
+  </section>
