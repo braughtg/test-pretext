@@ -37,10 +37,51 @@
     </introduction>
 
 
-    <task xml:id="ex-deleting-feature-branch-a" label="ex-deleting-feature-branch-a">
+    <task xml:id="ex-deleting-feature-branch-step-order" label="ex-deleting-feature-branch-step-order" >
       <statement>
         <p>
           It is not possible to delete the active branch.
+          Drag the commands needed to switch from your feature branch to the <c>main</c> branch and then list all of the branches in your local repository.
+          Not all commands will be used.
+        </p>
+      </statement>
+      <blocks> <block order="1">
+      <p>
+        <c>git switch main</c>
+      </p>
+      </block> <block correct="no">
+
+      <p>
+        <c>git log</c>
+      </p>
+      </block> <block order="2">
+
+      <p>
+        <c>git branch</c>
+      </p>
+      </block> <block correct="no">
+
+      <p>
+        <c>git switch &lt;feature branch name&gt;</c>
+      </p>
+      </block> <block correct="no">
+
+      <p>
+        <c>git status</c>
+      </p>
+      </block> </blocks>
+
+      <hint>
+        <p>
+          You will need two commands, the first one to switch to your branch and the second to check what the local branches are.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-deleting-feature-branch-a" label="ex-deleting-feature-branch-a">
+      <statement>
+        <p>
           So, if you have not already, switch from your feature branch to the <c>main</c> branch.
           Then give a command that lists all of the branches in your local repository.
         </p>
@@ -58,6 +99,7 @@
               <c>git switch</c>
             </p>
           </statement>
+
           <feedback>
             <p>
               The <c>git switch</c> command is used to change the active branch.
@@ -71,6 +113,7 @@
               <c>git pull</c>
             </p>
           </statement>
+
           <feedback>
             <p>
               The <c>git pull</c> command is used to pull changes from a remote repository to your local repository.
@@ -84,6 +127,7 @@
               <c>git commit</c>
             </p>
           </statement>
+
           <feedback>
             <p>
               The <c>git commit</c> command is used to commit staged changes to the repository.
@@ -97,6 +141,7 @@
               <c>git branch</c>
             </p>
           </statement>
+
           <feedback>
             <p>
               Correct! The <c>git branch</c> command is used to display all of branches in your local repository.
@@ -169,28 +214,129 @@
         </p>
       </hint>
     </task>
-
-    <task xml:id="ex-deleting-feature-branch-c" label="ex-deleting-feature-branch-c">
-      <statement>
-        <p>
-          The command <c>git branch -D &lt;branch&gt;</c> will delete a branch from your local repository.
-          Use the this command to delete your feature branch.
-        </p>
-      </statement>
-    </task>
-
-
-    <task xml:id="ex-deleting-feature-branch-d" label="ex-deleting-feature-branch-d">
-      <statement>
-        <p>
-          How can you check if your branch was deleted?  Be sure to check that it was deleted.
-          If not return to <xref ref="ex-deleting-feature-branch-b"/> and try again.
-        </p>
-      </statement>
-      <response />
-    </task>
   </exercise>
 
+  <exercise xml:id="ex-deleting-feature-branch-c" label="ex-deleting-feature-branch-c">
+    <statement>
+      <p>
+        The command <c>git branch -D &lt;branch&gt;</c> will delete a branch from your local repository.
+      </p>
+    </statement>
+
+    <statement>
+      <p>
+        Type the modified <c>git branch</c> command below.
+      </p>
+
+      <p>
+        <var width="45" />
+      </p>
+    </statement>
+    <setup> <var> <condition string="^git branch -D (?!main)[^&lt;].+[^&gt;]$">
+    <feedback>
+      <p>
+        Thank you.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
+
+    <feedback>
+      <p>
+        Please give the full <c>git branch</c> command using the format indicated in the question.
+        Be sure not to leave in the &lt; and &gt; symbols.
+        Replace the word branch with your feature branch name.
+      </p>
+    </feedback>
+    </condition> </var> </setup>
+  </exercise>
+
+  <exercise xml:id="ex-deleting-feature-branch-d" label="ex-deleting-feature-branch-d">
+    <statement>
+      <p>
+        Type the command from <xref ref="ex-deleting-feature-branch-c"/>.
+        Look at the output provided.
+        Which of the following did you see?
+      </p>
+    </statement>
+
+
+    <choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            Deleted branch (was &lt;SHA code here&gt;)
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Correct!
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            error: branch &lt;branch&gt; not found.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Return to <xref ref="ex-deleting-feature-branch-c"/> and try again.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            branch deleted
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Look at your output again.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            there are no active branches
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Look at your output again.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    <hint>
+      <p>
+        Look at your terminal window to see what appears after the <c>git branch</c> command you typed.
+      </p>
+    </hint>
+  </exercise>
+  <!--
+  <exercise xml:id="ex-deleting-feature-branch-d" label="ex-deleting-feature-branch-d">
+    <statement>
+      <p>
+        Type the command from <xref ref="ex-deleting-feature-branch-c"/>.
+        Look at the output provided.
+        How can you check if your branch was deleted?  Be sure to check that it was deleted.
+        If not return to <xref ref="ex-deleting-feature-branch-b"/> and try again.
+      </p>
+    </statement>
+    <response />
+  </exercise>
+  -->
   <exercise xml:id="ex-deleting-feature-branch-on-github" label="ex-deleting-feature-branch-on-github">
     <introduction>
       <p>
@@ -199,15 +345,91 @@
     </introduction>
 
 
+    <task xml:id="ex-deleting-feature-branch-on-github-b" label="ex-deleting-feature-branch-on-github-b">
+      <statement>
+        <p>
+          How can you check if your feature branch exists in your <c>origin</c> repo on GitHub?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              Go to the GitHub origin repo and click on the branches button.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              type &lt;git branch&gt;
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This command shows the local branches.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              type <c>git branch -D &lt;branch&gt;</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This command will delete a local branch
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              There is no way to check for branches on GitHub.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Take another look at the GitHub interface.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Go to the origin repository on GitHub and look at the options.
+        </p>
+      </hint>
+    </task>
+
+
     <task xml:id="ex-deleting-feature-branch-on-github-a" label="ex-deleting-feature-branch-on-github-a">
       <statement correct="false">
         <p>
           This feature branch no longer exists in your <c>origin</c> repo on GitHub.
         </p>
       </statement>
+
       <feedback>
         <p>
-          You have only deleted the feature branch in your local repository. It still exists in your <c>origin</c> repository on GitHub.
+          You have only deleted the feature branch in your local repository.
+          It still exists in your <c>origin</c> repository on GitHub.
         </p>
       </feedback>
 
@@ -217,37 +439,47 @@
         </p>
       </hint>
     </task>
+  </exercise>
 
+  <exercise xml:id="ex-deleting-feature-branch-on-github-c" label="ex-deleting-feature-branch-on-github-c">
+    <statement>
+      <p>
+        You can delete your feature branch from your origin repo using the git CLI.
+        The command
+      </p>
 
-    <task xml:id="ex-deleting-feature-branch-on-github-b" label="ex-deleting-feature-branch-on-github-b">
-      <statement>
-        <p>
-          Explain how you know whether the feature branch exists in your <c>origin</c> repo on GitHub?
-        </p>
-      </statement>
-      <response />
-    </task>
+      <p>
+        <c>git push -d &lt;remote&gt; &lt;branch&gt;</c>
+      </p>
 
+      <p>
+        will delete the specified branch from the specified remote repository.
+        Use this command to delete your feature branch from your origin repo.
+      </p>
 
-    <task xml:id="ex-deleting-feature-branch-on-github-c" label="ex-deleting-feature-branch-on-github-c">
-      <statement>
-        <p>
-          You can delete your feature branch from your origin repo using the git CLI.
-          The command
-        </p>
+      <p>
+        <var width="45" />
+      </p>
+    </statement>
+    <setup> <var> <condition string="^git push -d origin (?!main)[^&lt;].+[^&gt;]$">
+    <feedback>
+      <p>
+        Thank you.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
 
-        <p>
-          <c>git push -d &lt;remote repo name&gt; &lt;branch&gt;</c>
-        </p>
-
-        <p>
-          will delete the specified branch from the specified remote repository.
-          Use this command to delete your feature branch from your origin repo.
-        </p>
-      </statement>
-    </task>
-
-
+    <feedback>
+      <p>
+        Please give the full <c>git push -d</c> command using the format indicated in the question.
+        Be sure not to leave in the &lt; and &gt; symbols.
+        Replace the word remote with your origina and branch with your feature branch name.
+      </p>
+    </feedback>
+    </condition> </var> </setup>
+  </exercise>
+<!--
+  <exercise>
     <task xml:id="ex-deleting-feature-branch-on-github-d" label="ex-deleting-feature-branch-on-github-d">
       <statement>
         <p>
@@ -257,5 +489,6 @@
       </statement>
     </task>
   </exercise>
+  -->
   </exercises>
 </section>

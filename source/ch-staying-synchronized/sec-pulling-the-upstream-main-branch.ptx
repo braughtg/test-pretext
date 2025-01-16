@@ -104,7 +104,7 @@
       </p>
     </hint>
   </exercise>
-  
+
   <exercise xml:id="ex-active-branch-b" label="ex-active-branch-b">
     <statement>
       <p>
@@ -190,11 +190,13 @@
       </p>
 
       <p>
-        will pull any new commits from the specified branch in the remote repo and add them onto the end of the active branch of your local repo. <c>&lt;branch&gt;</c> can be a name like <c>origin</c>.
+        will pull any new commits from the specified branch in the remote repo and add them onto the end of the active branch of your local repo.
+        <c>&lt;branch&gt;</c> can be a name like <c>origin</c>.
         You will need to modify the <c>git pull</c> command above to pull and add the commits from the <c>main</c> branch of the upstream repo to your <c>main</c> branch.
       </p>
     </statement>
-        <statement>
+
+    <statement>
       <p>
         Enter the modified <c>git pull</c> command below.
       </p>
@@ -213,7 +215,9 @@
 
     <feedback>
       <p>
-        Please give the full <c>git pull</c> command using the format indicated in the question. Be sure not to leave in the &lt; and &gt; symbols. Replace the words remote and branch with the appropriate names.
+        Please give the full <c>git pull</c> command using the format indicated in the question.
+        Be sure not to leave in the &lt; and &gt; symbols.
+        Replace the words remote and branch with the appropriate names.
       </p>
     </feedback>
     </condition> </var> </setup>
