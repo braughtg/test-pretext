@@ -40,7 +40,7 @@
           <var width="45" />
         </p>
       </statement>
-      <setup> <var> <condition string="^git push orign main$">
+      <setup> <var> <condition string="^git push origin main$">
       <feedback>
         <p>
           Thank you.
