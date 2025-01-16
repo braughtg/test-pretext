@@ -201,7 +201,7 @@
         <var width="45" />
       </p>
     </statement>
-    <setup> <var> <condition string="^https://github.com/(?!(FarmData2/FarmData2|DickinsonCollege/FarmData2).)*$">
+    <setup> <var> <condition string="^https://github.com/(?!(FarmData2|DickinsonCollege)).+/.+.git$">
     <feedback>
       <p>
         Thank you.
@@ -211,7 +211,7 @@
 
     <feedback>
       <p>
-        Please give the full URL using the format indicated in the question.
+        Be sure you are copying the URL of the upstream for your class given by your instructor.
       </p>
     </feedback>
     </condition> </var> </setup>
