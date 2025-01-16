@@ -141,5 +141,43 @@
 </exercises>
 
   </subsection>
+<subsection>
+    <title>Setting the GitHub Codespace Timeout</title>
+    <introduction>
+      <p>
+        The GitKit development environment runs in GitHub Codespaces.  GitHub provides you with approximately 60 hours per month of free Codespaces use. By default the GitKit development enviornemnt will timeout after 30 minutes of inactivity. It is recommended that you reduce this timeout to 15 minutes to avoid accidentally consuming your allotted free useage.
+      </p>
+    </introduction>
+    <exercises>
+      <title />
+      <exercise
+        xml:id="ex-codespace-timeout-setting"
+        label="ex-codespace-timeout-setting">
+        <introduction>
+          <p>
+            Use the following steps to adjust the timeout for your Codespaces, including the GitKit developent environment.
+          </p>
+        </introduction>
+        <task 
+          xml:id="ex-open-codespace-settings"
+          label="ex-open-codespace-settings">
+          <statement>
+            <p>
+              Open your GitHub Codespace settings by visiting <url href="https://github.com/settings/codespaces" />.
+            </p>
+          </statement>
+        </task>
+        <task 
+          xml:id="ex-adjust-codespace-timeout"
+          label="ex-adjust-codespace-timeout">
+          <statement>
+            <p>
+              Scroll down to the section labeled "Default idle timeout", adjust the timeout to 15 minutes, and click "Save".
+            </p>
+          </statement>
+        </task>
+      </exercise>
+    </exercises>
+  </subsection>
 
 </section>
