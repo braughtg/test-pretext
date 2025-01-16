@@ -262,13 +262,13 @@
         <choice>
           <statement>
             <p>
-              option 1
+             <c>origin https://github.com/yourClass/theRepoName (fetch)</c>
             </p>
           </statement>
 
           <feedback>
             <p>
-              feedback 1
+              The origin is not the upstream.
             </p>
           </feedback>
         </choice>
@@ -276,13 +276,27 @@
         <choice>
           <statement>
             <p>
-              option 2
+           <c>origin https://github.com/yourClass/theRepoName (push)</c>
             </p>
           </statement>
 
           <feedback>
             <p>
-              feedback 2
+              The origin is not the upstream.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+           <c>upstream https://github.com/yourClass/theRepoName (fetch)</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The upstream fetch is where you are copying changes from.
             </p>
           </feedback>
         </choice>
@@ -290,13 +304,13 @@
         <choice>
           <statement>
             <p>
-              option 3
+           <c>upstream https://github.com/yourClass/theRepoName (push)</c>
             </p>
           </statement>
 
           <feedback>
             <p>
-              feedback 3
+              Push specifies where your changes are going.
             </p>
           </feedback>
         </choice>
@@ -304,7 +318,7 @@
 
       <hint>
         <p>
-          HINT HERE
+          Think about the different between origin vs. upstream and fetch vs. push.
         </p>
       </hint>
     </task>
