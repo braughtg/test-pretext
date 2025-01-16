@@ -12,47 +12,61 @@
       You now have been assigned an <term>issue</term> to work on and you have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space.
     </p>
     <p>
-      To work on your issue you will need to setup your <term>development environment</term>.  Your development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use `git` commands to add your changes to to your clone and <term>push</term> those changes to your <term>origin</term>.  
+      To work on your issue you will need to setup your <term>development environment</term>.  Your development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use Git commands to add your changes to to your clone and <term>push</term> those changes to your <term>origin</term>.  
     </p>
     <p>
-      Many FOSS contributors will setup the development environment on their personal machines. Because student machines vary greatly the GitKit provides a browser based development environment. This development environment runs in the cloud and you will access it using your web browser.  This development environment includes standard development tools but also has a few features designed specifically to help you stay on track when completing the GitKit's hands-on exercises.
+      Many FOSS contributors will setup the development environment on their personal machines. Because student machines vary greatly the GitKit provides a browser based development environment that you will access using your web browser. This development environment includes a code editor and other development tools, but also has a few features designed specifically to help you stay on track when completing the GitKit's hands-on exercises.
+    </p>
+    <p>
+      In this section you will create a new development environment, learn how to stop and restart the development environment, and do some necessary configuration of Git. 
     </p>
   </introduction>
 
-  <subsection>
-    <title>Starting the Development Environment</title>
+  <subsection
+    xml:id="topic-create-devenv"
+    label="topic-create-devenv">
+    <title>Creating the Development Environment</title>
     <introduction>
       <p>
-        In this section you will learn how to start, configure, stop, and restart your development environment.
+        The development environment will run in the cloud using a service called <term>GitHub Codespaces</term>. 
       </p>
     </introduction>
     <exercises>
-      <title />
-      <exercise>
-        xml:id="ex-github-login"
-        label="ex-github-login">
-        <statement>
-          <p>
-            Your development environment will run in the cloud using a service called <term>GitHub Codespaces</term>. In order to do so log into the GitHub acccount that you listed in <xref ref="ex-github-account-url" />
-          </p>
-        </statement>
-      </exercise>
-
       <exercise
         xml:id="ex-create-devenv"
         label="ex-create-devenv">
         <introduction>
           <p>
-            The following tasks will guide you through the process of creating and configuring your development environment. 
+            The following tasks will guide you through the process of creating your development environment. 
           </p>
         </introduction>
+
+        <task
+          xml:id="ex-github-login"
+          label="ex-github-login">
+          <statement>
+            <p>
+              Ensure that you are logged into the GitHub acccount that you listed in <xref ref="ex-github-account-url" />.
+            </p>
+          </statement>
+        </task>
 
         <task
           xml:id="ex-create-codespace"
           label="ex-create-codespace">
           <statement>
             <p>
-              Click this link to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">create your Development Enviornment</url>
+              Click this link to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">create your Development Enviornment</url>.
+            </p>
+          </statement>
+        </task>
+
+        <task 
+          xml:id="ex-create-codespace-button"
+          label="ex-create-codesapce-button">
+          <statement>
+            <p>
+              Click the "Create new codespace" button on the page that appears.
             </p>
           </statement>
         </task>
@@ -65,7 +79,7 @@
               Wait for the development environment to be created. Your browser window will refresh and change a few times during the creation process. Please be patient as this can take a few minutes.
             </p>
             <p>
-              After a few minutes, your browser window will look similar to <xref ref="fig-devenv-pat" /> including the prompt asking you to paste your GitHub Personal Access Token (PAT).
+              After a few minutes, your browser window will look similar to <xref ref="fig-devenv-pat-prompt" /> including the prompt asking you to paste your GitHub Personal Access Token (PAT).
             </p>
 
             <figure 
@@ -100,7 +114,7 @@
           label="ex-devenv-ready">
           <statement>
             <p>
-              After pasting your PAT, the development environment will to finish being created. When it is fully created your browser window will look similar to <xref ref="fig-devenv-ready-blank" /> including the "Kit development environment is ready for use" message.
+              After pasting your PAT, the development environment will finish being created. When the development environment is fully created your browser window will look similar to <xref ref="fig-devenv-ready-blank" /> including the "Kit development environment is ready for use" message.
             </p>
 
             <figure 
@@ -108,7 +122,7 @@
               <caption>
                 The GitKit development environment "Kit development environment is ready for use" message.
               </caption>
-              <image source="images/ch-communities-and-collaboration/DevEnv-Request-PAT.png" width="75%">
+              <image source="images/ch-communities-and-collaboration/DevEnv-Blank-Ready.png" width="75%">
                 <description>
                   The GitKit Development Environment "Kit development environment is ready for use" message.
                 </description>
@@ -120,7 +134,86 @@
     </exercises>
   </subsection>
 
+  <subsection>
+    <title>Stopping the Development Environment</title>
+    <introduction>
+      <p>
+        At some point you will complete an assignment or want to take a break and do other things. When you do so, you should stop the development environment.  This will ensure that you do not consume more of your free Codespaces time than necessary.
+      </p>
+    </introduction>
+    <exercises>
+      <title />
+      <exercise
+        xml:id="ex-stopping-dev-env"
+        label="ex-stopping-dev-env">
+        <introduction>
+          <p>
+            You can stop the development environment using the following steps.
+          </p>
+        </introduction>
+        <task 
+          xml:id="ex-stopping-dev-env-a"
+          label="ex-stopping-dev-env-a">
+          <statement>
+            <p>
+              Click on the word "Codespaces" in the bottom left of the browser window.
+            </p>
+          </statement>
+        </task>
+        <task 
+          xml:id="ex-stopping-dev-env-b"
+          label="ex-stopping-dev-env-b">
+          <statement>
+            <p>
+              Select "Stop Current Codesapce" from the popup menu that appears in the top center of the browser window.
+            </p>
+          </statement>
+        </task>
+        <task 
+          xml:id="ex-stopping-dev-env-c"
+          label="ex-stopping-dev-env-c">
+          <statement>
+            <p>
+              Close the browser tab containing the development environment.
+            </p>
+          </statement>
+        </task>
+      </exercise>
+    </exercises>
+  </subsection>
+
   <subsection
+    xml:id="topic-restarting-dev-env">
+    <title>Re-starting the Development Environment</title>
+    <introduction>
+      <p>
+        When you return to work on an assignment or begin work on a new assignment, you will need to restart your development enviornment. Each chapter will contains a link, similar to the one given below, that you can use restart your development environment.
+      </p>
+      <p>
+        Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+      </p>
+    </introduction>
+    <exercises>
+      <title />
+      <exercise
+        xml:id="ex-restarting-dev-env"
+        label="ex-restarting-dev-env">
+        <statement>
+          <p>
+            If you have not done so already, use the link above to restart your development environment.
+          </p>
+          <p>
+            Please be patient as this can take a few minutes.
+          </p>
+          <p> 
+            The development environment is ready when you see the message "Kit development environment is ready for use."
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+  </subsection>
+
+<subsection
     xml:id="topic-git-client"
     label="topic-git-client">
     <title>The Git Client</title>
@@ -255,7 +348,7 @@
             Give a command that will set the name you want to have associated with your changes by replacing <c>&lt;name&gt;</c> with the name you wish to use.
           </p>
           <p>
-            <var width="30" />
+            <var width="50" />
           </p>
         </statement>
         <setup>
@@ -303,7 +396,7 @@
             Give a command that will set the email you want to have associated with your changes by replacing <c>&lt;email&gt;</c> with the email address you wish to use.
           </p>
           <p>
-            <var width="30" />
+            <var width="50" />
           </p>
         </statement>
         <setup>
@@ -420,166 +513,6 @@
           </feedback>
           </choice>         
         </choices>
-      </exercise>
-    </exercises>
-  </subsection>
-
-  <subsection>
-    <title>Adjusting some GitPod Settings</title>
-    <introduction>
-      <p>
-        There are a few GitPod settings that you can change that will make working with your development environment more convenient.
-      </p>
-    </introduction>
-    <exercises>
-      <title />
-      <exercise
-        xml:id="ex-gitpod-settings"
-        label="ex-gitpod-settings">
-        <introduction>
-          <p>
-            Use the following steps to adjust your GitPod settings.
-          </p>
-        </introduction>
-        <task 
-          xml:id="ex-gitpod-settings-a"
-          label="ex-gitpod-settings-a">
-          <statement>
-            <p>
-              Open your GitPod workspaces in a browser by visiting <url href="https://gitpod.io/workspaces" />.
-            </p>
-          </statement>
-        </task>
-        <task 
-          xml:id="ex-gitpod-settings-b"
-          label="ex-gitpod-settings-b">
-          <statement>
-            <p>
-              Choose "Rename" from the "⋮" (three vertical dots) menu to the right of the KitClient workspace and rename the workspace to be "GitKit Dev Env" or something else that you will remember easily.
-            </p>
-          </statement>
-        </task>
-        <task 
-          xml:id="ex-gitpod-settings-c"
-          label="ex-gitpod-settings-c">
-          <statement>
-            <p>
-              Click the "Pushpin" icon, or choose "Pin" from the "⋮" (three vertical dots) menu to the right of the "GitKit Dev Env" workspace.
-            </p> 
-            <p>
-              This will <term>Pin</term> your GitKit workspace making it easier to find, and will also prevent it from becoming inactive or being deleted if you don't use it for a few days.
-            </p>
-          </statement>
-        </task>
-        <task 
-          xml:id="ex-gitpod-settings-d"
-          label="ex-gitpod-settings-d">
-          <statement>
-            <p>
-              Open your GitPod preferences in a browser by visiting <url href="https://gitpod.io/user/preferences" />.
-            </p>
-          </statement>
-        </task>
-        <task 
-          xml:id="ex-gitpod-settings-e"
-          label="ex-gitpod-settings-e">
-          <statement>
-            <p>
-              Set your “Timeout” to 10 minutes. This will stop your development environment if you are away from it for more than 5 minutes.  This will help to ensure that your free GitPod credits are not accidentally used up if you forget to stop your development environment.
-            </p>
-            <p>
-              If your development environment times out and stops you can restart it using the steps in <xref ref="topic-restarting-dev-env" />.
-            </p>
-          </statement>
-        </task>
-      </exercise>
-    </exercises>
-  </subsection>
-
-  <subsection>
-    <title>Stopping your Development Environment</title>
-    <introduction>
-      <p>
-        At some point you will complete this assignment or want to take a break and do other things. When you do so, you should stop your development environment.
-      </p>
-    </introduction>
-    <exercises>
-      <title />
-      <exercise
-        xml:id="ex-stopping-dev-env"
-        label="ex-stopping-dev-env">
-        <introduction>
-          <p>
-            You can stop your development environment using the following steps.
-          </p>
-        </introduction>
-        <task 
-          xml:id="ex-stopping-dev-env-a"
-          label="ex-stopping-dev-env-a">
-          <statement>
-            <p>
-              Open your GitPod workspaces in a browser by visiting <url href="https://gitpod.io/workspaces" />
-            </p>
-          </statement>
-        </task>
-        <task 
-          xml:id="ex-stopping-dev-env-b"
-          label="ex-stopping-dev-env-b">
-          <statement>
-            <p>
-              Choose "Stop" from the "⋮" (three vertical dots) menu to the right of the "GitKit Dev Env" workspace.
-            </p>
-          </statement>
-        </task>
-      </exercise>
-    </exercises>
-  </subsection>
-
-  <subsection
-    xml:id="topic-restarting-dev-env">
-    <title>Re-starting your Development Environment</title>
-    <introduction>
-      <p>
-        When you already have a GitKit development environment and want to continue working on the GitKit exercises, you will need to <term>restart</term> it.
-      </p>
-    </introduction>
-    <exercises>
-      <title />
-      <exercise
-        xml:id="ex-restarting-dev-env"
-        label="ex-restarting-dev-env">
-        <introduction>
-          <p>
-            Restart your development environment using the following steps.
-          </p>
-        </introduction>
-        <task 
-          xml:id="ex-restarting-dev-env-a"
-          label="ex-restarting-dev-env-a">
-          <statement>
-            <p>
-              Open your GitPod workspaces in a browser by visiting <url href="https://gitpod.io/workspaces" />
-            </p>
-          </statement>
-        </task>
-        <task 
-          xml:id="ex-restarting-dev-env-b"
-          label="ex-restarting-dev-env-b">
-          <statement>
-            <p>
-              Click the name of your "GitKit Dev Env" workspace or choose "Open" from the "⋮" (three vertical dots) menu to the right of its name.
-            </p>
-          </statement>
-        </task>
-        <task 
-          xml:id="ex-restarting-dev-env-c"
-          label="ex-restarting-dev-env-c">
-          <statement>
-            <p>
-              Wait for the text similar to that in <xref ref="ex-create-kit-client-linux-c" /> to appear and click the link.
-            </p>
-          </statement>
-        </task>
       </exercise>
     </exercises>
   </subsection>
