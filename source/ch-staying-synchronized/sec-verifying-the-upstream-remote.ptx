@@ -258,25 +258,15 @@
       </statement>
 
 
-      <choices randomize="yes">
+      <choices>
         <choice>
           <statement>
             <p>
-             <c>origin https://github.com/yourClass/theRepoName (fetch)</c>
+              <c>origin https://github.com/yourClass/theRepoName (fetch)</c>
             </p>
-          </statement>
 
-          <feedback>
             <p>
-              The origin is not the upstream.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-           <c>origin https://github.com/yourClass/theRepoName (push)</c>
+              <c>origin https://github.com/yourClass/theRepoName (push)</c>
             </p>
           </statement>
 
@@ -290,7 +280,11 @@
         <choice correct="yes">
           <statement>
             <p>
-           <c>upstream https://github.com/yourClass/theRepoName (fetch)</c>
+              <c>upstream https://github.com/yourClass/theRepoName (fetch)</c>
+            </p>
+
+            <p>
+              <c>upstream https://github.com/yourClass/theRepoName (push)</c>
             </p>
           </statement>
 
@@ -303,14 +297,12 @@
 
         <choice>
           <statement>
-            <p>
-           <c>upstream https://github.com/yourClass/theRepoName (push)</c>
-            </p>
+            None of the above.
           </statement>
 
           <feedback>
             <p>
-              Push specifies where your changes are going.
+              You should have gotten one of these outputs.
             </p>
           </feedback>
         </choice>
@@ -318,7 +310,8 @@
 
       <hint>
         <p>
-          Think about the different between origin vs. upstream and fetch vs. push.
+          Think about the different between origin vs.
+          upstream.
         </p>
       </hint>
     </task>
