@@ -18,7 +18,11 @@
         Match the tasks on the right with the appropriate git command listed on the left.
       </p>
     </statement>
-    
+    <feedback>
+      <p>
+        Refer back to the sections in this chapter to see what each command does.
+      </p>
+    </feedback>
     <matches> <match>
     <premise>
     <c>git remote -v</c></premise> <response>List your remote repos</response> </match> 
