@@ -157,11 +157,19 @@
           </statement>
 
 
-          <choices>
+          <choices multiple-correct="yes">
             <choice correct="yes">
               <statement>
                 <p>
-                  issue 1 info
+                  #39 - Add farmOS Link
+                </p>
+              </statement>
+            </choice>
+
+            <choice correct="yes">
+              <statement>
+                <p>
+                  #38 - GNOME CEC Link
                 </p>
               </statement>
             </choice>
@@ -169,7 +177,7 @@
             <choice>
               <statement>
                 <p>
-                  issue 2 info
+                  #37 - NSF Award Link
                 </p>
               </statement>
             </choice>
@@ -177,15 +185,7 @@
             <choice>
               <statement>
                 <p>
-                  issue 3 info
-                </p>
-              </statement>
-            </choice>
-
-            <choice>
-              <statement>
-                <p>
-                  issue 4 info
+                  #36 - Dickinson College Farm Link
                 </p>
               </statement>
             </choice>
