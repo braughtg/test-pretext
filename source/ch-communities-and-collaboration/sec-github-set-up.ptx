@@ -7,6 +7,7 @@
     <p>
       You will be using GitHub in many of the exercises in this text.
       In order to use GitHub it is necessary that you have an account and a Personal Access Token.
+      You will also configure your GitHub Codespaces to help conserve your free useage time.
     </p>
   </introduction>
 
@@ -142,10 +143,10 @@
 
   </subsection>
 <subsection>
-    <title>Setting the GitHub Codespace Timeout</title>
+    <title>Setting the GitHub Codespaces Timeout</title>
     <introduction>
       <p>
-        The GitKit development environment runs in GitHub Codespaces.  GitHub provides you with approximately 60 hours per month of free Codespaces use. By default the GitKit development enviornemnt will timeout after 30 minutes of inactivity. It is recommended that you reduce this timeout to 15 minutes to avoid accidentally consuming your allotted free useage.
+        The GitKit development environment runs in GitHub Codespaces.  GitHub provides you with approximately 60 hours per month of free Codespaces use. By default the GitKit development environment will timeout after 30 minutes of inactivity. It is recommended that you reduce this timeout to 15 minutes to avoid accidentally consuming your allotted free useage.
       </p>
     </introduction>
     <exercises>
@@ -163,7 +164,7 @@
           label="ex-open-codespace-settings">
           <statement>
             <p>
-              Open your GitHub Codespace settings by visiting <url href="https://github.com/settings/codespaces" />.
+              Open your GitHub Codespaces settings by visiting <url href="https://github.com/settings/codespaces" />.
             </p>
           </statement>
         </task>

@@ -290,20 +290,38 @@
       </task>
 
 
-      <!-- This needs to be changed to a matching question
       <task xml:id="ex-explore-the-issue-tracker-e" label="ex-explore-the-issue-tracker-e" >
-        <statement>
-          <p>
-            Pick one of the sort orders that can be used with issues and briefly explain why it might be useful to sort the issues in that order.
-          </p>
-        </statement>
-        <response />
-        <hint>
-          <p>
-            Think about why it might bue useful for a requestor, contributor or maintainer to find the types of issues that would be at the top of the sorted list.
-          </p>
-        </hint>
-      </task>-->
+       <statement>
+        <p>
+          Match issue tracker sort orders on the left to a reason for sorting in that order on the right.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          You can do it! Try again!
+        </p>
+      </feedback>
+
+      <matches>
+        <match>
+          <premise>Created on</premise>
+          <response>Find issues you have not seen before</response>
+        </match>
+        <match>
+          <premise>Last updated</premise>
+          <response>Check if any issues you have been assigned to have had their requirements changed</response>
+        </match>
+        <match>
+          <premise>Total comments</premise>
+          <response>Find which issues are being most actively worked on</response>
+        </match>
+      </matches>
+      <hint>
+        <p>
+          Choose the best match.
+        </p>
+      </hint>
+      </task>
     </exercise>
     </exercises>
   </subsection>
@@ -474,20 +492,41 @@
       </condition> </var> </setup>
     </exercise>
 
-   <!-- This needs to be changed to a matching question <exercise xml:id="ex-why-not-assign-issues" label="ex-why-not-assign-issues">
-      <statement>
+   <exercise xml:id="ex-why-not-assign-issues" label="ex-why-not-assign-issues">
+     <statement>
         <p>
           It is worth noting that different projects will have different processes for claiming and assigning issues, and some projects may not assign issues at all.
           What are some advantages and disadvantages of assigning issues to specific individuals?
         </p>
+        <p>
+          Match the reasons on the left with "Advantage" or "Disadvantage" on the right.
+        </p>
       </statement>
-      <response />
+      <feedback>
+        <p>
+          You can do it! Try again!
+        </p>
+      </feedback>
+      <matches>
+        <match>
+          <premise>To prevent wasting effort by having two developers work on the same issue</premise>
+          <response>Advantage</response>
+        </match>
+        <match>
+          <premise>Allow a developer to "hold on" to an issue, even if they are not currently working on it.</premise>
+          <response>Disadvantage</response>
+        </match>
+        <match>
+          <premise>To plan in advance who will be working each issue</premise>
+          <response>Advantage</response>
+        </match>
+      </matches>
       <hint>
         <p>
           Think about this from both the individual developer's perspective and from the overall project's perspective.
         </p>
       </hint>
-    </exercise> -->
+    </exercise>
     </exercises>
   </subsection>
 </section>
