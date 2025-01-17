@@ -15,7 +15,7 @@
   <p>
     Like the last activity, you will be working within the development environment for this activity.
   </p>
-  <title/>
+
   <subsection xml:id="subsec-restarting-dev_environment">
     <title>Restarting the Development Environment</title>
 
@@ -232,7 +232,7 @@
   <exercises>
   <title/>
   <exercise xml:id="ex-setting-upstream-2-linux" label="ex-setting-upstream-2-linux">
-    <task xml:id="ex-setting-upstream-2-linux-a" label="ex-setting-upstream-2-linux-a">
+    <task xml:id="ex-setting-upstream-d-linux" label="ex-setting-upstream-d-linux">
       <statement>
         <p>
           The format for this command is:
@@ -249,7 +249,7 @@
     </task>
 
 
-    <task xml:id="ex-setting-upstream-2-linux-b" label="ex-setting-upstream-2-linux-b">
+    <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-e-linux">
       <statement>
         <p>
           Use the <c>git remote -v</c> command.
