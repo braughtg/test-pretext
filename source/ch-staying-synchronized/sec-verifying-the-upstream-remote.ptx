@@ -37,7 +37,7 @@
 </subsection>
 
 
-<subsection xml:id="subsec-setting-upstream">
+<subsection xml:id="subsec-setting-upstream-1a">
   <title>Understanding Upstream</title>
 
   <exercises>
@@ -177,7 +177,7 @@
 </subsection>
 
 
-<subsection>
+<subsection xml:id="subsec-setting-upstream-1b">
   <title>Finding Upstream</title>
 
   <exercises>
@@ -231,8 +231,8 @@
 
   <exercises>
   <title/>
-  <exercise xml:id="ex-setting-upstream-d-linux" label="ex-setting-upstream-d-linux">
-    <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-d1-linux">
+  <exercise xml:id="ex-setting-upstream-2-linux" label="ex-setting-upstream-2-linux">
+    <task xml:id="ex-setting-upstream-2-linux-a" label="ex-setting-upstream-2-linux-a">
       <statement>
         <p>
           The format for this command is:
@@ -249,7 +249,7 @@
     </task>
 
 
-    <task xml:id="ex-setting-upstream-e-linux" label="ex-setting-upstream-b-linux">
+    <task xml:id="ex-setting-upstream-2-linux-b" label="ex-setting-upstream-2-linux-b">
       <statement>
         <p>
           Use the <c>git remote -v</c> command.
@@ -317,7 +317,7 @@
     </task>
 
 
-    <task xml:id="ex-setting-upstream-f-linux" label="ex-setting-upstream-b-2-linux">
+    <task xml:id="ex-setting-upstream-2-linux-c" label="ex-setting-upstream-2-linux-c">
       <statement>
         <p>
           The upstream remote provides your local repo with the information it needs to find the upstream repo.
