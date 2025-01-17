@@ -9,13 +9,13 @@
   <introduction
     xml:id="topic-dev-env-intro">
     <p>
-      You now have been assigned an <term>issue</term> to work on and you have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space.
+      You have been assigned an <term>issue</term> to work on and you have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space.
     </p>
     <p>
-      To work on your issue you will need to setup your <term>development environment</term>.  Your development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use Git commands to add your changes to to your clone and <term>push</term> those changes to your <term>origin</term>.  
+      To work on your issue you will need to setup a <term>development environment</term>.  The development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use Git commands to add your changes to your clone and <term>push</term> those changes to your <term>origin</term>.  
     </p>
     <p>
-      Many FOSS contributors will setup the development environment on their personal machines. Because student machines vary greatly the GitKit provides a browser based development environment that you will access using your web browser. This development environment includes a code editor and other development tools, but also has a few features designed specifically to help you stay on track when completing the GitKit's hands-on exercises.
+      Many FOSS contributors will setup the development environment on their personal machines. However, because student machines vary greatly the GitKit provides a browser based development environment that you will access using your web browser. This development environment is guaranteed to be the same for everyone that uses it.  It includes a code editor, development tools, and a few features designed specifically to help you stay on track when completing the GitKit's hands-on exercises.
     </p>
     <p>
       In this section you will create a new development environment, learn how to stop and restart the development environment, and do some necessary configuration of Git. 
@@ -28,7 +28,7 @@
     <title>Creating the Development Environment</title>
     <introduction>
       <p>
-        The development environment will run in the cloud using a service called <term>GitHub Codespaces</term>. 
+        The development environment will run in the cloud using a service called <term>GitHub Codespaces</term>, and you will access it using your web browser.
       </p>
     </introduction>
     <exercises>
@@ -37,7 +37,7 @@
         label="ex-create-devenv">
         <introduction>
           <p>
-            The following tasks will guide you through the process of creating your development environment. 
+            The following tasks will guide you through the process of creating the development environment. 
           </p>
         </introduction>
 
@@ -46,7 +46,7 @@
           label="ex-github-login">
           <statement>
             <p>
-              Ensure that you are logged into the GitHub acccount that you listed in <xref ref="ex-github-account-url" />.
+              Ensure that you are logged into the GitHub account that you listed in <xref ref="ex-github-account-url" />.
             </p>
           </statement>
         </task>
@@ -56,14 +56,14 @@
           label="ex-create-codespace">
           <statement>
             <p>
-              Click this link to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">create your Development Enviornment</url>.
+              Click this link to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">create the Development Environment</url>.
             </p>
           </statement>
         </task>
 
         <task 
           xml:id="ex-create-codespace-button"
-          label="ex-create-codesapce-button">
+          label="ex-create-codespace-button">
           <statement>
             <p>
               Click the "Create new codespace" button on the page that appears.
@@ -75,7 +75,7 @@
           xml:id="ex-paste-pat-prompt"
           label="ex-paste-pat-prompt">
           <statement>
-          <p>
+            <p>
               Wait for the development environment to be created. Your browser window will refresh and change a few times during the creation process. Please be patient as this can take a few minutes.
             </p>
             <p>
@@ -93,6 +93,27 @@
                 </description>
               </image>
             </figure>
+
+            <p>
+              If you do not see the prompt asking you to paste your PAT after a few minutes try:
+              <ul>
+                <li>
+                  <p>
+                    Reloading your browser tab.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Clearing your browser cache and reloading your browser tab.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Checking that your browser is <url href="https://docs.github.com/en/get-started/using-github/supported-browsers">fully supported by Codespaces</url>.
+                  </p>
+                </li>
+              </ul>
+            </p>
           </statement>
         </task>
 
@@ -101,7 +122,7 @@
           label="ex-paste-pat">
           <statement>
             <p>
-              Paste the PAT that you created in <xref ref="topic-github-pat" /> and press enter.  Note, for security resasons your PAT is not displayed when it is pasted.
+              Paste the PAT that you created in <xref ref="topic-github-pat" /> and press enter.  Note, for security reasons your PAT is not displayed when it is pasted.
             </p>
             <p>
               If you have lost or did not save your PAT, revisit <xref ref="topic-github-pat" /> and create a new one.
@@ -120,11 +141,11 @@
             <figure 
               xml:id="fig-devenv-ready-blank"               label="fig-devenv-ready-blank">
               <caption>
-                The GitKit development environment "Kit development environment is ready for use" message.
+                The GitKit development environment with the "Kit development environment is ready for use" message.
               </caption>
               <image source="images/ch-communities-and-collaboration/DevEnv-Blank-Ready.png" width="75%">
                 <description>
-                  The GitKit Development Environment "Kit development environment is ready for use" message.
+                  The GitKit Development Environment with the "Kit development environment is ready for use" message.
                 </description>
               </image>
             </figure>
@@ -144,16 +165,16 @@
     <exercises>
       <title />
       <exercise
-        xml:id="ex-stopping-dev-env"
-        label="ex-stopping-dev-env">
+        xml:id="ex-stopping-devenv"
+        label="ex-stopping-devenv">
         <introduction>
           <p>
-            You can stop the development environment using the following steps.
+            Use the following steps to practice stopping the development environment.
           </p>
         </introduction>
         <task 
-          xml:id="ex-stopping-dev-env-a"
-          label="ex-stopping-dev-env-a">
+          xml:id="ex-stopping-devenv-a"
+          label="ex-stopping-devenv-a">
           <statement>
             <p>
               Click on the word "Codespaces" in the bottom left of the browser window.
@@ -161,17 +182,17 @@
           </statement>
         </task>
         <task 
-          xml:id="ex-stopping-dev-env-b"
-          label="ex-stopping-dev-env-b">
+          xml:id="ex-stopping-devenv-b"
+          label="ex-stopping-devenv-b">
           <statement>
             <p>
-              Select "Stop Current Codesapce" from the popup menu that appears in the top center of the browser window.
+              Select "Stop Current Codespace" from the  menu that appears in the top center of the browser window.
             </p>
           </statement>
         </task>
         <task 
-          xml:id="ex-stopping-dev-env-c"
-          label="ex-stopping-dev-env-c">
+          xml:id="ex-stopping-devenv-c"
+          label="ex-stopping-devenv-c">
           <statement>
             <p>
               Close the browser tab containing the development environment.
@@ -187,22 +208,22 @@
     <title>Re-starting the Development Environment</title>
     <introduction>
       <p>
-        When you return to work on an assignment or begin work on a new assignment, you will need to restart your development enviornment. 
+        When you return to work after stopping the development environment, you will need to restart it.
       </p>
     </introduction>
     <exercises>
       <title />
       <exercise
-        xml:id="ex-restarting-dev-env"
-        label="ex-restarting-dev-env">
+        xml:id="ex-restarting-devenv"
+        label="ex-restarting-devenv">
         <introduction>
           <p>
             Use the following steps to restart the development environment.
           </p>
         </introduction>
         <task 
-          xml:id="ex-restart-dev-env-linnk"
-          label="ex-restart-dev-env-link">
+          xml:id="ex-restart-devenv-link"
+          label="ex-restart-devenv-link">
           <statement>
             <p>
               Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
@@ -210,11 +231,11 @@
           </statement>
         </task>
         <task
-          xml:id="ex-resume-codesapce"
-          label="ex-resume-codesapce">
+          xml:id="ex-resume-codespace"
+          label="ex-resume-codespace">
           <statement>
             <p>
-              Click the "Resume this codesapce" button.
+              Click the "Resume this codespace" button.
             </p>
             <p>
               Do not click the "Create a new one" button because a new development environment will not contain any of your prior work.
@@ -222,11 +243,11 @@
           </statement>
         </task>
         <task
-          xml:id="ex-wait-for-codesapce"
-          label="ex-wait-for-codesapce">
+          xml:id="ex-wait-for-codespace"
+          label="ex-wait-for-codespace">
           <statement>
             <p> 
-              Please be patient as this can take a few minutes.  When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to <xref ref="fig-devenv-blank-ready" />.
+              Please be patient as this can take a few minutes.  When the development environment is ready you will see the message "Kit development environment is ready for use" and your browser window will look similar to <xref ref="fig-devenv-blank-ready" />.
             </p>
 
             <figure 
@@ -278,7 +299,7 @@
               Using the <c>git</c> command without any additional arguments displays information about how to use <c>git</c>.
             </p>
             <p>
-              Enter the command <c>git</c> into the TERMINAL pane in the development environment and press enter.
+              Enter the command <c>git</c> into the terminal in the development environment and press enter.
             </p>
           </statement>
         </task>
@@ -357,7 +378,7 @@
     <title>Configuring the Git Client</title>
     <introduction>
       <p>
-        Recall from class that Git repositories maintain a complete history of all changes, including who made each change. To do this, Git needs to know a little bit of information about you.
+        Git repositories maintain a complete history of all changes, including who made each change. To do this, Git needs to know a little bit of information about you.
       </p>
       <p>
         Git identifies the author of each change using two pieces of information: A <term>name</term> and an <term>email</term>. For name, you might decide to use your full name, or a nickname, or your GitHub username. Just keep in mind that whatever name you use will be associated with all of the changes you make. For email, you can use any valid e-mail associated with you. 
