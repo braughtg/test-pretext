@@ -371,7 +371,7 @@
         <choice>
           <statement>
             <p>
-              type &lt;git branch&gt;
+              type <c>&lt;git branch&gt;</c>
             </p>
           </statement>
 
@@ -478,17 +478,98 @@
     </feedback>
     </condition> </var> </setup>
   </exercise>
-<!--
+
   <exercise>
     <task xml:id="ex-deleting-feature-branch-on-github-d" label="ex-deleting-feature-branch-on-github-d">
       <statement>
         <p>
-          Use your browser as you did in <xref ref="ex-deleting-feature-branch-on-github-a"/> to confirm that your feature branch is deleted from your origin repo on GitHub.
+          Type the command from <xref ref="ex-deleting-feature-branch-on-github-c"/>.
+          Look at the output provided.
+          Which of the following did you see?
+        </p>
+        <!--
+        <p>
+          ex-deleting-feature-branch-on-github-c Use your browser as you did in <xref ref="ex-deleting-feature-branch-on-github-a"/> to confirm that your feature branch is deleted from your origin repo on GitHub.
+          If it has not been deleted, revisit <xref ref="ex-deleting-feature-branch-on-github-c"/> and try again.
+        </p>
+        -->
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              [deleted] &lt;branch&gt;
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              error: unable to delete '&lt;branch&gt;': remote ref does not exist
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Make sure the branch exists in the remote repo (see <xref ref="ex-deleting-feature-branch-on-github-c"/>).
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              delete completed
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look again at the output provided in the terminal window.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              origin updated
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look again at the output provided in the terminal window.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Use your browser as you did in <xref ref="ex-deleting-feature-branch-on-github-a"/> to see if your feature branch has been deleted from your origin repo on GitHub.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-deleting-feature-branch-on-github-e" label="ex-deleting-feature-branch-on-github-e">
+      <statement>
+        <p>
+          Use your browser as you did in <xref ref="ex-deleting-feature-branch-on-github-b"/> to confirm that your feature branch is deleted from your origin repo on GitHub.
           If it has not been deleted, revisit <xref ref="ex-deleting-feature-branch-on-github-c"/> and try again.
         </p>
       </statement>
     </task>
   </exercise>
-  -->
   </exercises>
 </section>
