@@ -187,10 +187,7 @@
     <title>Re-starting the Development Environment</title>
     <introduction>
       <p>
-        When you return to work on an assignment or begin work on a new assignment, you will need to restart your development enviornment. Each chapter will contains a link, similar to the one given below, that you can use restart your development environment.
-      </p>
-      <p>
-        Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+        When you return to work on an assignment or begin work on a new assignment, you will need to restart your development enviornment. 
       </p>
     </introduction>
     <exercises>
@@ -198,17 +195,53 @@
       <exercise
         xml:id="ex-restarting-dev-env"
         label="ex-restarting-dev-env">
-        <statement>
+        <introduction>
           <p>
-            If you have not done so already, use the link above to restart your development environment.
+            Use the following steps to restart the development environment.
           </p>
-          <p>
-            Please be patient as this can take a few minutes.
-          </p>
-          <p> 
-            The development environment is ready when you see the message "Kit development environment is ready for use."
-          </p>
-        </statement>
+        </introduction>
+        <task 
+          xml:id="ex-restart-dev-env-linnk"
+          label="ex-restart-dev-env-link">
+          <statement>
+            <p>
+              Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-resume-codesapce"
+          label="ex-resume-codesapce">
+          <statement>
+            <p>
+              Click the "Resume this codesapce" button.
+            </p>
+            <p>
+              Do not click the "Create a new one" button because a new development environment will not contain any of your prior work.
+            </p>
+          </statement>
+        </task>
+        <task
+          xml:id="ex-wait-for-codesapce"
+          label="ex-wait-for-codesapce">
+          <statement>
+            <p> 
+              Please be patient as this can take a few minutes.  When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to <xref ref="fig-devenv-blank-ready" />.
+            </p>
+
+            <figure 
+              xml:id="fig-devenv-blank-ready"               label="fig-devenv-blank-ready">
+              <caption>
+                The GitKit Development Environment. The development environment is ready when you see the "Kit development environment is ready for use" message.
+              </caption>
+              <image source="images/ch-communities-and-collaboration/DevEnv-Blank-Ready.png" width="75%">
+                <description>
+                  The GitKit Development Environment. The development environment is ready when you see the "Kit development environment is ready for use" message.
+                </description>
+              </image>
+            </figure>
+          </statement>
+        </task>
       </exercise>
     </exercises>
   </subsection>
@@ -222,7 +255,7 @@
         Your development environment includes a <term>Git client</term>. The Git client is the tool that you will use to interact with Git repositories, such as the GitKit FarmData2 repository.
       </p>
       <p>
-        There are lots of different Git clients. Some are graphical and some use a text interface. These exercises, introduce you to Git using the Git <term>command line interface (CLI)</term>. This is the most general way to interact with Git and will provide a conceptual foundation for using any other Git client that you might encounter.
+        There are lots of different Git clients. Some are graphical and some use a text interface. These exercises, introduce you to Git using the text-based Git <term>command line interface (CLI)</term>. This is the most general way to interact with Git and will provide a conceptual foundation for using any other Git client that you might encounter.
       </p>
     </introduction>
     
@@ -242,7 +275,7 @@
           label="ex-git-version-a">
           <statement>
             <p>
-              Using the <c>git</c> command without any additional arguments will display information about how to use <c>git</c>.
+              Using the <c>git</c> command without any additional arguments displays information about how to use <c>git</c>.
             </p>
             <p>
               Enter the command <c>git</c> into the TERMINAL pane in the development environment and press enter.
@@ -327,10 +360,10 @@
         Recall from class that Git repositories maintain a complete history of all changes, including who made each change. To do this, Git needs to know a little bit of information about you.
       </p>
       <p>
-        Git identifies the author of each change using two pieces of information: A name and an e-mail. For name, you might decide to your full name, or a nickname, or your GitHub username. Just keep in mind that whatever name you use will be associated with all of the changes you make. For e-mail, you can again use any valid e-mail associated with you. 
+        Git identifies the author of each change using two pieces of information: A <term>name</term> and an <term>email</term>. For name, you might decide to use your full name, or a nickname, or your GitHub username. Just keep in mind that whatever name you use will be associated with all of the changes you make. For email, you can use any valid e-mail associated with you. 
       </p>
       <p>
-        The exercises in this section will guide you through the process of configuring the Git client in your development environment.
+        The exercises in this section will guide you through the process of configuring your name and email in the Git client in the development environment.
       </p>
     </introduction>
 
