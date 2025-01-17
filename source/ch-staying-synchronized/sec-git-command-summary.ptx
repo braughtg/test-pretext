@@ -18,19 +18,23 @@
         Match the tasks on the right with the appropriate git command listed on the left.
       </p>
     </statement>
+    
     <matches> <match>
     <premise>
-    <c>git remote -v</c></premise> <response>List your remote repos</response> </match> <match>
+    <c>git remote -v</c></premise> <response>List your remote repos</response> </match> 
+    
+    <match>
     <premise>
-    <c>git remote add &lt;remote repo name&gt; &lt;remote repo URL&gt;</c></premise> <response>Add a new remote repo</response> </match> <match>
+    <c>git remote add &lt;remote&gt; &lt;URL&gt;</c></premise> <response>Add a new remote repo</response> </match> <match>
     <premise>
-    <c>git pull --ff-only &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Synch a branch of your origin repo with your local repo</response> </match> <match>
+    <c>git pull --ff-only &lt;remote&gt; &lt;branch&gt; </c></premise> <response>Synch a branch of your origin repo with your local repo</response> </match> <match>
     <premise>
-    <c>git push &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Synch a branch of your local repo with the upstream</response> </match> <match>
+    <c>git push &lt;remote&gt; &lt;branch&gt; </c></premise> <response>Synch a branch of your local repo with the upstream</response> </match> <match>
     <premise>
     <c>git branch -D &lt;branch&gt; </c></premise> <response>Delete a feature branch from your local repo</response> </match> <match>
     <premise>
-    <c>git push -d &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Delete a feature branch from your origin</response> </match> </matches>
+    <c>git push -d &lt;remote&gt; &lt;branch&gt; </c></premise> <response>Delete a feature branch from your origin</response> </match> </matches>
+    
     <hint>
       <p>
         Note that the tasks listed are in approximately the same order as they appear in the sections of this chapter.
