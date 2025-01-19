@@ -39,14 +39,14 @@
     <task xml:id="ex-switching-branches-a" label="ex-switching-branches-a">
       <statement>
         <p>
-          Type <c>git switch &lt;name&gt;</c> to change your active branch to the new feature branch that you created in the previous section. Look at the output produced.
+          Type <c>git switch &lt;name&gt;</c> to change your active branch to the new feature branch that you created in the previous section. What output is produced?
         </p>
       </statement>
      <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
-              <c>git branch fixTypoInName</c>
+              Switched to branch '&lt;name&gt;'
             </p>
           </statement>
 
@@ -60,13 +60,13 @@
         <choice>
           <statement>
             <p>
-              <c>git branch &lt;fixTypoInName&gt;</c>
+               Switched to branch 'main'
             </p>
           </statement>
 
           <feedback>
             <p>
-              The command should not contain &lt; &gt;.
+              You were on <c>main</c> prior to switching branches.
             </p>
           </feedback>
         </choice>
@@ -74,13 +74,16 @@
         <choice>
           <statement>
             <p>
-              <c>branch fixTypoInName</c>
+              error: Your local changes to the following files would be overwritten by checkout: ... 
+            </p>
+            <p>
+              Aborting
             </p>
           </statement>
 
           <feedback>
             <p>
-              The command is missing <c>git</c>.
+              You should not have made any changes so far.
             </p>
           </feedback>
         </choice>
