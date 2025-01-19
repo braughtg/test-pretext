@@ -10,6 +10,20 @@
     </p>
   </introduction>
 
+  <p>
+    Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing that you have switched to your feature branch and that your Local Files have not been modified since the last commit on the main branch (drawn in green).
+  </p>
+  <p>
+    <figure xml:id="fig-switch-to-feature-branch">
+      <caption> Switch to Feature Branch. </caption>
+      <image source="images/ch-upstreaming-changes/switch-to-feature-branch.png" width="75%">
+        <description>
+          Cloud image of origin, upstream, and local branches (including new feature branch).
+        </description>
+      </image>
+    </figure>
+  </p>
+
   <exercises>
   <title/>
   <exercise xml:id="ex-switching-branches" label="ex-switching-branches">
@@ -43,19 +57,6 @@
     </task>
   </exercise>
 
-  <p>
-    Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing that you have switched to your feature branch and that your Local Files have not been modified since the last commit on the main branch (drawn in green).
-  </p>
-  <p>
-    <figure xml:id="fig-switch-to-feature-branch">
-      <caption> Switch to Feature Branch. </caption>
-      <image source="images/ch-upstreaming-changes/switch-to-feature-branch.png" width="75%">
-        <description>
-          Cloud image of origin, upstream, and local branches (including new feature branch).
-        </description>
-      </image>
-    </figure>
-  </p>
 
   <exercise xml:id="ex-switching-branches-git-branch" label="ex-switching-branches-git-branch">
     <introduction>

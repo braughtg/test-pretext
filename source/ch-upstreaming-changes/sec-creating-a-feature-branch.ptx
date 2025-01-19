@@ -201,7 +201,7 @@
     </introduction>
 
 
-    <task xml:id="ex-creating-a-branch-a" label="ex-creating-a-branch-a">
+    <task xml:id="ex-checking-a-branch-a" label="ex-checking-a-branch-a">
       <statement>
         <p>
           Type <c>git branch</c> and look at the output produced.
@@ -277,7 +277,7 @@
     </task>
 
 
-    <task xml:id="ex-creating-a-branch-b" label="ex-creating-a-branch-b">
+    <task xml:id="ex-checking-a-branch-b" label="ex-checking-a-branch-b">
       <statement>
         <p>
           By looking at the output provided by <c>git branch</c> how can you tell which is the active branch?
