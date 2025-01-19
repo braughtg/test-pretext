@@ -11,112 +11,7 @@
   </introduction>
 
   <exercises>
-  <title/>
-  <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
-    <introduction>
-      <p>
-        The <c>git status</c> command provides the current status of your local repository.
-        Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
-      </p>
-    </introduction>
-
-
-    <task xml:id="ex-git-status-command-a" label="ex-git-status-command-a">
-      <statement>
-        <p>
-          What part of the output tells you which branch is currently active in your repository?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice correct="yes">
-          <statement>
-            <p>
-              The branch name is displayed in the first line after "On branch".
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! The first line specifies the current branch.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              The branch name is displayed at the end of the second line.
-              It is "origin/main".
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              The second line specifies the origin branch not the active branch.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              The branch name is not displayed in the output from this git command.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Look again, the active branch is listed.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              The branch name is displayed at the end of the last line.
-              It is "working tree".
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              The last line indicates if there are changes to commit.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          Look at the first line of the output from the <c>git status</c> command.
-        </p>
-      </hint>
-    </task>
-
-
-    <task xml:id="ex-git-status-command-b" label="ex-git-status-command-b">
-      <statement>
-        <p>
-          Your output should contain the text “Your branch is up to date with 'origin/main'.”  What do you think it means that your branch is “up to date”?
-        </p>
-      </statement>
-      <response />
-    </task>
-
-
-    <task xml:id="ex-git-status-command-c" label="ex-git-status-command-c">
-      <statement>
-        <p>
-          Your output should contain the text “nothing to commit, working tree clean.”  What do you think it means that you have “nothing to commit.” Hint: when would you have something to commit?  This is the opposite of that!
-        </p>
-      </statement>
-      <response />
-    </task>
-  </exercise>
-
+  <title />
   <exercise xml:id="ex-creating-a-branch" label="ex-creating-a-branch">
     <introduction>
       <p>
@@ -147,6 +42,7 @@
         <p>
           Use the <c>git status</c> command again now.
         </p>
+
         <p>
           Creating a new branch with the <c>git branch</c> command makes your new branch the active branch.
         </p>
@@ -164,6 +60,7 @@
         </p>
       </hint>
     </task>
+
 
     <task xml:id="ex-creating-a-branch-c" label="ex-creating-a-branch-c">
       <statement>
@@ -189,6 +86,5 @@
       </image>
     </figure>
   </p>
-
   </exercises>
 </section>
