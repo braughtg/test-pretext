@@ -36,708 +36,706 @@
   <subsection xml:id="subsec-restarting-development-environment">
     <title>Restarting the Development Environment</title>
 
-  <introduction />
+      <exercises>
+      <title />
+      <exercise xml:id="ex-restarting-kitclient-for-upstreaming" label="ex-restarting-kitclient-for-upstreaming">
+        <p>
+          Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+          Please be patient as this can take a few minutes.
+          When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to the following: <image source="images/shared-images/DevEnv-Kitty-Ready.png" width="75%">
+          <description>
+            The GitKit Development Environment.
+            The development environment is ready when you see the "Kit development environment is ready for use" message.
+          </description>
+        </image>
+      </p>
+    </exercise>
+    </exercises>
+  </subsection>
+
+
+  <subsection xml:id="subsec-git-log-command">
+    <title><c>git log</c></title>
 
     <exercises>
     <title />
-    <exercise xml:id="ex-restarting-kitclient-for-upstreaming" label="ex-restarting-kitclient-for-upstreaming">
-      <p>
-        Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
-        Please be patient as this can take a few minutes.
-        When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to the following: <image source="images/shared-images/DevEnv-Kitty-Ready.png" width="75%">
-        <description>
-          The GitKit Development Environment.
-          The development environment is ready when you see the "Kit development environment is ready for use" message.
-        </description>
-      </image>
+    <p>
+      The <c>git log</c> command provides a way to see information about the history of the project.
+      It will display information about the most recent commits that have been made to the repository.
+      By default, <c>git log</c> displays information about the 10 most recent commits.
+      You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
     </p>
-  </exercise>
-  </exercises>
-</subsection>
 
-
-<subsection xml:id="subsec-git-log-command">
-  <title><c>git log</c></title>
-
-  <exercises>
-  <title />
-  <p>
-    The <c>git log</c> command provides a way to see information about the history of the project.
-    It will display information about the most recent commits that have been made to the repository.
-    By default, <c>git log</c> displays information about the 10 most recent commits.
-    You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
-  </p>
-
-  <exercise xml:id="ex-understanding-project-history-new" label="ex-understanding-project-history-new">
-    <introduction>
-      <p>
-        Ensure that you are in your cloned repo (i.e.
-        the <em>GitKit-FarmData2</em> directory is your working directory).
-        Then use the <c>git log</c> command to display the information about the 4 most recent commits.
-        (If you don't see more all four recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
-      </p>
-
-      <p>
-        A line that begins with "commit" appears at the start of the information about each commit.
-        That line also contains a long string of numbers and letters.
-        That string is called the <term>SHA (secure hashing algorithm)</term> hash.
-        It is a string of digits (0-9) and letters (a-f) known as a hexadecimal number and it provides a unique identifier for the commit.
-        Following the SHA hash is information about the author, the date the commit was made and the commit message that was used to describe the changes.
-      </p>
-    </introduction>
-
-
-    <task xml:id="ex-understanding-project-history-new-a" label="ex-understanding-project-history-new-a">
-      <statement>
+    <exercise xml:id="ex-understanding-project-history-new" label="ex-understanding-project-history-new">
+      <introduction>
         <p>
-          Which of the following commands will provide the four most recent commits?
+          Ensure that you are in your cloned repo (i.e.
+          the <em>GitKit-FarmData2</em> directory is your working directory).
+          Then use the <c>git log</c> command to display the information about the 4 most recent commits.
+          (If you don't see all four recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
         </p>
-      </statement>
 
-
-      <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              <c>git log</c>
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              This will provide information about the 10 most recent commits, not just the first four.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <c>git log 4</c>
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              This is not the proper format, a symbol is missing before the 4.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              <c>git log -4</c>
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct!
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <c>git log +4</c>
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              The symbol before the 4 is incorrect.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
         <p>
-          Refer back to the beginning of this subsection for specifics about the <c>git log</c> command.
+          A line that begins with "commit" appears at the start of the information about each commit.
+          That line also contains a long string of numbers and letters.
+          That string is called the <term>SHA (secure hashing algorithm)</term> hash.
+          It is a string of digits (0-9) and letters (a-f) known as a hexadecimal number and it provides a unique identifier for the commit.
+          Following the SHA hash is information about the author, the date the commit was made and the commit message that was used to describe the changes.
         </p>
-      </hint>
-    </task>
+      </introduction>
 
 
-    <task xml:id="ex-understanding-project-history-new-aa" label="ex-understanding-project-history-new-aa">
-      <statement>
+      <task xml:id="ex-understanding-project-history-new-a" label="ex-understanding-project-history-new-a">
+        <statement>
+          <p>
+            Which of the following commands will provide the four most recent commits?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice>
+            <statement>
+              <p>
+                <c>git log</c>
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This will provide information about the 10 most recent commits, not just the first four.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                <c>git log 4</c>
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This is not the proper format, a symbol is missing before the 4.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              <p>
+                <c>git log -4</c>
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                <c>git log +4</c>
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                The symbol before the 4 is incorrect.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            Refer back to the beginning of this subsection for specifics about the <c>git log</c> command.
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-understanding-project-history-new-aa" label="ex-understanding-project-history-new-aa">
+        <statement>
+          <p>
+            Run the command from <xref ref="ex-understanding-project-history-new-a"/> and paste the output in the space below.
+          </p>
+        </statement>
+        <response/>
+      </task>
+    </exercise>
+    </exercises>
+  </subsection>
+
+
+  <subsection xml:id="subsec-understanding-git-log-output">
+    <title>Reviewing the <c>git log</c> Output</title>
+
+    <exercises>
+    <title />
+    <p>
+      Use the output from the <xref ref="ex-understanding-project-history-new-aa" /> to answer the following questions about the project history.
+      Note, if you have started this exercise late, new commits may have been added.
+    </p>
+
+    <exercise xml:id="ex-understanding-project-history" label="ex-understanding-project-history">
+      <task xml:id="ex-understanding-project-history-a" label="ex-understanding-project-history-a">
+        <statement>
+          <p>
+            What is the SHA of the most recent commit by IrisSC?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice>
+            <statement>
+              <p>
+                f7330b62bf421c4a87830fee758105a790f6b6ba
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                That commit was not made by IrisSC.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                d622e8d6d71e27890c73e2428e6dcf9d44ca606e
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                That commit was not made by IrisSC.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              <p>
+                80b4408aa0df6dadc4e5e2c310a5e5cbbc0b9d35
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                73feb3808ae8978deaddfeb9eb14ef6d99457d18
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                That commit was made by IrisSC, but it is not her most recent commit.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            Look at the dates of each commit.
+            The SHA code appears above the author of the commit and date the commit was made.
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-understanding-project-history-b" label="ex-understanding-project-history-b">
+        <statement>
+          <p>
+            What is the date of the most recent commit to the repository?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice>
+            <statement>
+              <p>
+                Oct 11 2021
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                There is a more recent commit.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              <p>
+                None of those listed.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct! The most recent commit is always shown first in the list.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Oct 8 2021
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                There is a more recent commit.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Oct 5, 2021
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                There is a more recent commit.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            To see the most recent commit you can scroll up in the terminal window or type the log command again.
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-understanding-project-history-c" label="ex-understanding-project-history-c">
+        <statement>
+          <p>
+            Who authored a commit on October 11, 2021?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Batese2001
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct! Bates2001 authored a commit on October 11, 2021.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                kit
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                kit did not author a commit on October 11, 2021.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                IrisSC
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                IrisSC did not author a commit on October 11, 2021.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Grant Braught
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Grant Braught did not author a commit on October 11, 2021.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            The author's name will appear below the SHA and above the date of the commit.
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-understanding-project-history-d" label="ex-understanding-project-history-d">
+        <statement>
+          <p>
+            What is the purpose of the most recent commit by shes-dev?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Updated comment (#288)
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct! shes-dev made this commit on October 5, 2021.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                chore: install kit
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This commit was not made by shes-dev.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Reorder Seeding Input (#281)
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This commit was not made by shes-dev.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                Summary Table Timing and No Log Messages (#289)
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This commit was not made by shes-dev.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                No Default Label For Drop Down Component (#293)
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This commit was not made by shes-dev.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            This commit is older than the others, try a <c>git log</c> command that shows a few more commits.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    </exercises>
+  </subsection>
+
+
+  <subsection xml:id="subsec-git-status-command">
+    <title><c>git status</c></title>
+
+    <exercises>
+    <title/>
+    <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
+      <introduction>
         <p>
-          Run the command from <xref ref="ex-understanding-project-history-new-a"/> and paste the output in the space below.
+          The <c>git status</c> command provides the current status of your local repository.
+          Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
         </p>
-      </statement>
-      <response/>
-    </task>
-  </exercise>
-  </exercises>
-</subsection>
-
-
-<subsection xml:id="subsec-understanding-git-log-output">
-  <title>Reviewing the <c>git log</c> Output</title>
-
-  <exercises>
-  <title />
-  <p>
-    Use the output from the <xref ref="ex-understanding-project-history-new-aa" /> to answer the following questions about the project history.
-    Note, if you have started this exercise late, new commits may have been added.
-  </p>
-
-  <exercise xml:id="ex-understanding-project-history" label="ex-understanding-project-history">
-    <task xml:id="ex-understanding-project-history-a" label="ex-understanding-project-history-a">
-      <statement>
-        <p>
-          What is the SHA of the most recent commit by IrisSC?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              f7330b62bf421c4a87830fee758105a790f6b6ba
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              That commit was not made by IrisSC.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              d622e8d6d71e27890c73e2428e6dcf9d44ca606e
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              That commit was not made by IrisSC.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              80b4408aa0df6dadc4e5e2c310a5e5cbbc0b9d35
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct!
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              73feb3808ae8978deaddfeb9eb14ef6d99457d18
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              That commit was made by IrisSC, but it is not her most recent commit.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          Look at the dates of each commit.
-          The SHA code appears above the author of the commit and date the commit was made.
-        </p>
-      </hint>
-    </task>
-
-
-    <task xml:id="ex-understanding-project-history-b" label="ex-understanding-project-history-b">
-      <statement>
-        <p>
-          What is the date of the most recent commit to the repository?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              Oct 11 2021
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              There is a more recent commit.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              None of those listed.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! The most recent commit is always shown first in the list.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              Oct 8 2021
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              There is a more recent commit.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              Oct 5, 2021
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              There is a more recent commit.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          To see the most recent commit you can scroll up in the terminal window or type the log command again.
-        </p>
-      </hint>
-    </task>
-
-
-    <task xml:id="ex-understanding-project-history-c" label="ex-understanding-project-history-c">
-      <statement>
-        <p>
-          Who authored a commit on October 11, 2021?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice correct="yes">
-          <statement>
-            <p>
-              Batese2001
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! Bates2001 authored a commit on October 11, 2021.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              kit
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              kit did not author a commit on October 11, 2021.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              IrisSC
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              IrisSC did not author a commit on October 11, 2021.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              Grant Braught
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Grant Braught did not author a commit on October 11, 2021.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          The author's name will appear below the SHA and above the date of the commit.
-        </p>
-      </hint>
-    </task>
-
-
-    <task xml:id="ex-understanding-project-history-d" label="ex-understanding-project-history-d">
-      <statement>
-        <p>
-          What is the purpose of the most recent commit by shes-dev?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice correct="yes">
-          <statement>
-            <p>
-              Updated comment (#288)
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! shes-dev made this commit on October 5, 2021.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              chore: install kit
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              This commit was not made by shes-dev.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              Reorder Seeding Input (#281)
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              This commit was not made by shes-dev.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              Summary Table Timing and No Log Messages (#289)
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              This commit was not made by shes-dev.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              No Default Label For Drop Down Component (#293)
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              This commit was not made by shes-dev.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          This commit is older than the others, try a <c>git log</c> command that shows a few more commits.
-        </p>
-      </hint>
-    </task>
-  </exercise>
-  </exercises>
-</subsection>
-
-
-<subsection xml:id="subsec-git-status-command">
-  <title><c>git status</c></title>
-
-  <exercises>
-  <title/>
-  <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
-    <introduction>
-      <p>
-        The <c>git status</c> command provides the current status of your local repository.
-        Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
-      </p>
-    </introduction>
-
-
-    <task xml:id="ex-git-status-command-a" label="ex-git-status-command-a">
-      <statement>
-        <p>
-          What part of the output tells you which branch is currently active in your repository?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice correct="yes">
-          <statement>
-            <p>
-              The branch name is displayed in the first line after "On branch".
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! The first line specifies the current branch.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              The branch name is displayed at the end of the second line.
-              It is "origin/main".
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              The second line specifies the origin branch not the active branch.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              The branch name is not displayed in the output from this git command.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Look again, the active branch is listed.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              The branch name is displayed at the end of the last line.
-              It is "working tree".
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              The last line indicates if there are changes to commit.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          Look at the first line of the output from the <c>git status</c> command.
-        </p>
-      </hint>
-    </task>
-
-
-    <task xml:id="ex-git-status-command-b" label="ex-git-status-command-b">
-      <statement>
-        <p>
-          Your output should contain the text “Your branch is up to date with 'origin/main'.”  What do you think it means that your branch is “up to date”?
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice correct="yes">
-          <statement>
-            <p>
-              It means that your branch contains all of the commits in the origin <c>main</c> branch.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct!
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It means that the origin <c>main</c> branch contains all of the commits in your local branch.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Think about what is being compared in that statement.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It means that your branch contains all of the issues in the origin <c>main</c> branch.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Issues are not part of a branch.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It means that the origin <c>main</c> branch contains all of the issues in your branch.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Issues are not part of a branch.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          Think about what could be "out of date".
-          What differences might there be between the origin <c>main</c> and your branch?
-        </p>
-      </hint>
-    </task>
-
-
-    <task xml:id="ex-git-status-command-c" label="ex-git-status-command-c">
-      <statement>
-        <p>
-          Your output should contain the text “nothing to commit, working tree clean.”  What do you think it means that you have “nothing to commit.” Hint: when would you have something to commit?  This is the opposite of that!
-        </p>
-      </statement>
-
-
-      <choices randomize="yes">
-        <choice correct="yes">
-          <statement>
-            <p>
-              It means that you haven't made any changes.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct!
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It means that you haven't created any issues.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Issues aren't part of a branch.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It means you haven't made any branches.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Branches aren't committed.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              It means the origin <c>main</c> branch doesn't have any changes.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              This statement is referring to your local branch, not origin <c>main</c>.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          Think about what the next step might be after you have cloned the repo.
-          What would you want to do next?
-        </p>
-      </hint>
-    </task>
-  </exercise>
-  </exercises>
-</subsection>
+      </introduction>
+
+
+      <task xml:id="ex-git-status-command-a" label="ex-git-status-command-a">
+        <statement>
+          <p>
+            What part of the output tells you which branch is currently active in your repository?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                The branch name is displayed in the first line after "On branch".
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct! The first line specifies the current branch.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                The branch name is displayed at the end of the second line.
+                It is "origin/main".
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                The second line specifies the origin branch not the active branch.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                The branch name is not displayed in the output from this git command.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Look again, the active branch is listed.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                The branch name is displayed at the end of the last line.
+                It is "working tree".
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                The last line indicates if there are changes to commit.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            Look at the first line of the output from the <c>git status</c> command.
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-git-status-command-b" label="ex-git-status-command-b">
+        <statement>
+          <p>
+            Your output should contain the text “Your branch is up to date with 'origin/main'.”  What do you think it means that your branch is “up to date”?
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                It means that your branch contains all of the commits in the origin <c>main</c> branch.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                It means that the origin <c>main</c> branch contains all of the commits in your local branch.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Think about what is being compared in that statement.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                It means that your branch contains all of the issues in the origin <c>main</c> branch.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Issues are not part of a branch.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                It means that the origin <c>main</c> branch contains all of the issues in your branch.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Issues are not part of a branch.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            Think about what could be "out of date".
+            What differences might there be between the origin <c>main</c> and your branch?
+          </p>
+        </hint>
+      </task>
+
+
+      <task xml:id="ex-git-status-command-c" label="ex-git-status-command-c">
+        <statement>
+          <p>
+            Your output should contain the text “nothing to commit, working tree clean.”  What do you think it means that you have “nothing to commit.” Hint: when would you have something to commit?  This is the opposite of that!
+          </p>
+        </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                It means that you haven't made any changes.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                It means that you haven't created any issues.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Issues aren't part of a branch.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                It means you haven't made any branches.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                Branches aren't committed.
+              </p>
+            </feedback>
+          </choice>
+
+          <choice>
+            <statement>
+              <p>
+                It means the origin <c>main</c> branch doesn't have any changes.
+              </p>
+            </statement>
+
+            <feedback>
+              <p>
+                This statement is referring to your local branch, not origin <c>main</c>.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            Think about what the next step might be after you have cloned the repo.
+            What would you want to do next?
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    </exercises>
+  </subsection>
 </section>

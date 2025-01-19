@@ -7,6 +7,7 @@
     <p>
       In the last two sections you created a feature branch and switched to that branch.
       In this section you will edit your local files to fix the issue that you claimed in the issue tracker.
+      Confirm you are on your feature branch now.
     </p>
   </introduction>
 
@@ -19,13 +20,29 @@
       </p>
 
       <p>
-        Provide a link to the issue that you claimed in the issue tracker.
+        Provide the URL the issue that you claimed in the issue tracker.
       </p>
 
       <p>
         <var width="55" />
       </p>
     </statement>
+        <setup> <var> <condition string="^https://github.com/.+/issues/[0-9]+$">
+    <feedback>
+      <p>
+        Thank you.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
+
+    <feedback>
+      <p>
+        Please give the full <c>git pull</c> command using the format indicated in the question.
+        Be sure not to leave in the &lt; and &gt; symbols.
+        Replace the words remote and branch with the appropriate names.
+      </p>
+    </feedback>
+    </condition> </var> </setup>
     <!-- THIS NEEDS TO BE UPDATED WITH FEEDBACK AND A REGULAR EXPRESSION TO MAKE SURE THE STUDENT IS IN THE ISSUE TRACKER -->
   </exercise>
 
