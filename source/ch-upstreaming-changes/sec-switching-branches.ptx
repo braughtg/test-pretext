@@ -11,7 +11,7 @@
   </introduction>
 
   <p>
-    Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing that you have switched to your feature branch and that your Local Files have not been modified since the last commit on the main branch (drawn in green).
+    Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing that what will happen when you switch to your feature branch and your Local Files have not been modified since the last commit on the main branch (drawn in green).
   </p>
   <p>
     <figure xml:id="fig-switch-to-feature-branch">
@@ -29,7 +29,7 @@
   <exercise xml:id="ex-switching-branches" label="ex-switching-branches">
     <introduction>
       <p>
-        As you saw in the previous section, the <c>git branch</c> command creates a branch (among other uses), but it does not change your active branch.
+        As you saw in <xref ref="topic-creating-a-feature-branch"/>, the <c>git branch &lt;name&gt;</c> command creates a branch (among other uses), but it does not change your active branch.
         The <c>git switch &lt;name&gt;</c> command switches (i.e.
         changes) the active branch.
       </p>
@@ -39,10 +39,72 @@
     <task xml:id="ex-switching-branches-a" label="ex-switching-branches-a">
       <statement>
         <p>
-          What command will change your active branch to the new feature branch that you created in the previous section?
+          Type <c>git switch &lt;name&gt;</c> to change your active branch to the new feature branch that you created in the previous section. Look at the output produced.
         </p>
       </statement>
-      <response />
+     <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git branch fixTypoInName</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git branch &lt;fixTypoInName&gt;</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The command should not contain &lt; &gt;.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>branch fixTypoInName</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The command is missing <c>git</c>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git fixTypoInName</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The command is missing <c>branch</c>.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look back at the format of the command in the previous description.
+        </p>
+      </hint>
     </task>
 
 
