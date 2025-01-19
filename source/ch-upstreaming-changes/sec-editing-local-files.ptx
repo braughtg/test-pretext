@@ -25,10 +25,9 @@
 
       <p>
         <var width="55" />
-
       </p>
     </statement>
-        <setup> <var> <condition string="^https://github.com/.+/issues/[0-9]+$">
+    <setup> <var> <condition string="^https://github.com/.+/issues/[0-9]+$">
     <feedback>
       <p>
         Thank you.
@@ -38,44 +37,68 @@
 
     <feedback>
       <p>
-        Please give the full <c>git pull</c> command using the format indicated in the question.
-        Be sure not to leave in the &lt; and &gt; symbols.
-        Replace the words remote and branch with the appropriate names.
+        Make sure you have pasted the complete URL starting with https and ending with the issue number.
       </p>
     </feedback>
-    </condition> </var> </setup>
-    <!-- THIS NEEDS TO BE UPDATED WITH FEEDBACK AND A REGULAR EXPRESSION TO MAKE SURE THE STUDENT IS IN THE ISSUE TRACKER -->
+    </condition> </var> </setup> <!-- THIS REG EX NEEDS TO VERIFY THE ISSUE NUMBER IS BETWEEN 1 AND 35 -->
   </exercise>
 
   <exercise xml:id="ex-locate-claimed-issue" label="ex-locate-claimed-issue">
     <introduction>
       <p>
         Read the issue that you claimed.
+        To make the requested change you will need to open the file.
+        Click <em>&lt;Code&gt;</em> to see the files in the repository.
+        Use the issue to locate the file.
+        Once you have found it, click on it to open it.
       </p>
     </introduction>
 
+    <statement>
+      <p>
+        In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker. Be careful to use the same capitalization as given in the issue.
+      </p>
 
-    <task xml:id="ex-locate-claimed-issue-a" label="ex-locate-claimed-issue-a">
-      <statement>
-        <p>
-          In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
-        </p>
-      </statement>
-      <response />
-    </task>
+      <p>
+        <var width="55" />
+      </p>
+    </statement>
+    <setup> <var> <condition string="^ONBOARDING.md|CONTRIBUTING.md|LICENSE.md|INSTALL.md|README.md|AUTHORS.md$">
+    <feedback>
+      <p>
+        Thank you.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
 
-
-    <task xml:id="ex-locate-claimed-issue-b" label="ex-locate-claimed-issue-b">
-      <statement>
-        <p>
-          Use a text editor to modify the file you identified in <xref ref="ex-locate-claimed-issue-a" /> so that the issue you claimed has been fixed.
-          Be sure to save your changes.
-        </p>
-      </statement>
-    </task>
+    <feedback>
+      <p>
+        Double check the spelling of the file name, that the name is ALL CAPS, the .md at the end of the file name is included and in lower case.
+      </p>
+    </feedback>
+    </condition> </var> </setup>
+  </exercise>
+  <!--
+  <exercise xml:id="ex-locate-claimed-issue-a" label="ex-locate-claimed-issue-a">
+    <statement>
+      <p>
+        In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
+      </p>
+    </statement>
+    <response />
   </exercise>
 
-  <p>
+  <exercise xml:id="ex-locate-claimed-issue-b" label="ex-locate-claimed-issue-b">
+    <statement>
+      <p>
+        Use a text editor to modify the file you identified in <xref ref="ex-locate-claimed-issue-a" /> so that the issue you claimed has been fixed.
+        Be sure to save your changes.
+      </p>
+    </statement>
+  </exercise>
+  -->
+
+     <p>
     <xref ref="fig-edit-local-files-on-feature-branch" />  illustrates the current situation where your <em>Local Files</em> have been modified. In <xref ref="fig-switch-to-feature-branch" /> the <em>Local Files</em> in your feature branch were drawn in green. This reflected that they were, at that time, an exact copy of the last commit on the main branch, which was also drawn in green.  Here <em>Local Files</em> are drawn in blue to indicate that they have been changed as compared to the final commit in the main branch, which is still green.
   </p>
 
