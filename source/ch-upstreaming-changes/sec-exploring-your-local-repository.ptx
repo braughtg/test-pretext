@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      Like in the previous chapter, you will be working within the KitClient for this exercise.
+      Like in the previous chapter, you will be working within the development environment for this exercise.
     </p>
   </introduction>
 
@@ -32,14 +32,33 @@
     </figure>
   </p>
 
-  <exercises>
-  <title/>
-  <exercise xml:id="ex-restarting-kitclient" label="ex-restarting-kitclient">
-    <p>
-      Restart your KitClient based on the instructions in <xref ref="topic-restarting-dev-env" />.
+
+  <subsection xml:id="subsec-restarting-development-environment">
+    <title>Restarting the Development Environment</title>
+
+    <exercises>
+    <title />
+    <exercise xml:id="ex-restarting-kitclient-for-upstreaming" label="ex-restarting-kitclient-for-upstreaming">
+      <p>
+        Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+        Please be patient as this can take a few minutes.
+        When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to the following: <image source="images/shared-images/DevEnv-Kitty-Ready.png" width="75%">
+        <description>
+          The GitKit Development Environment.
+          The development environment is ready when you see the "Kit development environment is ready for use" message.
+        </description>
+      </image>
     </p>
   </exercise>
+  </exercises>
+</subsection>
 
+
+<subsection xml:id="subsec-git-log-command">
+  <title><c>git log</c></title>
+
+  <exercises>
+  <title />
   <p>
     The <c>git log</c> command provides a way to see information about the history of the project.
     It will display information about the most recent commits that have been made to the repository.
@@ -47,7 +66,7 @@
     You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
   </p>
 
-  <exercise xml:id="ex-understanding-project-history" label="ex-understanding-project-history">
+  <exercise xml:id="ex-understanding-project-history-new" label="ex-understanding-project-history-new">
     <introduction>
       <p>
         Ensure that you are in your cloned repo (i.e.
@@ -63,13 +82,107 @@
         It is a string of digits (0-9) and letters (a-f) known as a hexadecimal number and it provides a unique identifier for the commit.
         Following the SHA hash is information about the author, the date the commit was made and the commit message that was used to describe the changes.
       </p>
-
-      <p>
-        Use the output from the <c>git log</c> command to answer the following questions about the project history. Note, if you have started this exercise late, new commits may have been added. If so, you will need to look at more than the 5 most recent commits to answer the question.
-      </p>
     </introduction>
 
 
+    <task xml:id="ex-understanding-project-history-new-a" label="ex-understanding-project-history-new-a">
+      <statement>
+        <p>
+          Which of the following commands will provide the four most recent commits?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              <c>git log</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This will provide information about the 10 most recent commits, not just the first four.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git log 4</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This is not the proper format, a symbol is missing before the 4.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git log -4</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git log +4</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The symbol before the 4 is incorrect.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Refer back to the beginning of this subsection for specifics about the <c>git log</c> command.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-understanding-project-history-new-aa" label="ex-understanding-project-history-new-aa">
+      <statement>
+        <p>
+          Run the command from <xref ref="ex-understanding-project-history-new-a"/> and paste the output in the space below.
+        </p>
+      </statement>
+      <response/>
+    </task>
+  </exercise>
+  </exercises>
+</subsection>
+
+
+<subsection xml:id="subsec-understanding-git-log-output">
+  <title>Reviewing the <c>git log</c> Output</title>
+
+  <exercises>
+  <title />
+  <p>
+    Use the output from the <xref ref="ex-understanding-project-history-new-aa" /> to answer the following questions about the project history.
+    Note, if you have started this exercise late, new commits may have been added.
+  </p>
+
+  <exercise xml:id="ex-understanding-project-history" label="ex-understanding-project-history">
     <task xml:id="ex-understanding-project-history-a" label="ex-understanding-project-history-a">
       <statement>
         <p>
@@ -138,10 +251,12 @@
 
       <hint>
         <p>
-          Look at the dates of each commit. The SHA code appears above the author of the commit and date the commit was made.
+          Look at the dates of each commit.
+          The SHA code appears above the author of the commit and date the commit was made.
         </p>
       </hint>
     </task>
+
 
     <task xml:id="ex-understanding-project-history-b" label="ex-understanding-project-history-b">
       <statement>
@@ -149,6 +264,7 @@
           What is the date of the most recent commit to the repository?
         </p>
       </statement>
+
 
       <choices randomize="yes">
         <choice>
@@ -202,7 +318,7 @@
 
           <feedback>
             <p>
-              There is a more recent commit. 
+              There is a more recent commit.
             </p>
           </feedback>
         </choice>
@@ -215,12 +331,14 @@
       </hint>
     </task>
 
+
     <task xml:id="ex-understanding-project-history-c" label="ex-understanding-project-history-c">
       <statement>
         <p>
           Who authored a commit on October 11, 2021?
         </p>
       </statement>
+
 
       <choices randomize="yes">
         <choice correct="yes">
@@ -287,12 +405,14 @@
       </hint>
     </task>
 
+
     <task xml:id="ex-understanding-project-history-d" label="ex-understanding-project-history-d">
       <statement>
         <p>
           What is the purpose of the most recent commit by shes-dev?
         </p>
       </statement>
+
 
       <choices randomize="yes">
         <choice correct="yes">
@@ -371,8 +491,8 @@
           This commit is older than the others, try a <c>git log</c> command that shows a few more commits.
         </p>
       </hint>
-
     </task>
   </exercise>
   </exercises>
+</subsection>
 </section>
