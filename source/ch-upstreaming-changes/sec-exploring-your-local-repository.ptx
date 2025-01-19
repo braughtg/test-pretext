@@ -36,6 +36,8 @@
   <subsection xml:id="subsec-restarting-development-environment">
     <title>Restarting the Development Environment</title>
 
+  <introduction />
+
     <exercises>
     <title />
     <exercise xml:id="ex-restarting-kitclient-for-upstreaming" label="ex-restarting-kitclient-for-upstreaming">
