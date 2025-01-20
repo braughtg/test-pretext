@@ -2,16 +2,19 @@
 
 <section xml:id="topic-verifying-the-upstream-remote" xmlns:xi="http://www.w3.org/2001/XInclude" >
   <title>Creating and Verifying the Upstream Remote</title>
-  <introduction >
-    In order to pull changes from the upstream you will need to tell your local repository where the upstream is.
-    In earlier figures, dotted orange lines were used to indicate that your local repository knew about the origin and that the origin knew about the upstream.
-    But there was no orange dotted line from your local repository to the upstream.
-    That is because, by default, your local repository isn’t aware of the upstream.
-  </introduction>
 
-  <p>
-    Like the last activity, you will be working within the KitClient for this activity.
-  </p>
+  <introduction >
+    <p>
+      In order to pull changes from the upstream you will need to tell your local repository where the upstream is.
+      In earlier figures, dotted orange lines were used to indicate that your local repository knew about the origin and that the origin knew about the upstream.
+      But there was no orange dotted line from your local repository to the upstream.
+      That is because, by default, your local repository isn’t aware of the upstream.
+    </p>
+
+    <p>
+      Like the last activity, you will be working within the KitClient for this activity.
+    </p>
+  </introduction>
 
   <exercises>
   <title/>
@@ -22,12 +25,12 @@
   </exercise>
 
   <exercise xml:id="ex-setting-upstream" label="ex-setting-upstream">
-
     <introduction>
       In order to pull from the upstream you will first need to make your local repository aware of the upstream.
       This is done by setting a remote for it.
       This exercise will walk you through that process.
     </introduction>
+
 
     <task xml:id="ex-setting-upstream-a" label="ex-setting-upstream-a">
       <statement>
@@ -93,6 +96,7 @@
         </p>
       </hint>
     </task>
+
 
     <task xml:id="ex-setting-upstream-c-linux" label="ex-setting-upstream-c-linux">
       <statement>
@@ -191,10 +195,10 @@
       </hint>
     </task>
   </exercise>
-
+  </exercises>
+  
   <conclusion>
     Note that you will only need to set the upstream remote once for a repository.
     Once the upstream remote is set you will be able to pull from the upstream repo as often as is necessary.
   </conclusion>
-  </exercises>
 </section>

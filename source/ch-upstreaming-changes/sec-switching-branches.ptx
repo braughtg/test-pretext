@@ -8,22 +8,22 @@
       In the previous section you learned how to create a branch.
       In this section you will learn more about why branching is important and how to switch between existing branches.
     </p>
+
+    <p>
+      Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing what what will happen when you switch to your feature branch and your Local Files have not been modified since the last commit on the main branch (drawn in green).
+    </p>
+
+    <p>
+      <figure xml:id="fig-switch-to-feature-branch">
+        <caption> Switch to Feature Branch. </caption>
+        <image source="images/ch-upstreaming-changes/switch-to-feature-branch.png" width="75%">
+          <description>
+            Cloud image of origin, upstream, and local branches (including new feature branch).
+          </description>
+        </image>
+      </figure>
+    </p>
   </introduction>
-
-  <p>
-    Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing what what will happen when you switch to your feature branch and your Local Files have not been modified since the last commit on the main branch (drawn in green).
-  </p>
-
-  <p>
-    <figure xml:id="fig-switch-to-feature-branch">
-      <caption> Switch to Feature Branch. </caption>
-      <image source="images/ch-upstreaming-changes/switch-to-feature-branch.png" width="75%">
-        <description>
-          Cloud image of origin, upstream, and local branches (including new feature branch).
-        </description>
-      </image>
-    </figure>
-  </p>
 
   <exercises>
   <title/>
@@ -308,11 +308,10 @@
       </p>
     </hint>
   </exercise>
-
-  <conclusion>
+  </exercises>
+    <conclusion>
     <p>
       Use the commands from <xref ref="ex-switching-branches-git-branch"/> to make your feature branch the active branch.
     </p>
   </conclusion>
-  </exercises>
 </section>
