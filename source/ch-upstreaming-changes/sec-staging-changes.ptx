@@ -58,7 +58,7 @@
       </statement>
       <response />
     </task>
-    -->
+    --> <!-- QUESTIONS C & D BELOW NEED TO BE UPDATED BASED UP COMPARING THE TWO OUTPUTS -->
     <task xml:id="ex-staging-changes-c" label="ex-staging-changes-c">
       <statement>
         <p>
@@ -211,9 +211,88 @@
       </hint>
     </task>
   </exercise>
+
+  <exercise xml:id="ex-staging-changes-diff" label="ex-staging-changes-diff">
+    <statement>
+      <p>
+        Run the <c>git diff</c> command again.
+        What output is produced?
+      </p>
+    </statement>
+
+
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>
+            No output is produced.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Correct! There are no differences because your changes were staged.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            It shows the file name that I changed.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            If you are seeing the file name you changed it means either you made additional changes after the <c>git stage</c> command was done or your <c>git stage</c> command did not work properly.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            It shows the code I added in green.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            If you are seeing code changes it means either you made additional changes after the <c>git stage</c> command was done or your <c>git stage</c> command did not work properly.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            It shows the code I deleted in red.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            If you are seeing code changes it means either you made additional changes after the <c>git stage</c> command was done or your <c>git stage</c> command did not work properly.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    <hint>
+      <p>
+        The <c>git diff</c> command will only show the changes that have yet to be staged.
+      </p>
+    </hint>
+  </exercise>
   </exercises>
 
   <conclusion>
+    <p>
+      The <c>git diff --staged</c> command will show you the differences between the staged changes and the most recent commit.
+      Try this command now.
+    </p>
+
     <p>
       Note that git also has a <c>git add</c> command that is equivalent to <c>git stage</c>.
       So, you can add files to the stage using either <c>git stage</c> or <c>git add</c>.
