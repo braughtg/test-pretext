@@ -36,6 +36,11 @@
   <subsection xml:id="subsec-restarting-development-environment">
     <title>Restarting the Development Environment</title>
 
+    <introduction>
+      <p>
+      </p>
+    </introduction>
+
     <exercises>
     <title />
     <exercise xml:id="ex-restarting-kitclient-for-upstreaming" label="ex-restarting-kitclient-for-upstreaming">
@@ -57,15 +62,17 @@
 <subsection xml:id="subsec-git-log-command">
   <title><c>git log</c></title>
 
+  <introduction>
+    <p>
+      The <c>git log</c> command provides a way to see information about the history of the project.
+      It will display information about the most recent commits that have been made to the repository.
+      By default, <c>git log</c> displays information about the 10 most recent commits.
+      You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
+    </p>
+  </introduction>
+
   <exercises>
   <title />
-  <p>
-    The <c>git log</c> command provides a way to see information about the history of the project.
-    It will display information about the most recent commits that have been made to the repository.
-    By default, <c>git log</c> displays information about the 10 most recent commits.
-    You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
-  </p>
-
   <exercise xml:id="ex-understanding-project-history-new" label="ex-understanding-project-history-new">
     <task xml:id="ex-understanding-project-history-new-a" label="ex-understanding-project-history-new-a">
       <statement>
@@ -172,13 +179,15 @@
 <subsection xml:id="subsec-understanding-git-log-output">
   <title>Reviewing the <c>git log</c> Output</title>
 
+  <introduction>
+    <p>
+      Use the output from the <xref ref="ex-understanding-project-history-new-aa" /> to answer the following questions about the project history.
+      Note, if you have started this exercise late, new commits may have been added.
+    </p>
+  </introduction>
+
   <exercises>
   <title />
-  <p>
-    Use the output from the <xref ref="ex-understanding-project-history-new-aa" /> to answer the following questions about the project history.
-    Note, if you have started this exercise late, new commits may have been added.
-  </p>
-
   <exercise xml:id="ex-understanding-project-history" label="ex-understanding-project-history">
     <task xml:id="ex-understanding-project-history-a" label="ex-understanding-project-history-a">
       <statement>
@@ -497,17 +506,16 @@
 <subsection xml:id="subsec-git-status-command">
   <title><c>git status</c></title>
 
+  <introduction>
+    <p>
+      The <c>git status</c> command provides the current status of your local repository.
+      Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
+    </p>
+  </introduction>
+
   <exercises>
   <title/>
   <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
-    <introduction>
-      <p>
-        The <c>git status</c> command provides the current status of your local repository.
-        Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
-      </p>
-    </introduction>
-
-
     <task xml:id="ex-git-status-command-a" label="ex-git-status-command-a">
       <statement>
         <p>
@@ -735,324 +743,4 @@
   </exercise>
   </exercises>
 </subsection>
-<!--
-<p>
-  Use the output from the <c>git log</c> command to answer the following questions about the project history.
-  Note, if you have started this exercise late, new commits may have been added.
-  If so, you will need to look at more than the 5 most recent commits to answer the question.
-</p>
-</introduction>
-
-
-<task xml:id="ex-understanding-project-history-a" label="ex-understanding-project-history-a">
-  <statement>
-    <p>
-      What is the SHA of the most recent commit by IrisSC?
-    </p>
-  </statement>
-
-
-  <choices randomize="yes">
-    <choice>
-      <statement>
-        <p>
-          f7330b62bf421c4a87830fee758105a790f6b6ba
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          That commit was not made by IrisSC.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          d622e8d6d71e27890c73e2428e6dcf9d44ca606e
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          That commit was not made by IrisSC.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice correct="yes">
-      <statement>
-        <p>
-          80b4408aa0df6dadc4e5e2c310a5e5cbbc0b9d35
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          Correct!
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          73feb3808ae8978deaddfeb9eb14ef6d99457d18
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          That commit was made by IrisSC, but it is not her most recent commit.
-        </p>
-      </feedback>
-    </choice>
-  </choices>
-
-  <hint>
-    <p>
-      Look at the dates of each commit.
-      The SHA code appears above the author of the commit and date the commit was made.
-    </p>
-  </hint>
-</task>
-
-
-<task xml:id="ex-understanding-project-history-b" label="ex-understanding-project-history-b">
-  <statement>
-    <p>
-      What is the date of the most recent commit to the repository?
-    </p>
-  </statement>
-
-
-  <choices randomize="yes">
-    <choice>
-      <statement>
-        <p>
-          Oct 11 2021
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          There is a more recent commit.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice correct="yes">
-      <statement>
-        <p>
-          None of those listed.
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          Correct! The most recent commit is always shown first in the list.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          Oct 8 2021
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          There is a more recent commit.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          Oct 5, 2021
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          There is a more recent commit.
-        </p>
-      </feedback>
-    </choice>
-  </choices>
-
-  <hint>
-    <p>
-      To see the most recent commit you can scroll up in the terminal window or type the log command again.
-    </p>
-  </hint>
-</task>
-
-
-<task xml:id="ex-understanding-project-history-c" label="ex-understanding-project-history-c">
-  <statement>
-    <p>
-      Who authored a commit on October 11, 2021?
-    </p>
-  </statement>
-
-
-  <choices randomize="yes">
-    <choice correct="yes">
-      <statement>
-        <p>
-          Batese2001
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          Correct! Bates2001 authored a commit on October 11, 2021.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          kit
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          kit did not author a commit on October 11, 2021.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          IrisSC
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          IrisSC did not author a commit on October 11, 2021.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          Grant Braught
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          Grant Braught did not author a commit on October 11, 2021.
-        </p>
-      </feedback>
-    </choice>
-  </choices>
-
-  <hint>
-    <p>
-      The author's name will appear below the SHA and above the date of the commit.
-    </p>
-  </hint>
-</task>
-
-
-<task xml:id="ex-understanding-project-history-d" label="ex-understanding-project-history-d">
-  <statement>
-    <p>
-      What is the purpose of the most recent commit by shes-dev?
-    </p>
-  </statement>
-
-
-  <choices randomize="yes">
-    <choice correct="yes">
-      <statement>
-        <p>
-          Updated comment (#288)
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          Correct! shes-dev made this commit on October 5, 2021.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          chore: install kit
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          This commit was not made by shes-dev.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          Reorder Seeding Input (#281)
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          This commit was not made by shes-dev.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          Summary Table Timing and No Log Messages (#289)
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          This commit was not made by shes-dev.
-        </p>
-      </feedback>
-    </choice>
-
-    <choice>
-      <statement>
-        <p>
-          No Default Label For Drop Down Component (#293)
-        </p>
-      </statement>
-
-      <feedback>
-        <p>
-          This commit was not made by shes-dev.
-        </p>
-      </feedback>
-    </choice>
-  </choices>
-
-  <hint>
-    <p>
-      This commit is older than the others, try a <c>git log</c> command that shows a few more commits.
-    </p>
-  </hint>
-</task>
-</exercise>
-</exercises> -->
 </section>
