@@ -44,32 +44,26 @@
     <task xml:id="ex-staging-changes-a" label="ex-staging-changes-a">
       <statement>
         <p>
+          Paste the output of the <c>git stage</c> command here.
+        </p>
+      </statement>
+      <response />
+    </task>
+    <!--
+    <task xml:id="ex-staging-changes-a" label="ex-staging-changes-a">
+      <statement>
+        <p>
           Provide the command you entered.
         </p>
       </statement>
       <response />
     </task>
-
-
-    <task xml:id="ex-staging-changes-b" label="ex-staging-changes-b">
-      <statement>
-        <p>
-          Note that git also has a <c>git add</c> command that is equivalent to <c>git stage</c>.
-          So, you can add files to the stage using either <c>git stage</c> or <c>git add</c>.
-          These activities will use <c>git stage</c> because it seems more descriptive of what is happening.
-          However, you are likely to see <c>git add</c> used in other resources, so it is worth knowing that they are equivalent.
-          Provide the <c>git add</c> command that would be equivalent to your answer in <xref ref="ex-staging-changes-a" />.
-        </p>
-      </statement>
-      <response />
-    </task>
-
-
+    -->
     <task xml:id="ex-staging-changes-c" label="ex-staging-changes-c">
       <statement>
         <p>
           Now run the <c>git status</c> command again.
-          Compare your output in <xref ref="ex-staging-changes-a" /> to the output in <xref ref="ex-verify-changes-a" />.
+          Compare your output in <xref ref="ex-staging-changes-a" /> to the output in <xref ref="ex-verify-changes-new-a" />.
         </p>
 
         <p>
@@ -218,4 +212,13 @@
     </task>
   </exercise>
   </exercises>
+
+  <conclusion>
+    <p>
+      Note that git also has a <c>git add</c> command that is equivalent to <c>git stage</c>.
+      So, you can add files to the stage using either <c>git stage</c> or <c>git add</c>.
+      These activities will use <c>git stage</c> because it seems more descriptive of what is happening.
+      However, you are likely to see <c>git add</c> used in other resources, so it is worth knowing that they are equivalent.
+    </p>
+  </conclusion>
 </section>
