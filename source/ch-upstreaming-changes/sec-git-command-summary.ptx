@@ -22,18 +22,15 @@
     <premise>
     <c>git log</c></premise> <response>Display recent commits made to the active branch.</response> </match> <match>
     <premise>
-    <c>git branch &lt;branch&gt;</c></premise> <response>Create a new feature branch.</response> </match> 
-    <match>
+    <c>git branch &lt;branch&gt;</c></premise> <response>Create a new feature branch.</response> </match> <match>
     <premise>
-    <c>git branch</c></premise> <response>Lists all branches.</response> </match> 
-    <match>
+    <c>git branch</c></premise> <response>Lists all branches.</response> </match> <match>
     <premise>
     <c>git switch &lt;branch&gt;</c></premise> <response>Change the active branch</response> </match> <match>
     <premise>
     <c>git status</c></premise> <response>Check the current state of your local repo.</response> </match> <match>
     <premise>
-    <c>git diff</c></premise> <response>Displays unstaged changes.</response> </match>  
-    <match>
+    <c>git diff</c></premise> <response>Displays unstaged changes.</response> </match> <match>
     <premise>
     <c>git diff --staged</c></premise> <response>Displays staged changes.</response> </match></matches>
     <hint>
@@ -43,7 +40,7 @@
     </hint>
   </exercise>
 
-    <exercise xml:id="ex-git-commands-summary-upstreaming-2" label="ex-git-commands-summary-upstreaming-2">
+  <exercise xml:id="ex-git-commands-summary-upstreaming-2" label="ex-git-commands-summary-upstreaming-2">
     <statement>
       <p>
         Match the tasks on the right with the appropriate git command listed on the left.
