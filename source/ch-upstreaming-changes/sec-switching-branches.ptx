@@ -24,7 +24,7 @@
       </figure>
     </p>
   </introduction>
-<!--
+
   <exercises>
   <title/>
   <exercise xml:id="ex-switching-branches" label="ex-switching-branches">
@@ -309,7 +309,7 @@
     </hint>
   </exercise>
   </exercises>
--->
+
   <conclusion>
     <p>
       Use the commands from <xref ref="ex-switching-branches-git-branch"/> to make your feature branch the active branch.

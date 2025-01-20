@@ -40,8 +40,7 @@
         Make sure you have pasted the complete URL starting with https and ending with the issue number.
       </p>
     </feedback>
-    </condition> </var> </setup> 
-    <!-- THIS REG EX NEEDS TO VERIFY THE ISSUE NUMBER IS BETWEEN 1 AND 35 -->
+    </condition> </var> </setup> <!-- THIS REG EX NEEDS TO VERIFY THE ISSUE NUMBER IS BETWEEN 1 AND 35 -->
   </exercise>
 
   <exercise xml:id="ex-locate-claimed-issue" label="ex-locate-claimed-issue">
@@ -122,20 +121,24 @@
       </p>
 
       <p>
-        What does the output tell you about the current status of the repository? If you see the message "nothing to commit, working tree clean", it means that your edits in the previous exercise were not saved.
+        If you see the message "nothing to commit, working tree clean", it means that your edits in the previous exercise were not saved.
         Go back and save your edits and then issue the <c>git status</c> command again before answering the questions below.
       </p>
     </introduction>
 
 
+    <task xml:id="ex-verify-changes-new-a" label="ex-verify-changes-new-a">
+      <statement>
+        <p>
+          Paste the output of the <c>git status</c> command below.
+        </p>
+      </statement>
+      <response />
+    </task>
+
+
     <task xml:id="ex-verify-changes-a" label="ex-verify-changes-a">
       <statement>
-        <!--
-        <p>
-          What two things does the output tell you about the file that you edited? If you see the message “nothing to commit, working tree clean,” it means that your edits in the previous exercise were not saved.
-          <term>NOTE: may want to change this so that it asks which files are staged, untracked, etc.</term> Go back and save your edits and then issue the <c>git status</c> command again before describing the two things that the output tells you.
-        </p>
-        -->
         <p>
           How many files are not staged?
         </p>
@@ -284,94 +287,84 @@
   </exercise>
 
   <exercise xml:id="ex-verify-changes-with-diff" label="ex-verify-changes-with-diff">
-    <introduction>
+    <statement>
       <p>
         The <c>git diff</c> command provides another way to examine or confirm the changes you have been making.
         Note <em>diff</em> is just short for <em>difference</em>, and is called this because it is used to show differences.
-        By default the <c>git diff</c> command will show you any changes that have been made to your local files as compared to the version in the most recent commit in the active branch.
+        By default the <c>git diff</c> command will show you any changes that have been made to your local files that have not yet been staged.
         Run the <c>git diff</c> command now.
       </p>
-    </introduction>
+
+      <p>
+        How is the change that you made indicated in the output from <c>git diff</c>?
+      </p>
+    </statement>
 
 
-    <task xml:id="ex-verify-changes-with-diff-a" label="ex-verify-changes-with-diff-a">
-      <statement>
-        <p>
-          How is the change that you made indicated in the output from <c>git diff</c>?
-        </p>
-      </statement>
+    <choices randomize="yes">
+      <choice>
+        <statement>
+          <p>
+            The new text is in red, the old text is in green.
+          </p>
+        </statement>
 
+        <feedback>
+          <p>
+            Look again to see what color your change appears in.
+          </p>
+        </feedback>
+      </choice>
 
-      <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              The new text is in red, the old text is in green.
-            </p>
-          </statement>
+      <choice correct="yes">
+        <statement>
+          <p>
+            The new text is in green, the old text is in red.
+          </p>
+        </statement>
 
-          <feedback>
-            <p>
-              Look again to see what color your change appears in.
-            </p>
-          </feedback>
-        </choice>
+        <feedback>
+          <p>
+            Correct! The original text is in red, your changes are in green.
+          </p>
+        </feedback>
+      </choice>
 
-        <choice correct="yes">
-          <statement>
-            <p>
-              The new text is in green, the old text is in red.
-            </p>
-          </statement>
+      <choice>
+        <statement>
+          <p>
+            Only the new text appears.
+          </p>
+        </statement>
 
-          <feedback>
-            <p>
-              Correct! The original text is in red, your changes are in green.
-            </p>
-          </feedback>
-        </choice>
+        <feedback>
+          <p>
+            Look again, you should see the original text as well.
+          </p>
+        </feedback>
+      </choice>
 
-        <choice>
-          <statement>
-            <p>
-              Only the new text appears.
-            </p>
-          </statement>
+      <choice>
+        <statement>
+          <p>
+            The old text appears with a strike-through line across it.
+          </p>
+        </statement>
 
-          <feedback>
-            <p>
-              Look again, you should see the original text as well.
-            </p>
-          </feedback>
-        </choice>
+        <feedback>
+          <p>
+            Strike-through is not part of the feedback git commands can provide.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
 
-        <choice>
-          <statement>
-            <p>
-              The old text appears with a strike-through line across it.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Strike-through is not part of the feedback git commands can provide.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          Look at the feedback again and look for your change.
-          Do you also see the original text?
-        </p>
-      </hint>
-    </task>
+    <hint>
+      <p>
+        Look at the feedback again and look for your change.
+        Do you also see the original text?
+      </p>
+    </hint>
   </exercise>
   </exercises>
-  <conclusion>
-    <p>
-      something here
-    </p>
-  </conclusion>
 </section>
