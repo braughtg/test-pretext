@@ -7,30 +7,30 @@
     <p>
       Like in the previous chapter, you will be working within the development environment for this exercise.
     </p>
+
+    <p>
+      <term> Current State: </term>
+    </p>
+
+    <p>
+      <xref ref="fig-fork-and-clone-local" /> shows where you should be based upon the exercises in the previous chapter. You will have forked the upstream FarmData2 repository into your own GitHub account. You will then have cloned your fork into a local repository on your computer. Your local files at this point are a copy that reflects the current state of the upstream main branch.
+    </p>
+
+    <p>
+      Let's explore this state just a little before making the changes that address the issue that you have claimed.
+    </p>
+
+    <p>
+      <figure xml:id="fig-fork-and-clone-local">
+        <caption> Fork, Clone and Local Files. </caption>
+        <image source="images/ch-upstreaming-changes/fork_clone_local_files.png" width="75%">
+          <description>
+            Cloud image of fork, clone, and local files.
+          </description>
+        </image>
+      </figure>
+    </p>
   </introduction>
-
-  <p>
-    <term> Current State: </term>
-  </p>
-
-  <p>
-    <xref ref="fig-fork-and-clone-local" /> shows where you should be based upon the exercises in the previous chapter. You will have forked the upstream FarmData2 repository into your own GitHub account. You will then have cloned your fork into a local repository on your computer. Your local files at this point are a copy that reflects the current state of the upstream main branch.
-  </p>
-
-  <p>
-    Let's explore this state just a little before making the changes that address the issue that you have claimed.
-  </p>
-
-  <p>
-    <figure xml:id="fig-fork-and-clone-local">
-      <caption> Fork, Clone and Local Files. </caption>
-      <image source="images/ch-upstreaming-changes/fork_clone_local_files.png" width="75%">
-        <description>
-          Cloud image of fork, clone, and local files.
-        </description>
-      </image>
-    </figure>
-  </p>
 
 
   <subsection xml:id="subsec-restarting-development-environment">
@@ -743,6 +743,7 @@
   </exercise>
   </exercises>
 </subsection>
+
 <conclusion>
   <p>
     In the next section you will create a feature branch.
