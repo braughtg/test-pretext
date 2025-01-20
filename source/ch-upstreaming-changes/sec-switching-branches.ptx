@@ -309,7 +309,8 @@
     </hint>
   </exercise>
   </exercises>
-    <conclusion>
+
+  <conclusion>
     <p>
       Use the commands from <xref ref="ex-switching-branches-git-branch"/> to make your feature branch the active branch.
     </p>
