@@ -584,7 +584,7 @@
 
           <feedback>
             <p>
-              Feedback 3
+              The <c>git status</c> command is used to see what files have been changed and staged.
             </p>
           </feedback>
         </choice>
@@ -592,13 +592,13 @@
         <choice>
           <statement>
             <p>
-              Option 4
+              It only shows the first commit made, not every commit.
             </p>
           </statement>
 
           <feedback>
             <p>
-              Feedback 4
+              The <c>git log</c> command will show multiple commits with the most recent appearing first.
             </p>
           </feedback>
         </choice>
@@ -606,7 +606,7 @@
 
       <hint>
         <p>
-          Hint here
+          Commits are specific to branches. You must be on the proper branch to see a commit.
         </p>
       </hint>
     </task>
