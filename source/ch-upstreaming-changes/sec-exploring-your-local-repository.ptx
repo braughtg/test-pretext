@@ -13,7 +13,7 @@
     </p>
 
     <p>
-      <xref ref="fig-fork-and-clone-local" /> shows where you should be based upon the exercises in the previous chapter. You will have forked the upstream FarmData2 repository into your own GitHub account. You will then have cloned your fork into a local repository on your computer. Your local files at this point are a copy that reflects the current state of the upstream main branch.
+      <xref ref="fig-fork-and-clone-local" /> shows where you should be based upon the exercises in the previous chapter. You will have forked the upstream FarmData2 repository into your own GitHub account. You will then have cloned your fork into a local repository in the development environment. Your local files at this point are a copy that reflects the current state of the upstream <c>main</c> branch.
     </p>
 
     <p>
