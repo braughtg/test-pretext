@@ -129,7 +129,7 @@
   <title><c>git clone</c></title>
 
   <p>
-  The <c>git clone</c> command will make a copy of your remote copy on GitHub and make the Local Copy on your computer (in your development environment).
+  The <c>git clone</c> command will make a copy of your fork on GitHub and make the Local Copy on your computer (in your development environment).
   Refer to <xref ref="fig-basic-workflow-clone">Figure</xref>.
 </p>
 
@@ -142,11 +142,11 @@
 </p>
 
 <p>
-  <c>git clone &lt;clone URL&gt;</c>
+  <c>git clone &lt;URL&gt;</c>
 </p>
 
 <p>
-  Be sure to replace <c>&lt;clone URL&gt;</c> with the clone URL you found in <xref ref="ex-clone-url-linux" />.
+  Be sure to replace <c>&lt;URL&gt;</c> with the clone URL you found in <xref ref="ex-clone-url-linux" />.
 </p>
 
 <exercises>
@@ -198,20 +198,104 @@
 </exercise>
 
 <exercise xml:id="ex-clone-origin-linux-b" label="ex-clone-origin-linux-b">
-  <introduction>
-    <p>
-      Copy and paste the output from your command in <xref ref="ex-clone-origin-linux-a" /> as your answer here.
-    </p>
-  </introduction>
-  <response />
+          <statement>
+            <p>
+              Which of the following appear in the output from entering the command from <xref ref="ex-clone-origin-linux-a" />?
+            </p>
+          </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              Cloning into
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              Sending objects
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              Deleting objects
+            </statement>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              Resolving deltas
+            </statement>
+          </choice>
+
+          <choice correct="yes">
+            <statement>
+              Counting objects
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              local:
+            </statement>
+          </choice>
+        </choices>
+
+        <hint>
+          <p>
+            Look at the output in your terminal.
+          </p>
+        </hint>
 </exercise>
 
 <exercise xml:id="ex-clone-origin-linux-c" label="ex-clone-origin-linux-c">
-  <statement>
-    Examine the output in <xref ref="ex-clone-origin-linux-b" />.
-    Into which directory in your development environment was your GitKit FarmData2 origin cloned?
-  </statement>
-  <response />
+          <statement>
+            <p>
+              Which line of output from entering the command from <xref ref="ex-clone-origin-linux-a" /> indicates the directory into which the repository was cloned?
+            </p>
+          </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              Cloning into
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              remote: Enumerating objects
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              remote: Counting objects
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              remote: Total
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              Receiving objects
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              Resolving deltas
+            </statement>
+          </choice>
+        </choices>
+
   <hint>
     <p>
       Look for a line in the output that begins with "Cloning into".
@@ -236,12 +320,11 @@
   <title><c>git remote</c></title>
   
 </subsection>
+
 <subsection xml:id="topic-open-repo-folder">
   <title>Opening the GitKit-FarmData2 Repository Folder</title>
   
-</subsection>
-<!---
-<exercise xml:id="ex-kit-tty-linux" label="ex-kit-tty-linux">
+  <exercise xml:id="ex-kit-tty-linux" label="ex-kit-tty-linux">
   <statement>
     <p>
       The the output in <xref ref="ex-clone-origin-linux-b" /> should contain a message from the <term>Kit-tty</term>.
@@ -255,94 +338,14 @@
     </p>
   </hint>
 </exercise>
-</exercises>
-
-</subsection>
-
-<exercises>
-<title />
-
-
-
-
-
 
 <p>
   Be sure to keep your eyes open for messages from the Kit-tty as you work on the GitKit exercises.
   The Kit-tty will help you to stay on track and may save you a lot of time by preventing you from going down an incorrect path.
 </p>
 
-<exercise xml:id="ex-close-terminal-linux" label="ex-close-terminal-linux">
-  <introduction>
-    <p>
-      Use the final line of output in <xref ref="ex-clone-origin-linux-b" /> that begins with "IMPORTANT" to complete this exercise.
-    </p>
-  </introduction>
-
-
-  <task xml:id="ex-close-terminal-linux-a" label="ex-close-terminal-linux-a">
-    <statement>
-      <p>
-        What does the "IMPORTANT" line ask you to do?
-      </p>
-    </statement>
-
-
-    <choices randomize="yes">
-      <choice correct="yes">
-        <statement>
-          <p>
-            Close the terminal and open a new one.
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Take the Kit-tty for a walk.
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            I'm sure the Kit-tty would like that, but its not the correct answer.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Use the <c>git clone</c> command.
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Delete some unnecessary files.
-          </p>
-        </statement>
-      </choice>
-    </choices>
-  </task>
-
-
-  <task xml:id="ex-close-terminal-linux-b" label="ex-close-terminal-linux-b">
-    <statement>
-      <p>
-        If you haven't already, close the Terminal you are currently using and open a new one.
-      </p>
-
-      <p>
-        There is a technical reason for having to close your current Terminal and open a new.
-        But the details for why this is necessary are unimportant.
-      </p>
-    </statement>
-  </task>
-</exercise>
+</subsection>
+<!---
 
 <exercise xml:id="ex-explore-clone-linux" label="ex-explore-clone-linux">
   <introduction>
