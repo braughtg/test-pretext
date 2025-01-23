@@ -33,7 +33,7 @@
     <exercises>
     <title />
 
-    <exercise xml:id="ex-merge-conflict-computation" label="ex-merge-conflict-computation">
+    <exercise xml:id="ex-merge-conflict-1-computation" label="ex-merge-conflict-1-computation">
       <statement>
         <p>
           Study the program shown in the <c>main</c> branch of <xref ref="fig-merge-conflicts-1" />. Then choose the statement below that best describes the computation the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
@@ -214,13 +214,15 @@
       </task> 
     </exercise>
 
-    <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1">
+    <exercise 
+      xml:id="ex-merge-conflict-1" 
+      label="ex-merge-conflict-1">
       <introduction>
         <p>
           The questions below will now ask you to identify the non-conflicting and conflicting changes that exist in the merge from <xref ref="fig-merge-conflicts-1" />.  
         </p>
       </introduction>
-      <task xml:id="ex-merge-conflicts-practice-1-b" label="ex-merge-conflicts-practice-1-b">
+      <task xml:id="ex-merge-conflict-1-non-conflicting" label="ex-merge-conflict-1-non-conflicting">
         <statement>
           <p>
             Highlight (by clicking) all of the lines in the <c>main</c> branch and the feature branch that contain non-conflicting changes. Use the example in the course slides as a guide.
@@ -283,7 +285,7 @@
         </hint>
       </task>
 
-      <task xml:id="ex-merge-conflicts-practice-1-c" label="ex-merge-conflicts-practice-1-c">
+      <task xml:id="ex-merge-conflict-1-conflicting" label="ex-merge-conflict-1-conflicting">
         <statement>
           <p>
             Highlight by clicking all of the lines in the <c>main</c> and feature branches that contain conflicting changes. Use the example in the course slides as a guide.
@@ -348,8 +350,8 @@
     </exercise>
 
     <exercise 
-      xml:id="ex-merge-conflicts-practice-1-d"
-      label="ex-merge-conflicts-practice-1-d">
+      xml:id="ex-merge-conflict-1-can-merge"
+      label="ex-merge-conflict-1-can-merge">
         <statement>
           <p>
             Select the statement below that best describes why the feature branch in <xref ref="fig-merge-conflicts-1" /> would, or would not, be able to be merged automatically by the project maintainers.
@@ -368,6 +370,18 @@
               </p>
             </feedback>
           </choice>
+          <choice>
+          <statement>
+            <p>
+              The feature branch can be merged automatically because there all of the changes are non-conflicting.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Are you sure there are no conflicting changes?
+            </p>
+          </feedback>
+        </choice>
           <choice>
             <statement>
               <p>
@@ -499,8 +513,8 @@
     <title />
 
       <exercise 
-        xml:id="ex-non-conflicting-changes-2" label="ex-non-conflicting-changes-2">
-      <statement>
+        xml:id="ex-merge-conflict-2-computation" label="ex-merge-conflict-2-computation">
+        <statement>
         <p>
           Study the program in <xref ref="fig-merge-conflicts-2" />. Then choose the statement below that best describes the computation the program is trying to perform. gNote: The <c>**</c> operator indicates exponentiation, so <c>x**2</c> computes x squared.  
         </p>
@@ -563,14 +577,16 @@
     </exercise>
 
     <exercise 
-      xml:id="ex-merge-conflicts-practice-2" label="ex-merge-conflicts-practice-2">
+      xml:id="ex-merge-conflict-2" 
+      label="ex-merge-conflict-2">
       <introduction>
         <p>
           The questions below will now ask you to identify the non-conflicting and conflicting changes that exist in the merge from <xref ref="fig-merge-conflicts-2" />.  
         </p>
       </introduction>
 
-      <task xml:id="ex-merge-conflicts-practice-2-b" label="ex-merge-conflicts-practice-2-b">
+      <task 
+        xml:id="ex-merge-conflict2-non-conflicting" label="ex-merge-conflict-2-non-conflicting">
         <statement>
           <p>
               Highlight (by clicking) all of the lines in the <c>main</c> branch and the feature branch that contain non-conflicting changes.
@@ -618,7 +634,8 @@
         </hint>
       </task>
 
-    <task xml:id="ex-merge-conflicts-practice-2-c" label="ex-merge-conflicts-practice-2-c">
+    <task 
+      xml:id="ex-merge-conflict2-conflicting" label="ex-merge-conflict2-conflicting">
       <statement>
         <p>
           Highlight (by clicking) all of the lines (if any) in the <c>main</c> branch and the feature branch that contain conflicting changes.
@@ -667,19 +684,78 @@
     </task>
   </exercise>
 
-
-
-  
-  <exercise>
-  
-    <task xml:id="ex-merge-conflicts-practice-2-d" label="ex-merge-conflicts-practice-2-d">
+  <exercise
+      xml:id="ex-merge-conflict-2-can-merge" label="ex-merge-conflict-2-can-merge">
       <statement>
         <p>
-          Would the feature branch in <xref ref="fig-merge-conflicts-2" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
+          Select the statement below that best describes why the feature branch in <xref ref="fig-merge-conflicts-2" /> would, or would not, be able to be merged automatically by the project maintainers.
         </p>
       </statement>
-      <response />
-    </task>  
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              The feature branch can be merged automatically because there all of the changes are non-conflicting.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              The feature branch cannot be merged automatically because there is a conflicting change.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Are there any conflicting changes?
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              The feature branch cannot be merged automatically because there are non-conflicting changes.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Non-conflicting changes can (usually) be merged automatically.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              It is not possible to tell if the feature branch can be merged automatically.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              If there are conflicting changes then the feature branch will not be able to be merged automatically.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              The feature branch cannot be merged automatically because there are changes both in <c>main</c> and in the feature branch.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              What type of changes prevent automatic merges?
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise>  
 
     <task xml:id="ex-merge-conflicts-practice-2-e" label="ex-merge-conflicts-practice-2-e">
       <statement>
