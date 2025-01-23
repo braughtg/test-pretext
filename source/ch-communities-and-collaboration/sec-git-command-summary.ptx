@@ -40,7 +40,7 @@
         </match> 
         <match>
           <premise>
-            <c>git clone &lt;clone URL&gt;</c>
+            <c>git clone &lt;URL&gt;</c>
           </premise> 
           <response>
             Create a copy of the origin repository in your development environment.
