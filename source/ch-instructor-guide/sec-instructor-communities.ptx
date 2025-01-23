@@ -174,11 +174,8 @@
       <ul>
         <li>
           <em>
-            <p component="linux-kit-client">
+            <p>
               <xref ref="ex-find-clone-url-linux" /> 
-            </p>
-            <p component="vscode-kit-client">
-              <xref ref="ex-create-kit-client-vscode-b" />
             </p>
           </em>
           <p>

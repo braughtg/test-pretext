@@ -2,27 +2,10 @@
 <!-- This file, the project manifest, provides the overall configuration for your PreTeXt project. To edit the content of your document, open `source/main.ptx`. See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest. -->
 <project ptx-version="2">
   <targets>
-    <target name="web" format="html" publication="publication-instructor-linux.ptx"/>
-    <target name="print" format="pdf" publication="publication-instructor-linux.ptx"/>
+    <target name="web" format="html" publication="publication.ptx"/>
+    <target name="print" format="pdf" publication="publication.ptx"/>
 
     <!-- This is the target that is built on runestone -->
-    <!-- It will need to be made to point to the vscode publication file in the fork for that edition. -->
-    <!-- The output-dir should also be changed to a unique directory for the VSCode version. -->
-    <target name="runestone" format="html" publication="publication-runestone-linux.ptx" output-dir="published/gitkitlinux" />
-    
-    <!--
-    <target name="runestone-linux" format="html" publication="publication-runestone-linux.ptx" output-dir="publication/gitkit" />
-    <target name="runestone-vscode" format="html" publication="publication-runestone-vscode.ptx" output-dir="publication/gitkit" />
-    -->
-
-    <target name="student-web-linux" format="html" publication="publication-student-linux.ptx"/>
-    <target name="student-print-linux" format="pdf" publication="publication-student-linux.ptx"/>
-    <target name="instructor-web-linux" format="html" publication="publication-instructor-linux.ptx"/>
-    <target name="instructor-print-linux" format="pdf" publication="publication-instructor-linux.ptx"/>
-
-    <target name="student-web-vscode" format="html" publication="publication-student-vscode.ptx"/>
-    <target name="student-print-vscode" format="pdf" publication="publication-student-vscode.ptx"/>
-    <target name="instructor-web-vscode" format="html" publication="publication-instructor-vscode.ptx"/>
-    <target name="instructor-print-vscode" format="pdf" publication="publication-instructor-vscode.ptx"/>
+    <target name="runestone" format="html" publication="publication-runestone.ptx" output-dir="published/gitkit" />
   </targets>
 </project>

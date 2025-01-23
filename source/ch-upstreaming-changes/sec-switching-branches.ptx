@@ -8,6 +8,21 @@
       In the previous section you learned how to create a branch.
       In this section you will learn more about why branching is important and how to switch between existing branches.
     </p>
+
+    <p>
+      Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing what what will happen when you switch to your feature branch and your Local Files have not been modified since the last commit on the main branch (drawn in green).
+    </p>
+
+    <p>
+      <figure xml:id="fig-switch-to-feature-branch">
+        <caption> Switch to Feature Branch. </caption>
+        <image source="images/ch-upstreaming-changes/switch-to-feature-branch.png" width="75%">
+          <description>
+            Cloud image of origin, upstream, and local branches (including new feature branch).
+          </description>
+        </image>
+      </figure>
+    </p>
   </introduction>
 
   <exercises>
@@ -15,7 +30,7 @@
   <exercise xml:id="ex-switching-branches" label="ex-switching-branches">
     <introduction>
       <p>
-        As you saw in the previous section, the <c>git branch</c> command creates a branch (among other uses), but it does not change your active branch.
+        As you saw in <xref ref="topic-creating-a-feature-branch"/>, the <c>git branch &lt;name&gt;</c> command creates a branch (among other uses), but it does not change your active branch.
         The <c>git switch &lt;name&gt;</c> command switches (i.e.
         changes) the active branch.
       </p>
@@ -25,98 +40,279 @@
     <task xml:id="ex-switching-branches-a" label="ex-switching-branches-a">
       <statement>
         <p>
-          What command will change your active branch to the new feature branch that you created in the previous section?
+          Type <c>git switch &lt;name&gt;</c> to change your active branch to the new feature branch that you created in the previous section.
+          What output is produced?
         </p>
       </statement>
-      <response />
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              Switched to branch '&lt;name&gt;'
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Switched to branch 'main'
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You were on <c>main</c> prior to switching branches.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              error: Your local changes to the following files would be overwritten by checkout: ...
+            </p>
+
+            <p>
+              Aborting
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You should not have made any changes so far.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              fatal: invlalid reference: &lt;name&gt;
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You probably typed the branch name incorrectly.
+              Run <c>git branch</c> again to see the name of the branch you created.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Make sure you don't include &lt; &gt; in your <c>git switch &lt;name&gt;</c> command.
+        </p>
+      </hint>
     </task>
 
 
     <task xml:id="ex-switching-branches-b" label="ex-switching-branches-b">
       <statement>
         <p>
-          Use the <c>git status</c> command again now.
-          What part of the output confirms that your feature branch is now the active branch?
+          Which of the following commands could be used to confirm that your feature branch is now the active branch?
         </p>
-        <response />
       </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git branch</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git status</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git log</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <c>git log</c> will show the commit history, it will not show the active branch
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git branch &lt;name&gt;</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              When <c>git branch</c> ends with a <c>name</c> it creates a new branch, it does not show what is active.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          There are two commands that will provide information about the active branch.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-switching-branches-c" label="ex-switching-branches-c">
+      <statement>
+        <p>
+          Which of the following commands could be used to make <c>main</c> the active branch?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git switch main</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git branch main</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This will try to create a new branch named <c>main</c>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git branch</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <c>git branch</c> will show all the branches
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git status</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <c>git status</c> will show the active branch and information about changes
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Refer back to how you made your feature branch the active branch.
+        </p>
+      </hint>
     </task>
   </exercise>
 
   <p>
-    Figure <xref ref="fig-switch-to-feature-branch" /> illustrates this idea by showing that you have switched to your feature branch and that your Local Files have not been modified since the last commit on the main branch (drawn in green).
-  </p>
-  <p>
-    <figure xml:id="fig-switch-to-feature-branch">
-      <caption> Switch to Feature Branch. </caption>
-      <image source="images/ch-upstreaming-changes/switch-to-feature-branch.png" width="75%">
-        <description>
-          Cloud image of origin, upstream, and local branches (including new feature branch).
-        </description>
-      </image>
-    </figure>
+    Type the command from <xref ref="ex-switching-branches-c" /> and verify that <c>main</c> is the active branch.
   </p>
 
   <exercise xml:id="ex-switching-branches-git-branch" label="ex-switching-branches-git-branch">
-    <introduction>
+    <statement>
       <p>
-        You can also switch branches using the <c>git branch</c> command. 
+        Assuming you are on the main branch, drag the steps that will make your feature branch the active branch and verify you are on your feature branch.
+        Some steps may not be used.
       </p>
-    </introduction>
+    </statement>
+    <blocks> <block correct="no">
+    <p>
+      <c>git switch</c>
+    </p>
+    </block> <block order="1">
 
+    <p>
+      <c>git switch &lt;name&gt;</c>
+    </p>
+    </block> <block correct="no">
 
-    <task xml:id="ex-switching-branches-git-branch-a" label="ex-switching-branches-git-branch-a">
-      <statement>
-        <p>
-          Issue the <c>git branch</c> command now. You should see a list of branches. How can you tell which branch is the active branch?
-        </p>
-      </statement>
-      <response />
-    </task>
+    <p>
+      <c>git branch &lt;name&gt;</c>
+    </p>
+    </block> <block order="2">
 
+    <p>
+      <c>git branch</c>
+    </p>
+    </block> <block correct="no">
 
-    <task xml:id="ex-switching-branches-git-branch-b" label="ex-switching-branches-git-branch-b">
-      <statement>
-        <p>
-          <c>git branch &lt;name&gt;</c> will make <em>name</em> the active branch. Enter a <c>git branch</c> command that will make <c>main</c> the active branch. What command did you enter?
-        </p>
-      </statement>
-      <response />
-    </task>
+    <p>
+      <c>git switch main</c>
+    </p>
+    </block> </blocks>
 
-
-    <task xml:id="ex-switching-branches-git-branch-c" label="ex-switching-branches-git-branch-c">
-      <statement>
-        <p>
-          How do you know that <c>main</c> is the active branch?
-        </p>
-      </statement>
-      <response />
-    </task>
-    
-
-    <task xml:id="ex-switching-branches-git-branch-d" label="ex-switching-branches-git-branch-d">
-      <statement>
-        <p>
-          In the next section you will be making changes to your Local Files. It is essential that you are on your feature branch <em>before</em> making any changes. 
-        </p>
-        <p>
-          Enter a <c>git branch</c> command that will make your feature branch the active branch. What command did you enter?
-        </p>
-      </statement>
-      <response />
-    </task>
-
-
-    <task xml:id="ex-switching-branches-git-branch-e" label="ex-switching-branches-git-branch-e">
-      <statement>
-        <p>
-          How do you know that your feature branch is the active branch?
-        </p>
-      </statement>
-      <response />
-    </task>
-
+    <hint>
+      <p>
+        Think about how you make a branch active and then verify it.
+      </p>
+    </hint>
   </exercise>
   </exercises>
+
+  <conclusion>
+    <p>
+      Use the commands from <xref ref="ex-switching-branches-git-branch"/> to make your feature branch the active branch.
+    </p>
+  </conclusion>
 </section>

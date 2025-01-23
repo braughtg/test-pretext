@@ -193,10 +193,7 @@
         </li>
         <li>
           <em>
-            <p component="vscode-kit-client">
-              <xref ref="ex-setting-upstream-b-vscode" />
-            </p>
-            <p component="linux-kit-client">
+            <p>
               <xref ref="ex-setting-upstream-e-linux" />
             </p>
           </em>

@@ -59,6 +59,13 @@
         Fix typo
       </p>
       </block> </blocks>
+
+      <hint>
+        <p>
+          Commit messages should be as specific as possible regarding the changes made.
+          Something like "fix typo" is too generic as it can apply to lots of different changes.
+        </p>
+      </hint>
     </task>
 
 
@@ -83,40 +90,183 @@
         Extend harvest logs
       </p>
       </block> </blocks>
+
+      <hint>
+        <p>
+          Commit messages should be as specific as possible regarding the changes made.
+          Which of the messages provides information about what is added and where?
+        </p>
+      </hint>
     </task>
   </exercise>
 
   <exercise xml:id="ex-committing-changes" label="ex-committing-changes">
-    <introduction>
+    <statement>
       <p>
         The <c>git commit -m "&lt;message&gt;"</c> command commits all of the staged files to the currently active branch with the specified commit message.
-        Use the <c>git commit</c> command to commit your staged changes to your local repository with a meaningful commit message.
       </p>
-    </introduction>
+
+      <p>
+        Write a <c>git commit</c> command for the change you made in the space below.
+        Be sure to include a meaningful message.
+      </p>
+
+      <p>
+        <var width="55" />
+      </p>
+    </statement>
+    <setup> <var> <condition string='^git commit -m ["].+["]$'>
+    <feedback>
+      <p>
+        Thank you.
+        Your command is in the proper format, please make sure the commit message is meaningful.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
+
+    <feedback>
+      <p>
+        Double check the format of your command.
+        You need to include " " around the text of the message.
+      </p>
+    </feedback>
+    </condition> </var> </setup>
+  </exercise>
+
+  <exercise xml:id="ex-committing-changes-new-a" label="ex-committing-changes-new-a">
+    <statement>
+      <p>
+        Use the <c>git commit</c> command you wrote in <xref ref="ex-committing-changes"/> to commit your staged changes to your local repository with a meaningful commit message.
+      </p>
+
+      <p>
+        Look at the output produced.
+      </p>
+    </statement>
 
 
-    <task xml:id="ex-committing-changes-a" label="ex-committing-changes-a">
-      <statement>
-        <p>
-          Provide the command you entered.
-        </p>
-      </statement>
-      <response />
-    </task>
+    <choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            It shows the name of the file changed in [].
+          </p>
+        </statement>
 
+        <feedback>
+          <p>
+            The first part of the first line is the name of the file.
+          </p>
+        </feedback>
+      </choice>
 
+      <choice correct="yes">
+        <statement>
+          <p>
+            It shows the SHA code of the commit in [].
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            The second part of the first line is the SHA code of the commit.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            It shows the commit message.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            The last part of the first line is the commit message.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            It shows the number of files changed.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            The first part of the second line is the number of files changed.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            It shows the number of lines inserted.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            The second part of the second line is the number of lines inserted.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            It shows the number of lines deleted.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            The last part of the second line is the number of lines deleted.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            It shows every line that was inserted and/or deleted.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            The output should not show the individual line changes, rather a summary of the changes.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    <hint>
+      <p>
+        There should be two lines of output.
+        The first will provide 3 different pieces of information.
+        The second provides what additional information?
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-committing-changes-new-ex" label="ex-committing-changes-new-ex">
     <task xml:id="ex-committing-changes-b" label="ex-committing-changes-b">
       <statement>
         <p>
           Now use the <c>git status</c> command again.
-          Compare your output to the output in <xref ref="ex-staging-changes-c" />.
+          Compare your output to the output in <xref ref="ex-verify-changes-new-a" />.
           What two changes have occurred that reflect that your changes have been staged?
         </p>
       </statement>
 
 
       <choices>
-        <choice>
+        <choice correct="yes">
           <statement>
             <p>
               No files appear listed as modified in red (meaning they are unstaged).
@@ -157,7 +307,71 @@
           How do you know your changes have been committed?
         </p>
       </statement>
-      <response />
+
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Option 1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 1
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Option 2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 2
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Option 3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 3
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Option 4
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 4
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Hint here
+        </p>
+      </hint>
     </task>
 
 
@@ -165,12 +379,74 @@
       <statement>
         <p>
           Use the <c>git log</c> command to show the 3 most recent commits to your branch.
-          How is this output different from what you observed in Question #1?  Briefly explain why? <term>Note: Question #1 is now a multiple choice question.
-          Maybe there should be multiple choice questions here that are similar (showing that the new commit appears in the log).
-          I'm not sure I understand this - Question #1 is a parson's question.</term>
+          Refer back to your output from <xref ref="ex-understanding-project-history-new-aa"/>.
         </p>
       </statement>
-      <response />
+
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Option 1
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 1
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Option 2
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 2
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Option 3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 3
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Option 4
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Feedback 4
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Hint here
+        </p>
+      </hint>
     </task>
 
 
@@ -190,6 +466,12 @@
               <c>git status</c>
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              <c>git status</c> shows what files have been changed and staged.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
@@ -198,6 +480,12 @@
               <c>git stage main</c>
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              <c>git stage main</c> is not a proper command.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
@@ -206,6 +494,12 @@
               <c>git branch main</c>
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              <c>git branch main</c> would try to create a new branch named <c>main</c>.
+            </p>
+          </feedback>
         </choice>
 
         <choice correct="yes">
@@ -214,27 +508,107 @@
               <c>git switch main</c>
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
         </choice>
       </choices>
+
+      <hint>
+        <p>
+          To change the active branch you need to switch to it.
+        </p>
+      </hint>
     </task>
 
 
     <task xml:id="ex-committing-changes-f" label="ex-committing-changes-f">
-      <statement correct="yes">
+      <statement correct="no">
         <p>
           The output of the <c>git log</c> command now shows the information about the commit you made.
         </p>
       </statement>
+      <hint>
+        <p>
+          What branch are you on, the <c>main</c> branch our your feature branch? In which branch did you make your changes?
+        </p>
+      </hint>
     </task>
 
 
     <task xml:id="ex-committing-changes-g" label="ex-committing-changes-g">
       <statement>
         <p>
-          Briefly explain how you know.
+          The commit is not shown in the <c>git log</c> output because:
         </p>
       </statement>
-      <response />
+      
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              You are on the <c>main</c> branch and the commit is on the feature branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              You are on the feature branch and the commit is on the <c>main</c> branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You should be on the <c>main</c> branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The <c>git status</c> command should be used to show the commits.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The <c>git status</c> command is used to see what files have been changed and staged.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It only shows the first commit made, not every commit.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The <c>git log</c> command will show multiple commits with the most recent appearing first.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Commits are specific to branches. You must be on the proper branch to see a commit.
+        </p>
+      </hint>
     </task>
   </exercise>
   </exercises>

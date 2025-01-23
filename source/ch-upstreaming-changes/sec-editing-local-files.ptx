@@ -7,6 +7,7 @@
     <p>
       In the last two sections you created a feature branch and switched to that branch.
       In this section you will edit your local files to fix the issue that you claimed in the issue tracker.
+      Confirm you are on your feature branch now.
     </p>
   </introduction>
 
@@ -19,44 +20,84 @@
       </p>
 
       <p>
-        Provide a link to the issue that you claimed in the issue tracker.
+        Provide the URL to the issue that you claimed in the issue tracker.
       </p>
 
       <p>
         <var width="55" />
       </p>
     </statement>
-    <!-- THIS NEEDS TO BE UPDATED WITH FEEDBACK AND A REGULAR EXPRESSION TO MAKE SURE THE STUDENT IS IN THE ISSUE TRACKER -->
+    <setup> <var> <condition string="^https://github.com/.+/issues/[0-9]+$">
+    <feedback>
+      <p>
+        Thank you.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
+
+    <feedback>
+      <p>
+        Make sure you have pasted the complete URL starting with https and ending with the issue number.
+      </p>
+    </feedback>
+    </condition> </var> </setup> <!-- THIS REG EX NEEDS TO VERIFY THE ISSUE NUMBER IS BETWEEN 1 AND 35 -->
   </exercise>
 
   <exercise xml:id="ex-locate-claimed-issue" label="ex-locate-claimed-issue">
     <introduction>
       <p>
         Read the issue that you claimed.
+        To make the requested change you will need to open the file.
+        Click <em>&lt;Code&gt;</em> to see the files in the repository.
+        Use the issue to locate the file.
+        Once you have found it, click on it to open it.
       </p>
     </introduction>
 
+    <statement>
+      <p>
+        In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
+        Be careful to use the same capitalization as given in the issue.
+      </p>
 
-    <task xml:id="ex-locate-claimed-issue-a" label="ex-locate-claimed-issue-a">
-      <statement>
-        <p>
-          In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
-        </p>
-      </statement>
-      <response />
-    </task>
+      <p>
+        <var width="55" />
+      </p>
+    </statement>
+    <setup> <var> <condition string="^ONBOARDING.md|CONTRIBUTING.md|LICENSE.md|INSTALL.md|README.md|AUTHORS.md$">
+    <feedback>
+      <p>
+        Thank you.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
 
-
-    <task xml:id="ex-locate-claimed-issue-b" label="ex-locate-claimed-issue-b">
-      <statement>
-        <p>
-          Use a text editor to modify the file you identified in <xref ref="ex-locate-claimed-issue-a" /> so that the issue you claimed has been fixed.
-          Be sure to save your changes.
-        </p>
-      </statement>
-    </task>
+    <feedback>
+      <p>
+        Double check the spelling of the file name, that the name is ALL CAPS, the .md at the end of the file name is included and in lower case.
+      </p>
+    </feedback>
+    </condition> </var> </setup>
+  </exercise>
+  <!--
+  <exercise xml:id="ex-locate-claimed-issue-a" label="ex-locate-claimed-issue-a">
+    <statement>
+      <p>
+        In which file will you be making changes to address your issue? Hint: Look at the text of your issue in the issue tracker.
+      </p>
+    </statement>
+    <response />
   </exercise>
 
+  <exercise xml:id="ex-locate-claimed-issue-b" label="ex-locate-claimed-issue-b">
+    <statement>
+      <p>
+        Use a text editor to modify the file you identified in <xref ref="ex-locate-claimed-issue-a" /> so that the issue you claimed has been fixed.
+        Be sure to save your changes.
+      </p>
+    </statement>
+  </exercise>
+  -->
   <p>
     <xref ref="fig-edit-local-files-on-feature-branch" />  illustrates the current situation where your <em>Local Files</em> have been modified. In <xref ref="fig-switch-to-feature-branch" /> the <em>Local Files</em> in your feature branch were drawn in green. This reflected that they were, at that time, an exact copy of the last commit on the main branch, which was also drawn in green.  Here <em>Local Files</em> are drawn in blue to indicate that they have been changed as compared to the final commit in the main branch, which is still green.
   </p>
@@ -80,20 +121,24 @@
       </p>
 
       <p>
-        What does the output tell you about the current status of the repository? If you see the message "nothing to commit, working tree clean", it means that your edits in the previous exercise were not saved.
+        If you see the message "nothing to commit, working tree clean", it means that your edits in the previous exercise were not saved.
         Go back and save your edits and then issue the <c>git status</c> command again before answering the questions below.
       </p>
     </introduction>
 
 
+    <task xml:id="ex-verify-changes-new-a" label="ex-verify-changes-new-a">
+      <statement>
+        <p>
+          Paste the output of the <c>git status</c> command below.
+        </p>
+      </statement>
+      <response />
+    </task>
+
+
     <task xml:id="ex-verify-changes-a" label="ex-verify-changes-a">
       <statement>
-        <!--
-        <p>
-          What two things does the output tell you about the file that you edited? If you see the message “nothing to commit, working tree clean,” it means that your edits in the previous exercise were not saved.
-          <term>NOTE: may want to change this so that it asks which files are staged, untracked, etc.</term> Go back and save your edits and then issue the <c>git status</c> command again before describing the two things that the output tells you.
-        </p>
-        -->
         <p>
           How many files are not staged?
         </p>
@@ -242,89 +287,84 @@
   </exercise>
 
   <exercise xml:id="ex-verify-changes-with-diff" label="ex-verify-changes-with-diff">
-    <introduction>
+    <statement>
       <p>
         The <c>git diff</c> command provides another way to examine or confirm the changes you have been making.
         Note <em>diff</em> is just short for <em>difference</em>, and is called this because it is used to show differences.
-        By default the <c>git diff</c> command will show you any changes that have been made to your local files as compared to the version in the most recent commit in the active branch.
+        By default the <c>git diff</c> command will show you any changes that have been made to your local files that have not yet been staged.
         Run the <c>git diff</c> command now.
       </p>
-    </introduction>
+
+      <p>
+        How is the change that you made indicated in the output from <c>git diff</c>?
+      </p>
+    </statement>
 
 
-    <task xml:id="ex-verify-changes-with-diff-a" label="ex-verify-changes-with-diff-a">
-      <statement>
-        <p>
-          How is the change that you made indicated in the output from <c>git diff</c>?
-        </p>
-      </statement>
+    <choices randomize="yes">
+      <choice>
+        <statement>
+          <p>
+            The new text is in red, the old text is in green.
+          </p>
+        </statement>
 
+        <feedback>
+          <p>
+            Look again to see what color your change appears in.
+          </p>
+        </feedback>
+      </choice>
 
-      <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              The new text is in red, the old text is in green.
-            </p>
-          </statement>
+      <choice correct="yes">
+        <statement>
+          <p>
+            The new text is in green, the old text is in red.
+          </p>
+        </statement>
 
-          <feedback>
-            <p>
-              Look again to see what color your change appears in.
-            </p>
-          </feedback>
-        </choice>
+        <feedback>
+          <p>
+            Correct! The original text is in red, your changes are in green.
+          </p>
+        </feedback>
+      </choice>
 
-        <choice correct="yes">
-          <statement>
-            <p>
-              The new text is in green, the old text is in red.
-            </p>
-          </statement>
+      <choice>
+        <statement>
+          <p>
+            Only the new text appears.
+          </p>
+        </statement>
 
-          <feedback>
-            <p>
-              Correct! The original text is in red, your changes are in green.
-            </p>
-          </feedback>
-        </choice>
+        <feedback>
+          <p>
+            Look again, you should see the original text as well.
+          </p>
+        </feedback>
+      </choice>
 
-        <choice>
-          <statement>
-            <p>
-              Only the new text appears.
-            </p>
-          </statement>
+      <choice>
+        <statement>
+          <p>
+            The old text appears with a strike-through line across it.
+          </p>
+        </statement>
 
-          <feedback>
-            <p>
-              Look again, you should see the original text as well.
-            </p>
-          </feedback>
-        </choice>
+        <feedback>
+          <p>
+            Strike-through is not part of the feedback git commands can provide.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
 
-        <choice>
-          <statement>
-            <p>
-              The old text appears with a strike-through line across it.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Strike-through is not part of the feedback git commands can provide.
-            </p>
-          </feedback>
-        </choice>
-      </choices>
-
-      <hint>
-        <p>
-          Look at the feedback again and look for your change.
-          Do you also see the original text?
-        </p>
-      </hint>
-    </task>
+    <hint>
+      <p>
+        Look at the feedback again and look for your change.
+        Do you also see the original text?
+      </p>
+    </hint>
   </exercise>
   </exercises>
 </section>

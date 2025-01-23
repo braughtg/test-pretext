@@ -24,13 +24,6 @@
         </image>
       </figure>
     </p>
-
-    <p component="vscode-kit-client">
-      In some development environments cloning the origin requires that you use a command like <c>git clone &lt;originURL&gt;.git</c> to create the clone.
-    </p>
-    <p component="vscode-kit-client">
-      However, the development environment you have opened in GitPod simplifies this process for you. Recall, that you provided the URL of your origin repository when opening the development environment in <xref ref="ex-create-kit-client-vscode-b" />. When you did that, a clone of your origin was automatically created for you in your development environment. 
-    </p>
   </introduction>
 
   <!-- Linux KitClient -->
@@ -39,8 +32,7 @@
 
     <exercise
       xml:id="ex-find-clone-url-linux"
-      label="ex-find-clone-url-linux"
-      component="linux-kit-client">
+      label="ex-find-clone-url-linux">
       <introduction>
         In order to clone a repository into your development environment you will need the <term>clone URL</term> for that repository.  The steps in this exercise will help you find the clone URL for your origin repository.
       </introduction>
@@ -96,8 +88,7 @@
 
     <exercise
       xml:id="ex-clone-url-linux"
-      label="ex-clone-url-linux"
-      component="linux-kit-client">
+      label="ex-clone-url-linux">
       <statement>
         <p>
           Copy and paste the clone URL that you will use to clone your origin as your answer to this exercise. 
@@ -146,8 +137,7 @@
 
     <exercise
       xml:id="ex-clone-origin-linux"
-      label="ex-clone-origin-linux"
-      component="linux-kit-client">
+      label="ex-clone-origin-linux">
       <introduction>
         <p>
           Now that you have the clone URL for your origin repository, use the tasks in this exercise to clone your origin into your development environment.
@@ -205,8 +195,7 @@
 
     <exercise
       xml:id="ex-kit-tty-linux"
-      label="ex-kit-tty-linux"
-      component="linux-kit-client">
+      label="ex-kit-tty-linux">
       <statement>
         <p>
           The the output in <xref ref="ex-clone-origin-linux-b" /> should contain a message from the <term>Kit-tty</term>. What is the <term>Kit-tty</term>?
@@ -221,14 +210,13 @@
       </hint>
     </exercise>
 
-    <p component="linux-kit-client">
+    <p>
       Be sure to keep your eyes open for messages from the Kit-tty as you work on the GitKit exercises. The Kit-tty will help you to stay on track and may save you a lot of time by preventing you from going down an incorrect path.
     </p>
 
     <exercise 
       xml:id="ex-close-terminal-linux"
-      label="ex-close-terminal-linux"
-      component="linux-kit-client">
+      label="ex-close-terminal-linux">
       <introduction>
         <p>
           Use the final line of output in <xref ref="ex-clone-origin-linux-b" /> that begins with "IMPORTANT" to complete this exercise.
@@ -294,8 +282,7 @@
 
     <exercise
       xml:id="ex-explore-clone-linux"
-      label="ex-explore-clone-linux"
-      component="linux-kit-client">
+      label="ex-explore-clone-linux">
       <introduction>
         <p>
           In this exercise you will briefly explore the GitKit FarmData2 repository that you have cloned into your development environment. 
@@ -328,22 +315,6 @@
         </statement>
         <response />
       </task>
-    </exercise>
-
-    <!-- VSCode KitClient -->
-    <exercise 
-      xml:id="ex-explore-clone-vscode"
-      label="ex-explore-clone-vscode"
-      component="vscode-kit-client">
-      <statement>
-        <p>
-          The development environment displays the files and directories contained in your clone in the "Explorer" panel at the left of the window.  You can also see a list of these files and directories by using the <c>ls -a</c> command in the Terminal.
-        </p>
-        <p>
-          Compare these files and directories to those in your origin repository on GitHub. Are there any differences? If so describe them here.
-        </p>
-      </statement>
-      <response />
     </exercise>
 
     <!-- Both KitClients -->

@@ -21,7 +21,7 @@
     <!-- Style of fill-in-the-blanks: -->
     <fillin textstyle="underline" mathstyle="shade" />
     <!-- You can set a watermark: -->
-    <!-- <watermark scale="1.0">DRAFT</watermark> -->
+    <!-- <watermark scale="0.5">DRAFT</watermark> -->
   </common>
 
 
@@ -34,7 +34,6 @@
     <!-- See
     https://pretextbook.org/doc/guide/html/publication-file-source.html#publication-file-source-version -->
     <!-- <version include="videos labs"/> -->
-    <version include="instructor vscode-kit-client" />
   </source>
 
   <numbering>
@@ -61,7 +60,7 @@
   <!-- for printing; set @sides="two" if the printing woudl be two- -->
   <!-- sided.  @pageref="yes/no" controls whether page number are   -->
   <!-- included in cross-references                                 -->
-  <latex print="yes" sides="two" font-size="10" draft="no">
+  <latex print="no" sides="two" font-size="10" draft="no">
     <!-- Control text justification and bottom page behavior: -->
     <page right-alignment="flush" bottom-alignment="ragged" />
     <!-- Add content to \geometry{}: -->
@@ -70,7 +69,7 @@
     <!-- links the html version of asymptote graphics.    -->
     <asymptote links="no" />
     <!-- Set @formatted to "no" to remove formatting on worksheets: -->
-    <worksheets formatted="yes" />
+    <!-- <watermark scale="1.0">DRAFT</watermark> -->
   </latex>
 
   <html>
