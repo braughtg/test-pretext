@@ -18,7 +18,7 @@
   <p>
     <figure xml:id="fig-merge-conflicts-1">
       <caption> Example merge conflicts with Best Common Ancestor. </caption>
-      <image source="images/ch-merge-conflicts/merge-conflicts-1.png" width="75%">
+      <image source="images/ch-merge-conflicts/merge-conflicts-1.png" width="100%">
         <description>
           Three panels of code (feature branch, common ancestor, main branch)
         </description>
@@ -38,10 +38,59 @@
     <task xml:id="ex-merge-conflicts-practice-1-a" label="ex-merge-conflicts-practice-1-a">
       <statement>
         <p>
-          Study the program in the <c>main</c> branch and then describe in a sentence the computation that the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
+          Study the program in the <c>main</c> branch and then choose the description below that best describes the computation the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
         </p>
       </statement>
-      <response />
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              Find the average of a list of numbers.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Find the total of a list of numbers.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Consider the last line in the <c>main</c> branch.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Count how many numbers the user enters.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              What does the program do besides count the numbers?
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              None of these.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              One of the other answers is correct.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
     </task>
 
     <task xml:id="ex-merge-conflicts-practice-1-b" label="ex-merge-conflicts-practice-1-b">
