@@ -814,9 +814,9 @@
         </choices>
       </exercise>
 
-
       <exercise
-      xml:id="ex-merge-conflicts-auto-always-ok" label="ex-merge-conflicts-auto-always-ok">
+        xml:id="ex-merge-conflicts-auto-always-ok" 
+        abel="ex-merge-conflicts-auto-always-ok">
         <statement correct="no">
           <p>
             When both the feature branch and the <c>main</c> branch function correctly, and the merge contains no conflicting changes then the result of an automatic merge will also be correct. 
