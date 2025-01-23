@@ -11,9 +11,11 @@
 
   <exercises>
   <title />
-
   <p>
-    <xref ref="fig-merge-conflicts-1" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
+    Consider <xref ref="fig-merge-conflicts-1" />.  This figure shows a <term>feature branch</term> (in the left panel) that is to be merged into the current <c>main</c> branch (in the right panel).  The center panel shows the <term>best common ancestor</term> from which both the feature branch and <c>main</c> branch have diverged.
+  </p>
+  <p>
+    The current <c>main</c> branch contains changes, merged by the maintainers, to fix several bugs that existed in the best common ancestor. The feature branch has been changed to use more descriptive variable names, but has not fixed the bugs.
   </p>
   <p>
     <figure xml:id="fig-merge-conflicts-1">
@@ -26,26 +28,81 @@
     </figure>
   </p>
 
+  <exercise xml:id="ex-merge-conflict-computation" label="ex-merge-conflict-computation">
+    <statement>
+      <p>
+        Study the program shown in the <c>main</c> branch of <xref ref="fig-merge-conflicts-1" />. Then choose the statement below that best describes the computation the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
+      </p>
+    </statement>
+    <choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            Find the average of a list of numbers.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Correct.
+          </p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Find the total of a list of numbers.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Consider the last line in the <c>main</c> branch.
+          </p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Count how many numbers the user enters.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            What does the program do besides count the numbers?
+          </p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            None of these.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            One of the other answers is correct.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
 
-  <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1">
-  
+  <exercise xml:id="ex-conflict-type" label="ex-ex-conflict-type">
     <introduction>
       <p>
-        Consider the merge shown in <xref ref="fig-merge-conflicts-1" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
+        When both the feature branch being merged and the <c>main</c> branch that it is being merged into contain changes with respect to the best common ancestor, those changes can be <term>non-conflicting</term> or <term>conflicting</term>.  
       </p>
     </introduction>
-
-    <task xml:id="ex-merge-conflicts-practice-1-a" label="ex-merge-conflicts-practice-1-a">
+    <task xml:id="ex-non-conflicting-change" label="ex-non-conflicting-change">
       <statement>
         <p>
-          Study the program in the <c>main</c> branch and then choose the description below that best describes the computation the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
+          Select the statement below that best describes a <term>non-conflicting change</term>.
         </p>
       </statement>
       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
-              Find the average of a list of numbers.
+              A non-conflicting change occurs when a part of the code changes in the feature branch or in the <c>main</c> branch but not in both.
             </p>
           </statement>
           <feedback>
@@ -57,47 +114,113 @@
         <choice>
           <statement>
             <p>
-              Find the total of a list of numbers.
+              A non-conflicting change occurs when a part of the code changes in both the feature branch and the <c>main</c> branch.
             </p>
           </statement>
           <feedback>
             <p>
-              Consider the last line in the <c>main</c> branch.
+              Review the definitions of non-conflicting and conflicting changes in the class slides.
             </p>
           </feedback>
         </choice>
         <choice>
           <statement>
             <p>
-              Count how many numbers the user enters.
+              A non-conflicting change occurs when the best common ancestor is modified.
             </p>
           </statement>
           <feedback>
             <p>
-              What does the program do besides count the numbers?
+              The best common ancestor cannot be changed, all changes are either in the feature branch or the <c>main</c> branch.
             </p>
           </feedback>
         </choice>
         <choice>
           <statement>
             <p>
-              None of these.
+              A non-conflicting change occurs when part of the feature branch contains only one change.
             </p>
           </statement>
           <feedback>
             <p>
-              One of the other answers is correct.
+              You need to consider changes to both the feature branch and the <c>main</c> branch to determine if a change is non-conflicting.
             </p>
           </feedback>
         </choice>
       </choices>
-    </task>
+    </task>    
 
+    <task xml:id="ex-conflicting-change" label="ex-conflicting-change">
+      <statement>
+        <p>
+          Select the statement below that best describes a <term>conflicting change</term>.
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              A conflicting change occurs when a part of the code changes in the feature branch or in the <c>main</c> branch but not in both.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Review the definitions of non-conflicting and conflicting changes in the class slides.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              A non-conflicting change occurs when a part of the code changes in both the feature branch and the <c>main</c> branch.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              A conflicting change occurs when the best common ancestor is modified.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              The best common ancestor cannot be changed, all changes are either in the feature branch or the <c>main</c> branch.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              A conflicting change occurs when a part of the feature branch contains multiple changes.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              You need to consider changes to both the feature branch and the <c>main</c> branch to determine if a change is conflicting.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </task> 
+  </exercise>
+
+  <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1">
+    <introduction>
+      <p>
+        The questions below will now ask you to identify the non-conflicting and conflicting changes that exist in <xref ref="fig-merge-conflicts-1" />.  
+      </p>
+    </introduction>
     <task xml:id="ex-merge-conflicts-practice-1-b" label="ex-merge-conflicts-practice-1-b">
       <statement>
         <p>
-          Highlight (by clicking, or by circling) all of the lines that are non-conflicting changes in the feature branch or the <c>main</c> branch. Use the example in the slides as a guide for highlighting.
+          Highlight (by clicking) all of the lines in the <c>main</c> branch and the feature branch that contain non-conflicting changes. Use the example in the course slides as a guide.
         </p>
+        <p></p>
       </statement>
       <areas>
       <tabular top="minor" bottom="minor" left="minor" right="minor">
@@ -159,8 +282,9 @@
     <task xml:id="ex-merge-conflicts-practice-1-c" label="ex-merge-conflicts-practice-1-c">
       <statement>
         <p>
-          Highlight (by clicking, or by circling) all of the lines that are conflicting changes in the feature branch and the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
+          Highlight by clicking all of the lines in the <c>main</c> and feature branches that contain conflicting changes. Use the example in the course slides as a guide.
         </p>
+        <p></p>
       </statement>
       <areas>
       <tabular top="minor" bottom="minor" left="minor" right="minor">
@@ -221,10 +345,59 @@
     <task xml:id="ex-merge-conflicts-practice-1-d" label="ex-merge-conflicts-practice-1-d">
       <statement>
         <p>
-          Would the feature branch in <xref ref="fig-merge-conflicts-1" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
+          Select the statement below that best describes why the feature branch in <xref ref="fig-merge-conflicts-1" /> would, or would not, be able to be merged automatically by the project maintainers.
         </p>
       </statement>
-      <response />
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              The feature branch cannot be merged automatically because there is a conflicting change.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct. The last line contains changes in both <c>main</c> and the feature branch.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              The feature branch cannot be merged automatically because there are non-conflicting changes.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Non-conflicting changes can (usually) be merged automatically.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              It is not possible to tell if the feature branch can be merged automatically.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              If there are conflicting changes then the feature branch will not be able to be merged automatically.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              The feature branch cannot be merged automatically because there are changes both in <c>main</c> and in the feature branch.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Close. What type of changes prevent automatic merges?
+            </p>
+          </feedback>
+        </choice>
+      </choices>
     </task>
 
     <task xml:id="ex-merge-conflicts-practice-1-e" label="ex-merge-conflicts-practice-1-e">
