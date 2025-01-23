@@ -170,7 +170,7 @@
 
           <feedback>
             <p>
-              Correct! The file you changes has been modified but not staged yet.
+              Correct! The file you changed has been modified but not staged yet.
             </p>
           </feedback>
         </choice>
