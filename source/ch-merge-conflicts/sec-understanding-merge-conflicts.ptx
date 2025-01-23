@@ -562,63 +562,68 @@
       </hint>
     </exercise>
 
-
-
-
-
-    <exercise>
-    <task xml:id="ex-merge-conflicts-practice-2-b" label="ex-merge-conflicts-practice-2-b">
-      <statement>
+    <exercise 
+      xml:id="ex-merge-conflicts-practice-2" label="ex-merge-conflicts-practice-2">
+      <introduction>
         <p>
-          Highlight (by clicking, or by circling) all of the lines that are non-conflicting changes in the feature branch or the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
+          The questions below will now ask you to identify the non-conflicting and conflicting changes that exist in the merge from <xref ref="fig-merge-conflicts-2" />.  
         </p>
-      </statement>
-      <areas>
-      <tabular top="minor" bottom="minor" left="minor" right="minor">
-        <row header="yes">
-          <cell>Feature Branch</cell>
-          <cell>Best Common Ancestor</cell>
-          <cell><c>main</c> Branch</cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">r=15</area></cell>
-          <cell>r=15</cell>
-          <cell><area correct="no">r=15</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="yes">pi = 3.1415927</area></cell>
-          <cell>pi = 3.14</cell>
-          <cell><area correct="no">pi = 3.14</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="yes">rsq = r**2</area></cell>
-          <cell>rsq = r*2</cell>
-          <cell><area correct="no">rsq = r*2</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">a = pi*rsq</area></cell>
-          <cell>a = pi*rsq</cell>
-          <cell><area correct="yes">area = pi*(rsq/2)**2</area></cell>
-        </row>
-        <row>
-          <cell><area correct="no">print a</area></cell>
-          <cell>print a</cell>
-          <cell><area correct="yes">print area</area></cell>
-        </row>
-      </tabular>
-      </areas>
-      <hint>
-        <p>
-          Merge conflicts occur when the feature, <c>main</c>, and common ancestor branches are all different.
-        </p>
-      </hint>
-    </task>
+      </introduction>
+
+      <task xml:id="ex-merge-conflicts-practice-2-b" label="ex-merge-conflicts-practice-2-b">
+        <statement>
+          <p>
+              Highlight (by clicking) all of the lines in the <c>main</c> branch and the feature branch that contain non-conflicting changes.
+          </p>
+          <p></p>
+        </statement>
+        <areas>
+        <tabular top="minor" bottom="minor" left="minor" right="minor">
+          <row header="yes">
+            <cell>Feature Branch</cell>
+            <cell>Best Common Ancestor</cell>
+            <cell><c>main</c> Branch</cell>
+          </row>
+          <row bottom="none">
+            <cell><area correct="no">r=15</area></cell>
+            <cell>r=15</cell>
+            <cell><area correct="no">r=15</area></cell>
+          </row>
+          <row bottom="none">
+            <cell><area correct="yes">pi = 3.1415927</area></cell>
+            <cell>pi = 3.14</cell>
+            <cell><area correct="no">pi = 3.14</area></cell>
+          </row>
+          <row bottom="none">
+            <cell><area correct="yes">rsq = r**2</area></cell>
+            <cell>rsq = r*2</cell>
+            <cell><area correct="no">rsq = r*2</area></cell>
+          </row>
+          <row bottom="none">
+            <cell><area correct="no">a = pi*rsq</area></cell>
+            <cell>a = pi*rsq</cell>
+            <cell><area correct="yes">area = pi*(rsq/2)**2</area></cell>
+          </row>
+          <row>
+            <cell><area correct="no">print a</area></cell>
+            <cell>print a</cell>
+            <cell><area correct="yes">print area</area></cell>
+          </row>
+        </tabular>
+        </areas>
+        <hint>
+          <p>
+            Non-conflicting changes occur when a part of the code changes in either the feature branch or the <c>main</c> but not both.
+          </p>
+        </hint>
+      </task>
 
     <task xml:id="ex-merge-conflicts-practice-2-c" label="ex-merge-conflicts-practice-2-c">
       <statement>
         <p>
-          Highlight (by clicking, or by circling) all of the lines that are conflicting changes in the feature branch and the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
+          Highlight (by clicking) all of the lines (if any) in the <c>main</c> branch and the feature branch that contain conflicting changes.
         </p>
+        <p></p>
       </statement>
       <areas>
       <tabular top="minor" bottom="minor" left="minor" right="minor">
@@ -656,11 +661,17 @@
       </areas>
       <hint>
         <p>
-          Merge conflicts occur when the feature, <c>main</c>, and common ancestor branches are all different.
+          Conflicting changes occur when the same part of the code is changed both the feature branch and the <c>main</c> branch.
         </p>
       </hint>
     </task>
+  </exercise>
 
+
+
+  
+  <exercise>
+  
     <task xml:id="ex-merge-conflicts-practice-2-d" label="ex-merge-conflicts-practice-2-d">
       <statement>
         <p>
