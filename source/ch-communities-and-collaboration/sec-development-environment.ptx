@@ -407,21 +407,21 @@
         </statement>
         <setup>
           <var>
-            <condition string='^git config --global user.name "[^&lt;].+[^&gt;]"$'>
+            <condition string='^git config --global user\.name "[^&lt;].+[^&gt;]"$'>
               <feedback>
                 <p>
                   This command will set the name associated with your changes in git.
                 </p>
               </feedback>
             </condition>
-            <condition string='^git config --global user.name ["]*&lt;.+&gt;["]*$'>
+            <condition string='^git config --global user\.name ["]*&lt;.+&gt;["]*$'>
               <feedback>
                 <p>
                   You should not include the &lt; and &gt; in your command.
                 </p>
               </feedback>
             </condition>
-            <condition string='^git config --global user.name [^"].+[^"]$'>
+            <condition string='^git config --global user\.name [^"].+[^"]$'>
               <feedback>
                 <p>
                   Be sure to use quotation marks around your name.
@@ -455,28 +455,28 @@
         </statement>
         <setup>
           <var>
-            <condition string='^git config --global user.email "[^&lt;].+@.+[^&gt;]"$'>
+            <condition string='^git config --global user\.email "[^&lt;].+@.+[^&gt;]"$'>
               <feedback>
                 <p>
                   This command will set the email associated with your changes in git.
                 </p>
               </feedback>
             </condition>
-            <condition string='^git config --global user.email "[^&lt;][^@]+[^&gt;]"$'>
+            <condition string='^git config --global user\.email "[^&lt;][^@]+[^&gt;]"$'>
               <feedback>
                 <p>
                   Be sure you have entered a valid email address.
                 </p>
               </feedback>
             </condition>
-            <condition string='^git config --global user.email ["]*&lt;.+&gt;["]*$'>
+            <condition string='^git config --global user\.email ["]*&lt;.+&gt;["]*$'>
               <feedback>
                 <p>
                   You should not include the &lt; and &gt; in your command.
                 </p>
               </feedback>
             </condition>
-            <condition string='^git config --global user.email [^"].+[^"]$'>
+            <condition string='^git config --global user\.email [^"].+[^"]$'>
               <feedback>
                 <p>
                   Be sure to use quotation marks around your email.
