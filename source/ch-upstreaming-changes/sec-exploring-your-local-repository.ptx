@@ -5,71 +5,190 @@
 
   <introduction>
     <p>
-      Like in the previous chapter, you will be working within the KitClient for this exercise.
+      Like in the previous chapter, you will be working within the development environment for this exercise.
+    </p>
+
+    <p>
+      <term> Current State: </term>
+    </p>
+
+    <p>
+      <xref ref="fig-fork-and-clone-local" /> shows where you should be based upon the exercises in the previous chapter. You will have forked the upstream FarmData2 repository into your own GitHub account. You will then have cloned your fork into a local repository in the development environment. Your local files at this point are a copy that reflects the current state of the upstream <c>main</c> branch.
+    </p>
+
+    <p>
+      Let's explore this state just a little before making the changes that address the issue that you have claimed.
+    </p>
+
+    <p>
+      <figure xml:id="fig-fork-and-clone-local">
+        <caption> Fork, Clone and Local Files. </caption>
+        <image source="images/ch-upstreaming-changes/fork_clone_local_files.png" width="75%">
+          <description>
+            Cloud image of fork, clone, and local files.
+          </description>
+        </image>
+      </figure>
     </p>
   </introduction>
 
-  <p>
-    <term> Current State: </term>
-  </p>
 
-  <p>
-    <xref ref="fig-fork-and-clone-local" /> shows where you should be based upon the exercises in the previous chapter. You will have forked the upstream FarmData2 repository into your own GitHub account. You will then have cloned your fork into a local repository on your computer. Your local files at this point are a copy that reflects the current state of the upstream main branch.
-  </p>
+  <subsection xml:id="subsec-restarting-development-environment">
+    <title>Restarting the Development Environment</title>
 
-  <p>
-    Let's explore this state just a little before making the changes that address the issue that you have claimed.
-  </p>
-
-  <p>
-    <figure xml:id="fig-fork-and-clone-local">
-      <caption> Fork, Clone and Local Files. </caption>
-      <image source="images/ch-upstreaming-changes/fork_clone_local_files.png" width="75%">
-        <description>
-          Cloud image of fork, clone, and local files.
-        </description>
-      </image>
-    </figure>
-  </p>
-
-  <exercises>
-  <title/>
-  <exercise xml:id="ex-restarting-kitclient" label="ex-restarting-kitclient">
-    <p>
-      Restart your KitClient based on the instructions in <xref ref="topic-restarting-dev-env" />.
-    </p>
-  </exercise>
-
-  <p>
-    The <c>git log</c> command provides a way to see information about the history of the project.
-    It will display information about the most recent commits that have been made to the repository.
-    By default, <c>git log</c> displays information about the 10 most recent commits.
-    You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
-  </p>
-
-  <exercise xml:id="ex-understanding-project-history" label="ex-understanding-project-history">
     <introduction>
       <p>
-        Ensure that you are in your cloned repo (i.e.
-        the <em>GitKit-FarmData2</em> directory is your working directory).
-        Then use the <c>git log</c> command to display the information about the 4 most recent commits.
-        (If you don't see more all four recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
-      </p>
-
-      <p>
-        A line that begins with "commit" appears at the start of the information about each commit.
-        That line also contains a long string of numbers and letters.
-        That string is called the <term>SHA (secure hashing algorithm)</term> hash.
-        It is a string of digits (0-9) and letters (a-f) known as a hexadecimal number and it provides a unique identifier for the commit.
-        Following the SHA hash is information about the author, the date the commit was made and the commit message that was used to describe the changes.
-      </p>
-
-      <p>
-        Use the output from the <c>git log</c> command to answer the following questions about the project history. Note, if you have started this exercise late, new commits may have been added. If so, you will need to look at more than the 5 most recent commits to answer the question.
       </p>
     </introduction>
 
+    <exercises>
+    <title />
+    <exercise xml:id="ex-restarting-kitclient-for-upstreaming" label="ex-restarting-kitclient-for-upstreaming">
+      <p>
+        Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+        Please be patient as this can take a few minutes.
+        When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to the following: <image source="images/shared-images/DevEnv-Kitty-Ready.png" width="75%">
+        <description>
+          The GitKit Development Environment.
+          The development environment is ready when you see the "Kit development environment is ready for use" message.
+        </description>
+      </image>
+    </p>
+  </exercise>
+  </exercises>
+</subsection>
 
+
+<subsection xml:id="subsec-git-log-command">
+  <title><c>git log</c></title>
+
+  <introduction>
+    <p>
+      The <c>git log</c> command provides a way to see information about the history of the project.
+      It will display information about the most recent commits that have been made to the repository.
+      By default, <c>git log</c> displays information about the 10 most recent commits.
+      You can append a -2 (or -5) to show only the most recent 2 (or 5) commits.
+    </p>
+  </introduction>
+
+  <exercises>
+  <title />
+  <exercise xml:id="ex-understanding-project-history-new" label="ex-understanding-project-history-new">
+    <task xml:id="ex-understanding-project-history-new-a" label="ex-understanding-project-history-new-a">
+      <statement>
+        <p>
+          Which of the following commands will provide the four most recent commits?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice>
+          <statement>
+            <p>
+              <c>git log</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This will provide information about the 10 most recent commits, not just the first four.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git log 4</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This is not the proper format, a symbol is missing before the 4.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>git log -4</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git log +4</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The symbol before the 4 is incorrect.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Refer back to the beginning of this subsection for specifics about the <c>git log</c> command.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-understanding-project-history-new-aa" label="ex-understanding-project-history-new-aa">
+      <statement>
+        <p>
+          Ensure that you are in your cloned repo (i.e.
+          the <em>GitKit-FarmData2</em> directory is your working directory).
+          Then use the <c>git log</c> command to display the information about the 4 most recent commits.
+          (If you don't see more all four recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
+        </p>
+
+        <p>
+          A line that begins with "commit" appears at the start of the information about each commit.
+          That line also contains a long string of numbers and letters.
+          That string is called the <term>SHA (secure hashing algorithm)</term> hash.
+          It is a string of digits (0-9) and letters (a-f) known as a hexadecimal number and it provides a unique identifier for the commit.
+          Following the SHA hash is information about the author, the date the commit was made and the commit message that was used to describe the changes.
+        </p>
+
+        <p>
+          Run the command from <xref ref="ex-understanding-project-history-new-a"/> and paste the output in the space below.
+        </p>
+      </statement>
+      <response/>
+    </task>
+  </exercise>
+  </exercises>
+</subsection>
+
+
+<subsection xml:id="subsec-understanding-git-log-output">
+  <title>Reviewing the <c>git log</c> Output</title>
+
+  <introduction>
+    <p>
+      Use the output from the <xref ref="ex-understanding-project-history-new-aa" /> to answer the following questions about the project history.
+      Note, if you have started this exercise late, new commits may have been added.
+    </p>
+  </introduction>
+
+  <exercises>
+  <title />
+  <exercise xml:id="ex-understanding-project-history" label="ex-understanding-project-history">
     <task xml:id="ex-understanding-project-history-a" label="ex-understanding-project-history-a">
       <statement>
         <p>
@@ -138,10 +257,12 @@
 
       <hint>
         <p>
-          Look at the dates of each commit. The SHA code appears above the author of the commit and date the commit was made.
+          Look at the dates of each commit.
+          The SHA code appears above the author of the commit and date the commit was made.
         </p>
       </hint>
     </task>
+
 
     <task xml:id="ex-understanding-project-history-b" label="ex-understanding-project-history-b">
       <statement>
@@ -149,6 +270,7 @@
           What is the date of the most recent commit to the repository?
         </p>
       </statement>
+
 
       <choices randomize="yes">
         <choice>
@@ -202,7 +324,7 @@
 
           <feedback>
             <p>
-              There is a more recent commit. 
+              There is a more recent commit.
             </p>
           </feedback>
         </choice>
@@ -215,12 +337,14 @@
       </hint>
     </task>
 
+
     <task xml:id="ex-understanding-project-history-c" label="ex-understanding-project-history-c">
       <statement>
         <p>
           Who authored a commit on October 11, 2021?
         </p>
       </statement>
+
 
       <choices randomize="yes">
         <choice correct="yes">
@@ -287,12 +411,14 @@
       </hint>
     </task>
 
+
     <task xml:id="ex-understanding-project-history-d" label="ex-understanding-project-history-d">
       <statement>
         <p>
           What is the purpose of the most recent commit by shes-dev?
         </p>
       </statement>
+
 
       <choices randomize="yes">
         <choice correct="yes">
@@ -371,8 +497,256 @@
           This commit is older than the others, try a <c>git log</c> command that shows a few more commits.
         </p>
       </hint>
-
     </task>
   </exercise>
   </exercises>
+</subsection>
+
+
+<subsection xml:id="subsec-git-status-command">
+  <title><c>git status</c></title>
+
+  <introduction>
+    <p>
+      The <c>git status</c> command provides the current status of your local repository.
+      Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
+    </p>
+  </introduction>
+
+  <exercises>
+  <title/>
+  <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
+    <task xml:id="ex-git-status-command-a" label="ex-git-status-command-a">
+      <statement>
+        <p>
+          What part of the output tells you which branch is currently active in your repository?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              The branch name is displayed in the first line after "On branch".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct! The first line specifies the current branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name is displayed at the end of the second line.
+              It is "origin/main".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The second line specifies the origin branch not the active branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name is not displayed in the output from this git command.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look again, the active branch is listed.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name is displayed at the end of the last line.
+              It is "working tree".
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The last line indicates if there are changes to commit.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Look at the first line of the output from the <c>git status</c> command.
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-git-status-command-b" label="ex-git-status-command-b">
+      <statement>
+        <p>
+          Your output should contain the text “Your branch is up to date with 'origin/main'.”  What do you think it means that your branch is “up to date”?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              It means that your branch contains all of the commits in the origin <c>main</c> branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It means that the origin <c>main</c> branch contains all of the commits in your local branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Think about what is being compared in that statement.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It means that your branch contains all of the issues in the origin <c>main</c> branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Issues are not part of a branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It means that the origin <c>main</c> branch contains all of the issues in your branch.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Issues are not part of a branch.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Think about what could be "out of date".
+          What differences might there be between the origin <c>main</c> and your branch?
+        </p>
+      </hint>
+    </task>
+
+
+    <task xml:id="ex-git-status-command-c" label="ex-git-status-command-c">
+      <statement>
+        <p>
+          Your output should contain the text “nothing to commit, working tree clean.”  What do you think it means that you have “nothing to commit.” Hint: when would you have something to commit?  This is the opposite of that!
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              It means that you haven't made any changes.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It means that you haven't created any issues.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Issues aren't part of a branch.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It means you haven't made any branches.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Branches aren't committed.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It means the origin <c>main</c> branch doesn't have any changes.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This statement is referring to your local branch, not origin <c>main</c>.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          Think about what the next step might be after you have cloned the repo.
+          What would you want to do next?
+        </p>
+      </hint>
+    </task>
+  </exercise>
+  </exercises>
+</subsection>
+
+<conclusion>
+  <p>
+    In the next section you will create a feature branch.
+  </p>
+</conclusion>
 </section>

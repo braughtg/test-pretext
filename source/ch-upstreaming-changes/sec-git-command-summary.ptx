@@ -22,21 +22,39 @@
     <premise>
     <c>git log</c></premise> <response>Display recent commits made to the active branch.</response> </match> <match>
     <premise>
-    <c>git branch &lt;branch&gt; </c></premise> <response>Create a new feature branch.</response> </match> <match>
+    <c>git branch &lt;branch&gt;</c></premise> <response>Create a new feature branch.</response> </match> <match>
     <premise>
-    <c>git switch &lt;branch&gt; </c></premise> <response>Change the active branch</response> </match> <match>
+    <c>git branch</c></premise> <response>Lists all branches.</response> </match> <match>
     <premise>
-    <c>git status </c></premise> <response>Check the current state of your local repo.</response> </match> <match>
+    <c>git switch &lt;branch&gt;</c></premise> <response>Change the active branch</response> </match> <match>
     <premise>
-    <c>git status &lt;file name&gt; </c></premise> <response>Display the changes that you made to a file.</response> </match> <match>
+    <c>git status</c></premise> <response>Check the current state of your local repo.</response> </match> <match>
     <premise>
-    <c>git stage &lt;file name&gt; </c></premise> <response>Stage changed files to be committed to the repo.</response> </match> <match>
+    <c>git diff</c></premise> <response>Displays unstaged changes.</response> </match> <match>
     <premise>
-    <c>git add &lt;file name&gt; </c></premise> <response>Another way to stage changed files for a commit.</response> </match> <match>
+    <c>git diff --staged</c></premise> <response>Displays staged changes.</response> </match></matches>
+    <hint>
+      <p>
+        Note that the tasks listed are in approximately the same order as they appear in the sections of this chapter.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-git-commands-summary-upstreaming-2" label="ex-git-commands-summary-upstreaming-2">
+    <statement>
+      <p>
+        Match the tasks on the right with the appropriate git command listed on the left.
+      </p>
+    </statement>
+    <matches> <match>
     <premise>
-    <c>git commit -m "message" </c></premise> <response>Commit staged files with a message.</response> </match> <match>
+    <c>git stage &lt;file name&gt;</c></premise> <response>Stage changed files to be committed to the repo.</response> </match> <match>
     <premise>
-    <c>git push &lt;remote repo name&gt; &lt;branch&gt; </c></premise> <response>Push a feature branch to your origin.</response> </match> </matches>
+    <c>git add &lt;file name&gt;</c></premise> <response>Another way to stage changed files for a commit.</response> </match> <match>
+    <premise>
+    <c>git commit -m "message"</c></premise> <response>Commit staged files with a message.</response> </match> <match>
+    <premise>
+    <c>git push &lt;remote&gt; &lt;branch&gt;</c></premise> <response>Push a feature branch to your origin.</response> </match> </matches>
     <hint>
       <p>
         Note that the tasks listed are in approximately the same order as they appear in the sections of this chapter.

@@ -8,23 +8,41 @@
       When you set out to make changes to the project you will do so by working on a feature branch.
       The exercises in this section will walk you through the process of creating a feature branch on which you will fix the issue that you claimed in <xref ref="topic-the-issue-tracker" />.
     </p>
+
+    <p>
+      <xref ref="fig-create-feature-branch" /> illustrates this process. The feature branch that you will create is shown in orange.
+    </p>
+
+    <p>
+      <figure xml:id="fig-create-feature-branch">
+        <caption> Create Feature Branch. </caption>
+        <image source="images/ch-upstreaming-changes/create-feature-branch.png" width="75%">
+          <description>
+            Cloud image of origin, upstream, and local branches.
+          </description>
+        </image>
+      </figure>
+    </p>
   </introduction>
 
   <exercises>
   <title/>
-  <exercise xml:id="ex-git-status-command" label="ex-git-status-command">
+  <exercise xml:id="ex-creating-a-branch" label="ex-creating-a-branch">
     <introduction>
       <p>
-        The <c>git status</c> command provides the current status of your local repository.
-        Use the <c>git status</c> command to see the current status of your local <em>GitKit-FarmData2</em> repository.
+        The <c>git branch &lt;name&gt;</c> command creates a new branch with the given <em>name</em>.
+        When creating a branch, you should give it a short but descriptive name (e.g.
+        <em>FixTypoInReadme</em>).
+        Note: <em>name</em> may not have spaces, so you can use - (dashes) or CammelCaseText to divide words in your branch names.
+        Remember not to include the &lt; &gt; when writing your own command.
       </p>
     </introduction>
 
 
-    <task xml:id="ex-git-status-command-a" label="ex-git-status-command-a">
+    <task xml:id="ex-creating-a-branch-a" label="ex-creating-a-branch-a">
       <statement>
         <p>
-          What part of the output tells you which branch is currently active in your repository?
+          If you want to create a new feature branch named <em>fixTypoInName</em>, which command should you use?
         </p>
       </statement>
 
@@ -33,13 +51,13 @@
         <choice correct="yes">
           <statement>
             <p>
-              The branch name is displayed in the first line after "On branch".
+              <c>git branch fixTypoInName</c>
             </p>
           </statement>
 
           <feedback>
             <p>
-              Correct! The first line specifies the current branch.
+              Correct!
             </p>
           </feedback>
         </choice>
@@ -47,14 +65,13 @@
         <choice>
           <statement>
             <p>
-              The branch name is displayed at the end of the second line.
-              It is "origin/main".
+              <c>git branch &lt;fixTypoInName&gt;</c>
             </p>
           </statement>
 
           <feedback>
             <p>
-              The second line specifies the origin branch not the active branch.
+              The command should not contain &lt; &gt;.
             </p>
           </feedback>
         </choice>
@@ -62,13 +79,13 @@
         <choice>
           <statement>
             <p>
-              The branch name is not displayed in the output from this git command.
+              <c>branch fixTypoInName</c>
             </p>
           </statement>
 
           <feedback>
             <p>
-              Look again, the active branch is listed.
+              The command is missing <c>git</c>.
             </p>
           </feedback>
         </choice>
@@ -76,14 +93,13 @@
         <choice>
           <statement>
             <p>
-              The branch name is displayed at the end of the last line.
-              It is "working tree".
+              <c>git fixTypoInName</c>
             </p>
           </statement>
 
           <feedback>
             <p>
-              The last line indicates if there are changes to commit.
+              The command is missing <c>branch</c>.
             </p>
           </feedback>
         </choice>
@@ -91,104 +107,252 @@
 
       <hint>
         <p>
-          Look at the first line of the output from the <c>git status</c> command.
+          Look back at the format of the command in the previous description.
         </p>
       </hint>
-    </task>
-
-
-    <task xml:id="ex-git-status-command-b" label="ex-git-status-command-b">
-      <statement>
-        <p>
-          Your output should contain the text “Your branch is up to date with 'origin/main'.”  What do you think it means that your branch is “up to date”?
-        </p>
-      </statement>
-      <response />
-    </task>
-
-
-    <task xml:id="ex-git-status-command-c" label="ex-git-status-command-c">
-      <statement>
-        <p>
-          Your output should contain the text “nothing to commit, working tree clean.”  What do you think it means that you have “nothing to commit.” Hint: when would you have something to commit?  This is the opposite of that!
-        </p>
-      </statement>
-      <response />
-    </task>
-  </exercise>
-
-  <exercise xml:id="ex-creating-a-branch" label="ex-creating-a-branch">
-    <introduction>
-      <p>
-        The <c>git branch &lt;name&gt;</c> command creates a new branch with the given <em>name</em>.
-        When creating a branch, you should give it a short but descriptive name (e.g.
-        <em>FixTypoInReadme</em>).
-        Note: <em>name</em> may not have spaces, so you can use - (dashes) or CammelCaseText to divide words in your branch names.
-      </p>
-    </introduction>
-
-
-    <task xml:id="ex-creating-a-branch-a" label="ex-creating-a-branch-a">
-      <statement>
-        <p>
-          <p>
-            Create a new feature branch with a descriptive name that you will use to fix the issue that you claimed.
-            Remember not to include the &lt; &gt; when writing your own command.
-            Type the command you entered below.
-          </p>
-        </p>
-      </statement>
-      <response />
     </task>
 
 
     <task xml:id="ex-creating-a-branch-b" label="ex-creating-a-branch-b">
-      <statement correct="no">
+      <statement>
         <p>
-          Use the <c>git status</c> command again now.
+          Adapt the command from <xref ref="ex-creating-a-branch-a" /> to create a branch for the issue you claimed.
+          Type that command now.
         </p>
+
         <p>
-          Creating a new branch with the <c>git branch</c> command makes your new branch the active branch.
+          What output was produced when you typed the <c>git branch</c> command?
         </p>
       </statement>
 
-      <feedback>
-        <p>
-          <c>git branch &lt;name&gt;</c> only creates the branch.
-        </p>
-      </feedback>
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              No output was provided.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It said the branch was created.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look at the terminal window again.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              It gave an error statement.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Your branch was not created.
+              Make sure your branch name does not contain spaces and &lt; &gt;
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The current branch is &lt;branch name&gt;.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look at the terminal window again.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
 
       <hint>
         <p>
-          After you create a branch what needs to be done to make it active?
+          Look back at the format of the command and make sure you type it correctly.
+        </p>
+      </hint>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-checking-a-branch" label="ex-checking-a-branch">
+    <introduction>
+      <p>
+        The <c>git branch</c> command without the branch name lists all branches.
+      </p>
+    </introduction>
+
+
+    <task xml:id="ex-checking-a-branch-a" label="ex-checking-a-branch-a">
+      <statement>
+        <p>
+          Type <c>git branch</c> and look at the output produced.
+          Which of the following do you see listed?
+        </p>
+      </statement>
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>main</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <c>name</c> which is the name of your feature branch
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>git</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <c>git</c> is a command and should not be your branch name
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <c>&lt;name&gt;</c> which is the name of your feature branch
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              The branch name should not have &lt; &gt;.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          If you don't see your branch name it means it was not created.
+          Try creating it again using the format of the command from <xref ref="ex-creating-a-branch-a"/>.
         </p>
       </hint>
     </task>
 
-    <task xml:id="ex-creating-a-branch-c" label="ex-creating-a-branch-c">
+
+    <task xml:id="ex-checking-a-branch-b" label="ex-checking-a-branch-b">
       <statement>
         <p>
-          How can you tell from the output in <xref ref="ex-creating-a-branch-b" /> if it switched you to the new branch?
+          By looking at the output provided by <c>git branch</c> how can you tell which is the active branch?
         </p>
       </statement>
-      <response />
+
+
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              It will have an * before the branch name.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              The branch name will appear in green.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name will appear in italics.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look at the output provided in the terminal window again.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              The branch name will appear in bold.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Look at the output provided in the terminal window again.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          There are two ways the active branch is indicated.
+        </p>
+      </hint>
     </task>
   </exercise>
 
   <p>
-    <xref ref="fig-create-feature-branch" /> illustrates the process you just completed to create a feature branch. The feature branch created is shown in orange.
+    Refer back to <xref ref="fig-create-feature-branch"/> to see the process you just completed.
   </p>
-
-  <p>
-    <figure xml:id="fig-create-feature-branch">
-      <caption> Create Feature Branch. </caption>
-      <image source="images/ch-upstreaming-changes/create-feature-branch.png" width="75%">
-        <description>
-          Cloud image of origin, upstream, and local branches.
-        </description>
-      </image>
-    </figure>
-  </p>
-
   </exercises>
 </section>
