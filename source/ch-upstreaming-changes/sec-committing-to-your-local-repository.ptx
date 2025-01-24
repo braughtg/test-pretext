@@ -127,7 +127,7 @@
     <feedback>
       <p>
         Double check the format of your command.
-        You need to include " " around the text of the message.
+        You need to include " " around the text of the message and include the -m.
       </p>
     </feedback>
     </condition> </var> </setup>
@@ -531,6 +531,7 @@
           The output of the <c>git log</c> command now shows the information about the commit you made.
         </p>
       </statement>
+
       <hint>
         <p>
           What branch are you on, the <c>main</c> branch our your feature branch? In which branch did you make your changes?
@@ -545,7 +546,8 @@
           The commit is not shown in the <c>git log</c> output because:
         </p>
       </statement>
-      
+
+
       <choices>
         <choice correct="yes">
           <statement>
@@ -606,7 +608,8 @@
 
       <hint>
         <p>
-          Commits are specific to branches. You must be on the proper branch to see a commit.
+          Commits are specific to branches.
+          You must be on the proper branch to see a commit.
         </p>
       </hint>
     </task>
