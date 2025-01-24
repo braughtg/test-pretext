@@ -153,8 +153,8 @@
         <p>
           Ensure that you are in your cloned repo (i.e.
           the <em>GitKit-FarmData2</em> directory is your working directory).
-          Then use the <c>git log</c> command to display the information about the 4 most recent commits.
-          (If you don't see more all four recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
+          Then use the <c>git log</c> command from <xref ref="ex-understanding-project-history-new-a"/> to display the information about the 4 most recent commits.
+          (If you don't see all four recent commits, press "return" or "spacebar" to see more; when you are done, press "q" to quit.)
         </p>
 
         <p>
@@ -166,7 +166,7 @@
         </p>
 
         <p>
-          Run the command from <xref ref="ex-understanding-project-history-new-a"/> and paste the output in the space below.
+          Paste the output of the <c>git log</c> command you typed in the space below.
         </p>
       </statement>
       <response/>
@@ -415,7 +415,7 @@
     <task xml:id="ex-understanding-project-history-d" label="ex-understanding-project-history-d">
       <statement>
         <p>
-          What is the purpose of the most recent commit by shes-dev?
+          What is the purpose of the most recent commit by Elad Sheskin (username: shes-dev)?
         </p>
       </statement>
 
