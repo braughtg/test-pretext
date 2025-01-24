@@ -10,11 +10,11 @@
       But there was no orange dotted line from your local repository to the upstream.
       That is because, by default, your local repository isn’t aware of the upstream.
     </p>
-  </introduction>
 
-  <p>
-    Like the last activity, you will be working within the development environment for this activity.
-  </p>
+    <p>
+      Like the last activity, you will be working within the development environment for this activity.
+    </p>
+  </introduction>
 
 
   <subsection xml:id="subsec-restarting-dev_environment">
