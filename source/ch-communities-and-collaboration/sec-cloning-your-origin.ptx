@@ -193,7 +193,7 @@
 </exercise>
 <exercise xml:id="ex-clone-origin-linux-a" label="ex-clone-origin-linux-a">
   <p>
-    Enter the command from <xref ref="ex-clone-origin-linux" /> into your terminal.
+    Execute the command from <xref ref="ex-clone-origin-linux" /> in your terminal.
   </p>
 </exercise>
 
@@ -316,61 +316,29 @@
 </exercise>
 </exercises>
 </subsection>
-<subsection xml:id="topic-git remote">
-  <title><c>git remote</c></title>
-  
-</subsection>
 
-<subsection xml:id="topic-open-repo-folder">
-  <title>Opening the GitKit-FarmData2 Repository Folder</title>
+<subsection xml:id="topic-explore-clone-linux">
+  <title>Exploring Your Cloned Repository In Your Development Environment</title>
   
-  <exercise xml:id="ex-kit-tty-linux" label="ex-kit-tty-linux">
+    <p>
+      In this section you will briefly explore the GitKit FarmData2 repository that you have cloned into your development environment.
+    </p>
+
+<exercises>
+<title />
+<exercise xml:id="ex-explore-clone-linux-a" label="ex-explore-clone-linux-a">
   <statement>
-    <p>
-      The the output in <xref ref="ex-clone-origin-linux-b" /> should contain a message from the <term>Kit-tty</term>.
-      What is the <term>Kit-tty</term>?
-    </p>
-  </statement>
-  <response />
-  <hint>
-    <p>
-      The "Kit-tty" introduces itself using the line "😺💻 Meow, Kit-tty here!" Read the description of the "Kit-tty" that follows this line.
-    </p>
-  </hint>
-</exercise>
-
-<p>
-  Be sure to keep your eyes open for messages from the Kit-tty as you work on the GitKit exercises.
-  The Kit-tty will help you to stay on track and may save you a lot of time by preventing you from going down an incorrect path.
-</p>
-
-</subsection>
-<!---
-
-<exercise xml:id="ex-explore-clone-linux" label="ex-explore-clone-linux">
-  <introduction>
-    <p>
-      In this exercise you will briefly explore the GitKit FarmData2 repository that you have cloned into your development environment.
-    </p>
-  </introduction>
-
-
-  <task xml:id="ex-explore-clone-linux-a" label="ex-explore-clone-linux-a">
-    <statement>
       <p>
         Use the <c>cd</c> command in the Terminal to change into the directory containing your clone of the GitKit FarmData2 repository.
       </p>
-    </statement>
 
-    <hint>
       <p>
         See <xref ref="ex-clone-origin-linux-c" /> for the name of the directory.
       </p>
-    </hint>
-  </task>
+  </statement>
+</exercise>
 
-
-  <task xml:id="ex-explore-clone-linux-b" label="ex-explore-clone-linux-b">
+  <exercise xml:id="ex-explore-clone-linux-b" label="ex-explore-clone-linux-b">
     <statement>
       <p>
         Use the <c>ls -a</c> command to display the names of all of the files and directories in your clone of the GitKit FarmData2 repository.
@@ -378,24 +346,82 @@
 
       <p>
         Compare these files and directories to those in your origin repository on GitHub.
-        Are there any differences? If so describe them here.
+      </p>
+      <p>
+        Check all files and directories that do not appear both locally and on GitHub.
       </p>
     </statement>
-    <response />
-  </task>
+       <choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            <c>.</c>
+          </p>
+        </statement>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            <c>..</c>
+          </p>
+        </statement>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            <c>.git</c>
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            <c>README.md</c>
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            <c>.kit</c>
+          </p>
+        </statement>
+      </choice>
+            <choice>
+        <statement>
+          <p>
+            <c>.vscode</c>
+          </p>
+        </statement>
+      </choice>
+    </choices>
 </exercise>
 
-<exercise xml:id="ex-check-remotes" label="ex-check-remotes">
-  <introduction>
+</exercises>
+
+</subsection>
+
+
+
+
+
+<subsection xml:id="topic-git remote">
+  <title><c>git remote</c></title>
+
     <p>
-      In this exercise you will see that your clone keeps track of the location of your origin repository.
+      In this section you will see that your clone keeps track of the location of your origin repository.
       It does this using a piece of information called a <term>remote</term>, which Git uses to store the URLs of remote repositories in the cloud (e.g.
       on GitHub).
     </p>
-  </introduction>
 
 
-  <task xml:id="ex-check-remotes-a" label="ex-check-remotes-a">
+<exercises>
+  <title />
+<exercise xml:id="ex-check-remotes-a" label="ex-check-remotes-a">
     <statement>
       <p>
         Use the following command to ask Git to display a list of the remote repositories (i.e.
@@ -411,10 +437,9 @@
       </p>
     </statement>
     <response />
-  </task>
+  </exercise>
 
-
-  <task xml:id="ex-check-remotes-b" label="ex-check-remotes-b">
+    <exercise xml:id="ex-check-remotes-b" label="ex-check-remotes-b">
     <statement>
       <p>
         Examine the output in <xref ref="ex-check-remotes-a" />.
@@ -460,10 +485,9 @@
     <hint>
       Look closely at the "origin" URLs.
     </hint>
-  </task>
+  </exercise>
 
-
-  <task xml:id="ex-check-remotes-c" label="ex-check-remotes-c">
+  <exercise xml:id="ex-check-remotes-c" label="ex-check-remotes-c">
     <statement>
       <p>
         How is the origin remote that you see in the output of the <xref ref="ex-check-remotes-a" /> command represented in <xref ref="fig-basic-workflow-clone" />?
@@ -516,10 +540,9 @@
     <hint>
       Which arrow would represent the clone knowing the location of the origin?
     </hint>
-  </task>
+  </exercise>
 
-
-  <task xml:id="ex-check-remotes-d" label="ex-check-remotes-d">
+    <exercise xml:id="ex-check-remotes-d" label="ex-check-remotes-d">
     <statement>
       <p>
         Which step of the basic FOSS workflow requires that your clone know the location of your origin repository?
@@ -572,7 +595,36 @@
     <hint>
       Think about which step of the basic FOSS workflow will need to send information from the clone back to the origin.
     </hint>
-  </task>
+  </exercise>
+  </exercises>
+  </subsection>
+
+<subsection xml:id="topic-open-repo-folder">
+  <title>Opening the GitKit-FarmData2 Repository Folder</title>
+  
+  <exercise xml:id="ex-kit-tty-linux" label="ex-kit-tty-linux">
+  <statement>
+    <p>
+      The the output in <xref ref="ex-clone-origin-linux-b" /> should contain a message from the <term>Kit-tty</term>.
+      What is the <term>Kit-tty</term>?
+    </p>
+  </statement>
+  <response />
+  <hint>
+    <p>
+      The "Kit-tty" introduces itself using the line "😺💻 Meow, Kit-tty here!" Read the description of the "Kit-tty" that follows this line.
+    </p>
+  </hint>
 </exercise>
+
+<p>
+  Be sure to keep your eyes open for messages from the Kit-tty as you work on the GitKit exercises.
+  The Kit-tty will help you to stay on track and may save you a lot of time by preventing you from going down an incorrect path.
+</p>
+
+</subsection>
+<!---
+
+
 -->
 </section>
