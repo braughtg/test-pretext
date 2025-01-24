@@ -146,7 +146,7 @@
 
 
     <choices randomize="yes">
-      <choice correct="yes">
+      <choice>
         <statement>
           <p>
             It shows the name of the file changed in [].
@@ -155,7 +155,21 @@
 
         <feedback>
           <p>
-            The first part of the first line is the name of the file.
+            The first part of the first line is not the file name, take another look at the output.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            It shows the name of the feature branch that contains the  change in [].
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            The first part of the first line is the feature branch name.
           </p>
         </feedback>
       </choice>
@@ -216,21 +230,7 @@
         </feedback>
       </choice>
 
-      <choice correct="yes">
-        <statement>
-          <p>
-            It shows the number of lines deleted.
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            The last part of the second line is the number of lines deleted.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
+       <choice>
         <statement>
           <p>
             It shows every line that was inserted and/or deleted.
