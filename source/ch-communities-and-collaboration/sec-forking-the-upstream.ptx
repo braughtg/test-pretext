@@ -128,7 +128,7 @@
         >
         <statement>
           <p>
-            Click the “Fork” button to create your own fork of the upstream repository. Be sure to pick the GitHub username you used in <xref ref="ex-github-account-url" /> in the "Choose an owner" box so that your fork will be created in your GitHub space.
+            Click the “Fork” button to create your own fork of the upstream repository. Be sure to pick the GitHub username that is at the end of the URL you used in <xref ref="ex-github-account-url" /> in the "Choose an owner" box so that your fork will be created in your GitHub space.
           </p>
         </statement>
       </task>
