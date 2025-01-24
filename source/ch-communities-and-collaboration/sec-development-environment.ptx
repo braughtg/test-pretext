@@ -9,7 +9,7 @@
   <introduction
     xml:id="topic-dev-env-intro">
     <p>
-      You now have been assigned an <term>issue</term> to work on and yuu have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space.
+      You now have been assigned an <term>issue</term> to work on and you have created a <term>fork</term> of the <term>upstream</term> GitKit FarmData2 repository into your GitHub space.
     </p>
     <p>
       To work on your issue you will need to setup your <term>development environment</term>.  Your development environment is where you will create your <term>clone</term> of the repository, where you will edit files, and where you will use `git` commands to add your changes to to your clone and <term>push</term> those changes to your <term>origin</term>.  
