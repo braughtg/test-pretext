@@ -164,18 +164,58 @@
     <exercise
       xml:id="ex-extra-practice-remotes"
       label="ex-extra-practice-remotes">
-      <statement>
-        <p>
-          Use the Git command that displays the remotes that your local repository knows about.  
-        </p>
-        <p>
-          Copy and paste the Git commands that you used and their output here.
-        </p>
-      </statement>
-      <response />
-      <hint>
-        Review <xref ref="ex-check-remotes" /> for information about how to display the remotes.
-      </hint>
-    </exercise>
+          <statement>
+            <p>
+              In your terminal enter the commands from <xref ref="ex-extra-practice-clone-linux" />.
+            </p>
+            <p>
+              Which of the following do you see in the output from entering those commands?
+            </p>
+          </statement>
+
+
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              The output from <c>git remote -v</c> contains <c>origin</c> followed by the URL that you entered in <xref ref="ex-extra-practice-fork" />
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              The output from <c>git remote -v</c> contains <c>origin</c> followed by the URL in <xref ref="table-foss-projects" />
+             </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+               The output from <c>git remote -v</c> contains <c>upstream</c> followed by the URL in <xref ref="table-foss-projects" />
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              The output from <c>git remote -v</c> contains <c>upstream</c> followed by the URL that you entered in <xref ref="ex-extra-practice-fork" />
+            </statement>
+          </choice>
+
+         <choice correct="no">
+            <statement>
+               The output from <c>git remote -v</c> contains <c>fork</c> followed by the URL in <xref ref="table-foss-projects" />
+            </statement>
+          </choice>
+
+          <choice correct="no">
+            <statement>
+              The output from <c>git remote -v</c> contains <c>fork</c> followed by the URL that you entered in <xref ref="ex-extra-practice-fork" />
+            </statement>
+          </choice>
+          </choices>
+  <hint>
+    <p>
+      The origin URL should be the one from your git clone command.
+    </p>
+  </hint>
+</exercise>
   </exercises>
 </section>
