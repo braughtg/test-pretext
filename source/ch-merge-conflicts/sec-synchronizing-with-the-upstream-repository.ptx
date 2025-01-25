@@ -8,183 +8,149 @@
 
   <introduction>
     <p>
-      <xref ref="fig-conflicting-upstream-changes" /> shows the <c>main</c> branch has committed changes that conflict with what the local branch wants to commit.
+      From the previous section you know that there is a merge conflict between the upstream <c>main</c> branch and your feature branch.  Before you can resolve this conflict you will need to get the changes from the upstream <c>main</c> branch into your local and origin <c>main</c> branches.
     </p>
     <p>
-      <figure xml:id="fig-conflicting-upstream-changes" >
-        <caption> Conflicting Upstream Changes. </caption>
-        <image source="images/ch-merge-conflicts/conflicting-upstream-changes.png" width="75%">
+      The process you learned for synchronizing with the upstream in <xref ref="topic-staying-synchronized" /> (<xref ref="topic-pulling-the-upstream-main-branch" /> and <xref ref="topic-pushing-main-to-your-origin" />) will copy the changes in the upstream <c>main</c> branch into your local and origin <c>main</c> branches. This process is illustrated in <xref ref="fig-synching-upstream-changes-with-conflict" />. 
+    </p>
+
+    <p>
+      <figure xml:id="fig-synching-upstream-changes-with-conflict" >
+        <caption> Synchronizing with the upstream. </caption>
+        <image source="images/ch-merge-conflicts/synching-with-upstream-with-conflict.png" width="75%">
           <description>
-            Cloud image of the changes merged into the upstream that conflict with a local branch
+            Using <c>pull</c> and <c>push</c> to synchronize the local and origin <c>main</c> branches with the upstream <c>main</c> branch.
           </description>
         </image>
       </figure>
     </p>
+
     <p>
-      In class we saw that the maintainers had merged some changes into the upstream <c>main</c> after you had created your feature branch. The changes that were merged were specifically designed to conflict with the changes required for each of the Round2 issues. Thus, the pull request that you made at the end of the previous activity will now contain conflicts that prevent it from being merged automatically.  This situation is shown in <xref ref="fig-conflicting-upstream-changes" />, where the maintainers have merged the dark blue commit into the <c>main</c> branch.
-    </p>
-    <p>
-      The activities in the remainder of this section will have you confirm that you are out of synch with the upstream and that your pull request cannot be merged automatically.  It will then have you synch the <c>main</c> branch in your local and origin repos with the upstream, so that you can resolve the merge conflict.
+      The exercises in the remainder of this section will help you to synchronize your local and origin <c>main</c> branches with the upstream <c>main</c> branch.
     </p>
   </introduction>
 
-  <p>
-    Like the last activity, you will be working within the KitClient for this activity.
-  </p>
-
   <exercises>
   <title/>
-  
-  <exercise xml:id="ex-restarting-kitclient-for-synching-with-conflicts" label="ex-restarting-kitclient-for-synching-with-conflicts">
-    <introduction>
-      <p> 
-        Restart your KitClient based on the instructions in <xref ref="topic-restarting-dev-env" />
-      </p>
-    </introduction>
-  </exercise>
 
-  <exercise xml:id="ex-identifying-commits-that-conflict" label="ex-identifying-commits-that-conflict">
-    <introduction>
-      <p> 
-        Answer the following based on <xref ref="fig-conflicting-upstream-changes" />.
-      </p>
-    </introduction>
-
-    <task>
+    <exercise 
+      xml:id="ex-restarting-kitclient-for-synching-with-conflicts" label="ex-restarting-kitclient-for-synching-with-conflicts">
       <statement>
         <p>
-          Which of the commits (i.e. which colors) in <xref ref="fig-conflicting-upstream-changes" /> might contain merge conflicts after the dark blue commit was merged? 
+          To do the synchronization you'll need to have your development environment running.
         </p>
+        <p>
+          Click here to <url href="https://codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1" visual="codespaces.new/HFOSSedu/KitClient-Codespace?quickstart=1">open your development environment</url>.
+        </p>
+        <p>
+          Please be patient as this can take a few minutes.  When the development environment is ready you will see the message "Kit development environment is ready for use." and your browser window will look similar to the following:
+        </p>
+
+        <image source="images/shared-images/DevEnv-Kitty-Ready.png" width="75%">
+          <description>
+            The GitKit Development Environment.  The development environment is ready when you see the "Kit development environment is ready for use" message.
+          </description>
+        </image>
       </statement>
-    <choices>
-      <choice correct="yes">
-        <statement>
-          <p>
-            Dark Blue
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Lime Green
-          </p>
-        </statement>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            Brown
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            Green
-          </p>
-        </statement>
-      </choice>
-    </choices>
-
-    
-    <hint>
-      <p>
-        Look at which commits are new in upstream that are not part of the local repository's <c>main</c> or feature branch.
-      </p>
-    </hint>
-    </task>
-  </exercise>
-
-  <exercise xml:id="ex-num-commits-behind-upstream" label="ex-num-commits-behind-upstream">
-    <introduction>
-      <p>
-        Visit the main page for your <c>origin</c> repo on GitHub and make sure that the <c>main</c> branch is active.  You should be able to tell from this page that there have been changes to the upstream <c>main</c> branch that you have not yet synched (i.e. you are behind).
-      </p>
-      <p>
-        How many commits behind the upstream are you?
-      </p>
-    </introduction>
-    <response />
-  </exercise>
-
-  <exercise xml:id="ex-no-automatic-merge-on-github" label="ex-no-automatic-merge-on-github">
-    <introduction>
-      <p>
-        Now find your pull request in the <c>upstream</c> repo on GitHub.  You should see that your pull request cannot be merged automatically. 
-        <ul marker="">
-          <li>If GitHub indicates that your pull request can be merged automatically follow the instructions in <xref ref="topic-appendix-a-merge-conflicts"/> at the end of this activity sheet and then return to this question when you have a pull request that cannot be merged automatically.</li>
-          <li>Do not continue unless your pull request on GitHub shows that it cannot be merged automatically.</li>
-        </ul>
-      </p>
-    </introduction>
-    <task xml:id="ex-no-automatic-merge-on-github-a" label="ex-no-automatic-merge-on-github-a">    
-      <statement correct="yes">
-        <p>
-          Does your pull request on GitHub show that it cannot be merged automatically?
-        </p>
-      </statement>
-      <feedback>
-        <p>
-          If you don't have a merge conflict, you can't do the rest of the exercises in this section.
-        </p>
-      </feedback>
-    </task>
-    <task xml:id="ex-no-automatic-merge-on-github-b" label="ex-no-automatic-merge-on-github-b">    
-      <statement>
-        <p>
-          Briefly explain in a sentence or two of your own words, what happened that made your pull request go from being able to be merged automatically to now not being able to be merged automatically.
-        </p>
-      </statement>
-      <response />
-      <hint>
-        <p>
-          Think <xref ref="fig-conflicting-upstream-changes"/>!
-        </p>
-      </hint>
-    </task>
     </exercise>
 
-    <exercise xml:id="ex-synch-main-local-upstream" label="ex-synch-main-local-upstream">
-      <introduction>
-        <p>
-          Use what you learned in the prior chapter to synch the <c>main</c> branch of your local and <c>origin</c> repos with the upstream.  Don't forget to switch to your <c>main</c> branch first! 
-        </p>
-      </introduction>
-      <task xml:id="ex-synch-main-local-upstream-a" label="ex-synch-main-local-upstream-a">
+    <exercise 
+      xml:id="ex-synch-main-local-upstream" 
+      label="ex-synch-main-local-upstream">
+
+      <task
+        xml:id="ex-synch-main-local-upstream-cmds" 
+        label="ex-synch-main-local-upstream-cmds">
         <statement>
           <p>
-            What are the commands you used?
+            Assuming your feature branch is currently the active branch, arrange the the commands below into the order they would be used to synchronize your <c>main</c> branches with the upstream <c>main</c> branch. Note: Not all commands will be used.
           </p>
         </statement>
-        <response />
+        <blocks randomize="yes"> 
+          <block>
+            <p>
+              <cline>git switch main</cline>
+            </p>
+          </block> 
+          <block>
+            <p>
+              <cline>git pull upstream main</cline>
+            </p>
+          </block> 
+          <block>
+            <p>
+              <cline>git push origin main</cline>
+            </p>
+          </block> 
+          <block correct="no">
+            <p>
+              <cline>git pull origin main</cline>
+            </p>
+          </block> 
+          <block correct="no">
+            <p>
+              <cline>git push upstream main</cline>
+            </p>
+          </block> 
+        </blocks>
+        <hint>
+          <p>
+            Review <xref ref="topic-pulling-the-upstream-main-branch" /> and <xref ref="topic-pushing-main-to-your-origin" /> for how to synchronize with the upstream <c>main</c>.
+          </p>
+        </hint>
       </task>
-      <task xml:id="ex-synch-main-local-upstream-b" label="ex-synch-main-local-upstream-b">
+
+      <task
+        xml:id="ex-synch-main-local-upstream-do-it" 
+        label="ex-synch-main-local-upstream-do-it">
         <statement>
           <p>
-            Check that you are now synchronized:
-            <ul>
-              <li>
-                <p>
-                  Check that the <c>main</c> branch on your origin repo on GitHub "is up to date…" (See <xref ref="ex-num-commits-behind-upstream"/>).
-                </p>
-              </li>
-              <li>
-                <p>
-                  Use <c>git status</c> to check that the <c>main</c> branch in your local repo is up to date with your <c>origin</c>.
-                </p>
-              </li>
-            </ul>
-          </p>
-          <p>
-            If the <c>main</c> branch in your local or origin repos are not up to date, double check your synchronization commands in part <xref ref="ex-synch-main-local-upstream-a"/> and try again.
+            Run the commands that you identified in <xref ref="ex-synch-main-local-upstream-cmds" /> in the terminal.
           </p>
         </statement>
       </task>
-    </exercise>
 
+      <task 
+        xml:id="ex-confirm-origin-synch" 
+        label="ex-confirm-origin-synch">
+        <statement>
+          <p>
+            Let's, confirm that your origin <c>main</c> branch is now synchronized with the upstream <c>main</c> branch.
+          </p>
+          <p>
+            Visit your origin repository and ensure that the <c>main</c> branch is active.
+          </p>
+          <p>
+            Near the top of the page, you should see a message that is similar to one of the following. Select the message that is most similar to what you see.
+          </p>
+        </statement>
+        <choices>
+          <choice correct="yes">
+            <statement>
+              <p>
+                This branch is up to date with &lt;the upstream&gt;.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Excellent. Just as it should be.  Continue on to the next exercise.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                This branch xx commits behind &lt;the upstream&gt;. 
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Uh Oh. It doesn't look like your synchronization worked.  Try running the commands from <xref ref="ex-synch-main-local-upstream-cmds" /> again. 
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+    </exercise>
   </exercises>
 </section>
