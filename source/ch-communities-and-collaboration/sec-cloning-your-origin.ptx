@@ -409,40 +409,76 @@
 
 
 
-<subsection xml:id="topic-git remote">
+<subsection xml:id="topic-git-remote">
   <title><c>git remote</c></title>
 
-    <p>
-      In this section you will see that your clone keeps track of the location of your origin repository.
-      It does this using a piece of information called a <term>remote</term>, which Git uses to store the URLs of remote repositories in the cloud (e.g.
-      on GitHub).
-    </p>
+  <p>
+    In this section you will see that your clone keeps track of the location of your origin repository.
+    It does this using a piece of information called a <term>remote</term>, which Git uses to store the URLs of remote repositories in the cloud (e.g.
+    on GitHub).
+  </p>
 
+  <p>
+    The command <c>git remote</c> on its own will show you the <em>names</em> of the remotes that git knows about, but not their URLS.
+  </p>
+
+  <p>
+    If you want to have git display the URLs of the remotes as well, you will need to add the <c>-v</c> or <c>--verbose</c> flag: <c>git remote -v</c>
+  </p>
 
 <exercises>
   <title />
 <exercise xml:id="ex-check-remotes-a" label="ex-check-remotes-a">
     <statement>
       <p>
-        Use the following command to ask Git to display a list of the remote repositories (i.e.
-        those on GitHub) that it knows about:
+       Which command will show you the URL(s) of the remote(s) that git knows about?
       </p>
+      </statement>
+    <choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            <c>git remote -v</c>
+          </p>
+        </statement>
+      </choice>
 
-      <p>
-        <c>git remote -v</c>
-      </p>
+      <choice>
+        <statement>
+          <p>
+            <c>git remote</c>
+          </p>
+        </statement>
+      </choice>
 
+      <choice>
+        <statement>
+          <p>
+            <c>git remote -url</c>
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            <c>git url</c>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+
+    <hint>
       <p>
-        Copy and paste the output of the <c>git remote -v</c> command here.
+        You are asking <c>git remote</c> to give you more information.
       </p>
-    </statement>
-    <response />
+    </hint>
   </exercise>
 
     <exercise xml:id="ex-check-remotes-b" label="ex-check-remotes-b">
     <statement>
       <p>
-        Examine the output in <xref ref="ex-check-remotes-a" />.
+        Execute the command <c>git remote -v</c> in your terminal.
         How can you tell from that output that your clone knows about your origin?
       </p>
     </statement>
@@ -483,14 +519,16 @@
     </choices>
 
     <hint>
-      Look closely at the "origin" URLs.
+      <p>
+        Look closely at the "origin" URLs.
+      </p>
     </hint>
   </exercise>
 
   <exercise xml:id="ex-check-remotes-c" label="ex-check-remotes-c">
     <statement>
       <p>
-        How is the origin remote that you see in the output of the <xref ref="ex-check-remotes-a" /> command represented in <xref ref="fig-basic-workflow-clone" />?
+        How is the origin remote that you see in the output of the <xref ref="ex-check-remotes-b" /> command represented in <xref ref="fig-basic-workflow-clone" />?
       </p>
     </statement>
 
@@ -538,7 +576,9 @@
     </choices>
 
     <hint>
-      Which arrow would represent the clone knowing the location of the origin?
+      <p>
+        Which arrow would represent the clone knowing the location of the origin?
+      </p>
     </hint>
   </exercise>
 
@@ -593,7 +633,9 @@
     </choices>
 
     <hint>
-      Think about which step of the basic FOSS workflow will need to send information from the clone back to the origin.
+      <p>
+        Think about which step of the basic FOSS workflow will need to send information from the clone back to the origin.
+      </p>
     </hint>
   </exercise>
   </exercises>
