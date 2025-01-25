@@ -15,6 +15,7 @@
 
   <!-- include sections -->
   <xi:include href="sec-understanding-merge-conflicts.ptx" />
+  <xi:include href="sec-confirming-the-merge-conflict.ptx" />
   <xi:include href="sec-synchronizing-with-the-upstream-repository.ptx" />
   <xi:include href="sec-merging-the-main-branch-into-a-feature-branch.ptx" />
   <xi:include href="sec-resolving-a-merge-conflict.ptx" />
