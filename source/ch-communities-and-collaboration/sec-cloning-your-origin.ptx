@@ -644,6 +644,19 @@
 <subsection xml:id="topic-open-repo-folder">
   <title>Opening the GitKit-FarmData2 Repository Folder</title>
   
+  <p>
+  You cloned your GitKit-FarmData2 respitory into a folder in your development environment with the command in <xref ref="ex-clone-origin-linux-a" />.
+  </p>
+
+  <p>
+    But, you need to reopen your development environment in that folder to take advantage of all of the features that the KitClient provides for you.
+  </p>
+
+  <exercises>
+  <title />
+
+  <exercise>
+  </exercise>
   <exercise xml:id="ex-kit-tty-linux" label="ex-kit-tty-linux">
   <statement>
     <p>
@@ -658,6 +671,7 @@
     </p>
   </hint>
 </exercise>
+</exercises>
 
 <p>
   Be sure to keep your eyes open for messages from the Kit-tty as you work on the GitKit exercises.
