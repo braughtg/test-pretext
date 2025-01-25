@@ -655,16 +655,66 @@
   <exercises>
   <title />
 
-  <exercise>
+  <exercise xml:id="ex-open-repo-folder" label="ex-open-repo-folder">
+  <statement>
+    <p>
+      Open the GitKit-FarmData2 folder.
+    </p>
+    <p>
+      You can do this by going to the "hamburger" (&#8801;) menu in the upper left of your development environment window.
+    </p>
+    <p>
+      Choose <c>File > Open Folder...</c>
+    </p>
+    <p>
+      Select the <c>GitKit-FarmData2</c> folder and click <c>OK</c>.
+    </p>
+    <p>
+      You will see <c>Setting up your Codespace</c>, and then your terminal will show a message from the <term>Kit-tty</term>.
+    </p>
+  </statement>
   </exercise>
+
   <exercise xml:id="ex-kit-tty-linux" label="ex-kit-tty-linux">
   <statement>
     <p>
-      The the output in <xref ref="ex-clone-origin-linux-b" /> should contain a message from the <term>Kit-tty</term>.
+      The the output in <xref ref="ex-open-repo-folder" /> should contain a message from the <term>Kit-tty</term>.
       What is the <term>Kit-tty</term>?
     </p>
   </statement>
-  <response />
+    <choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            Your personal virtual assistant.
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            A terminal.
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            A teletypewriter.
+          </p>
+        </statement>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            A pet kitten.
+          </p>
+        </statement>
+      </choice>
+    </choices>
   <hint>
     <p>
       The "Kit-tty" introduces itself using the line "😺💻 Meow, Kit-tty here!" Read the description of the "Kit-tty" that follows this line.
