@@ -82,7 +82,12 @@
         </var>
       </setup>
       <hint>
-        Check the course materials from your instructor. It should provide the URL of the GitKit FarmData2 repository that was created for your course.
+        <p>
+          Check the course materials from your instructor. It should provide the URL of the GitKit FarmData2 repository that was created for your course.
+        </p>
+        <p>
+          The URL should include something that refers to your course name, not your GitHub username.
+        </p>
       </hint>
     </exercise>
 
@@ -123,7 +128,7 @@
         >
         <statement>
           <p>
-            Click the “Fork” button to create your own fork of the upstream repository. Be sure to pick the GitHub username you used in <xref ref="ex-github-account-url" /> in the "Choose an owner" box so that your fork will be created in your GitHub space.
+            Click the “Fork” button to create your own fork of the upstream repository. Be sure to pick the GitHub username that is at the end of the URL you used in <xref ref="ex-github-account-url" /> in the "Choose an owner" box so that your fork will be created in your GitHub space.
           </p>
         </statement>
       </task>
@@ -175,7 +180,9 @@
         </var>
       </setup>
       <hint>
-        The URL you give here should contain your GitHub username. Be sure you are looking the copy of the GitKit FarmData2 repository that is in your GitHub space.
+        <p>
+          The URL you give here should contain your GitHub username. Be sure you are looking the copy of the GitKit FarmData2 repository that is in your GitHub space.
+        </p>
       </hint>
     </exercise>
 
@@ -193,14 +200,38 @@
         xml:id="ex-upstream-ref-from-origin-a"
         label="ex-upstream-ref-from-origin-a"
         >
-        <statement>
+                <statement>
           <p>
-            Visit your origin repository on GitHub. There is some text and a link on that page that corresponds to the orange dashed arrow in <xref ref="fig-basic-workflow-fork" />.  Copy and paste that text and link here. 
+            Visit your origin repository on GitHub. There is a link on that page that corresponds to the orange dashed arrow in <xref ref="fig-basic-workflow-fork" />.  What appears before the link? 
           </p>
-        </statement>
-        <response />
+          </statement>
+          <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                forked from
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The Octokitty (GitHub) logo
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Fork your own copy of (in the Fork drop-down)
+              </p>
+            </statement>
+          </choice>
+        </choices>
         <hint>
-          This text and link will be near the repository name in the upper left corner of the window.
+          <p>
+            This text and link will be near the repository name in the upper left corner of the window.
+          </p>
         </hint>
       </task>
 
@@ -251,7 +282,9 @@
           </choice>
         </choices>
         <hint>
-          Think about which step of the basic FOSS workflow needs to send information back to the main project.
+          <p>
+            Think about which step of the basic FOSS workflow needs to send information back to the main project.
+          </p>
         </hint>
       </task>
 
@@ -261,12 +294,50 @@
         >
         <statement>
           <p>
-            Explain in a few sentences why your origin repository keeps track of the location of the upstream repository from which it was forked. 
+            Why does your origin repository keep track of the location of the upstream repository from which it was forked? 
           </p>
         </statement>
-        <response />
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                So that you can make a pull request back to the original project.
+              </p>
+            </statement>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                So that you can get back to the original project to access the issue tracker.
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                So that you can clone the project again.
+              </p>
+            </statement>
+          </choice>
+          <choice correct ="yes">
+            <statement>
+              <p>
+                So that you can pull changes provided by other contributors.
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                So that you can push changes back to the original project.
+              </p>
+            </statement>
+          </choice>
+        </choices>
         <hint>
-          Be sure to state which operation in the basic FOSS workflow uses this information and the function performed by that operation.
+          <p>
+            Think about which steps of the basic FOSS workflow need access back to the main project.
+          </p>
         </hint>
       </task>
     </exercise>
@@ -279,10 +350,47 @@
           When you forked the upstream repository, GitHub made a copy of that repository into your GitHub space.
         </p>
         <p>
-          Did it also make a copy of the issue tracker and its issues into your GitHub space?  What reasons can you think of for why the designers of GitHub decided that the issue tracker should not be copied into the fork?
+          But, it did not make a copy of the issue tracker and its issues into your GitHub space.
+        </p>
+        <p>
+          Why do you think the designers of GitHub decided that the issue tracker should not be copied into the fork?
         </p>
       </statement>
-      <response />
+       <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Because it would be hard for the maintainers of the original project to find issues entered in forks.
+              </p>
+            </statement>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                Because contributors would not know which issue tracker to enter new issues into.
+              </p>
+            </statement>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                Because it would be hard to keep issue descriptions and discussions up-to-date across multiple issue trackers.
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Because only the maintainers of the original project should be allowed to add new issues.
+              </p>
+            </statement>
+          </choice>
+        </choices>
+      <hint>
+          <p>
+            Why would it be confusing to have multiple issue trackers for a project?
+          </p>
+        </hint>
     </exercise>
   </exercises>
 </section>

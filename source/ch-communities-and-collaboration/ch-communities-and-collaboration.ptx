@@ -19,7 +19,7 @@
   <!-- include sections -->
   <xi:include href="sec-gitkit-pre-survey.ptx" />
   <xi:include href="sec-foss-communities.ptx" />
-  <xi:include href="sec-github-account.ptx" />
+  <xi:include href="sec-github-set-up.ptx" />
   <xi:include href="sec-the-issue-tracker.ptx" />
   <xi:include href="sec-basic-foss-workflow.ptx" />
   <xi:include href="sec-forking-the-upstream.ptx" />

@@ -31,12 +31,14 @@
   <exercise xml:id="ex-list-branches" label="ex-list-branches">
     <statement>
       <p>
-        The <c>git branch -l</c> (lower case L, not one) command lists all of the branches that exist in your local repository.
+        The <c>git branch</c> command lists all of the branches that exist in your local repository.
       </p>
+
       <p>
         How many branches are in your local repository?
       </p>
     </statement>
+
 
     <choices>
       <choice>
@@ -45,6 +47,7 @@
             1 - <c>main</c>
           </p>
         </statement>
+
         <feedback>
           <p>
             Look again, you should see more than just the <c>main</c> branch.
@@ -55,12 +58,13 @@
       <choice>
         <statement>
           <p>
-            1 - <c>feature branch</c>
+            1 - <em>feature branch</em> that you created in <xref ref="ex-creating-a-branch-b"/>
           </p>
         </statement>
+
         <feedback>
           <p>
-            Look again, you should see more than just the <c>feature</c> branch.
+            Look again, you should see more than just the <em>feature branch</em>.
           </p>
         </feedback>
       </choice>
@@ -68,12 +72,13 @@
       <choice correct="yes">
         <statement>
           <p>
-            2 - <c>main</c> and <c>feature branch</c>
+            2 - <c>main</c> and <em>feature branch</em> that you created in <xref ref="ex-creating-a-branch-b"/>
           </p>
         </statement>
+
         <feedback>
           <p>
-            Correct! Your local repository will have both the <c>main</c> branch and your <c>feature</c> branch.
+            Correct! Your local repository will have both the <c>main</c> branch and your <em>feature branch</em>.
           </p>
         </feedback>
       </choice>
@@ -84,9 +89,10 @@
             3 or more with differing branch names
           </p>
         </statement>
+
         <feedback>
           <p>
-            If you have more than 2 branches perhaps you created a feature branch multiple times by accident.
+            If you have more than 2 branches perhaps you created a <em>feature branch</em> multiple times by accident.
           </p>
         </feedback>
       </choice>
@@ -114,6 +120,7 @@
         </p>
       </statement>
 
+
       <choices>
         <choice correct="yes">
           <statement>
@@ -121,56 +128,62 @@
               1 - <c>main</c>
             </p>
           </statement>
+
           <feedback>
             <p>
               Correct! There is only 1 branch, <c>main</c> in your origin repository on GitHub.
             </p>
           </feedback>
         </choice>
-  
+
         <choice>
           <statement>
             <p>
-              1 - <c>feature branch</c>
+              1 - <em>feature branch</em> that you created in <xref ref="ex-creating-a-branch-b"/>
             </p>
           </statement>
+
           <feedback>
             <p>
-              Look again, your <c>feature</c> branch should not be listed in GitHub as it is only in your local repository.
+              Look again, your <em>feature branch</em> should not be listed in GitHub as it is only in your local repository.
             </p>
           </feedback>
         </choice>
-  
+
         <choice>
           <statement>
             <p>
-              2 - <c>main</c> and <c>feature branch</c>
+              2 - <c>main</c> and <em>feature branch</em> that you created in <xref ref="ex-creating-a-branch-b"/>
             </p>
           </statement>
+
           <feedback>
             <p>
-              Look again, your <c>feature</c> branch should not be listed in GitHub as it is only in your local repository.
+              Look again, your <em>feature branch</em> should not be listed in GitHub as it is only in your local repository.
             </p>
           </feedback>
         </choice>
-  
+
         <choice>
           <statement>
             <p>
               3 or more with differing branch names
             </p>
           </statement>
+
           <feedback>
             <p>
-              Perhaps you aren't in your origin repository. Make sure you see your GitHub userid in the upper left hand corner of your GitHub tab.
+              Perhaps you aren't in your origin repository.
+              Make sure you see your GitHub userid in the upper left hand corner of your GitHub tab.
             </p>
           </feedback>
         </choice>
       </choices>
-  
+
       <hint>
         <p>
-          Make sure you are in your origin repository, not the upstream repository. Refer to <xref ref="fig-pushing-feature-branch"/> and look at the origin to see what branches should appear on GitHub.
+          Make sure you are in your origin repository, not the upstream repository.
+          Refer to <xref ref="fig-pushing-feature-branch"/> and look at the origin to see what branches appear on GitHub.
         </p>
       </hint>
     </task>
@@ -182,27 +195,95 @@
           Why is there a difference between the branches in your origin repository and your local repository?
         </p>
       </statement>
-      <response />
+
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              You created a branch in your local repository but it does not appear in the origin repository yet.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              You created a branch in the origin repository but it does not appear in your local repository.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Your branch is in your local repository, not the origin repository.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Someone else created a branch in the origin repository.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Branches are created in the local repository.
+              It is possible that someone else created a branch in their local repository and pushed it to their origin.
+              You have a different origin repository so you would not see it.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              Someone else created a branch in their local repository and it appears in the origin repository.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              It is possible that someone else created a branch in their local repository and pushed it to their origin.
+              You have a different origin repository so you would not see it.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+
+      <hint>
+        <p>
+          All the work you have done in this chapter is on your local machine.
+          What should be appearing in your local repository that is not in the origin repository?
+        </p>
+      </hint>
     </task>
   </exercise>
-
-  <p component="linux-kit-client">
+  <!--
+  <p>
     <term>Getting a Personal Access Token: </term>
   </p>
 
-  <p component="linux-kit-client">
-    Before you will be able to push your feature branch to GitHub you will have to get a <term>Personal Access Token (PAT)</term> from GitHub.
+  <p>
+    Before you will be able to push your <em>feature branch</em> to GitHub you will have to get a <term>Personal Access Token (PAT)</term> from GitHub.
     A PAT is like a password but has some security benefits.
     In particular, you can have multiple different PATs.
     Each one can have different limits on what can be done with it and each one can be revoked individually without affecting the others.
   </p>
 
-  <p component="linux-kit-client">
+  <p>
     When interacting with GitHub using the git CLI (e.g.
     when pushing a branch), GitHub requires that you use a PAT for authentication instead of your password.
   </p>
 
-  <exercise xml:id="ex-getting-pat" label="ex-getting-pat" component="linux-kit-client">
+  <exercise xml:id="ex-getting-pat-remove" label="ex-getting-pat-remove">
     <introduction>
       <p>
         Follow GitHub's instructions for creating a (classic) personal access token: <url href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic" visual="docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic">Creating a Personal Access Token (classic)</url>.
@@ -235,15 +316,15 @@
       </p>
     </introduction>
   </exercise>
-
+  -->
   <p>
     <term>Pushing your Feature Branch: </term>
   </p>
 
-  <exercise xml:id="ex-push-branch-linux" label="ex-push-branch-linux" component="linux-kit-client">
-    <introduction>
+  <exercise xml:id="ex-push-branch-linux" label="ex-push-branch-linux">
+    <statement>
       <p>
-        The <c>git push &lt;remote repository name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repository to the specified remote repository (i.e.
+        The <c>git push &lt;remote&gt; &lt;branch&gt;</c> command will push the specified branch of your local repository to the specified remote repository (i.e.
         on GitHub).
       </p>
 
@@ -252,59 +333,170 @@
       </p>
 
       <p>
-        Note: You can use the name of the remote repository, so you do not need to use the full URL.
-        You will also need to paste your PAT as the password when it is requested. <em>The cursor will not move when you put in the PAT nor will you see any characters. After you type or paste it hit Enter</em>
+        You have given your remote repository the name <c>origin</c> which you can use instead of the full URL.
+        For example, <c>git push origin &lt;branch&gt;</c> and the name of your branch where you committed your change.
+        Type the command now.
       </p>
-    </introduction>
-  </exercise>
 
-  <exercise xml:id="ex-push-error-linux" label="ex-push-error-linux" component="linux-kit-client">
-    <introduction>
       <p>
-        The output from <xref ref="ex-push-branch-linux"/> should not contain any error messages.
+        The output should not contain any error messages.
+        If you see error messages, make sure you spelled your branch name corrected and your command is in the proper format and does not include &lt; &gt;.
         The last few lines should also give you some indication that that your push was successful.
+        Look at the last two lines of output produced.
+      </p>
+      <!--
+      <p>
+        Note: You can use the name of the remote repository, so you do not need to use the full URL.
+        You will also need to paste your PAT as the password when it is requested.
+        <em>The cursor will not move when you put in the PAT nor will you see any characters.
+        After you type or paste it hit Enter</em>
+      </p>
+      -->
+    </statement>
+
+
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>
+            The second to last line is the URL of the origin repository.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Correct!
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            The last line provides the name of the branch in the local repository that was <em>pushed</em> to the origin repository.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Correct!
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            The second to last line is the URL of your local repository.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Your local repository does not have a URL, it is on your local machine.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            The last line provides the URL of the branch in the local repository that was <em>pushed</em> to the origin repository.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            This shows the name of the branch, not a URL.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    <hint>
+      <p>
+        There are several lines of output that mention deltas.
+        Ignore these.
+        Make sure you are looking at the last two lines which begin with <em>To</em> and a hexademical code.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-push-error-linux" label="ex-push-error-linux">
+    <statement>
+      <p>
         Visit your origin repository on GitHub and check that the branch was pushed.
+        You may have to reload the page.
       </p>
-    </introduction>
-  </exercise>
-
-  <exercise xml:id="ex-push-branch-vscode" label="ex-push-branch-vscode" component="vscode-kit-client">
-    <introduction>
       <p>
-        The <c>git push &lt;remote repo name&gt; &lt;branch&gt;</c> command will push the specified branch of your local repo to the specified remote repo (i.e.
-        on GitHub).
+        How can you tell your branch was pushed?
       </p>
+    </statement>
 
-      <p>
-        Use a command that will push your <em>feature branch</em> from your local repo to your <em>origin repo</em> on GitHub.
-      </p>
 
-      <p>
-        Note: You can use the name of the remote repo, so you do not need to use the full URL.
-      </p>
-    </introduction>
-  </exercise>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>
+            The number next to the <em>Branches</em> link is now 2.
+          </p>
+        </statement>
 
-  <exercise xml:id="ex-push-error-vscode" label="ex-push-error-vscode" component="vscode-kit-client">
-    <introduction>
-      <p>
-        When you attempted to push in <xref ref="ex-push-branch-vscode"/>, you should have gotten an authorization error.
-        When this happens VSCode will prompt you in the lower right to open GitPod and configure the authorization.
-        Do that.
-        When done, return to your GitPod workspace and try the push again.
-        It should work.
-      </p>
+        <feedback>
+          <p>
+            Correct! The number of branches should have increased.
+          </p>
+        </feedback>
+      </choice>
 
+      <choice correct="yes">
+        <statement>
+          <p>
+            When I click on <em>Branches</em> my branch is now listed in addition to <c>main</c>.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Correct! You should be able to see both branches on this page.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            The number of issues has increased.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Pushing a branch will not create an issues.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>
+            The number of pull requests has increased.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            Pushing a branch will not create a pull request.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+
+    <hint>
       <p>
-        If you get the same pop up, open it again.
-        Look for the GitHub authorization.
-        Click the "..." menu next to it and edit it.
-        Ensure that "repo" with read/write permissions are set and save it.
-        It will send you to GitHub to complete the authorization.
-        When done, return to your GitPod workspace and try the push again.
-        It should work.
+        There are multiple ways you can tell that your branch has been pushed by looking at the <em>origin repository</em> on GitHub.
       </p>
-    </introduction>
+    </hint>
   </exercise>
   </exercises>
 </section>

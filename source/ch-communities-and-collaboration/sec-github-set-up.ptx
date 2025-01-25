@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="topic-github-set-up" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>GitHub Set Up</title>
+
+  <introduction>
+    <p>
+      You will be using GitHub in many of the exercises in this text.
+      In order to use GitHub it is necessary that you have an account and a Personal Access Token.
+      You will also configure your GitHub Codespaces to help conserve your free useage time.
+    </p>
+  </introduction>
+
+
+<subsection xml:id="topic-github-account">
+    <title>GitHub Account</title>
+
+    <exercises><title />
+    <exercise xml:id="ex-create-github-account" label="ex-create-github-account">
+      <statement>
+        <p>
+          If you do not have a GitHub account, or would like to have a separate account just for this course, you can create a GitHub account here:  <url href="https://github.com/signup" visual="github.com/signup">https://github.com/signup</url>.
+        </p>
+
+        <p>
+          When you have a GitHub account to use for this class, move on to the next exercise.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-github-account-url" label="ex-github-account-url">
+      <statement>
+        <p>
+          Give the full URL to your GitHub profile, for example <c>https://github.com/yourUsername</c>
+        </p>
+
+        <p>
+          <var width="45" />
+        </p>
+      </statement>
+      <setup> <var> <condition string="^https://github.com/.+">
+      <feedback>
+        <p>
+          Thank you.
+        </p>
+      </feedback>
+      </condition> <condition string=".*">
+
+      <feedback>
+        <p>
+          Please give the full URL using the format indicated in the question.
+        </p>
+      </feedback>
+      </condition> </var> </setup>
+    </exercise>
+    </exercises>
+  </subsection>
+
+  <subsection xml:id="topic-github-pat">
+    <title>GitHub Personal Access Token</title>
+    <p>
+    When starting your development environment for the first time (in <xref ref="topic-development-environment"/>) you will be asked to enter a <term>Personal Access Token (PAT)</term> from GitHub.
+    </p>
+    <p>
+    A PAT is like a password but has some security benefits.
+    In particular, you can have multiple different PATs.
+    Each one can have different limits on what can be done with it and each one can be revoked individually without affecting the others.
+  </p>
+
+<exercises><title />
+  <exercise xml:id="ex-getting-pat" label="ex-getting-pat">
+    <introduction>
+      <p>
+        Follow GitHub's instructions for creating a (classic) personal access token: <url href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic" visual="docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic">Creating a Personal Access Token (classic)</url>.
+      </p>
+
+      <p>
+        When doing so be sure to:
+        <ul>
+          <li>
+            <p>
+              Choose “repo” for the “scopes and permissions.”
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Be sure to copy and paste your PAT somewhere safe – maybe e-mail it to yourself.
+              You will not be able to retrieve it again after you leave the page.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+    </introduction>
+  </exercise>
+
+  <exercise xml:id="ex-github-pat" label="ex-github-pat">
+  <statement>
+    <p>
+      What are the first 4 characters of your GitHub PAT?
+    </p>
+  </statement>
+  <choices randomize="yes">
+  <choice>
+  <statement>
+    <p>
+      gpat
+    </p>
+  </statement>
+  <feedback>
+    <p>
+    </p>
+  </feedback>
+  </choice>
+  <choice correct="yes">
+  <statement>
+    <p>
+      ghp_
+    </p>
+  </statement>
+  <feedback>
+    <p>
+      All GitHub PATs begin with ghp_
+    </p>
+  </feedback>
+  </choice>
+  <choice>
+  <statement>
+    <p>
+      PAT_
+    </p>
+  </statement>
+  <feedback>
+    <p>
+      
+    </p>
+  </feedback>
+  </choice>
+  </choices>
+</exercise>
+</exercises>
+
+  </subsection>
+<subsection>
+    <title>Setting the GitHub Codespaces Timeout</title>
+    <introduction>
+      <p>
+        The GitKit development environment runs in GitHub Codespaces.  GitHub provides you with approximately 60 hours per month of free Codespaces use. By default the GitKit development environment will timeout after 30 minutes of inactivity. It is recommended that you reduce this timeout to 15 minutes to avoid accidentally consuming your allotted free useage.
+      </p>
+    </introduction>
+    <exercises>
+      <title />
+      <exercise
+        xml:id="ex-codespace-timeout-setting"
+        label="ex-codespace-timeout-setting">
+        <introduction>
+          <p>
+            Use the following steps to adjust the timeout for your Codespaces, including the GitKit developent environment.
+          </p>
+        </introduction>
+        <task 
+          xml:id="ex-open-codespace-settings"
+          label="ex-open-codespace-settings">
+          <statement>
+            <p>
+              Open your GitHub Codespaces settings by visiting <url href="https://github.com/settings/codespaces" />.
+            </p>
+          </statement>
+        </task>
+        <task 
+          xml:id="ex-adjust-codespace-timeout"
+          label="ex-adjust-codespace-timeout">
+          <statement>
+            <p>
+              Scroll down to the section labeled "Default idle timeout", adjust the timeout to 15 minutes, and click "Save".
+            </p>
+          </statement>
+        </task>
+      </exercise>
+    </exercises>
+  </subsection>
+
+</section>
