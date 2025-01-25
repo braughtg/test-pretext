@@ -87,8 +87,7 @@
           The questions in this exercise will help you to better understand what this information means.
         </p>
       </introduction>
-
-
+      <!--
       <task xml:id="ex-pull-request-b-i" label="ex-pull-request-b-i">
         <introduction>
           <p>
@@ -116,14 +115,13 @@
           <response />
         </task>
       </task>
-
-
+      -->
       <task xml:id="ex-pull-request-b-ii" label="ex-pull-request-b-ii">
         <statement>
           <p>
-            The terms “Base Repository” and “Head Repository” in <xref ref="ex-pull-request-b-i"/> are generic labels that GitHub uses for the two repositories that are involved in the pull request.
+            The terms “Base Repository” and “Head Repository” in are generic labels that GitHub uses for the two repositories that are involved in the pull request.
             Often, and in our case, these two repositories will be your origin repository and the project's upstream repository.
-            Examine the URL's from <xref ref="ex-pull-request-b-i"/> and match the right hand column with either head repository or base repository to indicate which term refers to your origin and which refers to the upstream.
+            Match the right hand column with either head repository or base repository to indicate which term refers to your origin and which refers to the upstream.
           </p>
         </statement>
         <matches> <match>
@@ -148,7 +146,7 @@
             Match the right hand column with either base branch or compare branch to indicate which is “pulled from” or “merged into”.
           </p>
         </statement>
-        <!-- part of this original question has been omitted regarding the names of the branches --> <matches> <match>
+        <matches> <match>
         <premise>
         <c>base branch</c></premise> <response>merged into</response> </match> <match>
         <premise>
@@ -209,7 +207,7 @@
         </p>
 
         <p>
-          The #123 part of the line should automatically become a link to the ticket.
+          The #123 part of the line should automatically become a link to the issue.
           If it does not, check to be sure you have entered the information exactly as shown above.
         </p>
       </statement>
@@ -219,7 +217,7 @@
     <task xml:id="ex-pull-request-finish-d" label="ex-pull-request-finish-d">
       <statement>
         <p>
-          Check that status of your PR and confirm that it can be merged automatically.
+          Check the status of your PR and confirm that it can be merged automatically.
           The status will be listed at the top of the GitHub page below the image from <xref ref="ex-pull-request-b"/>
         </p>
       </statement>
@@ -264,12 +262,34 @@
       <p>
         <var width="55" />
       </p>
-      <!-- THIS NEEDS TO BE UPDATED WITH FEEDBACK AND A REGULAR EXPRESSION TO MAKE SURE THE STUDENT IS IN THE UPSTREAM REPOSITORY -->
     </statement>
+    <setup> <var> <condition string='^https://github.com/(?!(FarmData2/FarmData2|DickinsonCollege/FarmData2).)/pulls[0-9]+$'> <!-- THE REGEX BELOW IS FOR A PULL REQUEST BUT IT NEEDS TO BE IN THE UPSTREAM REPO - NOT SURE IF THE ABOVE WORKS PROPERLY ^https://github.com/.+/pulls/[0-9]+$ -->
+    <feedback>
+      <p>
+        Thank you.
+      </p>
+    </feedback>
+    </condition> <condition string=".*">
+
+    <feedback>
+      <p>
+        The upstream repository is the repository you forked from.
+        Double check that you aren't in your origin repository.
+      </p>
+    </feedback>
+    </condition> </var> </setup>
+
+    <hint>
+      <p>
+        In GitHub look at the top left side of the browser window.
+        If it says "forked from" with a link it means you are in your fork instead of the upstream repository.
+        Click that link to go to the upstream repository.
+      </p>
+    </hint>
   </exercise>
 
   <exercise xml:id="ex-pull-request-files" label="ex-pull-request-files">
-    <introduction>
+    <statement>
       <p>
         On your pull request page there will be “Files Changed” tab:
       </p>
@@ -289,13 +309,11 @@
         It also indicates the changes you have made.
         The project maintainers will often use this diff to see the details of what you have changed.
       </p>
-    </introduction>
-
-
-    <task xml:id="ex-pull-request-files-a" label="ex-pull-request-files-a">
-      <statement>
+      <!--
+      <task xml:id="ex-pull-request-files-a" label="ex-pull-request-files-a">
+        -->
         <p>
-          Briefly describe how the diff indicates the changes that you made.
+          Which of the following describes how the diff indicates the changes that you made?
         </p>
       </statement>
 
@@ -309,6 +327,12 @@
               The change(s) appear in both in bold.
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              Correct! You can see the changes by comparing the red and green lines.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
@@ -317,6 +341,12 @@
               The line(s) which contains the change(s) appears once in red.
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              The red only shows what is being deleted.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
@@ -325,6 +355,12 @@
               The line(s) which contains the change(s) appears once in green.
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              The green only shows what is being inserted.
+            </p>
+          </feedback>
         </choice>
 
         <choice>
@@ -333,9 +369,21 @@
               Only the changed word(s) appear with the old in strike through and the new next to it.
             </p>
           </statement>
+
+          <feedback>
+            <p>
+              GitHub doesn't use strike through to indicate changes.
+            </p>
+          </feedback>
         </choice>
       </choices>
-    </task>
-  </exercise>
-  </exercises>
-</section>
+
+      <hint>
+        <p>
+          The diff command will color code the changes.
+          Lines that are changed will show both the original line and the updated line.
+        </p>
+      </hint>
+    </exercise>
+    </exercises>
+  </section>
