@@ -229,7 +229,7 @@
           </p>
         </statement>
         <choices>
-          <choice correct="yes">
+          <choice>
             <statement>
               <image source="images/ch-merge-conflicts/github-pr-no-conflict.png" width="90%">
                 <description>
@@ -241,26 +241,26 @@
             </statement>
             <feedback>
               <p>
-                Excellent.  Everything is as it should be.  Please continue to the next exercise.
+                <term>IMPORTANT:</term> You should be seeing that your pull request cannot be merged automatically. <term>Follow the instructions in <xref ref="topic-appendix-a-merge-conflicts"/> to fix this problem.</term>
+              </p>
+              <p>
+                When your pull request cannot be merged automatically, return to this question and continue. See your instructor if you cannot resolve this problem.
               </p>
             </feedback>
           </choice>
-          <choice>
+          <choice correct="yes">
             <statement>
                 <image source="images/ch-merge-conflicts/github-pr-conflict.png" width="90%">
                 <description>
                   <p>
-                    GitHub message indicating that merging cannot be performed automatically.
+                    GitHub message indicating that there are merge conflicts that must be resolved.
                   </p>
                 </description>
               </image>
             </statement>
             <feedback>
               <p>
-                <term>IMPORTANT:</term> You should be seeing that your pull request cannot be merged automatically. <term>Follow the instructions in <xref ref="topic-appendix-a-merge-conflicts"/> to fix this problem.</term>
-              </p>
-              <p>
-                When your pull request cannot be merged automatically, return to this question and continue. See your instructor if you cannot resolve this problem.
+                Excellent.  Everything is as it should be.  Please continue to the next exercise.
               </p>
             </feedback>
           </choice>
