@@ -298,7 +298,7 @@
               </statement>
               <feedback>
                 <p>
-                  Uh Oh! Something went wrong. Let's fix it.
+                  Uh Oh! Something went wrong. Let's try to fix it.
                   <ol marker="1">
                     <li>Press <c>Ctrl-x</c> to exit the nano editor.</li>
                     <li>Run the command <c>git revert --hard HEAD~1</c></li>

@@ -264,6 +264,18 @@
               </p>
             </feedback>
           </choice>
+          <choice>
+            <statement>
+              <p>
+                I don't see either of the other messages.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                If you see a message about GitHub checking if the merge can be performed automatically, wait a few moments for one of the other messages to appear.
+              </p>
+            </feedback>
+          </choice>
         </choices>
       </task>
     </exercise>
