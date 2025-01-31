@@ -10,14 +10,20 @@
       But there was no orange dotted line from your local repository to the upstream.
       That is because, by default, your local repository isn’t aware of the upstream.
     </p>
+
+    <p>
+      Like the last activity, you will be working within the development environment for this activity.
+    </p>
   </introduction>
 
-  <p>
-    Like the last activity, you will be working within the development environment for this activity.
-  </p>
 
   <subsection xml:id="subsec-restarting-dev_environment">
     <title>Restarting the Development Environment</title>
+
+    <introduction>
+      <p>
+      </p>
+    </introduction>
 
     <exercises>
     <title />
@@ -40,16 +46,16 @@
 <subsection xml:id="subsec-setting-upstream-1a">
   <title>Understanding Upstream</title>
 
-  <exercises>
-  <title/>
-  <statement>
+  <introduction>
     <p>
       In order to pull from the upstream you will first need to make your local repository aware of the upstream.
       This is done by setting a remote for it.
       This exercise will walk you through that process.
     </p>
-  </statement>
+  </introduction>
 
+  <exercises>
+  <title/>
   <exercise xml:id="ex-setting-upstream-1" label="ex-setting-upstream-1">
     <statement>
       <p>
@@ -180,17 +186,17 @@
 <subsection xml:id="subsec-setting-upstream-1b">
   <title>Finding Upstream</title>
 
-  <exercises>
-  <title/>
-  <statement>
+  <introduction>
     <p>
       To create a new remote that tells your local repo about the upstream you will need the URL of the upstream repo.
       Use your browser to navigate to the <em>upstream FarmData2 repo</em> that you are using for this course.
       Hint: You can find the <c>upstream</c> using the link from your origin repo in GitHub.
       Once you find the upstream, you can get the URL by using the “Code” button in the upstream repo, it ends in <c>.git</c>.
     </p>
-  </statement>
+  </introduction>
 
+  <exercises>
+  <title/>
   <exercise xml:id="ex-setting-upstream-c-linux" label="ex-setting-upstream-c-linux">
     <statement>
       <p>
@@ -223,11 +229,11 @@
 <subsection xml:id="subsec-setting-upstream-2">
   <title>Setting your Upstream Remote</title>
 
-  <statement>
+  <introduction>
     <p>
       The <c>git remote</c> command can also be used to add a new remote to your local repo.
     </p>
-  </statement>
+  </introduction>
 
   <exercises>
   <title/>
