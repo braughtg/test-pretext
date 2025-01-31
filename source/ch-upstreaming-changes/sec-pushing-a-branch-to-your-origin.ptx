@@ -329,10 +329,7 @@
       </p>
 
       <p>
-        Use a command that will push your <em>feature branch</em> from your local repository to your <em>origin repository</em> on GitHub.
-      </p>
-
-      <p>
+        You will need to push your <em>feature branch</em> from your local repository to your <em>origin repository</em> on GitHub.
         You have given your remote repository the name <c>origin</c> which you can use instead of the full URL.
         For example, <c>git push origin &lt;branch&gt;</c> and the name of your branch where you committed your change.
         Type the command now.
@@ -340,8 +337,8 @@
 
       <p>
         The output should not contain any error messages.
-        If you see error messages, make sure you spelled your branch name corrected and your command is in the proper format and does not include &lt; &gt;.
-        The last few lines should also give you some indication that that your push was successful.
+        If you see error messages, make sure you spelled your branch name correctly and your command is in the proper format and does not include &lt; &gt;.
+        The last few lines should also give you some indication that your push was successful.
         Look at the last two lines of output produced.
       </p>
       <!--
