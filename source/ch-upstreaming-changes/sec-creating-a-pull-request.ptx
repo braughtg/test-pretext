@@ -119,7 +119,7 @@
       <task xml:id="ex-pull-request-b-ii" label="ex-pull-request-b-ii">
         <statement>
           <p>
-            The terms “Base Repository” and “Head Repository” in are generic labels that GitHub uses for the two repositories that are involved in the pull request.
+            The terms “Base Repository” and “Head Repository” are generic labels that GitHub uses for the two repositories that are involved in the pull request.
             Often, and in our case, these two repositories will be your origin repository and the project's upstream repository.
             Match the right hand column with either head repository or base repository to indicate which term refers to your origin and which refers to the upstream.
           </p>
