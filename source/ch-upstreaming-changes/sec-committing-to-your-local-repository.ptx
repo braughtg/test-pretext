@@ -127,7 +127,6 @@
     <feedback>
       <p>
         Double check the format of your command.
-        You need to include " " around the text of the message and include the -m.
       </p>
     </feedback>
     </condition> </var> </setup>
