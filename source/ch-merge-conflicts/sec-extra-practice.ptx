@@ -115,68 +115,268 @@
       </hint>
     </exercise>
 
+    <p>
+      At this point you should think of the <c>merge-conflict-practice</c> branch as a feature branch that you created from your <c>main</c> and then made some changes that resulted in conflicts with the upstream <c>main</c> branch. Thinking of the <c>merge-conflict-practice</c> branch this way leaves you at the point where you are trying to merge the modified upstream <c>main</c> into your feature branch as you did in <xref ref="topic-git-merge-command" />).
+    </p>
+
     <exercise xml:id="ex-extra-practice-merging-active-branch" label="ex-extra-practice-merging-active-branch">
       <statement>
         <p>
-          At this point you should think of the <c>merge-conflict-practice</c> branch as a feature branch that you created from your <c>main</c> and then made some changes that resulted in conflicts with the upstream <c>main</c> branch. Thinking of the <c>merge-conflict-practice</c> branch this way leaves you at the point where you are trying to merge the modified upstream <c>main</c> into your feature branch as you did in <xref ref="topic-git-merge-command" />).
-        </p>
-        <p>
-          PARSON PROBLEM!!!
+          Assuming that your <c>main</c> branch is active, select and order statements that will make the <c>merge-conflict-practice</c> branch active and then merge the <c>main</c> branch into it. Note: not all commands will be used.
         </p>
       </statement>
-
-
-
-    </exercise>
-git s
-    <exercise xml:id="ex-extra-practice-merging-resolve-conflicts" label="ex-extra-practice-merging-resolve-conflicts">
-      <statement>
+      <blocks randomize="yes"> 
+        <block>
+          <p>
+            <cline>git switch merge-conflict-practice</cline>
+          </p>
+        </block> 
+        <block>
+          <p>
+            <cline>git merge main</cline>
+          </p>
+        </block> 
+        <block correct="no">
+          <p>
+            <cline>git merge merge-conflict-practice</cline>
+          </p>
+        </block> 
+        <block correct="no">
+          <p>
+            <cline>git switch main</cline>
+          </p>
+        </block> 
+      </blocks>
+      <hint>
         <p>
-          The <c>merge-conflict-practice</c> branch contains a few conflicts so the merge you attempted in <xref ref="ex-extra-practice-merging-active-branch" /> should fail.  Resolve the conflicts by accepting the changes from the <c>merge-conflict-practice</c> branch.
+          Review <xref ref="topic-git-merge-command" /> for how to merge <c>main</c> into a feature branch.
         </p>
-      </statement>
-      <choices>
-        <choice correct="yes">
-          <statement>
-            <p>
-              I have resolved the conflicts
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              I have not resolved the conflicts
-            </p>
-          </statement>
-          <feedback>
-            <p>
-              Do not make continue until you resolve the conflicts.
-            </p>
-          </feedback>    
-        </choice>
-      </choices>
+      </hint>
     </exercise>
 
-    <exercise xml:id="ex-extra-practice-merging-save-commit" label="ex-extra-practice-merging-save-commit">
-      <statement>
+    <exercise
+      xml:id=""
+      label="">
+      <introduction>
         <p>
-          Save your changes and commit them to resolve the conflicts to your feature branch.  Be sure to use a meaningful commit message.  Give the commands that you used and their output here.
+          Merging the <c>main</c> branch into the <c>merge-conflicit-practice</c> branch will create some conflicts for you to resolve.
         </p>
-      </statement>
-      <response />
+      </introduction>
+      <task 
+        xml:id="ex-extra-practice-merge-conflicts-file"
+        label="ex-extra-practice-merge-conflicts-file">
+        <statement>
+          <p>
+            Execute the commands you selected in <xref ref="ex-extra-practice-merging-active-branch" /> to perform the merge.
+          </p>
+          <p>
+            In which file were the merge conflicts created?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <c>README.md</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>ONBOARDING.md</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Check the hint.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>INSTALL.md</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Check the hint.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>LICENSE.md</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Check the hint.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <c>CONTRIBUTING.md</c>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Check the hint.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            The file containing the conflicts should have opened in the editor automatically when you performed the <c>git merge</c> operation.
+          </p>
+        </hint>
+      </task>
+
+      <task 
+        xml:id="ex-extra-practice-num-merge-conflicts"
+        label="ex-extra-practice-num-merge-conflicts">
+        <statement>
+          <p>
+            How many merge conflicts were created?
+          </p>
+        </statement>
+        <choices randomize="no">
+          <choice correct="yes">
+            <statement>
+              <p>
+                1
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                2
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Check the hint.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                3
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Check the hint.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                More than 3.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Check the hint.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Examine the <c>README.md</c> file that opened when you performed the merge operation. Look for places where raw merge conflict information appears.
+          </p>
+        </hint>
+      </task>
     </exercise>
 
-    <exercise xml:id="ex-extra-practice-merging-push-pr" label="ex-extra-practice-merging-push-pr">
+    <exercise xml:id="ex-extra-practice-resolving-conflicts" label="ex-extra-practice-resolving-conflicts">
       <statement>
         <p>
-          Push the <c>merge-conflict-practice</c> branch to your <c>origin</c> and create a pull request to the upstream. Give a link to your pull request.
+          Choose and order the steps below to describe the sequence of things that you will do to resolve the merge conflicts that were created.
         </p>
       </statement>
-      <response />
+      <blocks randomize="yes"> 
+        <block>
+          <p>
+            Edit the merge conflict information.
+          </p>
+        </block> 
+        <block>
+          <p>
+            <cline>git stage README.md</cline>
+          </p>
+        </block> 
+        <block>
+          <p>
+            <cline>git commit -m "&lt;message&gt;"</cline>
+          </p>
+        </block> 
+        <block>
+          <p>
+            <cline>git push origin merge-conflict-practice</cline>
+          </p>
+        </block> 
+        <block>
+          <p>
+            Create a pull request to the upstream.
+          </p>
+        </block> 
+      </blocks>
+    </exercise>
+
+    <exercise xml:id="ex-extra-practice-do-it" label="ex-extra-practice-merging-do-it">
+      <statement>
+        <p>
+          Carry out the steps you identified above in <xref ref="ex-extra-practice-resolving-conflicts" /> and give a link to your pull request.
+        </p>
+        <p>
+          <var width="55" />
+        </p>
+      </statement>
+      <setup> 
+        <var> 
+          <condition string='^https://github\.com/DickinsonCollege/FarmData2).)/pulls[0-9]+$'>
+        
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition> 
+          <condition string=".*">
+            <feedback>
+              <p>
+                Be sure that your URL is from your pull request to the upstream repository.
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+      <hint>
+        <p>
+          Review sections <xref ref="topic-resolving-a-merge-conflict" text="type-global-title" /> and <xref ref="topic-updating-your-pull-request" text="type-global-title" />.
+        </p>
+      </hint>
     </exercise>
 
   </exercises>
-  
 </section>
