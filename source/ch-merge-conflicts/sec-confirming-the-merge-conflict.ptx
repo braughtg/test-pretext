@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section
+  xml:id="topic-confirming-the-merge-conflict"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  >
+  <title>Confirming the Merge Conflict</title>
+
+  <introduction>
+    <p>
+      While you were working on your Round2 issue your instructor, playing the role of a maintainer, merged some changes into the upstream <c>main</c>. These changes were merged after you created the feature branch for your Round2 issue. This situation is illustrated in <xref ref="fig-conflicting-upstream-changes" />.
+    </p>
+
+    <p>
+      <figure xml:id="fig-conflicting-upstream-changes" >
+        <caption> Conflicting Upstream Changes. </caption>
+        <image source="images/ch-merge-conflicts/conflicting-upstream-changes.png" width="75%">
+          <description>
+            Changes were merged into the upstream <c>main</c> branch that could conflict with changes in the pull request feature branches.
+          </description>
+        </image>
+      </figure>
+    </p>
+
+    <p>
+      The changes that your instructor merged were specifically designed to create a conflict with the change that you made when you fixed your Round2 issue. Thus, the pull request you made in <xref ref="topic-lets-do-it-again" /> now contains a conflicting change and therefore cannot be merged automatically.
+    </p>
+
+    <p>
+      The activities in the remainder of this section will reinforce your understanding of how the conflict arose, confirm that your <c>main</c> branch is out of synch with the upstream, and that your pull request cannot be merged automatically.
+    </p>
+  </introduction>
+
+  <exercises>
+    <title/>
+
+    <exercise 
+      xml:id="ex-identifying-commits-that-conflict" label="ex-identifying-commits-that-conflict">
+      <introduction>
+        <p> 
+          Complete the following tasks that ask about the current situation, which is illustrated in <xref ref="fig-conflicting-upstream-changes" />.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>
+            Which of the following commits (i.e. which color) in <xref ref="fig-conflicting-upstream-changes" /> did the instructor add to the upstream <c>main</c> branch after you created the feature branch for your Round2 issue?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Dark Blue
+              </p>
+            </statement>
+              <feedback>
+                <p>
+                  Correct.
+                </p>
+              </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Lime Green
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The lime green commit is not in the upstream <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Brown
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The brown commit is not in the upstream <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Light Blue
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The light blue commit was added to the upstream <c>main</c> before the contributors created their feature branches.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Yellow
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The yellow commit was added to the upstream <c>main</c> before the contributors created their feature branches.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Look at which commits are in upstream <c>main</c> branch that are not in the contributors' <c>main</c> branches.
+          </p>
+        </hint>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Which of the following commits (i.e. which color) in <xref ref="fig-conflicting-upstream-changes" /> did you create that will create a merge conflict with the upstream <c>main</c> branch?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice>
+            <statement>
+              <p>
+                Dark Blue
+              </p>
+            </statement>
+              <feedback>
+                <p>
+                  The dark blue commit is already in the upstream <c>main</c> branch.
+                </p>
+              </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Lime Green
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The lime green commit might create a merge conflict, but it is not your commit.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                Brown
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Light Blue
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The light blue commit is already in the upstream <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Yellow
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The yellow commit is already in the upstream <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Look for a commit in your local repository that might contain changes that could conflict with the changes in the dark blue commit.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-no-automatic-merge-on-github" 
+      label="ex-no-automatic-merge-on-github">
+      <introduction>
+        <p>
+          If everything is as we saw above, then the pull request that you created for your Round2 issue will contain a merge conflict with the upstream <c>main</c> branch. Let's confirm that it does before going on.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Visit the <c>upstream</c> repo on GitHub, click on the "Pull requests" tab.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find and click on your Round2 pull request.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Scroll down toward the bottom of the pull request.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Which of the following messages do you see?
+          </p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <image source="images/ch-merge-conflicts/github-pr-no-conflict.png" width="90%">
+                <description>
+                  <p>
+                    GitHub message indicating that merging can be performed automatically.
+                  </p>
+                </description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                <term>IMPORTANT:</term> You should be seeing that your pull request cannot be merged automatically. <term>Follow the instructions in <xref ref="topic-appendix-a-merge-conflicts"/> to fix this problem.</term>
+              </p>
+              <p>
+                When your pull request cannot be merged automatically, return to this question and continue. See your instructor if you cannot resolve this problem.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+                <image source="images/ch-merge-conflicts/github-pr-conflict.png" width="90%">
+                <description>
+                  <p>
+                    GitHub message indicating that there are merge conflicts that must be resolved.
+                  </p>
+                </description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Excellent.  Everything is as it should be.  Please continue to the next exercise.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                I don't see either of the other messages.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                If you see a message about GitHub checking if the merge can be performed automatically, wait a few moments for one of the other messages to appear.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+    </exercise>
+
+    <exercise 
+      xml:id="ex-what-created-the-conflict" 
+      label="ex-what-created-the-conflict">    
+      <statement>
+        <p>
+          We now know that your Round2 pull request contains a merge conflict and cannot be merged automatically. Place the following actions into an order which could have created this merge conflict.
+        </p>
+        <p></p>
+      </statement>
+      <blocks randomize="yes"> 
+        <block name="branch">
+          <p>
+            You created a feature branch.
+          </p>
+        </block> 
+        <block name="merge" depends="branch">
+          <p>
+            Changes were merged into upstream main.
+          </p>
+        </block> 
+        <block name="fix" depends="branch">
+          <p>
+            You fixed your Round2 issue.
+          </p>
+        </block> 
+        <block name="pr" depends="branch fix">
+          <p>
+            You made your Round2 PR.
+          </p>
+        </block> 
+      </blocks>
+      <hint>
+        <p>
+          For a conflict to occur the upstream <c>main</c> branch must contain changes that are not in your feature branch.
+        </p>
+      </hint>
+      <hint>
+        <p>
+          When would you have to create your feature branch for the upstream <c>main</c> branch to contain changes that are not in your feature branch.
+        </p>
+      </hint>
+    </exercise>
+
+  </exercises>
+</section>

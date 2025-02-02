@@ -22,7 +22,7 @@
           Ensure that you are in your local repository in a Terminal.  Use the following commands to restore your main branch to the state before the conflicts were introduced:
           <ul marker="">
             <li><c>git switch main</c></li>
-            <li><c>git reset --hard~1</c></li>
+            <li><c>git reset --hard HEAD~1</c></li>
           </ul>
         </p>
         <p>

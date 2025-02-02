@@ -22,18 +22,34 @@
       </statement>
       <matches> 
         <match>
-          <premise><c>git merge &lt;target&gt; </c></premise> 
-          <response>Merge changes from source branches into a target branch</response> 
+          <premise><c>git switch &lt;branch&gt; </c></premise> 
+          <response>Change the active branch.</response> 
         </match> 
         <match>
-          <premise><c>git merge --abort </c></premise> 
-          <response>Undo a merge that failed due to conflicts</response> 
+          <premise><c>git pull upstream main </c></premise> 
+          <response>Synchronize the local <c>main</c> branch with the upstream <c>main</c> branch.</response> 
         </match> 
         <match>
-          <premise><c>git mergetool </c></premise> 
-          <response>Launch the configured graphical merge tool</response> 
+          <premise><c>git push origin main </c></premise> 
+          <response>Synchronize the origin <c>main</c> branch with the local <c>main</c> branch.</response> 
         </match> 
-      </matches>
+        <match>
+          <premise><c>git merge &lt;source&gt; </c></premise> 
+          <response>Add changes to source branch into the active branch</response> 
+        </match> 
+        <match>
+          <premise><c>git stage &lt;file&gt;</c></premise> 
+          <response>Indicate that changes to a file should be included in the next commit.</response> 
+        </match> 
+        <match>
+          <premise><c>git commit -m "&lt;message&gt;"</c></premise> 
+          <response>Add staged changes to the active branch.</response> 
+        </match> 
+        <match>
+          <premise><c>git push origin "&lt;branch&gt;"</c></premise> 
+          <response>Copy the named branch to your origin repository.</response> 
+        </match> 
+      </matches>      
       <hint>
         <p>
           Note that the tasks listed are in approximately the same order as they appear in the sections of this chapter.

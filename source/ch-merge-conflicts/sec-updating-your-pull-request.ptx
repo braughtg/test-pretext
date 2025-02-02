@@ -14,38 +14,246 @@
 
   <exercises>
     <title />
-    <exercise xml:id="ex-push-merge-resolution" label="ex-push-merge-resolution">
+
+    <exercise 
+      xml:id="ex-push-merge-resolution-cmd" 
+      label="ex-push-merge-resolution-cmd">
       <statement>
         <p>
-          Push your modified feature branch to your <c>origin</c>.  Give the command you used and its output here.
+          Give the command that will push your modified feature branch to your <c>origin</c>.
+        </p>
+         <p>
+          <var width="55" />
         </p>
       </statement>
-      <response />
+      <setup>
+        <var>
+          <condition string="^git push origin (?!(main)).+$">
+            <feedback>
+              <p>
+                Thank you.
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^git push upstream .+$">
+            <feedback>
+              <p>
+                It looks like you are trying to push to the upstream. Try pushing to your origin instead. 
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^git push origin main$">
+            <feedback>
+              <p>
+                It looks like you are pushing the <c>main</c> branch. Try pushing your feature branch. 
+              </p>
+            </feedback>
+          </condition>
+          <condition string="^git .*">
+            <feedback>
+              <p>
+                Review the <c>git push</c> command in <xref ref="topic-pushing-a-branch-to-your-origin" />. 
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+      <hint>
+        <p>
+          <xref ref="topic-pushing-a-branch-to-your-origin" /> introduced the command for pushing a feature branch to your origin.
+        </p>
+      </hint>
     </exercise>
 
-    <exercise xml:id="ex-pull-request-upstream" label="ex-pull-resquest-upstream">
-      <statement>
+    <exercise 
+      xml:id="ex-push-merge-resolution" 
+      label="ex-push-merge-resolution">
+      <introduction>
         <p>
-          Now visit the upstream repo and find your pull request.  You should see that it can now be merged automatically.  
+           
         </p>
-        <p>
-          If your PR cannot be merged automatically you have not correctly resolved the merge conflict; return to <xref ref="ex-name-source-target-branches" /> and try again.
-        </p>
-        <p>
-          !!Give a screenshot from your pull request showing that it can now be merged automatically.
-        </p>
-      </statement>
-      <response />
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Use your command from <xref ref="ex-push-merge-resolution-cmd" /> to push your feature branch to your origin.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Which of the following pieces of information appear in the terminal output from your command?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                The URL of your origin repository.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                The name of the feature branch that you pushed.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                A bunch of information about "objects".
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The name of the file that was changed.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Double check the output.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The URL of the upstream repository.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Are you sure it's not your origin repository?
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                None of these.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Double check the command you used to push your feature branch.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Look closely at the output from your command in the terminal.
+          </p>
+        </hint>
+      </task>
     </exercise>
-    <exercise xml:id="ex-pull-request-url" label="ex-pull-request-url">
-      <statement>
+
+    <exercise 
+      xml:id="ex-pull-request-upstream" 
+      label="ex-pull-request-upstream">
+      <introduction>
         <p>
-          Give the URL of your pull request.
+          Now that you've resolved the merge conflict and pushed the result to GitHub, it should be possible for the maintainers to automatically merge your pull request.  Let's check!
         </p>
-      </statement>
-      <response />
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Visit the <c>upstream</c> repo on GitHub, click on the "Pull requests" tab.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find and click on your Round2 pull request.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Scroll down toward the bottom of the pull request.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Which of the following messages do you see?
+          </p>
+        </statement>
+        <choices>
+          <choice correct="yes">
+            <statement>
+              <image source="images/ch-merge-conflicts/github-pr-no-conflict.png" width="90%">
+                <description>
+                  <p>
+                    GitHub message indicating that merging can be performed automatically.
+                  </p>
+                </description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Congratulations! You successfully resolved the merge conflict!  Please continue to the next exercise.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+                <image source="images/ch-merge-conflicts/github-pr-conflict.png" width="90%">
+                <description>
+                  <p>
+                    GitHub message indicating that there are merge conflicts that must be resolved.
+                  </p>
+                </description>
+              </image>
+            </statement>
+            <feedback>
+              <p>
+                Uh oh! Something didn't work.  Let's try to fix it.
+                 <ol marker="1">
+                    <li>Run the command <c>git revert --hard HEAD~1</c></li>
+                    <li>Go back to <xref ref="topic-git-merge-command" />, merge <c>main</c> into your feature branch and try again to resolve the conflict.</li>
+                  </ol>
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                I don't see either of the other messages.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                If you see a message about GitHub checking if the merge can be performed automatically, wait a few moments for one of the other messages to appear.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
     </exercise>
-  
   </exercises>
-
 </section>

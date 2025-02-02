@@ -5,378 +5,831 @@
 
   <introduction>
     <p>
-      The exercises in this section provide practice in identifying merge conflicts and their resolutions.
+      The exercises in this section provide practice in identifying merge conflicts and resolving them.
     </p>
   </introduction>
 
-  <exercises>
-  <title />
-
-  <p>
-    <xref ref="fig-merge-conflicts-1" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
-  </p>
-  <p>
-    <figure xml:id="fig-merge-conflicts-1">
-      <caption> Example merge conflicts with Best Common Ancestor. </caption>
-      <image source="images/ch-merge-conflicts/merge-conflicts-1.png" width="75%">
-        <description>
-          Three panels of code (feature branch, common ancestor, main branch)
-        </description>
-      </image>
-    </figure>
-  </p>
-
-
-  <exercise xml:id="ex-merge-conflicts-practice-1" label="ex-merge-conflicts-practice-1">
-  
+  <subsection xml:id="topic-merge-example-1">
+    <title>Merge Example 1</title>
     <introduction>
       <p>
-        Consider the merge shown in <xref ref="fig-merge-conflicts-1" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
+        Consider <xref ref="fig-merge-conflicts-1" />.  This figure shows a <term>feature branch</term> (in the left panel) that is to be merged into the current <c>main</c> branch (in the right panel).  The center panel shows the <term>best common ancestor</term> from which both the feature branch and <c>main</c> branch have diverged.
+      </p>
+      <p>
+        The current <c>main</c> branch contains changes, merged by the maintainers, to fix several bugs that existed in the best common ancestor. The feature branch has been changed to use more descriptive variable names, but has not fixed the bugs.
+      </p>
+      <p>
+        <figure xml:id="fig-merge-conflicts-1">
+          <caption> Example merge conflicts with Best Common Ancestor. </caption>
+          <image source="images/ch-merge-conflicts/merge-conflicts-1.png" width="100%">
+            <description>
+              Three panels of code (feature branch, best common ancestor, main branch)
+            </description>
+          </image>
+        </figure>
       </p>
     </introduction>
 
-    <task xml:id="ex-merge-conflicts-practice-1-a" label="ex-merge-conflicts-practice-1-a">
+    <exercises>
+    <title />
+
+    <exercise xml:id="ex-merge-conflict-1-computation" label="ex-merge-conflict-1-computation">
       <statement>
         <p>
-          Study the program in the <c>main</c> branch and then describe in a sentence the computation that the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
+          Study the program shown in the <c>main</c> branch of <xref ref="fig-merge-conflicts-1" />. Then choose the statement below that best describes the computation the program is trying to perform. Note: The Feature Branch and the Best Common Ancestor both contain bugs.
         </p>
       </statement>
-      <response />
-    </task>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              Find the average of a list of numbers.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Find the total of a list of numbers.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Consider the last line in the <c>main</c> branch.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Count how many numbers the user enters.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              What does the program do besides count the numbers?
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              None of these.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              One of the other answers is correct.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
 
-    <task xml:id="ex-merge-conflicts-practice-1-b" label="ex-merge-conflicts-practice-1-b">
-      <statement>
+    <exercise xml:id="ex-conflict-type" label="ex-ex-conflict-type">
+      <introduction>
         <p>
-          Highlight (by clicking, or by circling) all of the lines that are non-conflicting changes in the feature branch or the <c>main</c> branch. Use the example in the slides as a guide for highlighting.
+          When both the feature branch being merged and the <c>main</c> branch that it is being merged into contain changes with respect to the best common ancestor, those changes can be <term>non-conflicting</term> or <term>conflicting</term>.  
         </p>
-      </statement>
-      <areas>
-      <tabular top="minor" bottom="minor" left="minor" right="minor">
-        <row header="yes">
-          <cell>Feature Branch</cell>
-          <cell>Best Common Ancestor</cell>
-          <cell><c>main</c> Branch</cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="yes">total=0</area></cell>
-          <cell>tot=0</cell>
-          <cell><area correct="no">tot=0</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="no">count=0</area></cell>
-          <cell>count=0</cell>
-          <cell><area correct="no">count=0</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="no">read n</area></cell>
-          <cell>read n</cell>
-          <cell><area correct="no">read n</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="no">while count &gt; n:</area></cell>
-          <cell>while count &gt; n:</cell>
-          <cell><area correct="yes">while count &lt; n:</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/>read m</cell>
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><nbsp/><nbsp/><nbsp/><area correct="yes">total=total+m</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/>tot=tot+m</cell>
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">tot=tot+m</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/>count--</cell>
-          <cell><nbsp/><nbsp/><nbsp/><area correct="yes">count++</area></cell>
-        </row>
-        <row>
-          <cell><area correct="no">average=count <solidus/> total</area></cell>
-          <cell>ave=count <solidus/> tot</cell>
-          <cell><area correct="no">ave=tot <solidus/> count</area></cell>
-        </row>
-      </tabular>
-      </areas>
-      <hint>
-        <p>
-          Merge conflicts occur when both source branches change the same line.
-        </p>
-      </hint>
-    </task>
+      </introduction>
+      <task xml:id="ex-non-conflicting-change" label="ex-non-conflicting-change">
+        <statement>
+          <p>
+            Select the statement below that best describes a <term>non-conflicting change</term>.
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                A non-conflicting change occurs when a part of the code changes in the feature branch or in the <c>main</c> branch but not in both.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                A non-conflicting change occurs when a part of the code changes in both the feature branch and the <c>main</c> branch.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Review the definitions of non-conflicting and conflicting changes in the class slides.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                A non-conflicting change occurs when the best common ancestor is modified.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The best common ancestor cannot be changed, all changes are either in the feature branch or the <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                A non-conflicting change occurs when part of the feature branch contains only one change.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                You need to consider changes to both the feature branch and the <c>main</c> branch to determine if a change is non-conflicting.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>    
 
-  
-    <task xml:id="ex-merge-conflicts-practice-1-c" label="ex-merge-conflicts-practice-1-c">
-      <statement>
-        <p>
-          Highlight (by clicking, or by circling) all of the lines that are conflicting changes in the feature branch and the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
-        </p>
-      </statement>
-      <areas>
-      <tabular top="minor" bottom="minor" left="minor" right="minor">
-        <row header="yes">
-          <cell>Feature Branch</cell>
-          <cell>Best Common Ancestor</cell>
-          <cell><c>main</c> Branch</cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="no">total=0</area></cell>
-          <cell>tot=0</cell>
-          <cell><area correct="no">tot=0</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="no">count=0</area></cell>
-          <cell>count=0</cell>
-          <cell><area correct="no">count=0</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="no">read n</area></cell>
-          <cell>read n</cell>
-          <cell><area correct="no">read n</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><area correct="no">while count &gt; n:</area></cell>
-          <cell>while count &gt; n:</cell>
-          <cell><area correct="no">while count &lt; n:</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/>read m</cell>
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">total=total+m</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/>tot=tot+m</cell>
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">tot=tot+m</area></cell>
-        </row>
-        <row bottom="none" >
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
-          <cell><nbsp/><nbsp/><nbsp/>count--</cell>
-          <cell><nbsp/><nbsp/><nbsp/><area correct="no">count++</area></cell>
-        </row>
-        <row>
-          <cell><area correct="yes">average=count <solidus/> total</area></cell>
-          <cell>ave=count <solidus/> tot</cell>
-          <cell><area correct="yes">ave=tot <solidus/> count</area></cell>
-        </row>
-      </tabular>
-      </areas>
-      <hint>
-        <p>
-          Merge conflicts occur when both source branches change the same line.
-        </p>
-      </hint>
-    </task>
+      <task xml:id="ex-conflicting-change" label="ex-conflicting-change">
+        <statement>
+          <p>
+            Select the statement below that best describes a <term>conflicting change</term>.
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice>
+            <statement>
+              <p>
+                A conflicting change occurs when a part of the code changes in the feature branch or in the <c>main</c> branch but not in both.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Review the definitions of non-conflicting and conflicting changes in the class slides.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                A non-conflicting change occurs when a part of the code changes in both the feature branch and the <c>main</c> branch.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                A conflicting change occurs when the best common ancestor is modified.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The best common ancestor cannot be changed, all changes are either in the feature branch or the <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                A conflicting change occurs when a part of the feature branch contains multiple changes.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                You need to consider changes to both the feature branch and the <c>main</c> branch to determine if a change is conflicting.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task> 
+    </exercise>
 
-    <task xml:id="ex-merge-conflicts-practice-1-d" label="ex-merge-conflicts-practice-1-d">
-      <statement>
+    <exercise 
+      xml:id="ex-merge-conflict-1" 
+      label="ex-merge-conflict-1">
+      <introduction>
         <p>
-          Would the feature branch in <xref ref="fig-merge-conflicts-1" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
+          The questions below will now ask you to identify the non-conflicting and conflicting changes that exist in the merge from <xref ref="fig-merge-conflicts-1" />.  
         </p>
-      </statement>
-      <response />
-    </task>
+      </introduction>
+      <task xml:id="ex-merge-conflict-1-non-conflicting" label="ex-merge-conflict-1-non-conflicting">
+        <statement>
+          <p>
+            Highlight (by clicking) all of the lines in the <c>main</c> branch and the feature branch that contain non-conflicting changes. Use the example in the course slides as a guide.
+          </p>
+          <p></p>
+        </statement>
+        <areas>
+        <tabular top="minor" bottom="minor" left="minor" right="minor">
+          <row header="yes">
+            <cell>Feature Branch</cell>
+            <cell>Best Common Ancestor</cell>
+            <cell><c>main</c> Branch</cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="yes">total=0</area></cell>
+            <cell>tot=0</cell>
+            <cell><area correct="no">tot=0</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no">count=0</area></cell>
+            <cell>count=0</cell>
+            <cell><area correct="no">count=0</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no">read n</area></cell>
+            <cell>read n</cell>
+            <cell><area correct="no">read n</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no">while count &gt; n:</area></cell>
+            <cell>while count &gt; n:</cell>
+            <cell><area correct="yes">while count &lt; n:</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>read m</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="yes">total=total+m</area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>tot=tot+m</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">tot=tot+m</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>count--</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="yes">count++</area></cell>
+          </row>
+          <row>
+            <cell><area correct="no">average=count <solidus/> total</area></cell>
+            <cell>ave=count <solidus/> tot</cell>
+            <cell><area correct="no">ave=tot <solidus/> count</area></cell>
+          </row>
+        </tabular>
+        </areas>
+        <hint>
+          <p>
+            Non-conflicting changes occur when a part of the code changes in either the feature branch or the <c>main</c> but not both.
+          </p>
+        </hint>
+      </task>
 
-    <task xml:id="ex-merge-conflicts-practice-1-e" label="ex-merge-conflicts-practice-1-e">
-      <statement>
-        <p>
-          Highlight the correct lines that give a Merged Result of the program in <xref ref="fig-merge-conflicts-1" /> that combines the feature branch and the <c>main</c> branch such that the result both performs the desired computation and uses the more descriptive variable names.
-        </p>
-      </statement>
-      <areas language="python">
-        <cline><area correct="yes">total=0</area></cline>
-        <cline><area correct="no">tot=0</area></cline>
-        <cline><area correct="yes">count=0</area></cline>
-        <cline><area correct="yes">read n</area></cline>
-        <cline><area correct="no">while count &gt; n:</area></cline>
-        <cline><area correct="yes">while count &lt; n:</area></cline>
-        <cline><area correct="yes">read m</area></cline>
-        <cline><area correct="yes">total=total+m</area></cline>
-        <cline><area correct="no">tot=tot+m</area></cline>
-        <cline><area correct="no">count--</area></cline>
-        <cline><area correct="yes">count++</area></cline>
-        <cline><area correct="no">average=count/total</area></cline>
-        <cline><area correct="no">ave=tot/count</area></cline>
-        <cline><area correct="yes">average=total/count</area></cline>
-      </areas>
-    </task>
-      
-  </exercise>
+      <task xml:id="ex-merge-conflict-1-conflicting" label="ex-merge-conflict-1-conflicting">
+        <statement>
+          <p>
+            Highlight by clicking all of the lines in the <c>main</c> and feature branches that contain conflicting changes. Use the example in the course slides as a guide.
+          </p>
+          <p></p>
+        </statement>
+        <areas>
+        <tabular top="minor" bottom="minor" left="minor" right="minor">
+          <row header="yes">
+            <cell>Feature Branch</cell>
+            <cell>Best Common Ancestor</cell>
+            <cell><c>main</c> Branch</cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no">total=0</area></cell>
+            <cell>tot=0</cell>
+            <cell><area correct="no">tot=0</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no">count=0</area></cell>
+            <cell>count=0</cell>
+            <cell><area correct="no">count=0</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no">read n</area></cell>
+            <cell>read n</cell>
+            <cell><area correct="no">read n</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no">while count &gt; n:</area></cell>
+            <cell>while count &gt; n:</cell>
+            <cell><area correct="no">while count &lt; n:</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>read m</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">read m</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">total=total+m</area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>tot=tot+m</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">tot=tot+m</area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">count--</area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>count--</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no">count++</area></cell>
+          </row>
+          <row>
+            <cell><area correct="yes">average=count <solidus/> total</area></cell>
+            <cell>ave=count <solidus/> tot</cell>
+            <cell><area correct="yes">ave=tot <solidus/> count</area></cell>
+          </row>
+        </tabular>
+        </areas>
+        <hint>
+          <p>
+            Conflicting changes occur when the same part of the code is changed both the feature branch and the <c>main</c> branch.
+          </p>
+        </hint>
+      </task>
+    </exercise>
 
-  <p>
-    <xref ref="fig-merge-conflicts-2" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
-  </p>
-  <p>
-    <figure xml:id="fig-merge-conflicts-2" >
-      <caption> Example merge conflicts with Best Common Ancestor. </caption>
-      <image source="images/ch-merge-conflicts/merge-conflicts-2.png" width="75%">
-        <description>
-          Three panels of code (feature branch, common ancestor, main branch)
-        </description>
-      </image>
-    </figure>
-  </p>
+    <exercise 
+      xml:id="ex-merge-conflict-1-can-merge"
+      label="ex-merge-conflict-1-can-merge">
+        <statement>
+          <p>
+            Select the statement below that best describes why the feature branch in <xref ref="fig-merge-conflicts-1" /> would, or would not, be able to be merged automatically by the project maintainers.
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                The feature branch cannot be merged automatically because there is a conflicting change.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct. The last line contains changes in both <c>main</c> and the feature branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+          <statement>
+            <p>
+              The feature branch can be merged automatically because there all of the changes are non-conflicting.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Are you sure there are no conflicting changes?
+            </p>
+          </feedback>
+        </choice>
+          <choice>
+            <statement>
+              <p>
+                The feature branch cannot be merged automatically because there are non-conflicting changes.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Non-conflicting changes can (usually) be merged automatically.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                It is not possible to tell if the feature branch can be merged automatically.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                If there are conflicting changes then the feature branch will not be able to be merged automatically.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The feature branch cannot be merged automatically because there are changes both in <c>main</c> and in the feature branch.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Close. What type of changes prevent automatic merges?
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
 
-  <exercise xml:id="ex-merge-conflicts-practice-2" label="ex-merge-conflicts-practice-2">
+      <exercise 
+        xml:id="ex-do-merge-1" 
+        label="ex-do-merge-1">
+        <statement>
+          <p>
+            Use the table below to indicate how the feature branch would be merged into the <c>main</c> branch.  Each line that contains a change is shown in boldface. Click the change the feature branch or the <c>main</c> branch to indicate the version of the line that will appear in the merged result. The merged result should include all non-conflicting changes and should resolve the conflicting change. The resulting program must perform the desired computation as identified in <xref ref="ex-merge-conflict-1-computation" />
+          </p>
+          <p></p>
+        </statement>
+        <areas>
+        <tabular top="minor" bottom="minor" left="minor" right="minor">
+          <row header="yes">
+            <cell>Feature Branch</cell>
+            <cell>Best Common Ancestor</cell>
+            <cell><c>main</c> Branch</cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="yes"><term>total=0</term></area></cell>
+            <cell>tot=0</cell>
+            <cell><area correct="no"><term>tot=0</term></area></cell>
+          </row>
+          <row bottom="none" >
+            <cell>count=0</cell>
+            <cell>count=0</cell>
+            <cell>count=0</cell>
+          </row>
+          <row bottom="none" >
+            <cell>read n</cell>
+            <cell>read n</cell>
+            <cell>read n</cell>
+          </row>
+          <row bottom="none" >
+            <cell><area correct="no"><term>while count &gt; n:</term></area></cell>
+            <cell>while count &gt; n:</cell>
+            <cell><area correct="yes"><term>while count &lt; n:</term></area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/>read m</cell>
+            <cell><nbsp/><nbsp/><nbsp/>read m</cell>
+            <cell><nbsp/><nbsp/><nbsp/>read m</cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="yes"><term>total=total+m</term></area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>tot=tot+m</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no"><term>tot=tot+m</term></area></cell>
+          </row>
+          <row bottom="none" >
+            <cell><nbsp/><nbsp/><nbsp/><area correct="no"><term>count--</term></area></cell>
+            <cell><nbsp/><nbsp/><nbsp/>count--</cell>
+            <cell><nbsp/><nbsp/><nbsp/><area correct="yes"><term>count++</term></area></cell>
+          </row>
+          <row>
+            <cell><area correct="yes"><term>average=count <solidus/> total</term></area></cell>
+            <cell>ave=count <solidus/> tot</cell>
+            <cell><area correct="no"><term>ave=tot <solidus/> count</term></area></cell>
+          </row>
+        </tabular>
+        </areas>
+        <hint>
+          <p>
+            Select all of the non-conflicting changes and choose the conflicting change that ensures that the program will work correctly.
+          </p>
+        </hint>
+      </exercise>
+    </exercises>
+  </subsection>
+
+  <subsection xml:id="topic-merge-example-2">
+    <title>Merge Example 2</title>
     <introduction>
       <p>
-        Now consider the merge shown in <xref ref="fig-merge-conflicts-2" />.  As shown in the right-hand panel, the maintainers have merged commits into the <c>main</c> branch that fix several bugs that existed in the program.  The left-hand panel shows a contributor's feature branch with has been changed to use more descriptive variable names but that has not fixed the bugs. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
+        <xref ref="fig-merge-conflicts-2" /> shows another example of a contributor's feature branch that is to be merged into the <c>main</c> branch.
+      </p>
+      <p>
+        As in the previous example, the right-hand panel shows commits that the maintainers have merged into the <c>main</c> branch to fix a bug that existed in the program. The left-hand panel shows the contributor's feature branch with changes that also fix the bug, but in a different way. The center panel shows the best common ancestor of the feature and <c>main</c> branches.
+      </p>
+      <p>
+        <figure xml:id="fig-merge-conflicts-2" >
+          <caption> Example merge conflicts with Best Common Ancestor. </caption>
+          <image source="images/ch-merge-conflicts/merge-conflicts-2.png" width="100%">
+            <description>
+              Three panels of code (feature branch, best common ancestor, main branch)
+            </description>
+          </image>
+        </figure>
       </p>
     </introduction>
-    <task xml:id="ex-merge-conflicts-practice-2-a" label="ex-merge-conflicts-practice-2-a">
-      <statement>
-        <p>
-          Study the program in the <c>main</c> branch and then describe in a sentence the computation that the program is trying to perform. Note: The ** indicates exponentiation (e.g. x**2 is x squared).  Note: The Common Ancestor contains a bug that is fixed in different ways by the <c>main</c> branch and the feature branch.
-        </p>
-      </statement>
-      <response />
-    </task>
 
-    <task xml:id="ex-merge-conflicts-practice-2-b" label="ex-merge-conflicts-practice-2-b">
-      <statement>
-        <p>
-          Highlight (by clicking, or by circling) all of the lines that are non-conflicting changes in the feature branch or the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
-        </p>
-      </statement>
-      <areas>
-      <tabular top="minor" bottom="minor" left="minor" right="minor">
-        <row header="yes">
-          <cell>Feature Branch</cell>
-          <cell>Best Common Ancestor</cell>
-          <cell><c>main</c> Branch</cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">r=15</area></cell>
-          <cell>r=15</cell>
-          <cell><area correct="no">r=15</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="yes">pi = 3.1415927</area></cell>
-          <cell>pi = 3.14</cell>
-          <cell><area correct="no">pi = 3.14</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="yes">rsq = r**2</area></cell>
-          <cell>rsq = r*2</cell>
-          <cell><area correct="no">rsq = r*2</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">a = pi*rsq</area></cell>
-          <cell>a = pi*rsq</cell>
-          <cell><area correct="yes">area = pi*(rsq/2)**2</area></cell>
-        </row>
-        <row>
-          <cell><area correct="no">print a</area></cell>
-          <cell>print a</cell>
-          <cell><area correct="yes">print area</area></cell>
-        </row>
-      </tabular>
-      </areas>
-      <hint>
-        <p>
-          Merge conflicts occur when the feature, <c>main</c>, and common ancestor branches are all different.
-        </p>
-      </hint>
-    </task>
+    <exercises>
+    <title />
 
-    <task xml:id="ex-merge-conflicts-practice-2-c" label="ex-merge-conflicts-practice-2-c">
-      <statement>
-        <p>
-          Highlight (by clicking, or by circling) all of the lines that are conflicting changes in the feature branch and the <c>main</c> branch as shown in <xref ref="fig-merge-conflicts-1" />. Use the example in the slides as a guide for highlighting.
-        </p>
-      </statement>
-      <areas>
-      <tabular top="minor" bottom="minor" left="minor" right="minor">
-        <row header="yes">
-          <cell>Feature Branch</cell>
-          <cell>Best Common Ancestor</cell>
-          <cell><c>main</c> Branch</cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">r=15</area></cell>
-          <cell>r=15</cell>
-          <cell><area correct="no">r=15</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">pi = 3.1415927</area></cell>
-          <cell>pi = 3.14</cell>
-          <cell><area correct="no">pi = 3.14</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">rsq = r**2</area></cell>
-          <cell>rsq = r*2</cell>
-          <cell><area correct="no">rsq = r*2</area></cell>
-        </row>
-        <row bottom="none">
-          <cell><area correct="no">a = pi*rsq</area></cell>
-          <cell>a = pi*rsq</cell>
-          <cell><area correct="no">area = pi*(rsq/2)**2</area></cell>
-        </row>
-        <row>
-          <cell><area correct="no">print a</area></cell>
-          <cell>print a</cell>
-          <cell><area correct="no">print area</area></cell>
-        </row>
-      </tabular>
-      </areas>
-      <hint>
-        <p>
-          Merge conflicts occur when the feature, <c>main</c>, and common ancestor branches are all different.
-        </p>
-      </hint>
-    </task>
+      <exercise 
+        xml:id="ex-merge-conflict-2-computation" label="ex-merge-conflict-2-computation">
+        <statement>
+          <p>
+            Study the program in <xref ref="fig-merge-conflicts-2" />. Then choose the statement below that best describes the computation the program is trying to perform. gNote: The <c>**</c> operator indicates exponentiation, so <c>x**2</c> computes x squared.  
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Compute the area of a circle.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Find the circumference of a circle.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Close. Notice the use of <c>**</c> to square the radius <c>r</c>.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Compute the volume of a sphere.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Close, but that formula would use <c>r**3</c>.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                None of these.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                One of the other answers is correct.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            The <c>main</c> branch fixes the bug in a strange way. So focusing on the feature branch may be easier.
+          </p>
+        </hint>
+      </exercise>
 
-    <task xml:id="ex-merge-conflicts-practice-2-d" label="ex-merge-conflicts-practice-2-d">
-      <statement>
-        <p>
-          Would the feature branch in <xref ref="fig-merge-conflicts-2" /> be able to be merged automatically by the project maintainers? Briefly explain your answer.
-        </p>
-      </statement>
-      <response />
-    </task>  
+      <exercise 
+        xml:id="ex-merge-conflict-2" 
+        label="ex-merge-conflict-2">
+        <introduction>
+          <p>
+            The questions below will now ask you to identify the non-conflicting and conflicting changes that exist in the merge from <xref ref="fig-merge-conflicts-2" />.  
+          </p>
+        </introduction>
 
-    <task xml:id="ex-merge-conflicts-practice-2-e" label="ex-merge-conflicts-practice-2-e">
-      <statement>
-        <p>
-          Give the Merged Result to show the result of an automatic merge of the feature and <c>main</c> branches shown in <xref ref="fig-merge-conflicts-2" />.
-        </p>
-      </statement>
-      <areas language="python">
-        <cline><area correct="yes">r = 15</area></cline>
-        <cline><area correct="yes">pi = 3.1415927</area></cline>
-        <cline><area correct="no">pi = 3.14</area></cline>
-        <cline><area correct="yes">rsq = r**2</area></cline>
-        <cline><area correct="no">rsq = r*2</area></cline>
-        <cline><area correct="no">a = pi*rsq</area></cline>
-        <cline><area correct="no">area = p*rsq</area></cline>
-        <cline><area correct="yes">area = pi*(rqs/2)**2</area></cline>
-        <cline><area correct="no">print a</area></cline>
-        <cline><area correct="yes">print area</area></cline>
-        <cline><area correct="no">print rsq</area></cline>
-      </areas>
-    </task>
+        <task 
+          xml:id="ex-merge-conflict-2-non-conflicting" label="ex-merge-conflict-2-non-conflicting">
+          <statement>
+            <p>
+                Highlight (by clicking) all of the lines in the <c>main</c> branch and the feature branch that contain non-conflicting changes.
+            </p>
+            <p></p>
+          </statement>
+          <areas>
+          <tabular top="minor" bottom="minor" left="minor" right="minor">
+            <row header="yes">
+              <cell>Feature Branch</cell>
+              <cell>Best Common Ancestor</cell>
+              <cell><c>main</c> Branch</cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="no">r=15</area></cell>
+              <cell>r=15</cell>
+              <cell><area correct="no">r=15</area></cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="yes">pi = 3.1415927</area></cell>
+              <cell>pi = 3.14</cell>
+              <cell><area correct="no">pi = 3.14</area></cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="yes">rsq = r**2</area></cell>
+              <cell>rsq = r*2</cell>
+              <cell><area correct="no">rsq = r*2</area></cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="no">a = pi*rsq</area></cell>
+              <cell>a = pi*rsq</cell>
+              <cell><area correct="yes">area = pi*(rsq/2)**2</area></cell>
+            </row>
+            <row>
+              <cell><area correct="no">print a</area></cell>
+              <cell>print a</cell>
+              <cell><area correct="yes">print area</area></cell>
+            </row>
+          </tabular>
+          </areas>
+          <hint>
+            <p>
+              Non-conflicting changes occur when a part of the code changes in either the feature branch or the <c>main</c> but not both.
+            </p>
+          </hint>
+        </task>
 
-    <task xml:id="ex-merge-conflicts-practice-2-f" label="ex-merge-conflicts-practice-2-f">
-      <statement>
-        <p>
-          Look carefully at your result in <xref ref="ex-merge-conflicts-practice-2-e" />.  Will the resulting program perform the computation correctly? Briefly explain why or why not.
-        </p>
-      </statement>
-      <response />
-    </task>
+        <task 
+          xml:id="ex-merge-conflict2-conflicting" label="ex-merge-conflict2-conflicting">
+          <statement>
+            <p>
+              Highlight (by clicking) all of the lines (if any) in the <c>main</c> branch and the feature branch that contain conflicting changes.
+            </p>
+            <p></p>
+          </statement>
+          <areas>
+          <tabular top="minor" bottom="minor" left="minor" right="minor">
+            <row header="yes">
+              <cell>Feature Branch</cell>
+              <cell>Best Common Ancestor</cell>
+              <cell><c>main</c> Branch</cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="no">r=15</area></cell>
+              <cell>r=15</cell>
+              <cell><area correct="no">r=15</area></cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="no">pi = 3.1415927</area></cell>
+              <cell>pi = 3.14</cell>
+              <cell><area correct="no">pi = 3.14</area></cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="no">rsq = r**2</area></cell>
+              <cell>rsq = r*2</cell>
+              <cell><area correct="no">rsq = r*2</area></cell>
+            </row>
+            <row bottom="none">
+              <cell><area correct="no">a = pi*rsq</area></cell>
+              <cell>a = pi*rsq</cell>
+              <cell><area correct="no">area = pi*(rsq/2)**2</area></cell>
+            </row>
+            <row>
+              <cell><area correct="no">print a</area></cell>
+              <cell>print a</cell>
+              <cell><area correct="no">print area</area></cell>
+            </row>
+          </tabular>
+          </areas>
+          <hint>
+            <p>
+              Conflicting changes occur when the same part of the code is changed both the feature branch and the <c>main</c> branch.
+            </p>
+          </hint>
+        </task>
+      </exercise>
 
-    <task xml:id="ex-merge-conflicts-practice-2-g" label="ex-merge-conflicts-practice-2-g">
-      <statement>
-        <p>
-          When a merge can be completed automatically, does it guarantee that the Merged Result will be correct?.
-        </p>
-      </statement>
-      <response />
-    </task>
-    
-  </exercise>
-  </exercises>
+      <exercise
+        xml:id="ex-merge-conflict-2-can-merge" label="ex-merge-conflict-2-can-merge">
+        <statement>
+          <p>
+            Select the statement below that best describes why the feature branch in <xref ref="fig-merge-conflicts-2" /> would, or would not, be able to be merged automatically by the project maintainers.
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                The feature branch can be merged automatically because there all of the changes are non-conflicting.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The feature branch cannot be merged automatically because there is a conflicting change.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Are there any conflicting changes?
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The feature branch cannot be merged automatically because there are non-conflicting changes.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Non-conflicting changes can (usually) be merged automatically.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                It is not possible to tell if the feature branch can be merged automatically.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                If there are conflicting changes then the feature branch will not be able to be merged automatically.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The feature branch cannot be merged automatically because there are changes both in <c>main</c> and in the feature branch.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                What type of changes prevent automatic merges?
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
 
-    
+      <exercise
+        xml:id="ex-merge-conflict-2-bad-auto" label="ex-merge-conflict-2-bad-auto">
+        <statement>
+          <p>
+            Imagine that the non-conflicting changes you identified in <xref ref="ex-merge-conflict-2-non-conflicting" /> are automatically merged. Select the statement below that best describes the result.
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                The merged program will not work correctly because the formula for the area will be incorrect.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The merged program will work correctly because automatic merge's are guaranteed to produce a correct program.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Look closely at the lines that define <c>rsq</c> and <c>area</c>.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The merged program will not work correctly because an incorrect value of pi will be used.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                3.1415927 is a valid approximation of pi.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                The merged program will work correctly because <c>rsq</c> is will be correctly computed as <c>r</c> squared instead of <c>r*2</c>.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Look closely at how the <c>area</c> will be computed.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </exercise>
+
+      <exercise
+        xml:id="ex-merge-conflicts-auto-always-ok" 
+        abel="ex-merge-conflicts-auto-always-ok">
+        <statement correct="no">
+          <p>
+            When both the feature branch and the <c>main</c> branch function correctly, and the merge contains no conflicting changes then the result of an automatic merge will also be correct. 
+          </p>
+        </statement>
+        <feedback>
+        </feedback>
+        <hint>
+          <p>
+            Consider what happened with <xref ref="ex-merge-conflict-2-non-conflicting" /> where there were no conflicting changes.
+          </p>
+        </hint>
+      </exercise>
+    </exercises>
+  </subsection>  
 </section>

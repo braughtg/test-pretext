@@ -9,6 +9,7 @@ halign
 HFOSSedu
 inclusivity
 kitclient
+nbsp
 opensource
 POGIL
 Runestone

@@ -8,147 +8,383 @@
 
   <introduction>
  		<p>
-      Your local main branch now contains the changes that were made to the upstream main branch. The next step is to merge the changes from the main branch into your feature branch. This is like the example from class, which is illustrated in <xref ref="fig-merge-main-into-feature" />. 
-    </p>
-    <p>
-      <xref ref="fig-merge-main-into-feature" /> shows the <c>main</c> branch in the right panel, the contributor's feature branch in the left panel, and the common ancestor in the middle.
-    </p>
-    <p>
-      <figure xml:id="fig-merge-main-into-feature">
-        <caption> Merge main into feature branch </caption>
-        <image source="images/ch-merge-conflicts/merge-main-into-feature.png" width="75%">
-          <description>
-            main branch timeline with feature branch merge
-          </description>
-        </image>
-      </figure>
+      Your local and origin <c>main</c> branches now contain the changes that were made to the upstream main branch. The next step is to merge the changes from the <c>main</c> branch into your feature branch.
     </p>
   </introduction>
 
-  <exercises>
-    <title />
+  <subsection
+    xml:id="topic-branch-vocabulary"
+    label="topic-branch-vocabulary">
+    <title>Branch Vocabulary</title>
+    <introduction>
+      <p>
+        <xref ref="fig-merge-main-into-feature" /> shows the merge example from the class slides.
+      </p>
 
-    <exercise xml:id="ex-name-source-target-branches" label="ex-name-source-target-branches">
-      <statement>
-        <p>
-          If you are going to merge the changes from the <c>main</c> branch into your feature branch, which branches will be the source branches? Which branch will be the target branch?
-        </p>
-      </statement>
-      <matches>
-        <match order="1">
-        <premise>Source Branches</premise>
-        <response><c>main</c></response>
-        </match>
-        <match order="2">
-        <premise>Target Branch</premise>
-        <response>feature branch</response>
-        </match>
-      </matches>
-    </exercise>
-    
-    <exercise xml:id="ex-merge-main-branch" label="ex-merge-main-branch">
-      <introduction>
-        <p>
-          The <c>git merge &lt;branch name&gt;</c> command will attempt to merge the changes in the active branch with the changes in <c>&lt;branch name&gt;</c> (i.e. the source branches) into a merge commit in the currently active branch (i.e. the target branch). 
-        </p>
-      </introduction>
-      <task xml:id="ex-merge-main-branch-a" label="ex-merge-main-branch-a">
-        <statement>
-          <p>
-            To use the <c>merge</c> command as just described your feature branch (i.e. the target branch) must be the active branch.  Switch to your feature branch and confirm that it is now the active branch.  
-          </p>
-          <p>
-            What were the commands you used? And their output? You can copy your work into the provided textbox.
-          </p>
-        </statement>
-        <response />
-      </task>
-      <task xml:id="ex-merge-main-branch-b" label="ex-merge-main-branch-b">
-        <statement>
-          <p>
-            Use the <c>merge</c> command to try to merge the changes contained in the <c>main</c> branch and in your feature branch into your feature branch.
-          </p>
-          <p>
-            What were the commands you used? And their output? You can copy your work into the provided textbox.
-          </p>
-        </statement>
-        <response />
-      </task>
-    </exercise>
-    
-    <exercise xml:id="ex-merge-conflict-file" label="ex-merge-conflict-file">
-      <introduction>
-        <p>
-          The output from <xref ref="ex-merge-main-branch" /> should indicate that the automatic merge failed due to a conflict.  If your merge command did not fail due to a conflict, return to <xref ref="ex-no-automatic-merge-on-github" /> and follow the instructions from there again. 
-        </p>
-      </introduction>
-      <task xml:id="ex-merge-conflict-file-a" label="ex-merge-conflict-file-a">
-        <statement>
-          <p>
-            In which file is the conflict located?
-          </p>
-        </statement>
-        <response />
-      </task>
-      <task xml:id="ex-merge-conflict-file-b" label="ex-merge-conflict-file-b">
-        <statement>
-          <p>
-            Use the <c>cat</c> command to display the file containing the conflict. 
-          </p>
-          <p>
-            Find the part of the file that contains the <em>raw conflict information</em> and copy and paste it here.  Be sure to include the chevrons at the top and bottom of the conflict information.
-          </p>
-        </statement>
-        <response />
-      </task>
-      </exercise>
+      <p>
+        <figure xml:id="fig-merge-main-into-feature">
+          <caption> Merging the <c>main</c> branch into a feature branch. </caption>
+          <image source="images/ch-merge-conflicts/merge-main-into-feature.png" width="75%">
+            <description>
+              Illustration of the <c>main</c> branch being merged into a feature branch.
+            </description>
+          </image>
+        </figure>
+      </p>
 
-      <exercise xml:id="ex-identify-ancestor-main-feature" label="ex-identify-ancestor-main-feature">
-        <introduction>
-          <p>
-            Answer the following questions by copying the appropriate portion of the output that you gave in <xref ref="ex-merge-conflict-file-b" />. 
-          </p>
-        </introduction>
-        <task xml:id="ex-identify-ancestor-main-feature-a" label="ex-identify-ancestor-main-feature-a">
-          <statement>
-            <p>
-              What is the part of the output that is the Best Common Ancestor?
-            </p>
-          </statement>
-          <response />
-        </task>
-        <task xml:id="ex-identify-ancestor-main-feature-b" label="ex-identify-ancestor-main-feature-b">
-          <statement>
-            <p>
-              What is the part of the output that shows the changes that the maintainers merged into the <c>main</c> branch after you made your feature branch?
-            </p>
-          </statement>
-          <response />
-        </task>
-        <task xml:id="ex-identify-ancestor-main-feature-c" label="ex-identify-ancestor-main-feature-c">
-          <statement>
-            <p>
-              What is the part of the output that shows your changes?
-            </p>
-          </statement>
-          <response />
-        </task>
-      </exercise>
-  
-      <exercise>
+      <p>
+        When two branches are merged the branch containing the changes to be merged is called the <term>source branch</term>, and the branch into which the changes are merged is called the <term>target branch</term>.
+      <p>
+      </p>
+         When the changes in the source and target branches have been successfully merged a <term>merge commit</term> containing the merged changes is added to the target branch.
+      </p>
+    </introduction>
+    <exercises>
+      <title />
+      <exercise 
+        xml:id="ex-name-source-target-branches" label="ex-name-source-target-branches">
         <statement>
           <p>
-            Sometimes when you try to merge, and it fails due to a conflict you may want to undo the attempted merge.  The <c>git merge --abort</c> command will undo a failed merge.  
-          </p>
-          <p>
-            Undo the merge that you started in <xref ref="ex-merge-main-branch" /> and use the <c>cat</c> command to display the file that contains the conflict again. 
-          </p>
-          <p>
-            Briefly explain how you can tell from the output of <c>cat</c> that the failed merge has been undone?
+            Match the branch names to the appropriate term below.
           </p>
         </statement>
-        <response />
+        <matches>
+          <match order="1">
+            <premise><c>main</c></premise>
+            <response>Source Branch</response>
+          </match>
+          <match order="2">
+            <premise>feature branch (<c>hadPig</c>)</premise>
+            <response>Target Branch</response>
+          </match>
+        </matches>
+        <hint>
+          <p>
+            Read the introduction to this section.
+          </p>
+        </hint>
+      </exercise>
+      <exercise 
+        xml:id="ex-merge-commit" 
+        label="ex-merge-commit">
+        <statement>
+          <p>
+            Which commit (i.e. which color) in <xref ref="fig-merge-main-into-feature" /> is the merge commit created by merging the <c>main</c> branch into the <c>hadPig</c> branch?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                Dark blue with a brown ring.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct. The dark blue commit in <c>main</c> was merged with the brown commit in the <c>hadPig</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Dark blue
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The dark blue commit is a commit in the <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Brown
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The brown commit is a commit in the <c>hadPig</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Pink
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The pink commit is a commit in the <c>main</c> branch.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                Light blue with a white ring.
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                The light blue with a white ring is a merge commit in <c>main</c>. Likely from merging a pull request.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+        <hint>
+          <p>
+            Read the introduction to this section and examine <xref ref="fig-merge-main-into-feature" />.
+          </p>
+        </hint>
       </exercise>
     </exercises>
+  </subsection>
 
+  <subsection 
+    xml:id="topic-git-merge-command"
+    label="topic-git-merge-command">
+    <title>The <c>git merge</c> Command.</title>
+    <introduction>
+      <p>
+       The command <c>git merge &lt;branch name&gt;</c> will attempt to merge the changes in the active branch with the changes in <c>&lt;branch name&gt;</c>.
+      </p>
+    </introduction>
+    <exercises>
+      <title />
+      <exercise 
+        xml:id="ex-merge-main-into-had-pig"
+        label="ex-merge-main-into-had-pig">
+        <statement>
+          <p>
+            Imagine that the <c>main</c> branch is the active branch. Select and arrange statements from those listed below such that the <c>main</c> branch will be merged into the <c>hadPig</c> branch as in <xref ref="fig-merge-main-into-feature" />.  Note: Not all statements will be used.
+          </p>
+        </statement>
+        <blocks randomize="yes"> 
+          <block>
+            <p>
+              <cline>git switch hadPig</cline>
+            </p>
+          </block> 
+          <block>
+            <p>
+              <cline>git merge main</cline>
+            </p>
+          </block>
+          <block correct="no">
+            <p>
+              <cline>git merge hadPig</cline>
+            </p>
+          </block>
+          <block correct="no">
+            <p>
+              <cline>git switch main</cline>
+            </p>
+          </block>
+        </blocks>
+      </exercise>
+
+      <exercise xml:id="ex-make-feature-active" label="ex-make-feature-active">
+        <introduction>
+          <p>
+            To merge the <c>main</c> branch into your feature branch, your feature branch must be the active branch. Let's ensure that your feature branch is the active branch.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Use the <c>git switch &lt;branch&gt;</c> command to make your feature branch the active branch.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Use the <c>git status</c> command to check that your feature branch is now the active branch.
+            </p>
+          </statement>
+        </task>
+      </exercise> 
+
+      <exercise 
+        xml:id="ex-merge-main-into-feature-cmd" 
+        label="ex-merge-main-into-feature-cmd">
+        <statement>
+          <p>
+            Now that your feature branch is the active branch, give a command that will merge the <c>main</c> branch into your feature branch.
+          </p>
+          <p>
+            <var width="55" />
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="^git merge main$">
+              <feedback>
+                <p>
+                  Correct.
+                </p>
+              </feedback>
+            </condition>
+            <condition string="^git merge .+$">
+              <feedback>
+                <p>
+                  You want to merge the <c>main</c> branch into your feature branch, which is the active branch.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Review the format of the <c>git merge</c> command above.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  The command you want is in <xref ref="ex-merge-main-into-had-pig" />.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+        <hint>
+          Be sure you are using your GitHub origin repository (see <xref ref="ex-fork-url" />). This clone URL should contain your GitHub username and end in <c>.git</c>.
+        </hint>
+      </exercise>
+
+      <exercise 
+        xml:id="ex-merge-main-into-feature" 
+        label="ex-merge-main-into-feature">
+        <introduction>
+          <p>
+            Now let's try top merge the changes in the <c>main</c> branch into your feature branch.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Run your <c>merge</c> command from <xref ref="ex-merge-main-into-feature-cmd" /> in the terminal.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Which of the following statements best describes what happened when you ran your <c>merge</c> command?
+            </p>
+          </statement>
+          <choices>
+            <choice correct="yes">
+              <statement>
+                <p>
+                  The terminal displays a message indicating "Automatic merge failed; fix conflicts and then commit the result."
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Excellent! Because there is a merge conflict between the <c>main</c> branch and your feature branch, this is what we expect.  Continue to the next exercise.
+                </p>
+              </feedback>
+            </choice>
+            <choice>
+              <statement>
+                <p>
+                  The "GNU nano" editor opens with the first line of text being "Merge branch 'main' into" your feature branch.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Uh Oh! Something went wrong. Let's try to fix it.
+                  <ol marker="1">
+                    <li>Press <c>Ctrl-x</c> to exit the nano editor.</li>
+                    <li>Run the command <c>git revert --hard HEAD~1</c></li>
+                    <li>Go back to <xref ref="ex-no-automatic-merge-on-github" /> and ensure that your pull request contains a conflict.</li>
+                    <li>Then try your <c>merge</c> command again.</li>
+                  </ol>
+                </p>
+              </feedback>
+            </choice>
+            <choice>
+              <statement>
+                <p>
+                  Something else happened.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Double check that your <c>merge</c> command from <xref ref="ex-merge-main-into-feature-cmd" /> is correct and that you typed it into the terminal correctly.
+                </p>
+              </feedback>
+            </choice>
+          </choices>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Which of the following things also happened when you ran your <c>merge</c> command?
+            </p>
+          </statement>
+          <choices>
+            <choice correct="yes">
+              <statement>
+                <p>
+                  The terminal displays a message indicating that there is a "Merge conflict in README.md."
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Correct.
+                </p>
+              </feedback>
+            </choice>
+            <choice correct="yes">
+              <statement>
+                <p>
+                  The <c>README.md</c> file is opened in the editor.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Correct.
+                </p>
+              </feedback>
+            </choice>
+            <choice>
+              <statement>
+                <p>
+                  The conflict is automatically resolved.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  The conflict cannot be automatically resolved because there is a conflict.
+                </p>
+              </feedback>
+            </choice>
+            <choice>
+              <statement>
+                <p>
+                  The development environment plays a sad song because there is a conflict.
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  That would be fun, but unfortunately not.
+                </p>
+              </feedback>
+            </choice>
+          </choices>
+          <hint>
+            <p>
+              Look at the output in the terminal and the file that is open in the development environment.
+            </p>
+          </hint>
+        </task>
+      </exercise> 
+    </exercises>
+  </subsection>
 </section>
