@@ -34,6 +34,7 @@
       </statement>
     </exercise>
 
+
     <exercise 
       xml:id="ex-extra-practice-merging-fetch-repo" label="ex-extra-practice-merging-fetch-repo">
       <introduction>
@@ -155,11 +156,11 @@
     </exercise>
 
     <exercise
-      xml:id=""
-      label="">
+      xml:id="ex-extra-practice-do-merge"
+      label="ex-extra-practice-do-merge">
       <introduction>
         <p>
-          Merging the <c>main</c> branch into the <c>merge-conflicit-practice</c> branch will create some conflicts for you to resolve.
+          Merging the <c>main</c> branch into the <c>merge-conflict-practice</c> branch will create some conflicts for you to resolve.
         </p>
       </introduction>
       <task 
@@ -373,7 +374,7 @@
       </setup>
       <hint>
         <p>
-          Review sections <xref ref="topic-resolving-a-merge-conflict" text="type-global-title" /> and <xref ref="topic-updating-your-pull-request" text="type-global-title" />.
+          Review sections <xref ref="topic-resolving-a-merge-conflict" /> and <xref ref="topic-updating-your-pull-request" />.
         </p>
       </hint>
     </exercise>
